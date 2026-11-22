@@ -1,0 +1,6 @@
+node_modules/
+/guition-cache/
+__pycache__/
+*.pyc
+.wrangler/
+.DS_Store

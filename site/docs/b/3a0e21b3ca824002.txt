@@ -1,0 +1,5 @@
+﻿1.JPEG图片解码所需要的图片已经包含在工程内，下载就可以测试，加入图片时使用Bin2C.exe将JPEG图片转换为.C文件加入到工程,需要32位对齐
+2.测试的视频文件放在TF卡的【根目录/video/"】目录里面，测试的视频文件下载地址【链接：https://pan.baidu.com/s/18rA8OCNy005mX5ebmb57hg 
+提取码：wrvh】
+3.播放视频需要转换为MJPEG压缩的AVI格式，音频为16位无压缩格式，转换软件下载地址【链接：https://pan.baidu.com/s/18rA8OCNy005mX5ebmb57hg 
+提取码：wrvh】

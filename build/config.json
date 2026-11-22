@@ -1,0 +1,124 @@
+{
+  "cache_dir": "../guition-cache",
+  "site_dir": "site",
+  "pan_base": "https://pan.jczn1688.com",
+  "pan_include_dirs": [
+    "*"
+  ],
+  "download_workers": 4,
+  "limits": {
+    "max_file_bytes": 24000000,
+    "host_archive_max_bytes": 20000000,
+    "per_archive_hosted_bytes": 45000000,
+    "total_hosted_bytes": 700000000,
+    "max_hosted_files_total": 15000,
+    "per_archive_max_files": 600,
+    "nested_archive_max_bytes": 30000000,
+    "nested_depth": 2,
+    "text_index_chars_per_doc": 4000,
+    "pdf_text_pages": 6,
+    "max_text_bytes": 2000000,
+    "max_code_bytes": 300000,
+    "text_index_chars_other": 1200
+  },
+  "hosted_ext": {
+    "image": [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".gif",
+      ".webp",
+      ".bmp",
+      ".svg"
+    ],
+    "pdf": [
+      ".pdf"
+    ],
+    "markdown": [
+      ".md",
+      ".markdown"
+    ],
+    "html": [
+      ".html",
+      ".htm"
+    ],
+    "text": [
+      ".txt",
+      ".csv",
+      ".log",
+      ".ini",
+      ".cfg",
+      ".conf",
+      ".yaml",
+      ".yml",
+      ".json",
+      ".xml",
+      ".toml",
+      ".ld",
+      ".mk",
+      ".cmake",
+      ".properties",
+      ".rst"
+    ],
+    "code": [
+      ".c",
+      ".h",
+      ".cpp",
+      ".hpp",
+      ".cc",
+      ".ino",
+      ".py",
+      ".js",
+      ".ts",
+      ".sh",
+      ".bat",
+      ".s",
+      ".S",
+      ".lua",
+      ".rs",
+      ".go",
+      ".java",
+      ".kt"
+    ],
+    "office": [
+      ".docx",
+      ".xlsx",
+      ".doc",
+      ".xls",
+      ".pptx"
+    ]
+  },
+  "skip_dir_patterns": [
+    "(^|/)(lvgl|lv_demos|lv_examples|TFT_eSPI|managed_components|\\.git|build|\\.pio|\\.vscode|node_modules|__MACOSX|esp-idf|arduino-esp32|libraries)(/|$)"
+  ],
+  "priority_patterns": [
+    "schematic",
+    "原理图",
+    "spec",
+    "规格",
+    "datasheet",
+    "pinout",
+    "引脚",
+    "dimension",
+    "尺寸",
+    "readme",
+    "manual",
+    "说明",
+    "instructions",
+    "user.?guide",
+    "guide",
+    "\\.pdf$"
+  ],
+  "archive_overrides": {
+    "F100S/*": {
+      "max_files": 250,
+      "note": "F1C100S (Allwinner) SDKs are not display boards; host only top docs"
+    },
+    "TOOL/*": {
+      "max_files": 20
+    },
+    "PC_monitor/*": {
+      "max_files": 20
+    }
+  }
+}

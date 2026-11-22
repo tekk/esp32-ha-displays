@@ -1,0 +1,10 @@
+## IDF Component Manager Manifest File
+dependencies:
+  idf: '>=6.1'
+
+  # LVGL 9.6.0 + the Espressif LVGL port (RGB path).
+  lvgl/lvgl: '^9.6.0'
+  espressif/esp_lvgl_port: '^2.9.0'
+
+  # GT911 touch driver (pulls in esp_lcd_touch as its dependency).
+  espressif/esp_lcd_touch_gt911: '^1.2.1'

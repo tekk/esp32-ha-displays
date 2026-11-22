@@ -1,0 +1,6 @@
+1、ESP32库版本为V3.0.2。
+2、将libraries里面的库拷贝到arduino库目录。
+3、MJPEG播放需要把PSRAM速度改为120M,把我们提供esp32s3文件，替换C:\Users\用户名\AppData\Local\
+Arduino15\packages\esp32\tools\esp32-arduino-libs\idf-release_v5.1-bd2b9390ef\esp32s3。
+4、DEMO_PIC、DEMO_MJPEG、 DEMO_MP3，这三个样例测试必须插入TF卡，不插TF卡会黑屏，卡里需要有对应的文件，
+文件名分别是pic、mjpeg、music，也可以直接拷贝我们提供的文件到TF卡里面。

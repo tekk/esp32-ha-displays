@@ -1,0 +1,11 @@
+<window name="home" animation="" theme="home" anim_hint="htranslate(duration=500,easing=cubic_out)">
+  <gif name="gif" x="142" y="46" w="197" h="180" image="timg"/>
+  <button name="button_return" x="361" y="216" w="100" h="36" repeat="0" enable_long_press="false" style:normal:font_size="24" style:pressed:font_size="24" style:over:font_size="24" style:disable:font_size="24">
+    <property name="style:focused:font_size">
+      <![CDATA[24]]>
+    </property>
+    <property name="tr_text">
+      <![CDATA[退出]]>
+    </property>
+  </button>
+</window>

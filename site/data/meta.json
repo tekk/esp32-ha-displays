@@ -1,0 +1,294 @@
+{
+ "generated": "2026-11-22T07:07:00+01:00",
+ "counts": {
+  "Guition": 97,
+  "Waveshare": 7
+ },
+ "models": 104,
+ "archives": 60,
+ "archive_bytes": 8741910129,
+ "hosted_blobs": 9188,
+ "field_labels": {
+  "vendor": "Vendor",
+  "category": "Category",
+  "series": "Series",
+  "size": "Size",
+  "size_in": "Size (in)",
+  "resolution": "Resolution",
+  "shape": "Shape",
+  "panel": "Panel",
+  "touch": "Touch",
+  "touch_ic": "Touch IC",
+  "touch_points": "Touch points",
+  "driver_ic": "Display driver",
+  "interface": "Display interface",
+  "interface_detail": "Interface detail",
+  "mcu": "MCU",
+  "mcu_family": "MCU family",
+  "coprocessor": "Co-processor",
+  "frequency": "CPU frequency",
+  "sram": "SRAM",
+  "psram": "PSRAM",
+  "rom": "ROM",
+  "flash": "Flash",
+  "memory": "Memory",
+  "wifi": "Wi-Fi",
+  "bt": "Bluetooth",
+  "connectivity": "Connectivity",
+  "speaker": "Speaker interface",
+  "audio": "Audio",
+  "camera": "Camera",
+  "ethernet": "Ethernet",
+  "poe": "PoE",
+  "rs485": "RS-485",
+  "usb": "USB",
+  "sd": "SD / TF",
+  "rtc": "RTC",
+  "battery": "Battery",
+  "gpio": "GPIO",
+  "expansion": "Expansion / IO",
+  "shell": "Case / shell",
+  "glass": "Glass",
+  "dimensions": "Dimensions",
+  "active_area": "Active area",
+  "pixel_pitch": "Pixel pitch",
+  "voltage": "Operating voltage",
+  "power": "Power consumption",
+  "operating_temp": "Operating temp.",
+  "storage_temp": "Storage temp.",
+  "viewing_angle": "Viewing angle",
+  "contrast": "Contrast",
+  "brightness": "Brightness",
+  "color_depth": "Colors",
+  "color_gamut": "Color gamut",
+  "backlight": "Backlight",
+  "software": "Software / dev support",
+  "form_factor": "Form factor",
+  "display_module": "Display module",
+  "sku": "SKU"
+ },
+ "slug2models": {
+  "bare-screen-jc1216a018n-spec": [
+   "JC1216A018N"
+  ],
+  "bare-screen-jc2432a024n": [
+   "JC2432A024N"
+  ],
+  "bare-screen-jc2432a028n": [
+   "JC2432A028N"
+  ],
+  "bare-screen-jc3248a035n": [
+   "JC3248A035C"
+  ],
+  "bare-screen-jc4827b043n": [
+   "JC4827B043C",
+   "JC4827B043N",
+   "JC4827B043R"
+  ],
+  "bare-screen-jc8048b043n-i": [
+   "JC8048B043C_I",
+   "JC8048B043N"
+  ],
+  "bare-screen-jc8048b050c-i-5": [
+   "JC8048B050C_I",
+   "JC8048B050N_I"
+  ],
+  "bare-screen-jc8048b050n-i": [
+   "JC8048B050C_I",
+   "JC8048B050N_I"
+  ],
+  "bare-screen-jc8048b070n": [
+   "JC8048B070C",
+   "JC8048B070N"
+  ],
+  "esp32-module-1-28inch-esp32-2424s012": [
+   "ESP32-2424S012C_I",
+   "ESP32-2424S012C_I_Y(B)",
+   "ESP32-2424S012C_I_Y(W)",
+   "ESP32-2424S012N_I"
+  ],
+  "esp32-module-1-9inch-esp32-1732s019": [
+   "ESP32-1732S019N-I"
+  ],
+  "esp32-module-2-2inch-esp32-2432s022": [
+   "ESP32-2432S022"
+  ],
+  "esp32-module-2-4inch-esp32-2432s024": [
+   "ESP32-2432S024C",
+   "ESP32-2432S024N",
+   "ESP32-2432S024R"
+  ],
+  "esp32-module-2-8inch-esp32-2432s028r": [
+   "ESP32-2432S028R"
+  ],
+  "esp32-module-3-2inch-esp32-2432s032": [
+   "ESP32-2432S032C_I",
+   "ESP32-2432S032N_I",
+   "ESP32-2432S032R_I"
+  ],
+  "esp32-module-3-5inch-esp32-3248s035": [
+   "ESP32-3248S035C",
+   "ESP32-3248S035R"
+  ],
+  "esp32-module-4-0inch-esp32-4848s040": [
+   "ESP32-4848S040C_I",
+   "ESP32-4848S040C_I_Y_1",
+   "ESP32-4848S040C_I_Y_3"
+  ],
+  "esp32-module-4-3inch-esp32-4827s043": [
+   "ESP32-4827S043C",
+   "ESP32-4827S043N",
+   "ESP32-4827S043R"
+  ],
+  "esp32-module-4-3inch-esp32-8048s043": [
+   "ESP32-8048S043C_I"
+  ],
+  "esp32-module-5-0inch-esp32-8048s050": [
+   "ESP32-8048S050C_I",
+   "ESP32-8048S050N_I"
+  ],
+  "esp32-module-7-0inch-esp32-8048s070": [
+   "ESP32-8048S070C",
+   "ESP32-8048S070N"
+  ],
+  "f100s-f1c100s-keil": [],
+  "f100s-lc-pi-200s": [],
+  "f100s-pcb1-070d02-a1": [],
+  "f100s-sdk": [],
+  "hmi-display-jc-esp32p4-m3-c6": [
+   "JC-ESP32P4-M3-C6"
+  ],
+  "hmi-display-jc-esp32p4-m3-dev": [
+   "JC-ESP32P4-M3-DEV"
+  ],
+  "hmi-display-jc1060f570c-i-w-y": [
+   "JC1060F570C_I_W_Y"
+  ],
+  "hmi-display-jc1060p470c-i-w": [
+   "JC1060P470C_I_W",
+   "JC1060P470C_I_W_Y"
+  ],
+  "hmi-display-jc1060p470c-i-w-y": [
+   "JC1060P470C_I_W_Y"
+  ],
+  "hmi-display-jc2424w513": [
+   "JC2424W513"
+  ],
+  "hmi-display-jc2432w328": [
+   "JC2432W328C",
+   "JC2432W328N"
+  ],
+  "hmi-display-jc3248w535cn": [
+   "JC3248W535C_I_Y"
+  ],
+  "hmi-display-jc3248w535en": [
+   "JC3248W535C_I_Y"
+  ],
+  "hmi-display-jc3636f118-knob-cn": [
+   "JC3636F118C_I_YR",
+   "JC3636F118C_I_YR1"
+  ],
+  "hmi-display-jc3636f118-knob-en": [
+   "JC3636F118C_I_YR",
+   "JC3636F118C_I_YR1"
+  ],
+  "hmi-display-jc3636f318-knob-en": [
+   "JC3636F318C_I_Y1(BU)",
+   "JC3636F318C_I_Y1(GY)",
+   "JC3636F318C_I_Y1(RD)"
+  ],
+  "hmi-display-jc3636k518-instructions-cn": [
+   "JC3636K518C_I_YR",
+   "JC3636K518C_I_YR1"
+  ],
+  "hmi-display-jc3636k518cn-knob-cn": [
+   "JC3636K518C_I_YR",
+   "JC3636K518C_I_YR1"
+  ],
+  "hmi-display-jc3636k518cn-knob-en": [
+   "JC3636K518C_I_YR",
+   "JC3636K518C_I_YR1"
+  ],
+  "hmi-display-jc3636k718-knob-en": [
+   "JC3636K718C_I(BU)",
+   "JC3636K718C_I(GY)",
+   "JC3636K718C_I(RD)",
+   "JC3636K718C_I_Y1(BU)",
+   "JC3636K718C_I_Y1(GY)",
+   "JC3636K718C_I_Y1(RD)"
+  ],
+  "hmi-display-jc3636w518cn": [
+   "JC3636W518C_I_Y"
+  ],
+  "hmi-display-jc3636w518en": [
+   "JC3636W518C_I_Y"
+  ],
+  "hmi-display-jc4827w543": [
+   "JC4827W543C_I",
+   "JC4827W543N_I",
+   "JC4827W543R_I"
+  ],
+  "hmi-display-jc4880p443c-i-w": [
+   "JC4880P443C_I_W",
+   "JC4880P443C_I_W_Y"
+  ],
+  "hmi-display-jc8012p4a1c-i-w-y": [
+   "JC8012P4A1C_I_W_Y",
+   "JC8012P4A1C_I_W_Y1"
+  ],
+  "hmi-display-jc8048f550c-i-w-y": [
+   "JC8048F550C_I_W_Y"
+  ],
+  "hmi-display-jc8048q350": [
+   "JC8048Q350C_I",
+   "JC8048Q350C_I_W",
+   "JC8048Q350N_I",
+   "JC8048Q350N_I_W"
+  ],
+  "hmi-display-jc8048w550": [
+   "JC8048W550C_I",
+   "JC8048W550N_I"
+  ],
+  "hmi-display-xiaozhi-jc3636w518cn": [
+   "JC3636W518C_I_Y"
+  ],
+  "pc-monitor-pc-monitor": [],
+  "parallel-port-display-module-4-3inch-8080-module-ssd1963": [
+   "4.3inch_8080_Module_SSD1963"
+  ],
+  "parallel-port-display-module-5-0inch-8080-module-ssd1963": [
+   "5.0inch_8080_Module_SSD1963"
+  ],
+  "parallel-port-display-module-7-0inch-8080-module-ssd1963": [
+   "7.0inch_8080_Module_SSD1963"
+  ],
+  "spi-display-module-1-28inch-spi-module-gc9a01": [
+   "JC2424S012N_I"
+  ],
+  "spi-display-module-1-8inch-spi-module-st7735s": [
+   "JC1216S018N"
+  ],
+  "spi-display-module-2-4inch-spi-module-ili9341": [
+   "JC2432S024N",
+   "JC2432S024R"
+  ],
+  "spi-display-module-2-8inch-spi-module-ili9341": [
+   "JC2432S028N",
+   "JC2432S028R"
+  ],
+  "spi-display-module-3-5inch-spi-module-ili9488": [
+   "JC3248S035C",
+   "JC3248S035N",
+   "JC3248S035R"
+  ],
+  "tool-usb-serial-ch340": []
+ },
+ "sources": [
+  "https://www.guition.com/model-selection",
+  "https://www.guition.com/sk/model-selection",
+  "https://www.guition.com/sitemap.xml",
+  "https://pan.jczn1688.com/",
+  "https://www.waveshare.com/",
+  "https://docs.waveshare.com/"
+ ]
+}

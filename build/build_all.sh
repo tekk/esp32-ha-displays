@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Full rebuild: re-download everything and regenerate data, docs and indexes.
+# Limits (file size, hosted budget, …) are in build/config.json.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+python3 build/fetch_pan.py          # official file server → ../guition-cache/pan (≈9 GB, resumable, sha256-verified)
+python3 build/scrape_guition.py     # guition.com tables + product pages, images, spec PDFs
+python3 build/process_archives.py   # unpack ZIP/RAR, manifests, extract docs into site/docs/b
+python3 build/build_site.py         # merge → site/data/models.json, archives.json, meta.json
+node build/vendor.mjs               # copy JS libs into site/assets/vendor
+node build/build_index.mjs          # prebuilt MiniSearch indexes
+python3 tests/check_links.py

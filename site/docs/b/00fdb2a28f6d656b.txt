@@ -1,0 +1,3 @@
+NAND Flash 固件：sysimage-nand-120MB
+SD 卡固件：           sysimage-sdcard（使用Win32DiskImager软件烧录至SD卡）
+

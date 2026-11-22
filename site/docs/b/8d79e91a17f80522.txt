@@ -1,0 +1,25 @@
+
+一.双BOOT的作用:
+	1.当应用程序比较大时加快程序的加载速度,因为BOOT1运行在dram，darm有开启MMU-CACHE,能极大提高运行速度;
+	2.可以在BOOT1中做升级程序而不用考虑程序大小;
+
+
+二.双BOOT说明:
+	1.BOOT0存放在SPIFLASH的0x0地址,加载到内部SRAM中0x0开始执行;
+		(1).负责加载BOOT1到DDR;
+	2.BOOT1存放在SPIFLASH的0x6000地址,加载到内部DRAM中0x80000000开始执行;
+		(1).负责加载LOGO到DDR并显示;
+		(2).负责加载EXEC到DDR并执行;
+	3.LOGO存放在SPIFLASH的0xC000地址,加载到内部DRAM中0x81000000显示;
+        4.EXEC应用部分:
+		(1).没有LOGO时存放在SPIFLASH的0xC000地址,加载到内部DRAM中0x80080000开始执行;
+		(2).有LOGO时存放在SPIFLASH的0x50000地址,加载到内部DRAM中0x80080000开始执行;
+
+三.单BOOT改双BOOT说明:
+	1.EXEC都改为DRAM+512K开始:
+		(1).F1C100S.sct文件中IROM字段开始地址改为0x80080000,两个都要改;
+		(2).InitDDR.ini文件中PC改为0x80080000;
+		(3).工程设置中->linker->Misc controls中入口地址改为0x80080000;
+		(4).boot1中增加了mmu的初始化，需要去掉Exec中的mmu初始化sys_mmu_init();
+	2.下载BAT文件下载地址修改：boot0(0x0)+boot1(0x6000)+logo(0xC000)+exec(0x50000);
+四.测试例程是一个显示图片的例程;

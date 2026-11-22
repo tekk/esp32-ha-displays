@@ -1,0 +1,36 @@
+{
+ "_comment": "Variant warnings and notes per model regex. Each note cites its source.",
+ "notes": [
+  {
+   "match": "^JC1060P470",
+   "level": "warning",
+   "text": "Two hardware-different boards are sold as JC1060P470 with DIFFERENT PINOUTS: JC1060P470C_I_W = yellow PCB, no case, bare ESP32-P4 + separate ESP32-C6 module; JC1060P470C_I_W_Y = black case, JC-ESP32P4-M3 module (P4 + C6), Ethernet, RS-485 and a 2×13 pin header. Use the matching archive (JC1060P470C_I_W.zip vs JC1060P470C_I_W_Y.zip).",
+   "sk": "Pod označením JC1060P470 sa predávajú dve hardvérovo odlišné dosky s iným pinoutom: JC1060P470C_I_W (žlté PCB bez krytu) a JC1060P470C_I_W_Y (čierny kryt, modul JC-ESP32P4-M3, Ethernet, RS-485, 2×13 pin header).",
+   "source": "https://github.com/zhing2006/esp-gbx/blob/main/docs/boards/jc1060p470.md"
+  },
+  {
+   "match": "^JC1060P470C_I_W$",
+   "level": "info",
+   "text": "Newer panels (2026+, V2 mark or panel date code ≥ 2622) still use the JD9165 driver but with a different init sequence/timing; the wrong one gives a white screen with a vertical noise band.",
+   "source": "https://github.com/zhing2006/esp-gbx/blob/main/docs/boards/jc1060p470.md"
+  },
+  {
+   "match": "^JC1060P470",
+   "level": "info",
+   "text": "This family is the '7\" ESP32-P4 HMI, 1024×600, MIPI-DSI' Guition board from the request. The '60 FPS' claim was not found on guition.com; community timing analysis computes ≈60 Hz (dtsi timings) / ≈65 Hz (vendor example).",
+   "source": "https://github.com/zhing2006/esp-gbx/blob/main/docs/boards/jc1060p470.md"
+  },
+  {
+   "match": "^JC4880P443",
+   "level": "info",
+   "text": "ESP32-P4 silicon before rev 3 and rev 3 are not binary compatible; a 10150002-V3 board revision with rev3 silicon exists. ESP32-C6 ships with old ESP-Hosted slave firmware (2.3.0) – upgrade to 2.12.x for stable Wi-Fi.",
+   "source": "https://github.com/ultramcu/guition-jc4880p443c-i-w"
+  },
+  {
+   "match": "^JC4880P443C_I_W_Y$",
+   "level": "info",
+   "text": "guition.com links the same development archive (JC4880P443C_I_W.zip) for the _Y (cased) version.",
+   "source": "https://www.guition.com/model-selection"
+  }
+ ]
+}

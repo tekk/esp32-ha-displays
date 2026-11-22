@@ -1,0 +1,12 @@
+{
+    "type": "guition-jc3636f118",
+    "target": "esp32s31",
+    "builds": [
+        {
+            "name": "guition-jc3636f118",
+            "sdkconfig_append": [
+                "CONFIG_SPIRAM_TRY_ALLOCATE_WIFI_LWIP=y"
+            ]
+        }
+    ]
+}

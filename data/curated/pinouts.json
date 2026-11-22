@@ -1,0 +1,44 @@
+{
+  "_comment": "Pin facts restated (not copied) from community documentation; see source per table.",
+  "pinouts": [
+    {"match": "^JC4880P443", "title": "JC4880P443C_I_W pin map (community verified)", "source": "https://github.com/ultramcu/guition-jc4880p443c-i-w",
+     "rows": [
+      ["Display ST7701S", "MIPI-DSI 2 lanes", "480×800, 2 lanes @ 500 Mbps"],
+      ["LCD reset", "GPIO5", ""],
+      ["LCD backlight", "GPIO23", "active-high GPIO (Tessera uses PWM)"],
+      ["DSI PHY power", "on-chip LDO ch3", "2500 mV"],
+      ["Touch GT911 I2C", "SDA GPIO7 / SCL GPIO8", "addr 0x5D, shared with codec"],
+      ["Touch reset", "GPIO3", "some docs cite GPIO22"],
+      ["microSD SDMMC 4-bit", "CLK 43 / CMD 44 / D0-D3 39-42", "TF_VCC from on-chip LDO ch4"],
+      ["ESP32-C6 SDIO", "CLK 18 / CMD 19 / D0-D3 14-17", "C6 reset GPIO54"],
+      ["Audio ES8311 I2S", "MCLK 13 / BCLK 12 / LRCK 10 / DOUT 9 / DIN 48", "PA enable GPIO11"],
+      ["Boot button", "GPIO35", ""],
+      ["LED", "GPIO26", "RS485 UART1-TX in RS485 build"],
+      ["UART0 console", "TX 37 / RX 38", ""],
+      ["RS485 (MAX485)", "UART1 TX 26 / RX 27", ""]
+     ]},
+    {"match": "^JC4880P443", "title": "JC4880P443 GPIO (Tessera / ESPHome)", "source": "https://github.com/MaxGramser/homeassistant_espscreen/blob/main/docs/JC4880P443.md",
+     "rows": [
+      ["Wi-Fi ESP32-C6 SDIO 4-bit", "reset 54, CMD 19, CLK 18, D0-D3 14-17", "20 MHz"],
+      ["I2C (GT911, ES8311)", "SDA 7 / SCL 8", "400 kHz; ES8311 @0x18"],
+      ["Backlight", "GPIO23", "PWM"],
+      ["I2S", "MCLK 13, BCLK 12, LRCLK 10, DOUT 9, DIN 48", "16 kHz; amp enable GPIO11"],
+      ["Camera (C version)", "OV02C10 on MIPI-CSI", "SCCB on touch bus @0x36"]
+     ]},
+    {"match": "^JC1060P470C_I_W$", "title": "JC1060P470C_I_W pinout (from official schematics)", "source": "https://github.com/zhing2006/esp-gbx/blob/main/docs/boards/jc1060p470.md",
+     "rows": [
+      ["Display JD9165 7\" 1024×600", "MIPI-DSI 2 lanes, FPC1 0.5mm 30P", "reset GPIO27, PHY LDO VO3 2500 mV"],
+      ["Backlight (MP3202)", "GPIO23", "PWM on EN, 10k pull-down"],
+      ["Touch GT911 (FPC2 1.0mm 6P)", "INT GPIO21 / RST GPIO22", "I2C shared"],
+      ["I2C", "SDA GPIO7 / SCL GPIO8", "ES8311 0x18, GT911 0x5D/0x14, RX8025T 0x32"],
+      ["Audio ES8311 I2S", "MCLK 13 / BCLK 12 / LRCK 10 / DOUT 9 / DIN 11", "NS4150 amp enable GPIO20"],
+      ["TF card SDMMC 4-bit", "D0-D3 39-42 / CLK 43 / CMD 44", "power from on-chip LDO VO4, no card-detect"],
+      ["BOOT button", "GPIO35", "SW2 = reset, SW1 = IP5306 KEY"],
+      ["FPC3 expansion 0.5mm 14P", "GPIO45-48, 5, 4, 3, 2, SCL 8, SDA 7", "pins 1-2 GND, 13-14 3V3"],
+      ["FPC4 expansion 0.5mm 14P", "GPIO28-34", "GPIO34 is a strapping pin"],
+      ["CN4 SH1.0 4P", "GND, 3V3, SCL, SDA", "I2C"],
+      ["RTC RX8025T", "I2C 0x32", "CR1220 backup cell (BT1)"],
+      ["Other ICs", "W25Q128 16MB flash, CH340C, IP5306, WS2812 LED", ""]
+     ]}
+  ]
+}

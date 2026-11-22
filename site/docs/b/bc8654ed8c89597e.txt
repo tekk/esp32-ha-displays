@@ -1,0 +1,3 @@
+idf_component_register(SRCS "lcd_lvgl.c" "main.c"
+                    INCLUDE_DIRS "."
+                    REQUIRES esp_lcd_touch esp_lcd_touch_gt911 lvgl__lvgl espressif__esp_lvgl_port)

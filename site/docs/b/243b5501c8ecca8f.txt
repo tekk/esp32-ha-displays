@@ -1,0 +1,18 @@
+//获取天气接口
+GET https://www.tianqiapi.com/api?version=v9&appid=41329735&appsecret=wn19oQkM
+
+
+//获取时间接口
+1.使用串口发送指令AT+CWMODE=1设置模块Wi-Fi应用模式为Station模式；
+2.发送指令AT+RST重启模块使应用模式更改生效；
+3.发送指令AT+CWJAP =”ssid”,”pwd”连接AP；
+4.发送指令AT+CIPMUX=0设置模块为单路连接模式，模块默认为单路连接模式；
+5.发送指令AT+CIPSTART=”TCP”,”api.k780.com”,80 与服务器建立TCP连接 ;
+6.发送指令AT+CIPMODE=1设置模块传输模式为透传模式；
+7.发送指令AT+CIPSEND开启透传模式向服务器发送数据，模块收到此指令后先换行后返回“>”
+8.剩下只需要发送 GET http://api.k780.com:88/?app=life.time&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json&HTTP/1.1\r\n
+
+
+//透传接口
+安信可透传云 http://tt.ai-thinker.com:8000/ttcloud
+连接到透传云 http://wiki.ai-thinker.com/ttcloud

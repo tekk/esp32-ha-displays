@@ -1,0 +1,20 @@
+{
+  "name": "guition-catalog",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Static searchable catalog of Guition (and Waveshare ESP32-P4) display boards",
+  "scripts": {
+    "vendor": "node build/vendor.mjs",
+    "index": "node build/build_index.mjs",
+    "build": "python3 build/build_site.py && node build/build_index.mjs",
+    "serve": "python3 -m http.server -d site 8080"
+  },
+  "devDependencies": {
+    "minisearch": "^7.1.0",
+    "jszip": "^3.10.1",
+    "marked": "^14.1.0",
+    "dompurify": "^3.1.6",
+    "@highlightjs/cdn-assets": "^11.10.0"
+  }
+}

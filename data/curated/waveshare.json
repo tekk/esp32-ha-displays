@@ -1,0 +1,137 @@
+{
+  "_comment": "Hand-curated from Waveshare product pages, docs.waveshare.com, the Waveshare wiki and waveshareteam GitHub (fetched 2026-11-22). Every value has a source; values not found in a source are left empty.",
+  "common": {
+    "x_series": {
+      "sources": [
+        "https://www.waveshare.com/esp32-p4-wifi6-touch-lcd-7-8-10.1.htm",
+        "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-X",
+        "https://github.com/waveshareteam/ESP32-P4-WIFI6-Touch-LCD-X"
+      ],
+      "images": [
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-7-1_2.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-7-2_2.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-7-3_2.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-7-4_2.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-7-5_2.jpg"
+      ],
+      "image_note": "Series photos from the shared product page (shown for 7/8/10.1 variants)",
+      "files": [
+        {"name": "ESP32-P4-WIFI6-Touch-LCD-X-Schematic.pdf", "url": "https://files.waveshare.com/wiki/ESP32-P4-WIFI6-Touch-LCD-X/ESP32-P4-WIFI6-Touch-LCD-X-Schematic.pdf", "host": true},
+        {"name": "ESP32-P4-Connect-Adapter-Schematic.pdf", "url": "https://files.waveshare.com/wiki/ESP32-P4-WIFI6-Touch-LCD-X/ESP32-P4-Connect-Adapter-Schematic.pdf", "host": true},
+        {"name": "3D.zip (3D models)", "url": "https://files.waveshare.com/wiki/ESP32-P4-WIFI6-Touch-LCD-X/3D.zip", "host": false}
+      ],
+      "links": [
+        {"title": "Waveshare product page (7/8/10.1)", "url": "https://www.waveshare.com/esp32-p4-wifi6-touch-lcd-7-8-10.1.htm", "type": "vendor"},
+        {"title": "Waveshare docs: ESP32-P4-WIFI6-Touch-LCD-X", "url": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-X", "type": "vendor"},
+        {"title": "waveshareteam/ESP32-P4-WIFI6-Touch-LCD-X (examples, schematics)", "url": "https://github.com/waveshareteam/ESP32-P4-WIFI6-Touch-LCD-X", "type": "official-github"}
+      ],
+      "params": {
+        "mcu": "ESP32-P4NRW32", "mcu_family": "ESP32-P4", "coprocessor": "ESP32-C6-MINI-1U-H8 (SDIO)",
+        "psram": "32MB (in package)", "flash": "32MB NOR", "interface": "MIPI-DSI", "interface_detail": "MIPI 2-lane",
+        "panel": "IPS", "touch": "Capacitive", "touch_points": "10", "touch_ic": "GT9271",
+        "wifi": "Wi-Fi 6 (2.4 GHz, via ESP32-C6)", "bt": "Bluetooth 5 (LE)", "camera": "OV5647 5MP front camera (MIPI-CSI 2-lane)",
+        "audio": "ES8311 codec + ES7210 echo cancellation, dual microphones, speaker", "speaker": "Yes",
+        "sd": "microSD (SDIO 3.0)", "usb": "USB-to-UART Type-C + USB 2.0 OTG HS Type-C", "gpio": "40-pin header",
+        "battery": "3.7V Li battery connector (battery optional)", "shell": "Full metal case", "glass": "Toughened glass panel",
+        "operating_temp": "0℃ ~ 60℃", "shape": "Rectangular"
+      }
+    },
+    "round": {
+      "sources": [
+        "https://www.waveshare.com/esp32-p4-wifi6-touch-lcd-3.4c.htm",
+        "https://www.waveshare.com/wiki/ESP32-P4-WIFI6-Touch-LCD-3.4C",
+        "https://www.waveshare.com/wiki/ESP32-P4-WIFI6-Touch-LCD-4C"
+      ],
+      "images": [
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-3.4c-1.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-3.4c-2.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-3.4c-3.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-3.4c-4.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-3.4c-5.jpg"
+      ],
+      "image_note": "Photos from the shared 3.4C/4C product page",
+      "files": [
+        {"name": "ESP32-P4-WIFI6-Touch-LCD-XC-Schematic.pdf", "url": "https://files.waveshare.com/wiki/ESP32-P4-WIFI6-Touch-LCD-XC/ESP32-P4-WIFI6-Touch-LCD-XC-Schematic.pdf", "host": true},
+        {"name": "ESP32-P4-WIFI6-Touch-LCD-XC-Demo.zip (117.8 MB)", "url": "https://files.waveshare.com/wiki/ESP32-P4-WIFI6-Touch-LCD-XC/ESP32-P4-WIFI6-Touch-LCD-XC-Demo.zip", "host": false},
+        {"name": "ESP32-P4 datasheet", "url": "https://files.waveshare.com/wiki/common/Esp32-p4_datasheet_en.pdf", "host": false},
+        {"name": "ESP32-P4 technical reference manual", "url": "https://files.waveshare.com/wiki/common/Esp32-p4_technical_reference_manual_en.pdf", "host": false}
+      ],
+      "links": [
+        {"title": "Waveshare product page (3.4C / 4C)", "url": "https://www.waveshare.com/esp32-p4-wifi6-touch-lcd-3.4c.htm", "type": "vendor"},
+        {"title": "waveshareteam/ESP32-P4-WIFI6-Touch-LCD-XC", "url": "https://github.com/waveshareteam/ESP32-P4-WIFI6-Touch-LCD-XC", "type": "official-github"},
+        {"title": "espressif/esp-brookesia", "url": "https://github.com/espressif/esp-brookesia", "type": "community"}
+      ],
+      "params": {
+        "mcu": "ESP32-P4NRW32", "mcu_family": "ESP32-P4", "coprocessor": "ESP32-C6-MINI-1 (SDIO)", "frequency": "up to 360MHz (HP) / 40MHz (LP)",
+        "sram": "768KB HP L2MEM + 32KB LP SRAM", "rom": "128KB HP + 16KB LP", "psram": "32MB (in package)", "flash": "32MB NOR",
+        "interface": "MIPI-DSI", "interface_detail": "MIPI 2-lane", "panel": "IPS", "shape": "Round",
+        "touch": "Capacitive", "touch_points": "10", "touch_ic": "GT9271", "wifi": "Wi-Fi 6 (via ESP32-C6)", "bt": "Bluetooth 5 (LE)",
+        "camera": "MIPI-CSI connector (15-pin, 2-lane)", "audio": "ES8311 codec + ES7210 echo cancellation, dual microphones, speaker header (PH2.0, 8Ω 2W)",
+        "speaker": "Yes", "sd": "TF card (SDIO 3.0)", "usb": "USB 2.0 OTG HS Type-A + USB-to-UART Type-C + USB FS Type-C",
+        "gpio": "40-pin header (2.54mm, some RPi HAT compatible)", "rtc": "RTC battery holder (rechargeable only)",
+        "glass": "Optical bonding toughened glass (up to 6H)", "viewing_angle": "170°", "contrast": "1200:1", "operating_temp": "0℃ ~ 60℃"
+      }
+    },
+    "devkit": {
+      "sources": [
+        "https://www.waveshare.com/esp32-p4-module-dev-kit.htm",
+        "https://docs.waveshare.com/ESP32-P4-Module-DEV-KIT",
+        "https://www.waveshare.com/wiki/ESP32-P4-Module-DEV-KIT"
+      ],
+      "images": [
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-module-dev-kit-0_4.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-module-dev-kit-1_4.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-module-dev-kit-2.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-module-dev-kit-3_4.jpg",
+        "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-module-dev-kit-4.jpg"
+      ],
+      "image_note": "Photos from the shared ESP32-P4-Module-DEV-KIT product page",
+      "files": [
+        {"name": "ESP32-P4-Module-DEV-KIT.pdf (schematic)", "url": "https://files.waveshare.com/wiki/ESP32-P4-Module-DEV-KIT/ESP32-P4-Module-DEV-KIT.pdf", "host": true},
+        {"name": "ESP32-P4-Module-DEV-KIT-20250427.zip (demos)", "url": "https://files.waveshare.com/wiki/ESP32-P4-Module-DEV-KIT/ESP32-P4-Module-DEV-KIT-20250427.zip", "host": false}
+      ],
+      "links": [
+        {"title": "Waveshare product page (DEV-KIT / -A / -B / -C)", "url": "https://www.waveshare.com/esp32-p4-module-dev-kit.htm", "type": "vendor"},
+        {"title": "Waveshare docs: ESP32-P4-Module-DEV-KIT", "url": "https://docs.waveshare.com/ESP32-P4-Module-DEV-KIT", "type": "vendor"},
+        {"title": "waveshareteam/ESP32-P4-Platform", "url": "https://github.com/waveshareteam/ESP32-P4-Platform", "type": "official-github"}
+      ],
+      "params": {
+        "mcu": "ESP32-P4NRW32X (ESP32-P4-Module)", "mcu_family": "ESP32-P4", "coprocessor": "ESP32-C6 (SDIO)", "frequency": "up to 400MHz (HP) / 40MHz (LP)",
+        "sram": "768KB HP L2MEM + 32KB LP SRAM", "rom": "128KB HP + 16KB LP", "psram": "32MB (in package)", "flash": "16MB NOR (on module)",
+        "interface": "MIPI-DSI", "interface_detail": "MIPI 2-lane (external DSI panel)", "panel": "IPS", "shape": "Rectangular",
+        "touch": "Capacitive", "touch_points": "10", "touch_ic": "GT9271", "wifi": "Wi-Fi 6 (via ESP32-C6)", "bt": "Bluetooth 5 (LE)",
+        "camera": "MIPI-CSI 2-lane (RPi Camera (B) included in kits B/C)", "ethernet": "100Mbps RJ45", "poe": "Reserved PoE module header (PoE module not included)",
+        "audio": "Codec + amplifier, onboard microphone, speaker header (MX1.25 2P, 8Ω 2W)", "speaker": "Yes",
+        "sd": "TF card (SDIO 3.0)", "usb": "USB 2.0 OTG HS Type-A (host mode via jumper) + Type-C UART", "gpio": "40-pin header (28 programmable GPIO)",
+        "rtc": "RTC battery header (rechargeable only)", "glass": "Optical bonding toughened glass", "viewing_angle": "178°", "contrast": "800:1",
+        "operating_temp": "0℃ ~ 60℃", "form_factor": "Dev board + separate DSI display"
+      },
+      "notes": ["User-supplied description mentioned '4× USB-A host'; the Waveshare sources found list one USB 2.0 OTG Type-A port (host mode switchable via jumper) — not confirmed, left out."]
+    }
+  },
+  "models": [
+    {"id": "waveshare-esp32-p4-wifi6-touch-lcd-7", "model": "ESP32-P4-WIFI6-Touch-LCD-7", "group": "x_series", "series": "ESP32-P4-WIFI6-Touch-LCD-X",
+     "title": "ESP32-P4-WIFI6 7inch HMI all-in-one touch display", "sku": "30738 / 33147 (EN)",
+     "params": {"size": "7\"", "resolution": "720x1280", "driver_ic": "ILI9881C", "brightness": "450cd/m²", "active_area": "88.0 × 155.0 mm", "pixel_pitch": "0.12075 × 0.12075 mm", "contrast": "800:1", "viewing_angle": "170°"}},
+    {"id": "waveshare-esp32-p4-wifi6-touch-lcd-8", "model": "ESP32-P4-WIFI6-Touch-LCD-8", "group": "x_series", "series": "ESP32-P4-WIFI6-Touch-LCD-X",
+     "title": "ESP32-P4-WIFI6 8inch HMI all-in-one touch display", "sku": "33673 / 33149 (EN)",
+     "params": {"size": "8\"", "resolution": "800x1280", "driver_ic": "JD9365", "brightness": "400cd/m²", "active_area": "108.24 × 172.82 mm", "pixel_pitch": "0.13455 × 0.13455 mm", "contrast": "1200:1", "viewing_angle": "178°"}},
+    {"id": "waveshare-esp32-p4-wifi6-touch-lcd-10-1", "model": "ESP32-P4-WIFI6-Touch-LCD-10.1", "group": "x_series", "series": "ESP32-P4-WIFI6-Touch-LCD-X",
+     "title": "ESP32-P4-WIFI6 10.1inch HMI all-in-one touch display", "sku": "33672 / 33150 (EN)",
+     "params": {"size": "10.1\"", "resolution": "800x1280", "driver_ic": "JD9365", "brightness": "400cd/m²", "active_area": "135.96 × 217.18 mm", "pixel_pitch": "0.1692 × 0.1692 mm", "contrast": "800:1", "viewing_angle": "178°", "dimensions": "250.20 × 169.00 mm (case)"},
+     "extra_sources": ["https://b2b.berrybase.de/Sensoren-/-Module/Displays/LC-Displays/Waveshare-ESP32-P4-WIFI6-Touch-LCD-IPS-Touchdisplay-kapazitiv-WiFi-6-Bluetooth-5-USB-C-MIPI-Display-101/"]},
+    {"id": "waveshare-esp32-p4-wifi6-touch-lcd-3-4c", "model": "ESP32-P4-WIFI6-Touch-LCD-3.4C", "group": "round", "series": "ESP32-P4-WIFI6-Touch-LCD-XC",
+     "title": "ESP32-P4 3.4inch round touch display development board",
+     "params": {"size": "3.4\"", "resolution": "800x800", "brightness": "300cd/m²", "color_gamut": "70% NTSC", "dimensions": "115.00 × 115.00 mm", "active_area": "87.60 × 87.60 mm"},
+     "notes": ["The request listed both round boards as 720×720; Waveshare's product page and wiki give 800×800 for the 3.4C (720×720 is the 4C)."]},
+    {"id": "waveshare-esp32-p4-wifi6-touch-lcd-4c", "model": "ESP32-P4-WIFI6-Touch-LCD-4C", "group": "round", "series": "ESP32-P4-WIFI6-Touch-LCD-XC",
+     "title": "ESP32-P4 4inch round touch display development board",
+     "params": {"size": "4\"", "resolution": "720x720", "brightness": "350cd/m²", "color_gamut": "60% NTSC", "dimensions": "126.00 × 126.00 mm", "active_area": "101.52 × 101.52 mm"}},
+    {"id": "waveshare-esp32-p4-module-dev-kit-b", "model": "ESP32-P4-Module-DEV-KIT-B", "group": "devkit", "series": "ESP32-P4-Module-DEV-KIT",
+     "title": "ESP32-P4-Module-DEV-KIT-B (with 7-DSI-TOUCH-A 7inch display)", "sku": "30843",
+     "params": {"size": "7\"", "resolution": "720x1280", "display_module": "7-DSI-TOUCH-A", "brightness": "450cd/m²", "dimensions": "120.24 × 189.32 mm (display outline)", "active_area": "88.0 × 155.0 mm", "pixel_pitch": "0.12075 × 0.12075 mm"}},
+    {"id": "waveshare-esp32-p4-module-dev-kit-c", "model": "ESP32-P4-Module-DEV-KIT-C", "group": "devkit", "series": "ESP32-P4-Module-DEV-KIT",
+     "title": "ESP32-P4-Module-DEV-KIT-C (with 10.1-DSI-TOUCH-A 10.1inch display)", "sku": "30844",
+     "params": {"size": "10.1\"", "resolution": "800x1280", "display_module": "10.1-DSI-TOUCH-A", "brightness": "400cd/m²", "dimensions": "147.0 × 239.0 mm (display outline)", "active_area": "135.36 × 216.58 mm", "pixel_pitch": "0.1692 × 0.1692 mm"}}
+  ]
+}

@@ -1,0 +1,9 @@
+idf_component_register(SRCS "main.c" "mic.c" "wave_ui.c"
+                            "device/lcd_init.c" "device/backlight.c"
+                            "sd_card.c"
+                       PRIV_REQUIRES esp_codec_dev esp-audio-player esp-libhelix-mp3
+                                     esp_driver_i2c esp_driver_i2s esp_driver_gpio
+                                     esp_driver_spi esp_driver_ledc esp_timer
+                                     esp_lcd esp_lcd_st77916
+                                     esp_driver_sdmmc sdmmc fatfs vfs
+                       INCLUDE_DIRS "")

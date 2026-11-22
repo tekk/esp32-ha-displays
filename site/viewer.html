@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docs viewer – GUITION//CATALOG</title>
+<meta name="theme-color" content="#050806">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/vendor/hljs-github-dark.min.css">
+</head>
+<body>
+<div class="vlayout">
+  <aside class="vside">
+    <div class="vh">
+      <div class="an" id="aname">…</div>
+      <div class="st" id="astats"></div>
+      <div class="toolbar" style="margin:4px 0">
+        <input class="small" id="tfilter" placeholder="filter files… (regex ok)" style="flex:1">
+      </div>
+      <label class="count"><input type="checkbox" id="onlyhosted" checked> browsable only</label>
+      <label class="count" style="margin-left:8px"><input type="checkbox" id="expandall"> expand all</label>
+      <div id="alinks" class="toolbar" style="margin:6px 0 0"></div>
+    </div>
+    <div class="vtree" id="tree"><div class="empty loading">loading manifest</div></div>
+  </aside>
+  <section class="vmain">
+    <div class="vbar"><span class="path" id="vpath"><span class="na">select a file on the left</span></span><span id="vact"></span></div>
+    <div class="vbody" id="vbody"><div class="empty"><pre>
+  ┌─────────────────────────────────────┐
+  │  archive browser                    │
+  │  ▸ folders  📕 pdf  🖼 image  ⌨ code │
+  │  grey = not hosted (in original ZIP)│
+  └─────────────────────────────────────┘</pre></div></div>
+  </section>
+</div>
+<script src="assets/vendor/marked.umd.js"></script>
+<script src="assets/vendor/purify.min.js"></script>
+<script src="assets/vendor/highlight.min.js"></script>
+<script src="assets/vendor/hljs-arduino.min.js"></script>
+<script src="assets/vendor/hljs-cmake.min.js"></script>
+<script src="assets/vendor/hljs-ini.min.js"></script>
+<script src="assets/vendor/hljs-yaml.min.js"></script>
+<script src="assets/vendor/hljs-makefile.min.js"></script>
+<script src="assets/vendor/hljs-dos.min.js"></script>
+<script src="assets/vendor/hljs-x86asm.min.js"></script>
+<script src="assets/vendor/jszip.min.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<dialog x="c" y="m" w="50%" h="50%" highlight="default(alpha=100)" name="Err_Dialog">
+  <view w="100%" h="27" style:bg_color="gray" name="错误">
+    <label name="" x="15" y="0" w="-15" h="100%" style:text_color="black" style:text_align_h="left" style:normal:font_size="24" style:disable:font_size="24" style:focused:font_size="24" tr_text="错误"/>
+    <button name="close" x="r:0" y="0" w="27" h="100%" style:border_color="#00000000" style:bg_color="#00000000" style:over:border_color="#00000000" style:over:bg_color="red" style:pressed:border_color="#00000000" style:pressed:bg_color="red">
+      <property name="text">
+        <![CDATA[X]]>
+      </property>
+    </button>
+  </view>
+  <button name="cancel" x="r:15" y="b:21" w="60" h="27" style:normal:font_size="20" tr_text="取消"/>
+  <button name="ok" x="r:90" y="b:21" w="60" h="27" style:normal:font_size="20" tr_text="确定"/>
+  <label name="label" x="40" y="50" w="160" h="28" style:normal:font_size="20" tr_text="用户名或密码错误，请重新输入 ！"/>
+</dialog>

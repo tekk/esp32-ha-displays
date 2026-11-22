@@ -1,0 +1,12 @@
+# Board information output
+message(STATUS "Selected Board: jc1060f570c")
+message(STATUS "Board Path: /home/jzl/jzl/vscode/project/project/IDF_6.1.0/Guition-main/example/FactoryDemo/JC1060F570-FactoryDemo/managed_components/guition__guition_boards/jc1060f570c")
+
+idf_component_register(
+    SRC_DIRS "." "../../managed_components/guition__guition_boards/jc1060f570c"
+    INCLUDE_DIRS "." "../../managed_components/guition__guition_boards/jc1060f570c"
+    REQUIRES esp_board_manager
+)
+
+# This is equivalent to adding WHOLE_ARCHIVE option to the idf_component_register call above:
+idf_component_set_property(${COMPONENT_NAME} WHOLE_ARCHIVE TRUE)
