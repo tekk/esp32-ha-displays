@@ -33,7 +33,7 @@ Statický, vyhľadávateľný katalóg všetkých displejových dosiek **Guition
 **Všetky ZIP/RAR a dokumenty sú dostupné offline** (nezávisle od pan.jczn1688.com):
 - súbory ≤ 24 MB sú priamo v `site/` (`files/archives`, `files/pan`, `files/guition`, `files/waveshare`, `files/repos`) → servíruje ich GitHub/Cloudflare Pages,
 - väčšie súbory (archívy Guition do ~620 MB, Waveshare demo, snapshoty GitHub repozitárov) sú **GitHub Release assets** v release `files-v1`:
-  `https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/<asset>`; súbory > 2 GB by sa rozdelili na `.001/.002…` (spojenie: `cat name.0* > name`),
+  `https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/<asset>`; súbory > 1 GB sa rozdelia na `.001/.002…` (spojenie: `cat name.0* > name`),
 - pôvodná URL výrobcu zostáva ako „mirror“, sha256 každého súboru je v `site/data/offline.json`,
 - mapovanie *asset ↔ pôvodný názov ↔ URL ↔ sha256* je v `data/release_assets.json` (názvy assetov sú vopred očistené na `[A-Za-z0-9._-]`, aby ich GitHub nepremenoval),
 - komunitné repozitáre sa zrkadlia iba ak majú licenčný súbor (alebo sú oficiálne od výrobcu); ostatné sú len odkazy (`offline.mirror_unlicensed_repos` v `build/config.json`).

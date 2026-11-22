@@ -392,7 +392,11 @@
    "size": 1521893632,
    "sha256": "223d95152ac48d66fa16617c748a460e11e09aa155fd46ee08bfba992e751589",
    "original": "https://github.com/guitionofficial/ESP32-series",
-   "kind": "repo-snapshot"
+   "kind": "repo-snapshot",
+   "parts": [
+    "github-guitionofficial__ESP32-series.zip.001",
+    "github-guitionofficial__ESP32-series.zip.002"
+   ]
   },
   {
    "asset": "github-guitionofficial__K5-series.zip",
@@ -400,7 +404,11 @@
    "size": 1002477597,
    "sha256": "5ee9f8d80f1c5071bdeb4bcae0d289fec32b92d3560bcbf6f4ba626e1419cab4",
    "original": "https://github.com/guitionofficial/K5-series",
-   "kind": "repo-snapshot"
+   "kind": "repo-snapshot",
+   "parts": [
+    "github-guitionofficial__K5-series.zip.001",
+    "github-guitionofficial__K5-series.zip.002"
+   ]
   },
   {
    "asset": "github-guitionofficial__K7_series.zip",
@@ -416,7 +424,11 @@
    "size": 1270376168,
    "sha256": "fc3a45874a05c4d6916804d5f48b3d60e2e68e5f8acd305e460c9092e2e866c9",
    "original": "https://github.com/guitionofficial/P4-series",
-   "kind": "repo-snapshot"
+   "kind": "repo-snapshot",
+   "parts": [
+    "github-guitionofficial__P4-series.zip.001",
+    "github-guitionofficial__P4-series.zip.002"
+   ]
   },
   {
    "asset": "github-guitionofficial__W3-series.zip",
@@ -432,7 +444,12 @@
    "size": 1878518789,
    "sha256": "a362135c5653e20129e2bf0374461e542aeac310bd2b845b889a59c9cfdbe43e",
    "original": "https://github.com/guitionofficial/W5-series",
-   "kind": "repo-snapshot"
+   "kind": "repo-snapshot",
+   "parts": [
+    "github-guitionofficial__W5-series.zip.001",
+    "github-guitionofficial__W5-series.zip.002",
+    "github-guitionofficial__W5-series.zip.003"
+   ]
   },
   {
    "asset": "github-hexeguitar__ESP32_TFT_PIO.zip",

@@ -1235,8 +1235,12 @@
 "original": "https://github.com/guitionofficial/ESP32-series",
 "kind": "repo-snapshot",
 "type": "release",
-"url": "https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__ESP32-series.zip",
+"url": "https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__ESP32-series.zip.001",
 "asset": "github-guitionofficial__ESP32-series.zip",
+"parts": [
+"https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__ESP32-series.zip.001",
+"https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__ESP32-series.zip.002"
+],
 "license_file": null
 },
 "repo:guitionofficial/k5-series": {
@@ -1245,8 +1249,12 @@
 "original": "https://github.com/guitionofficial/K5-series",
 "kind": "repo-snapshot",
 "type": "release",
-"url": "https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__K5-series.zip",
+"url": "https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__K5-series.zip.001",
 "asset": "github-guitionofficial__K5-series.zip",
+"parts": [
+"https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__K5-series.zip.001",
+"https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__K5-series.zip.002"
+],
 "license_file": null
 },
 "repo:guitionofficial/k7_series": {
@@ -1265,8 +1273,12 @@
 "original": "https://github.com/guitionofficial/P4-series",
 "kind": "repo-snapshot",
 "type": "release",
-"url": "https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__P4-series.zip",
+"url": "https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__P4-series.zip.001",
 "asset": "github-guitionofficial__P4-series.zip",
+"parts": [
+"https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__P4-series.zip.001",
+"https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__P4-series.zip.002"
+],
 "license_file": null
 },
 "repo:guitionofficial/q3_series": {
@@ -1294,8 +1306,13 @@
 "original": "https://github.com/guitionofficial/W5-series",
 "kind": "repo-snapshot",
 "type": "release",
-"url": "https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__W5-series.zip",
+"url": "https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__W5-series.zip.001",
 "asset": "github-guitionofficial__W5-series.zip",
+"parts": [
+"https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__W5-series.zip.001",
+"https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__W5-series.zip.002",
+"https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/github-guitionofficial__W5-series.zip.003"
+],
 "license_file": null
 },
 "repo:hexeguitar/esp32_tft_pio": {

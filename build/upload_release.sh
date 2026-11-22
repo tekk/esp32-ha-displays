@@ -13,7 +13,7 @@ mkdir -p "$STAGE"
 if ! gh release view "$TAG" --repo "$REPO" >/dev/null 2>&1; then
   gh release create "$TAG" --repo "$REPO" --title "Offline files ($TAG)" --latest=false \
     --notes "Offline copies of all large files referenced by the catalog (Guition file server archives, Waveshare demos, repository snapshots).
-Mapping asset ↔ original name/URL ↔ sha256: data/release_assets.json in the repository. Files > 2 GB are split into .001/.002… parts – rejoin with: cat name.0* > name"
+Mapping asset ↔ original name/URL ↔ sha256: data/release_assets.json in the repository. Files > 1 GB are split into .001/.002… parts – rejoin with: cat name.0* > name"
 fi
 
 # existing assets: name -> size
