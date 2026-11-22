@@ -30,15 +30,15 @@
       const acts = [];
       if (f.manifest) acts.push(`<a class="btn" href="${viewerURL(f.slug)}">⌕ browse docs</a>`);
       if (f.hosted && f.type !== 'archive') acts.push(`<a class="btn" href="${fileViewerURL(f.hosted, f.name)}">👁 view</a>`);
-      if (f.hosted_archive) acts.push(`<a class="btn" href="${esc(f.hosted_archive)}" download>⇩ zip (mirror)</a>`);
-      acts.push(`<a class="btn" href="${esc(f.url)}" rel="noopener" target="_blank">⇩ original</a>`);
+      if (f.offline) acts.push(offlineLinks(f.offline, f.name, f.url));
+      else acts.push(`<a class="btn" href="${esc(f.url)}" rel="noopener" target="_blank">⇩ original</a> <span class="badge warn">online only</span>`);
       return `<div class="f"><span>${f.type === 'archive' ? '🗜' : '📕'}</span><div><div class="nm">${esc(f.name)} ${f.lang ? `<span class="badge info">${esc(f.lang)}</span>` : ''} ${f.missing ? '<span class="badge warn">missing on server</span>' : ''}</div>
         <div class="meta">${f.size ? fmtBytes(f.size) + ' · ' : ''}${esc(f.origin || '')}${st ? ' · ' + st : ''}${f.note ? ' · ' + esc(f.note) : ''}</div></div><div class="act">${acts.join('')}</div></div>`;
     }).join('') || '<div class="na">no downloadable files known</div>';
     const linkGroups = { vendor: 'Manufacturer', 'official-github': 'Official GitHub', community: 'Community' };
     const links = Object.entries(linkGroups).map(([t, lab]) => {
       const ls = m.links.filter((l) => l.type === t);
-      return ls.length ? `<h3 class="count">${lab}</h3><ul>${ls.map((l) => `<li><a href="${esc(l.url)}" rel="noopener" target="_blank">${esc(l.title)}</a>${l.desc ? ` <span class="na">– ${esc(l.desc)}</span>` : ''}</li>`).join('')}</ul>` : '';
+      return ls.length ? `<h3 class="count">${lab}</h3><ul>${ls.map((l) => `<li><a href="${esc(l.url)}" rel="noopener" target="_blank">${esc(l.title)}</a>${l.offline ? ` <a class="badge ok" href="${esc(l.offline.url)}" title="offline snapshot of the repository (${fmtBytes(l.offline.size)}, ${l.offline.type === 'local' ? 'this site' : 'GitHub release'})">⇩ offline zip</a>` : ''}${l.desc ? ` <span class="na">– ${esc(l.desc)}</span>` : ''}</li>`).join('')}</ul>` : '';
     }).join('');
     const pins = m.pinouts.map((pt) => `<h3 class="count">${esc(pt.title)} <a class="na" href="${esc(pt.source)}">[source]</a></h3><table class="kv2"><tr><th>Function</th><th>Pins</th><th>Notes</th></tr>${pt.rows.map((r) => `<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td class="na">${esc(r[2])}</td></tr>`).join('')}</table>`).join('');
     const bySrc = {};

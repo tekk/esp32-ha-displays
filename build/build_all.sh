@@ -7,6 +7,9 @@ python3 build/fetch_pan.py          # official file server → ../guition-cache/
 python3 build/scrape_guition.py     # guition.com tables + product pages, images, spec PDFs
 python3 build/process_archives.py   # unpack ZIP/RAR, manifests, extract docs into site/docs/b
 python3 build/build_site.py         # merge → site/data/models.json, archives.json, meta.json
+python3 build/fetch_extra.py        # Waveshare downloads + GitHub repo snapshots → ../guition-cache/extra
+python3 build/offline.py            # ≤24 MB → site/, larger → GitHub Release asset list (data/release_assets.json)
 node build/vendor.mjs               # copy JS libs into site/assets/vendor
 node build/build_index.mjs          # prebuilt MiniSearch indexes
 python3 tests/check_links.py
+# then: build/upload_release.sh   (needs `gh auth login`)

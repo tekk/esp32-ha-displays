@@ -14,6 +14,23 @@
   G.modelURL = (id) => 'model.html?id=' + encodeURIComponent(id);
   // parse "16MB" / "384KB" / "32MB (in package)" to bytes for sorting
   G.toBytes = (s) => { const m = /(\d+(?:\.\d+)?)\s*(K|M|G)B?/i.exec(s || ''); if (!m) return null; return parseFloat(m[1]) * { K: 1024, M: 1048576, G: 1073741824 }[m[2].toUpperCase()]; };
+  // primary (offline) download button + badge; original server URL becomes a secondary mirror link
+  G.offlineLinks = (off, name, original) => {
+    const out = [];
+    if (off) {
+      const where = off.type === 'local' ? 'this site' : 'GitHub release';
+      if (off.parts) {
+        out.push(`<span class="badge ok" title="sha256 ${G.esc(off.sha256)}">offline · ${where}</span>`);
+        off.parts.forEach((u, i) => out.push(`<a class="btn pri" href="${G.esc(u)}">⇩ part ${i + 1}/${off.parts.length}</a>`));
+        out.push(`<span class="na" title="rejoin">cat *.0?? &gt; ${G.esc(name)}</span>`);
+      } else {
+        out.push(`<a class="btn pri" href="${G.esc(off.url)}" ${off.type === 'local' ? `download="${G.esc(name)}"` : ''} title="sha256 ${G.esc(off.sha256)}">⇩ download</a>`,
+          `<span class="badge ok" title="stored on ${where}${off.size ? ', ' + G.fmtBytes(off.size) : ''}">offline · ${where}</span>`);
+      }
+    }
+    if (original) out.push(`<a class="btn" href="${G.esc(original)}" rel="noopener" target="_blank" title="original vendor server">↗ mirror: original</a>`);
+    return out.join(' ');
+  };
   G.header = (active) => {
     const nav = [['index.html', 'catalog', 'models'], ['docs.html', 'docs-search', 'docs'], ['files.html', 'archives', 'files'], ['about.html', 'about', 'about']];
     const el = document.createElement('header');

@@ -131,7 +131,7 @@
     body.innerHTML = '<div class="empty loading">loading</div>';
     const k = f.kind === 'code' || f.kind === 'text' ? 'code' : (f.kind === 'other' || f.kind === 'office' ? kindOf(path) : f.kind);
     if (!f.blob && !ZIP) {
-      body.innerHTML = `<div class="empty">⚠ <b>${esc(segs[segs.length - 1])}</b> (${fmtBytes(f.size)}) is not hosted on this site (size/type budget).<br><br>It is inside the original archive: <a href="${esc(MAN.url)}" target="_blank" rel="noopener">${esc(MAN.name)}</a> (${fmtBytes(MAN.size)})${MAN.hosted_archive ? `<br><br><button id="loadzip">open full archive in browser (JSZip, ${fmtBytes(MAN.size)})</button>` : ''}</div>`;
+      body.innerHTML = `<div class="empty">⚠ <b>${esc(segs[segs.length - 1])}</b> (${fmtBytes(f.size)}) is not hosted on this site (size/type budget).<br><br>It is inside the archive <b>${esc(MAN.name)}</b> (${fmtBytes(MAN.size)}):<br><br>${offlineLinks(MAN.offline, MAN.name, MAN.url)}${MAN.hosted_archive ? `<br><br><button id="loadzip">open full archive in browser (JSZip, ${fmtBytes(MAN.size)})</button>` : ''}</div>`;
       const lz = $('#loadzip'); if (lz) lz.onclick = () => loadZip().then(() => show(path));
       return;
     }
@@ -217,7 +217,7 @@
     $('#aname').textContent = '🗜 ' + man.name;
     const models = (meta.slug2models[slug] || []);
     $('#astats').innerHTML = `${s.files} files · ${fmtBytes(s.bytes)} unpacked · <b>${s.hosted_files}</b> browsable (${fmtBytes(s.hosted_bytes)})<br>archive ${fmtBytes(man.size)} · folder “${esc(man.dir)}”`;
-    $('#alinks').innerHTML = `<a class="btn" href="${esc(man.url)}" target="_blank" rel="noopener">⇩ original</a>` + (man.hosted_archive ? ` <button id="zipbtn">open full zip</button>` : '')
+    $('#alinks').innerHTML = offlineLinks(man.offline, man.name, man.url) + (man.hosted_archive ? ` <button id="zipbtn">open full zip</button>` : '')
       + (models.length ? ` <span class="na">for:</span> ` + models.slice(0, 6).map((m) => `<a href="index.html#q=${encodeURIComponent(m)}">${esc(m)}</a>`).join(', ') : '');
     const zb = $('#zipbtn'); if (zb) zb.onclick = () => loadZip();
     const want = qparam('p');

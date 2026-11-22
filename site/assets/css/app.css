@@ -107,6 +107,8 @@ table.grid img.th { width: 46px; height: 34px; object-fit: contain; background: 
 .tag.v-Waveshare { color: var(--acc2); }
 .badge { font-size: 10.5px; padding: 0 5px; border: 1px solid; }
 .badge.warn { color: var(--warn); border-color: var(--warn); }
+.badge.ok { color: #000; background: var(--acc); border-color: var(--acc); font-weight: 700; }
+.btn.pri { background: #0f3a22; border-color: var(--acc); }
 .badge.info { color: var(--acc2); border-color: var(--acc2); }
 
 /* detail */

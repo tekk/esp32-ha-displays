@@ -29,10 +29,18 @@ Statický, vyhľadávateľný katalóg všetkých displejových dosiek **Guition
 Žiadne vymyslené parametre. Každá hodnota pochádza z reálneho zdroja (guition.com tabuľka modelov EN/SK, produktové stránky, PDF, waveshare.com / docs.waveshare.com, komunitné repozitáre) a jej URL je uložená. Prázdne = neznáme. Ak si zdroje výrobcu odporujú, zobrazí sa varovanie „source conflict“.
 *No invented specs; every value has a stored source URL; empty = unknown; manufacturer-internal disagreements are flagged.*
 
-## Hosting a veľkosti / Hosting & size limits
-- Pôvodné archívy (až ~600 MB) sa **neukladajú** do repozitára – iba odkaz na oficiálny server. Archívy ≤ 20 MB sú zrkadlené v `site/files/archives/`.
-- Web má ~10 200 súborov / ~610 MB, najväčší súbor < 25 MiB → spĺňa **Cloudflare Pages** (20 000 súborov, 25 MiB/súbor) aj **GitHub Pages** (100 MB/súbor, odporúčané ≤ 1 GB).
-- Rozpočty sa nastavujú v `build/config.json` (`limits.max_file_bytes`, `total_hosted_bytes`, `max_hosted_files_total`, `host_archive_max_bytes`, …).
+## Hosting a offline súbory / Hosting & offline files
+**Všetky ZIP/RAR a dokumenty sú dostupné offline** (nezávisle od pan.jczn1688.com):
+- súbory ≤ 24 MB sú priamo v `site/` (`files/archives`, `files/pan`, `files/guition`, `files/waveshare`, `files/repos`) → servíruje ich GitHub/Cloudflare Pages,
+- väčšie súbory (archívy Guition do ~620 MB, Waveshare demo, snapshoty GitHub repozitárov) sú **GitHub Release assets** v release `files-v1`:
+  `https://github.com/tekk/esp32-ha-displays/releases/download/files-v1/<asset>`; súbory > 2 GB by sa rozdelili na `.001/.002…` (spojenie: `cat name.0* > name`),
+- pôvodná URL výrobcu zostáva ako „mirror“, sha256 každého súboru je v `site/data/offline.json`,
+- mapovanie *asset ↔ pôvodný názov ↔ URL ↔ sha256* je v `data/release_assets.json` (názvy assetov sú vopred očistené na `[A-Za-z0-9._-]`, aby ich GitHub nepremenoval),
+- komunitné repozitáre sa zrkadlia iba ak majú licenčný súbor (alebo sú oficiálne od výrobcu); ostatné sú len odkazy (`offline.mirror_unlicensed_repos` v `build/config.json`).
+
+*All files are available offline: ≤ 24 MB inside `site/`, larger ones as GitHub Release assets (tag `files-v1`), original vendor URL kept as mirror. Upload / re-upload with `build/upload_release.sh` (needs `gh auth login`).*
+
+Limity: web ~10 200 súborov / ~710 MB, žiadny súbor > 24 MB → spĺňa Cloudflare Pages (20 000 súborov, 25 MiB/súbor) aj GitHub Pages (≤ 1 GB). Rozpočty: `build/config.json` (`limits.*`, `offline.*`).
 
 ## Lokálne spustenie / Run locally
 ```bash
@@ -42,6 +50,7 @@ python3 -m http.server -d site 8080     # http://localhost:8080
 ## Nasadenie / Deploy
 
 ### GitHub Pages
+0. Release assets: `gh auth login && build/upload_release.sh`
 1. Vytvor repozitár a pushni (`git remote add origin git@github.com:<user>/guition-catalog.git && git push -u origin main`).
 2. Settings → Pages → **Source: GitHub Actions**.
 3. Workflow `.github/workflows/pages.yml` pri každom pushi do `main` nahrá priečinok `site/` (bez buildu – všetko je predgenerované).

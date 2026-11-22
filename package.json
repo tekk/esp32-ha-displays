@@ -7,8 +7,9 @@
   "scripts": {
     "vendor": "node build/vendor.mjs",
     "index": "node build/build_index.mjs",
-    "build": "python3 build/build_site.py && node build/build_index.mjs",
-    "serve": "python3 -m http.server -d site 8080"
+    "build": "python3 build/build_site.py && python3 build/offline.py && node build/build_index.mjs",
+    "serve": "python3 -m http.server -d site 8080",
+    "release": "bash build/upload_release.sh"
   },
   "devDependencies": {
     "minisearch": "^7.1.0",

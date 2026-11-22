@@ -120,5 +120,19 @@
     "PC_monitor/*": {
       "max_files": 20
     }
+  },
+  "offline": {
+    "release_repo": "tekk/esp32-ha-displays",
+    "release_tag": "files-v1",
+    "local_max_bytes": 24000000,
+    "release_asset_max_bytes": 2000000000,
+    "split_part_bytes": 1900000000,
+    "extra_dir": "../guition-cache/extra",
+    "mirror_unlicensed_repo_owners": [
+      "guitionofficial",
+      "waveshareteam"
+    ],
+    "pages_url": "https://tekk.github.io/esp32-ha-displays/",
+    "mirror_unlicensed_repos": false
   }
 }

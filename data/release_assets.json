@@ -1,0 +1,486 @@
+{
+ "repo": "tekk/esp32-ha-displays",
+ "tag": "files-v1",
+ "assets": [
+  {
+   "asset": "esp32-module-1-28inch-esp32-2424s012.zip",
+   "src": "../guition-cache/pan/ESP32 module/1.28inch_ESP32-2424S012.zip",
+   "size": 118417978,
+   "sha256": "f022b3521cba9ca64c6d6df668848052ca1120043908da91fbc461b1f77b55a6",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/1.28inch_ESP32-2424S012.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-1-9inch-esp32-1732s019.zip",
+   "src": "../guition-cache/pan/ESP32 module/1.9inch_ESP32-1732S019.zip",
+   "size": 92816393,
+   "sha256": "cd00c5ef6b8a19547ef3364008145a4584662fb2796b4d7396294b5de2005b18",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/1.9inch_ESP32-1732S019.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-2-2inch-esp32-2432s022.zip",
+   "src": "../guition-cache/pan/ESP32 module/2.2inch_ESP32-2432S022.zip",
+   "size": 118011381,
+   "sha256": "a7d8954d7dbc82c8c36f746f823653a84493ad29b6068d9350a6f42acc0503e6",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/2.2inch_ESP32-2432S022.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-2-4inch-esp32-2432s024.zip",
+   "src": "../guition-cache/pan/ESP32 module/2.4inch_ESP32-2432S024.zip",
+   "size": 111929805,
+   "sha256": "74652cb39c9e9742735d112459f75d3bd5c03ade152414b566a8f2dc8dc10342",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/2.4inch_ESP32-2432S024.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-2-8inch-esp32-2432s028r.rar",
+   "src": "../guition-cache/pan/ESP32 module/2.8inch_ESP32-2432S028R.rar",
+   "size": 252636403,
+   "sha256": "21a1757aa3d1a836b0c41c7da653412b8a67928f5454ecc032c579876f674c3e",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/2.8inch_ESP32-2432S028R.rar",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-3-2inch-esp32-2432s032.zip",
+   "src": "../guition-cache/pan/ESP32 module/3.2inch_ESP32-2432S032.zip",
+   "size": 118957973,
+   "sha256": "a9f09fa1bd0f0f048b7df096068793fa2d49e90496cb403fd1d8fd17b6a8ac94",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/3.2inch_ESP32-2432S032.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-3-5inch-esp32-3248s035.zip",
+   "src": "../guition-cache/pan/ESP32 module/3.5inch_ESP32-3248S035.zip",
+   "size": 113565206,
+   "sha256": "e7940f2b250dc3176a27daf1c6bd40ad2db4b2559a3452b24bf53be994a5b701",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/3.5inch_ESP32-3248S035.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-4-0inch-esp32-4848s040.zip",
+   "src": "../guition-cache/pan/ESP32 module/4.0inch_ESP32-4848S040.zip",
+   "size": 90999059,
+   "sha256": "c14b4343e6dc31340870764880dfb66cc773e2b9f2dbb4d857070ee69b995710",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/4.0inch_ESP32-4848S040.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-4-3inch-esp32-4827s043.zip",
+   "src": "../guition-cache/pan/ESP32 module/4.3inch_ESP32-4827S043.zip",
+   "size": 117374196,
+   "sha256": "36f87fe770ad2410c5a83dd57fccc54ab3f661bf5c5ca2773aa2716ca71387d2",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/4.3inch_ESP32-4827S043.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-4-3inch-esp32-8048s043.zip",
+   "src": "../guition-cache/pan/ESP32 module/4.3inch_ESP32-8048S043.zip",
+   "size": 117214225,
+   "sha256": "ca3ce4b8097f9eda75c6e62db600bd719426abdc567580c72c9e10d45dd62fe7",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/4.3inch_ESP32-8048S043.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-5-0inch-esp32-8048s050.zip",
+   "src": "../guition-cache/pan/ESP32 module/5.0inch_ESP32-8048S050.zip",
+   "size": 123913450,
+   "sha256": "ea2814b56759e0cf6b478ceea6e0a96c7824e0c1fdfa0f7ae4829be43038886b",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/5.0inch_ESP32-8048S050.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "esp32-module-7-0inch-esp32-8048s070.zip",
+   "src": "../guition-cache/pan/ESP32 module/7.0inch_ESP32-8048S070.zip",
+   "size": 128550415,
+   "sha256": "b7561eeb58a28496e182aa9cc6fc5d7e5c9235be77e77464c61a7ef8f31cf9fd",
+   "original": "https://pan.jczn1688.com/directlink/1/ESP32%20module/7.0inch_ESP32-8048S070.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "f100s-f1c100s-keil.rar",
+   "src": "../guition-cache/pan/F100S/F1C100S_keil开发文件.rar",
+   "size": 325901991,
+   "sha256": "f24e77c05432d9b832953f75801a20364b98245245949803fd226cc7022bf830",
+   "original": "https://pan.jczn1688.com/directlink/1/F100S/F1C100S_keil%E5%BC%80%E5%8F%91%E6%96%87%E4%BB%B6.rar",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "f100s-lc-pi-200s.rar",
+   "src": "../guition-cache/pan/F100S/LC-PI-200S.rar",
+   "size": 166023779,
+   "sha256": "8945100be02d8069b04de4c47301dab98dccc437db65217b4eb73e62270d3621",
+   "original": "https://pan.jczn1688.com/directlink/1/F100S/LC-PI-200S.rar",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "f100s-sdk.rar",
+   "src": "../guition-cache/pan/F100S/sdk.rar",
+   "size": 31546992,
+   "sha256": "6cbd5a2b32b681d9980169269ca7b559d703429a7e41cc33a8d2a790b75755fa",
+   "original": "https://pan.jczn1688.com/directlink/1/F100S/sdk.rar",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc-esp32p4-m3-c6.zip",
+   "src": "../guition-cache/pan/HMI display/JC-ESP32P4-M3-C6.zip",
+   "size": 258525251,
+   "sha256": "00930508f235b3f607953bd0fa2b52fb2bcc603b7e5f2841c645579682e92207",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC-ESP32P4-M3-C6.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc-esp32p4-m3-dev.zip",
+   "src": "../guition-cache/pan/HMI display/JC-ESP32P4-M3-DEV.zip",
+   "size": 259017372,
+   "sha256": "0159215c6e721f79c1bc65724c3bfeef9f0dd8f4afad62dfc18910d3babc71c3",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC-ESP32P4-M3-DEV.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc1060f570c-i-w-y.zip",
+   "src": "../guition-cache/pan/HMI display/JC1060F570C_I_W_Y.zip",
+   "size": 146843702,
+   "sha256": "1f00ddfd32a34d30940cbdacf322cb51c1b53b27504754b477f7dfe8b0f73617",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC1060F570C_I_W_Y.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc1060p470c-i-w.zip",
+   "src": "../guition-cache/pan/HMI display/JC1060P470C_I_W.zip",
+   "size": 200194110,
+   "sha256": "d2c5af2b44927eecb1f69070497f901caaddb6ffefd9ef305ee464b6b5d3dc83",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC1060P470C_I_W.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc1060p470c-i-w-y.zip",
+   "src": "../guition-cache/pan/HMI display/JC1060P470C_I_W_Y.zip",
+   "size": 369979692,
+   "sha256": "13f15f30ce16a057720eb0014a15495a4c8fa0ad4eb25f845a7a7985c16f1e3b",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC1060P470C_I_W_Y.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc2424w513.zip",
+   "src": "../guition-cache/pan/HMI display/JC2424W513.zip",
+   "size": 243338599,
+   "sha256": "f425dbdc1672b1ef54aa125c972e4a4748c5f1083fef6029a0e7b6269879d62e",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC2424W513.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc2432w328.zip",
+   "src": "../guition-cache/pan/HMI display/JC2432W328.zip",
+   "size": 102259280,
+   "sha256": "59e1b2b1bfa38c0eb3ae683dc55c28ad1fe5f3661411d81a6777099e642766d0",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC2432W328.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc3248w535cn.zip",
+   "src": "../guition-cache/pan/HMI display/JC3248W535CN.zip",
+   "size": 482071229,
+   "sha256": "2606dfb06520a851efe0f2f9401a66fbe465fe15f796710b5d5f3a85f4f7dc0f",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC3248W535CN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc3248w535en.zip",
+   "src": "../guition-cache/pan/HMI display/JC3248W535EN.zip",
+   "size": 502913510,
+   "sha256": "e9f27e75639da5ffda13ad4f6d7b2cb9dfde78fc728f98174c677232a6474c59",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC3248W535EN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc3636f118-knob-cn.zip",
+   "src": "../guition-cache/pan/HMI display/JC3636F118_knob_CN.zip",
+   "size": 184077197,
+   "sha256": "2c60e83afa550d4ffac746cf98436af75c648e6f4013a11abe769f33b1711f5d",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC3636F118_knob_CN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc3636f118-knob-en.zip",
+   "src": "../guition-cache/pan/HMI display/JC3636F118_knob_EN.zip",
+   "size": 184226683,
+   "sha256": "ad2903b783d51318f7b5d5fc23ce569196ef9a4d5202fa33390aaead35246b35",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC3636F118_knob_EN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc3636f318-knob-en.zip",
+   "src": "../guition-cache/pan/HMI display/JC3636F318_knob_EN.zip",
+   "size": 157822497,
+   "sha256": "2e29ad94dea315d70b7489c2d05243254174242f8653eb3ebed7395eeb700209",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC3636F318_knob_EN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc3636k518cn-knob-cn.zip",
+   "src": "../guition-cache/pan/HMI display/JC3636K518CN_knob_CN.zip",
+   "size": 541407139,
+   "sha256": "05ef7a53b285a078aa714d989edb6867a25b5d61a330ee9d74fe0de190b0d004",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC3636K518CN_knob_CN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc3636k518cn-knob-en.zip",
+   "src": "../guition-cache/pan/HMI display/JC3636K518CN_knob_EN.zip",
+   "size": 622866565,
+   "sha256": "a94dbf427ba797178835e37874ad6b068088e078920d7156e263f256f727bf16",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC3636K518CN_knob_EN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc3636k718-knob-en.zip",
+   "src": "../guition-cache/pan/HMI display/JC3636K718_knob_EN.zip",
+   "size": 304873988,
+   "sha256": "3324509b6ada81e01d897bb8851ca247b4dc5aa7ca3081e0e2b8c35d760608ce",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC3636K718_knob_EN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc3636w518cn.zip",
+   "src": "../guition-cache/pan/HMI display/JC3636W518CN.zip",
+   "size": 414830109,
+   "sha256": "590b36c1a78e7d31dc2c0bc56be5cc5e5043b75a5acb59d2f7847b263b33e798",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC3636W518CN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc3636w518en.zip",
+   "src": "../guition-cache/pan/HMI display/JC3636W518EN.zip",
+   "size": 141893851,
+   "sha256": "e79aa4c7ff37a95988afa211290501e8beeed878c91f22c89e8d663999860145",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC3636W518EN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc4827w543.zip",
+   "src": "../guition-cache/pan/HMI display/JC4827W543.zip",
+   "size": 121280467,
+   "sha256": "e7a5013a702d9fade1f8624483c79f5dc0d05c15dda0d12707418bb26e1310c2",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC4827W543.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc4880p443c-i-w.zip",
+   "src": "../guition-cache/pan/HMI display/JC4880P443C_I_W.zip",
+   "size": 477630572,
+   "sha256": "34e0f0aa80a9097f0649c7e93b1aece92c5e2bc237fd9fb6dd5875259fa61467",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC4880P443C_I_W.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc8012p4a1c-i-w-y.zip",
+   "src": "../guition-cache/pan/HMI display/JC8012P4A1C_I_W_Y.zip",
+   "size": 421427604,
+   "sha256": "a7baa659afcd9619e32d63801559c3b4bac5b5d102e2b786632933447788f3cd",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC8012P4A1C_I_W_Y.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc8048f550c-i-w-y.zip",
+   "src": "../guition-cache/pan/HMI display/JC8048F550C_I_W_Y.zip",
+   "size": 91723599,
+   "sha256": "7ccf39fc65a904733b19fca5afd1082c23429d6e22ce6d11187f52c00662276e",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC8048F550C_I_W_Y.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-jc8048w550.zip",
+   "src": "../guition-cache/pan/HMI display/JC8048W550.zip",
+   "size": 200825837,
+   "sha256": "6baf89c7a55b42a3634d436d30d4c03d2176749237cd2641d237f540656c0206",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC8048W550.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "hmi-display-xiaozhi-jc3636w518cn.zip",
+   "src": "../guition-cache/pan/HMI display/xiaozhi_JC3636W518CN.zip",
+   "size": 27003953,
+   "sha256": "61500cde38a3903adaedf083ea0568237e3998a9b1d9a1be75224376a668365b",
+   "original": "https://pan.jczn1688.com/directlink/1/HMI%20display/xiaozhi_JC3636W518CN.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "pc-monitor-pc-monitor.zip",
+   "src": "../guition-cache/pan/PC_monitor/PC_monitor.zip",
+   "size": 46440366,
+   "sha256": "56e2e63bf7f822dac539bab03535cc6e1b69e17592a7e88fabde3c7b249265ae",
+   "original": "https://pan.jczn1688.com/directlink/1/PC_monitor/PC_monitor.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "spi-display-module-1-8inch-spi-module-st7735s.zip",
+   "src": "../guition-cache/pan/SPI  display module/1.8inch_SPI_Module_ST7735S.zip",
+   "size": 40227802,
+   "sha256": "4482e72789f6fb84d8dbf514f5525c3f01d511d31e685e8036fb2f74d30e0b59",
+   "original": "https://pan.jczn1688.com/directlink/1/SPI%20%20display%20module/1.8inch_SPI_Module_ST7735S.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "spi-display-module-2-4inch-spi-module-ili9341.zip",
+   "src": "../guition-cache/pan/SPI  display module/2.4inch_SPI_Module_ILI9341.zip",
+   "size": 38920121,
+   "sha256": "1641beb806ece13831dfaa0f61ec82a90d90200c6a9a03675c888eac725daf04",
+   "original": "https://pan.jczn1688.com/directlink/1/SPI%20%20display%20module/2.4inch_SPI_Module_ILI9341.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "spi-display-module-2-8inch-spi-module-ili9341.zip",
+   "src": "../guition-cache/pan/SPI  display module/2.8inch_SPI_Module_ILI9341.zip",
+   "size": 38653229,
+   "sha256": "dc0cbfe7acb1c567fce39719e16fca317094839ec32f6e76553bee6acfaa1cc6",
+   "original": "https://pan.jczn1688.com/directlink/1/SPI%20%20display%20module/2.8inch_SPI_Module_ILI9341.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "spi-display-module-3-5inch-spi-module-ili9488.zip",
+   "src": "../guition-cache/pan/SPI  display module/3.5inch_SPI_Module_ILI9488.zip",
+   "size": 58528798,
+   "sha256": "2e97ee2104a317dd965b1a7691d019ff48c36e308a783364d4cc01a8d48580ab",
+   "original": "https://pan.jczn1688.com/directlink/1/SPI%20%20display%20module/3.5inch_SPI_Module_ILI9488.zip",
+   "kind": "guition-server"
+  },
+  {
+   "asset": "waveshare-ESP32-P4-WIFI6-Touch-LCD-XC-Demo.zip",
+   "src": "../guition-cache/extra/waveshare/ESP32-P4-WIFI6-Touch-LCD-XC-Demo.zip",
+   "size": 117768225,
+   "sha256": "b5319593738e114270852d84be0fdd8ccdc21ef1dac897b15f4fad5069dd66b8",
+   "original": "https://files.waveshare.com/wiki/ESP32-P4-WIFI6-Touch-LCD-XC/ESP32-P4-WIFI6-Touch-LCD-XC-Demo.zip",
+   "kind": "vendor-file"
+  },
+  {
+   "asset": "github-GalusPeres__HomeTiles.zip",
+   "src": "../guition-cache/extra/github/GalusPeres__HomeTiles.zip",
+   "size": 88161648,
+   "sha256": "db236357555a28925e6f12c06a544611157e1a64025e797104fc19fbecf132e3",
+   "original": "https://github.com/GalusPeres/HomeTiles",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-MaxGramser__homeassistant_espscreen.zip",
+   "src": "../guition-cache/extra/github/MaxGramser__homeassistant_espscreen.zip",
+   "size": 41601010,
+   "sha256": "67c4ba888db9e0fa7117b852e3412474b1306695903d9f27a6226dae3c5dcc08",
+   "original": "https://github.com/MaxGramser/homeassistant_espscreen",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-NorthernMan54__JC3248W535EN.zip",
+   "src": "../guition-cache/extra/github/NorthernMan54__JC3248W535EN.zip",
+   "size": 360196595,
+   "sha256": "d77495566cf6850fa77a6e6c69ccfce7bd1876d3eb33cedf6aa359876d3d38a3",
+   "original": "https://github.com/NorthernMan54/JC3248W535EN",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-fbiego__esp32-c3-mini.zip",
+   "src": "../guition-cache/extra/github/fbiego__esp32-c3-mini.zip",
+   "size": 31778372,
+   "sha256": "8847b4aa0ca14464bef7aaa6d9de2ed426773dc88dc0b015667936340995b154",
+   "original": "https://github.com/fbiego/esp32-c3-mini",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-guitionofficial__ESP32-series.zip",
+   "src": "../guition-cache/extra/github/guitionofficial__ESP32-series.zip",
+   "size": 1521893632,
+   "sha256": "223d95152ac48d66fa16617c748a460e11e09aa155fd46ee08bfba992e751589",
+   "original": "https://github.com/guitionofficial/ESP32-series",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-guitionofficial__K5-series.zip",
+   "src": "../guition-cache/extra/github/guitionofficial__K5-series.zip",
+   "size": 1002477597,
+   "sha256": "5ee9f8d80f1c5071bdeb4bcae0d289fec32b92d3560bcbf6f4ba626e1419cab4",
+   "original": "https://github.com/guitionofficial/K5-series",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-guitionofficial__K7_series.zip",
+   "src": "../guition-cache/extra/github/guitionofficial__K7_series.zip",
+   "size": 543993569,
+   "sha256": "a0cacd0be8ebc820c449eb93dfd205569f3ac6de8b20d693584d13f9c44d6d7d",
+   "original": "https://github.com/guitionofficial/K7_series",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-guitionofficial__P4-series.zip",
+   "src": "../guition-cache/extra/github/guitionofficial__P4-series.zip",
+   "size": 1270376168,
+   "sha256": "fc3a45874a05c4d6916804d5f48b3d60e2e68e5f8acd305e460c9092e2e866c9",
+   "original": "https://github.com/guitionofficial/P4-series",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-guitionofficial__W3-series.zip",
+   "src": "../guition-cache/extra/github/guitionofficial__W3-series.zip",
+   "size": 88444494,
+   "sha256": "9b621a0160198cd41802ea644438fe2adef400deedc4f99df6fd05683a707ec7",
+   "original": "https://github.com/guitionofficial/W3-series",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-guitionofficial__W5-series.zip",
+   "src": "../guition-cache/extra/github/guitionofficial__W5-series.zip",
+   "size": 1878518789,
+   "sha256": "a362135c5653e20129e2bf0374461e542aeac310bd2b845b889a59c9cfdbe43e",
+   "original": "https://github.com/guitionofficial/W5-series",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-hexeguitar__ESP32_TFT_PIO.zip",
+   "src": "../guition-cache/extra/github/hexeguitar__ESP32_TFT_PIO.zip",
+   "size": 34736397,
+   "sha256": "9f1d7c423bca52f9264d31f1e1570eeccdcf90382704059e48e01f696d80d8c5",
+   "original": "https://github.com/hexeguitar/ESP32_TFT_PIO",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-indecenti__NucleoOS-P4.zip",
+   "src": "../guition-cache/extra/github/indecenti__NucleoOS-P4.zip",
+   "size": 120011343,
+   "sha256": "f2afd408552a1970b07b76ba8322e4a01aff7e9d0cae3b05136aa58fe84ba4ec",
+   "original": "https://github.com/indecenti/NucleoOS-P4",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-rzeldent__platformio-espressif32-sunton.zip",
+   "src": "../guition-cache/extra/github/rzeldent__platformio-espressif32-sunton.zip",
+   "size": 68088685,
+   "sha256": "b5e5d23df87215408fd2bf9f268acba4d2c2b4057504fcd57832d5d0870ad990",
+   "original": "https://github.com/rzeldent/platformio-espressif32-sunton",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-waveshareteam__ESP32-P4-WIFI6-Touch-LCD-X.zip",
+   "src": "../guition-cache/extra/github/waveshareteam__ESP32-P4-WIFI6-Touch-LCD-X.zip",
+   "size": 61129444,
+   "sha256": "c67240e145f35ad2adb342be1e4109044dd2b11f5303004f3aef4386a210dc78",
+   "original": "https://github.com/waveshareteam/ESP32-P4-WIFI6-Touch-LCD-X",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-waveshareteam__ESP32-P4-WIFI6-Touch-LCD-XC.zip",
+   "src": "../guition-cache/extra/github/waveshareteam__ESP32-P4-WIFI6-Touch-LCD-XC.zip",
+   "size": 152400192,
+   "sha256": "72ae0a4c392b216d1907d0efc2cff8e3720ddcab4f2aac354bb16570259b6ac0",
+   "original": "https://github.com/waveshareteam/ESP32-P4-WIFI6-Touch-LCD-XC",
+   "kind": "repo-snapshot"
+  },
+  {
+   "asset": "github-witnessmenow__ESP32-Cheap-Yellow-Display.zip",
+   "src": "../guition-cache/extra/github/witnessmenow__ESP32-Cheap-Yellow-Display.zip",
+   "size": 26817591,
+   "sha256": "87a64d37e7cda92c71382d38814e3c1204738524b3934453e240b7d5163fcb6f",
+   "original": "https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display",
+   "kind": "repo-snapshot"
+  }
+ ]
+}

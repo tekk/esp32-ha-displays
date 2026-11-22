@@ -14,6 +14,12 @@ for m in models:
 for a in arch:
     for k in ('hosted', 'hosted_archive', 'manifest'):
         if a.get(k) and not ex(a[k]): miss.append(a[k])
+off = json.load(open(f'{S}/data/offline.json'))
+for k, e in off['files'].items():
+    if e['type'] == 'local' and not ex(e['url']): miss.append('offline ' + e['url'])
+    if e['type'] == 'release' and not e['url'].startswith(off['release']['base']): miss.append('bad release url ' + e['url'])
+no_off = [f['url'] for m in models for f in m['files'] if not f.get('offline')] + [a['url'] for a in arch if not a.get('offline')]
+print('files without offline copy:', len(no_off), no_off[:5])
 blobs = 0
 for mf in glob.glob(f'{S}/data/manifests/*.json'):
     for r in json.load(open(mf))['tree']:
