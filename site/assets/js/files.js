@@ -1,13 +1,12 @@
 /* list of every archive / file on the official file server + mapping to models */
 (function () {
   'use strict';
-  window.promptText = 'ls -lh /pan.jczn1688.com';
   header('files');
   Promise.all([getJSON('data/archives.json'), getJSON('data/meta.json'), getJSON('data/models.json'), getJSON('data/offline.json')]).then(([arch, meta, models, off]) => {
     const byModel = Object.fromEntries(models.map((m) => [m.model, m.id]));
     const tot = arch.reduce((s, a) => s + (a.size || 0), 0);
     const hostedF = arch.reduce((s, a) => s + (a.stats ? a.stats.hosted_files : 0), 0);
-    $('#app').innerHTML = `<div class="hero"><h1>&gt; archives<span class="cursor"></span></h1>
+    $('#app').innerHTML = `<div class="hero"><h1>Files &amp; archives</h1>
       <p class="na">${arch.length} files on the official Guition file server (${fmtBytes(tot)} total). <b>Every file is available offline</b>: files ≤ 24 MB are stored on this site, larger ones as <a href="${esc(off.release.base.replace('/download/', '/tag/').replace(/\/$/, ''))}">GitHub release assets</a>; the original vendor server stays as a mirror. ${hostedF} documentation files were extracted and are browsable here.</p></div>
       <div class="toolbar"><input id="flt" class="small" placeholder="filter…" style="min-width:260px"><span class="count" id="cnt"></span></div>
       <div class="tblwrap"><table class="grid" id="tbl"><thead><tr><th data-k="dir">folder</th><th data-k="name">file</th><th data-k="size">size</th><th data-k="files">files inside</th><th data-k="hosted">browsable</th><th>models</th><th>actions</th></tr></thead><tbody></tbody></table></div>`;

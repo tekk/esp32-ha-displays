@@ -18,7 +18,7 @@ from urllib.parse import quote
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = json.load(open(os.path.join(ROOT, 'build', 'config.json')))
 L = CFG['limits']
-CACHE = os.path.normpath(os.path.join(ROOT, CFG['cache_dir']))
+CACHE = os.path.normpath(os.environ.get('GUITION_CACHE') or os.path.join(ROOT, CFG['cache_dir']))
 SITE = os.path.join(ROOT, CFG['site_dir'])
 TMP = os.path.join(CACHE, 'tmp')
 EXT_KIND = {}
@@ -168,8 +168,14 @@ def pdf_text(fp):
         return ''
 
 
-def main():
+def main(only=None):
+    """only=None: full rebuild from the local cache (all archives).
+    only=[paths]: incremental mode (used by build/update.py on CI): process just these freshly downloaded
+    files and merge the result into the existing data/raw/{archives,docs_text}.json + manifests."""
     pan = json.load(open(os.path.join(ROOT, 'data/raw/pan_files.json')))
+    if only is not None:
+        only = set(only)
+        pan = [f for f in pan if f['path'] in only]
     os.makedirs(os.path.join(SITE, 'data/manifests'), exist_ok=True)
     os.makedirs(os.path.join(SITE, 'docs/b'), exist_ok=True)
     archives = []
@@ -217,6 +223,14 @@ def main():
     all_entries.sort(key=lambda t: (t[1].tier, 0 if PRIO_RE.search(t[1].path) else 1, t[1].size))
     per_bytes, per_files = {}, {}
     used_bytes, used_files = 0, 0
+    if only is not None:                                  # budget already used by the untouched archives
+        bdir = os.path.join(SITE, 'docs/b')
+        used_bytes = sum(os.path.getsize(os.path.join(bdir, fn)) for fn in os.listdir(bdir))
+        used_files = len(os.listdir(bdir))
+        for r in json.load(open(os.path.join(ROOT, 'data/raw/archives.json'))):
+            if r['path'] in only and r.get('stats'):
+                used_bytes -= r['stats'].get('hosted_bytes', 0)
+                used_files -= r['stats'].get('hosted_files', 0)
     selected = {}
     skipped_budget = 0
     for rec, e in all_entries:
@@ -291,6 +305,25 @@ def main():
         json.dump(man, open(mp, 'w'), ensure_ascii=False, separators=(',', ':'))
         rec['manifest'] = os.path.relpath(mp, SITE)
         print(f"  {rec['name']}: {stats['files']} files, hosted {stats['hosted_files']} ({stats['hosted_bytes']/1e6:.1f} MB)")
+    if only is not None:
+        old = json.load(open(os.path.join(ROOT, 'data/raw/archives.json')))
+        new = {r['path']: r for r in archives}
+        order = [r['path'] for r in json.load(open(os.path.join(ROOT, 'data/raw/pan_files.json')))]
+        merged = {r['path']: r for r in old if r['path'] not in new}
+        merged.update(new)
+        archives = sorted(merged.values(), key=lambda r: order.index(r['path']) if r['path'] in order else 1e9)
+        slugs = {r['slug'] for r in new.values()}
+        docs_text = [d for d in json.load(open(os.path.join(ROOT, 'data/raw/docs_text.json'))) if d['archive'] not in slugs] + docs_text
+        written = set()                                   # referenced = every blob named in any manifest on disk
+        mdir = os.path.join(SITE, 'data/manifests')
+        live = {r['slug'] for r in archives}
+        for fn in os.listdir(mdir):
+            if fn[:-5] not in live:
+                os.remove(os.path.join(mdir, fn))
+                continue
+            for row in json.load(open(os.path.join(mdir, fn))).get('tree', []):
+                if row[2]:
+                    written.add(row[2])
     json.dump(archives, open(os.path.join(ROOT, 'data/raw/archives.json'), 'w'), indent=1, ensure_ascii=False)
     json.dump(docs_text, open(os.path.join(ROOT, 'data/raw/docs_text.json'), 'w'), ensure_ascii=False)
     # remove blobs no longer referenced
@@ -301,4 +334,8 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--only', nargs='+', help='incremental: process only these pan paths and merge')
+    a = ap.parse_args()
+    main(a.only)

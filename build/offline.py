@@ -15,8 +15,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, 'site')
 CFG = json.load(open(os.path.join(ROOT, 'build/config.json')))
 O = CFG['offline']
-CACHE = os.path.normpath(os.path.join(ROOT, CFG['cache_dir']))
-EXTRA = os.path.normpath(os.path.join(ROOT, O['extra_dir']))
+CACHE = os.path.normpath(os.environ.get('GUITION_CACHE') or os.path.join(ROOT, CFG['cache_dir']))
+EXTRA = os.path.join(os.environ['GUITION_CACHE'], 'extra') if os.environ.get('GUITION_CACHE') else os.path.normpath(os.path.join(ROOT, O['extra_dir']))
 REL_BASE = f"https://github.com/{O['release_repo']}/releases/download/{O['release_tag']}/"
 HASHES_F = os.path.join(ROOT, 'data/raw/offline_hashes.json')
 HASHES = json.load(open(HASHES_F)) if os.path.exists(HASHES_F) else {}
@@ -37,8 +37,31 @@ def safe(name):
     return re.sub(r'-{2,}', '-', name) or 'file'
 
 assets, offline = [], {}
+# previous run's results: lets the build run without the multi-GB download cache (CI / monthly update):
+# unchanged files whose source is not on disk keep their recorded placement, size and sha256.
+_OJ = os.path.join(SITE, 'data/offline.json')
+PREV = json.load(open(_OJ)) if os.path.exists(_OJ) else {}
+PREV_FILES, PREV_REPOS = PREV.get('files', {}), PREV.get('repos', {})
+_RA = os.path.join(ROOT, 'data/release_assets.json')
+PREV_ASSETS = {a['asset']: a for a in json.load(open(_RA))['assets']} if os.path.exists(_RA) else {}
+MISSING = []
+
+def reuse(key, local_rel=None):
+    prev = PREV_FILES.get(key)
+    if not prev:
+        MISSING.append(key)
+        return None
+    if prev['type'] == 'local' and not os.path.exists(os.path.join(SITE, prev['url'])):
+        MISSING.append(key)
+        return None
+    if prev['type'] == 'release' and prev.get('asset') in PREV_ASSETS:
+        assets.append(PREV_ASSETS[prev['asset']])
+    offline[key] = prev
+    return prev
 
 def place(key, src, asset, local_rel, original, kind, extra=None):
+    if not os.path.exists(src):
+        return reuse(key, local_rel)
     size = os.path.getsize(src)
     ent = {'size': size, 'sha256': sha256(src), 'original': original, 'kind': kind}
     if size <= O['local_max_bytes']:
@@ -75,12 +98,14 @@ def main():
         else:
             local = f"files/archives/{a['slug']}{ext}"
         ent = place('pan:' + a['slug'], src, safe(a['slug']) + ext, local, a['url'], 'guition-server')
+        if not ent:
+            continue
         a['offline'] = ent
         if ext == '.zip' and ent['type'] == 'local' and not a.get('hosted_archive'):
             a['hosted_archive'] = ent['url']          # small zips can be opened completely by the viewer (JSZip)
     by_slug = {a['slug']: a for a in archives}
     for a in archives:                                   # manifests carry the offline link for the viewer
-        if a.get('manifest'):
+        if a.get('manifest') and a.get('offline'):
             mp = os.path.join(SITE, a['manifest'])
             man = json.load(open(mp))
             if man.get('offline') != a['offline'] or man.get('hosted_archive') != a.get('hosted_archive'):
@@ -91,6 +116,8 @@ def main():
         for f in m['files']:
             if f.get('slug') in by_slug:
                 a = by_slug[f['slug']]
+                if not a.get('offline'):
+                    continue
                 f['offline'] = a['offline']
                 f['hosted_archive'] = a.get('hosted_archive')
                 continue
@@ -102,11 +129,9 @@ def main():
                 continue
             name = unquote(urlsplit(f['url']).path.rsplit('/', 1)[-1])
             src = os.path.join(EXTRA, 'waveshare', name)
-            if not os.path.exists(src):
+            if f['url'] not in offline and not place(f['url'], src, 'waveshare-' + safe(name), 'files/waveshare/' + safe(name), f['url'], 'vendor-file'):
                 print('MISSING offline copy for', f['url'])
                 continue
-            if f['url'] not in offline:
-                place(f['url'], src, 'waveshare-' + safe(name), 'files/waveshare/' + safe(name), f['url'], 'vendor-file')
             f['offline'] = offline[f['url']]
             f['size'] = f.get('size') or offline[f['url']]['size']
     # 3) GitHub repository snapshots (only repos with a licence file, or vendor-official repos)
@@ -117,7 +142,10 @@ def main():
             continue
         src = os.path.join(EXTRA, 'github', r.replace('/', '__') + '.zip')
         if not os.path.exists(src):
-            repo_info[r] = {'mirrored': False, 'reason': 'download failed'}
+            if PREV_REPOS.get(r) and (not PREV_REPOS[r]['mirrored'] or reuse('repo:' + r.lower())):
+                repo_info[r] = PREV_REPOS[r]
+            else:
+                repo_info[r] = {'mirrored': False, 'reason': 'download failed'}
             continue
         try:
             names = zipfile.ZipFile(src).namelist()
@@ -142,11 +170,13 @@ def main():
     json.dump({'release': {'repo': O['release_repo'], 'tag': O['release_tag'], 'base': REL_BASE}, 'files': offline, 'repos': repo_info},
               open(os.path.join(SITE, 'data/offline.json'), 'w'), ensure_ascii=False, indent=0)
     json.dump({'repo': O['release_repo'], 'tag': O['release_tag'], 'assets': assets}, open(os.path.join(ROOT, 'data/release_assets.json'), 'w'), ensure_ascii=False, indent=1)
-    json.dump(HASHES, open(HASHES_F, 'w'))
+    json.dump({k: v for k, v in HASHES.items() if os.path.exists(k.rsplit('|', 2)[0])}, open(HASHES_F, 'w'))   # drop temp paths (CI)
     loc = [e for e in offline.values() if e['type'] == 'local']
     print(f"offline: {len(offline)} files – local {len(loc)} ({sum(e['size'] for e in loc)/1e6:.0f} MB), "
           f"release assets {len(assets)} ({sum(a['size'] for a in assets)/1e9:.2f} GB, split: {[a['asset'] for a in assets if a.get('parts')]})")
     print('repos not mirrored:', {k: v['reason'] for k, v in repo_info.items() if not v['mirrored']})
+    if MISSING:
+        print('MISSING (no source and no previous record):', MISSING)
     names = [a['asset'] for a in assets]
     assert len(names) == len(set(names)), 'duplicate asset names'
 

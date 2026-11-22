@@ -1,0 +1,3 @@
+Meslo LG – Copyright (c) 2009-2013 André Berg. Derived from Bitstream Vera Sans Mono / Menlo.
+Licensed under the Apache License, Version 2.0 – http://www.apache.org/licenses/LICENSE-2.0
+Source: https://github.com/andreberg/Meslo-Font

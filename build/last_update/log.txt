@@ -1,0 +1,71 @@
+14:24:35 update start (live), cache /tmp/ci-cache, delete-after True
+14:24:35 disk free: 16.5 GB
+14:24:35 == pan
+14:24:39 pan: 60 files listed (8.74 GB), previously 59
+14:24:55 pan: 1 new/changed files to process
+14:24:55   download Parallel port display module/4.3inch_8080_Module_SSD1963.zip (3.2 MB)
+14:24:55 $ /usr/bin/python3 build/process_archives.py --only Parallel port display module/4.3inch_8080_Module_SSD1963.zip
+    reading Parallel port display module/4.3inch_8080_Module_SSD1963.zip
+    selected blobs 7 bytes 457491266 skipped (budget) 0
+      4.3inch_8080_Module_SSD1963.zip: 71 files, hosted 7 (3.8 MB)
+    docs text entries 4941
+14:24:56 $ /usr/bin/python3 build/build_site.py
+    models 104 {'Guition': 97, 'Waveshare': 7}
+    unassigned archives ['F1C100S_keil开发文件.rar', 'LC-PI-200S.rar', 'PCB1-070D02-A1.pdf', 'sdk.rar', 'PC_monitor.zip', 'USB-SERIAL CH340.rar']
+14:24:56 $ /usr/bin/python3 build/offline.py
+    offline: 162 files – local 102 (200 MB), release assets 60 (16.12 GB, split: ['github-guitionofficial__ESP32-series.zip', 'github-guitionofficial__K5-series.zip', 'github-guitionofficial__P4-series.zip', 'github-guitionofficial__W5-series.zip'])
+    repos not mirrored: {'CelliesProjects/JC8012P4A1-LVGL': 'no licence file – linked only', 'CristianoGorla/guition-jc1060p470c-bsp-full-feature-demo': 'no licence file – linked only', 'DRubioG/JC-ESP32P4-M3-DEV': 'no licence file – linked only', 'LEKPCSTEAM/ESP32-2432S022C-IDF': 'no licence file – linked only', 'MMlodzinski/Sunton_ESP32-8048S070c_ESP_IDF_LVGL_example': 'no licence file – linked only', 'NoosaHydro/2.4inch_ESP32-2432S024': 'no licence file – linked only', 'OttoMeister/ESP32-1732S019': 'no licence file – linked only', 'ZyoungInc/JC4880P443C_BSP': 'no licence file – linked only', 'bigbag/JC4880P443C-examples': 'no licence file – linked only', 'cheops/JC1060P470C_I_W': 'no licence file – linked only', 'clowrey/ESPhome-JC3248W535EN': 'no licence file – linked only', 'clowrey/esphome-guition-360x360-jc3636w518': 'no licence file – linked only', 'kpeeem/3.2inch_ESP32-2432S032': 'no licence file – linked only', 'limpens/esp32-8048S043': 'no licence file – linked only', 'maxpill/JC2432W328': 'no licence file – linked only', 'moononournation/JC3636W518': 'no licence file – linked only', 'mr-sven/esp32-8048S050C': 'no licence file – linked only', 'nkinnan/Waveshare-ESP32-S3-Knob-Touch-LCD-1.8_and_Guition-K5-Knob-Series-JC3636K518': 'no licence file – linked only', 'profi-max/JC4827W543_4.3inch_ESP32S3_board': 'no licence file – linked only', 'profi-max/JC8012P4A1_BSP_ESP32P4': 'no licence file – linked only', 'sukesh-ak/JC1060P470C_I_W-GUITION-ESP32-P4_ESP32-C6': 'no licence file – linked only', 'sukesh-ak/JC8012P4A1-GUITION-ESP32-P4_ESP32-C6': 'no licence file – linked only', 'ultramcu/guition-jc4880p443c-i-w': 'no licence file – linked only', 'vldmr-d/Guition-ESP32-S3-JC4827W543R_I': 'no licence file – linked only', 'wegi1/ESP32P4-JC1060P470C-I_W_Y': 'no licence file – linked only', 'wegi1/ESP32P4-JC8012P4A1C-I_W_Y': 'no licence file – linked only', 'willcrawf/knobby-guition-notes': 'no licence file – linked only'}
+14:24:57   deleted local copy pan/Parallel port display module/4.3inch_8080_Module_SSD1963.zip
+14:24:57 == guition
+14:24:57 guition: table 59 rows (was 59), sitemap 180 product pages (known 182)
+14:24:57 $ /usr/bin/python3 build/scrape_guition.py
+    en 59 table rows
+    sk 59 table rows
+    182 product pages
+    products 182 with model 178
+14:25:40 skip waveshare
+14:25:40 skip github
+14:25:40 == rebuild
+14:25:40 $ /usr/bin/python3 build/build_site.py
+    models 104 {'Guition': 97, 'Waveshare': 7}
+    unassigned archives ['F1C100S_keil开发文件.rar', 'LC-PI-200S.rar', 'PCB1-070D02-A1.pdf', 'sdk.rar', 'PC_monitor.zip', 'USB-SERIAL CH340.rar']
+14:25:41 $ /usr/bin/python3 build/offline.py
+    offline: 162 files – local 102 (200 MB), release assets 60 (16.12 GB, split: ['github-guitionofficial__ESP32-series.zip', 'github-guitionofficial__K5-series.zip', 'github-guitionofficial__P4-series.zip', 'github-guitionofficial__W5-series.zip'])
+    repos not mirrored: {'CelliesProjects/JC8012P4A1-LVGL': 'no licence file – linked only', 'CristianoGorla/guition-jc1060p470c-bsp-full-feature-demo': 'no licence file – linked only', 'DRubioG/JC-ESP32P4-M3-DEV': 'no licence file – linked only', 'LEKPCSTEAM/ESP32-2432S022C-IDF': 'no licence file – linked only', 'MMlodzinski/Sunton_ESP32-8048S070c_ESP_IDF_LVGL_example': 'no licence file – linked only', 'NoosaHydro/2.4inch_ESP32-2432S024': 'no licence file – linked only', 'OttoMeister/ESP32-1732S019': 'no licence file – linked only', 'ZyoungInc/JC4880P443C_BSP': 'no licence file – linked only', 'bigbag/JC4880P443C-examples': 'no licence file – linked only', 'cheops/JC1060P470C_I_W': 'no licence file – linked only', 'clowrey/ESPhome-JC3248W535EN': 'no licence file – linked only', 'clowrey/esphome-guition-360x360-jc3636w518': 'no licence file – linked only', 'kpeeem/3.2inch_ESP32-2432S032': 'no licence file – linked only', 'limpens/esp32-8048S043': 'no licence file – linked only', 'maxpill/JC2432W328': 'no licence file – linked only', 'moononournation/JC3636W518': 'no licence file – linked only', 'mr-sven/esp32-8048S050C': 'no licence file – linked only', 'nkinnan/Waveshare-ESP32-S3-Knob-Touch-LCD-1.8_and_Guition-K5-Knob-Series-JC3636K518': 'no licence file – linked only', 'profi-max/JC4827W543_4.3inch_ESP32S3_board': 'no licence file – linked only', 'profi-max/JC8012P4A1_BSP_ESP32P4': 'no licence file – linked only', 'sukesh-ak/JC1060P470C_I_W-GUITION-ESP32-P4_ESP32-C6': 'no licence file – linked only', 'sukesh-ak/JC8012P4A1-GUITION-ESP32-P4_ESP32-C6': 'no licence file – linked only', 'ultramcu/guition-jc4880p443c-i-w': 'no licence file – linked only', 'vldmr-d/Guition-ESP32-S3-JC4827W543R_I': 'no licence file – linked only', 'wegi1/ESP32P4-JC1060P470C-I_W_Y': 'no licence file – linked only', 'wegi1/ESP32P4-JC8012P4A1C-I_W_Y': 'no licence file – linked only', 'willcrawf/knobby-guition-notes': 'no licence file – linked only'}
+14:25:41 $ /usr/bin/python3 build/photos.py
+    photos: 96/104 boards with photos, 5 ≥1000px, 711 images, 15.1 MB; missing: ['ESP32-2432S022 (diagram only)', '4.3inch_8080_Module_SSD1963', '5.0inch_8080_Module_SSD1963', '7.0inch_8080_Module_SSD1963', 'JC1216A018N', 'JC2424W513', 'JC2432A024N', 'JC2432A028N']
+14:25:51 $ node build/build_index.mjs
+    models index 0.20 MB docs index 9.05 MB snippets 1.27 MB docs 4941
+14:25:54 $ /usr/bin/python3 build/gen_sw.py
+    sw.js c29cbd6fa552 65 precached files
+14:25:54 $ /usr/bin/python3 tests/check_links.py
+    files without offline copy: 0 []
+    files: 11327 (CF limit 20000) total 737 MB; >25MiB: []; manifest blob refs 41171; missing: 0
+14:25:55 $ git status --porcelain
+     M site/data/search-docs.json
+     M site/docs.html
+     M site/files.html
+     M site/index.html
+     M site/model.html
+     M site/viewer.html
+     M tests/e2e.py
+    ?? .github/workflows/monthly-update.yml
+    ?? build/fonts.py
+    ?? build/gen_sw.py
+    ?? build/last_update/
+    ?? build/photos.py
+    ?? build/update.py
+    ?? build/update.sh
+    ?? data/curated/photos.json
+    ?? data/raw/photo_stats.json
+    ?? screenshots/02-hover-preview.png
+    ?? screenshots/03-catalog-cards-filtered.png
+    ?? screenshots/04-model-JC1060P470C_I_W_Y.png
+    ?? screenshots/05-viewer-JC4880P443C_I_W.png
+    ?? site/assets/fonts/
+    ?? site/assets/img/hd/
+    ?? site/assets/img/th/
+    ?? site/manifest.webmanifest
+    ?? site/sw.js
+14:25:55 57 changed paths in the repository
+14:25:55 done in 79.6s – new boards 0, new files 1, changed 0, errors 0

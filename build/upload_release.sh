@@ -2,6 +2,9 @@
 # (Re)upload large files as GitHub Release assets, driven by data/release_assets.json (written by build/offline.py).
 # Requires: gh (authenticated: `gh auth login`), jq. Idempotent: assets already present with the same size are skipped.
 # Usage: build/upload_release.sh [--force]
+#   ONLY_ASSETS="a.zip b.zip"  limit to these asset names (used by build/update.py)
+#   Entries whose source file is not on disk (CI runner without the download cache) are skipped
+#   when the asset already exists in the release, otherwise reported as failures.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 FORCE=${1:-}
@@ -34,6 +37,12 @@ n=$(jq '.assets | length' data/release_assets.json)
 for i in $(seq 0 $((n-1))); do
   asset=$(jq -r ".assets[$i].asset" data/release_assets.json)
   src=$(jq -r ".assets[$i].src" data/release_assets.json)
+  if [ -n "${ONLY_ASSETS:-}" ] && [[ " $ONLY_ASSETS " != *" $asset "* ]]; then continue; fi
+  if [ ! -e "$src" ]; then
+    first=$(jq -r "(.assets[$i].parts // [.assets[$i].asset])[0]" data/release_assets.json)
+    if [ -n "${HAVE[$first]:-}" ]; then echo "keep  $asset (no local source, already released)"; else echo "MISSING source for $asset: $src" >&2; FAIL=1; fi
+    continue
+  fi
   if jq -e ".assets[$i].parts" data/release_assets.json >/dev/null; then
     bytes=$(jq -r .offline.split_part_bytes build/config.json)
     src_abs=$(realpath "$src")

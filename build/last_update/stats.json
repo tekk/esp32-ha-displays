@@ -1,0 +1,26 @@
+{
+ "started": "2026-11-22T13:24:35+00:00",
+ "dry_run": false,
+ "new_boards": [],
+ "removed_boards": [],
+ "new_files": [
+  {
+   "source": "guition-server",
+   "path": "Parallel port display module/4.3inch_8080_Module_SSD1963.zip",
+   "size": 3240369
+  }
+ ],
+ "changed_files": [],
+ "removed_upstream": [],
+ "new_repos": [],
+ "updated_repos": [],
+ "waveshare_candidates": [],
+ "uploaded_assets": [],
+ "bytes_downloaded": 3240369,
+ "errors": [],
+ "warnings": [],
+ "commit": null,
+ "pushed": false,
+ "duration_s": 79.6,
+ "finished": "2026-11-22T13:25:55+00:00"
+}

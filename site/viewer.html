@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; frame-src 'self' blob: data:; worker-src 'self'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Docs viewer – GUITION//CATALOG</title>
-<meta name="theme-color" content="#050806">
+<title>Docs viewer – ESP32 Display Catalog</title>
+<meta name="theme-color" content="#0e0f11">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/app.css">
 <link rel="stylesheet" href="assets/vendor/hljs-github-dark.min.css">
@@ -26,12 +28,7 @@
   </aside>
   <section class="vmain">
     <div class="vbar"><span class="path" id="vpath"><span class="na">select a file on the left</span></span><span id="vact"></span></div>
-    <div class="vbody" id="vbody"><div class="empty"><pre>
-  ┌─────────────────────────────────────┐
-  │  archive browser                    │
-  │  ▸ folders  📕 pdf  🖼 image  ⌨ code │
-  │  grey = not hosted (in original ZIP)│
-  └─────────────────────────────────────┘</pre></div></div>
+    <div class="vbody" id="vbody"><div class="empty">Select a file on the left. Grey entries are not extracted on this site – download the archive to get them.</div></div>
   </section>
 </div>
 <script src="assets/vendor/marked.umd.js"></script>

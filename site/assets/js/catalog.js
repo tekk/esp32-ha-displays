@@ -157,13 +157,13 @@
     $('#facets').innerHTML = html;
     const chips = [];
     for (const [k, s] of Object.entries(st.f)) s.forEach((v) => chips.push(`<span class="chip x" data-k="${k}" data-v="${esc(v)}"><b>${esc(k)}</b>=${esc(v)}</span>`));
-    $('#chips').innerHTML = chips.join('') || '<span class="na">none — click values below or type key:value</span>';
+    $('#chips').innerHTML = chips.join('') || '<span class="na">None — pick values below or type key:value</span>';
   }
   const cell = (m, k, q) => {
     const p = m.params;
     switch (k) {
-      case 'thumb': { const im = m.images[0]; return `<td>${im ? `<img class="th" loading="lazy" src="${esc(im.src)}" alt="">` : ''}</td>`; }
-      case 'model': return `<td class="m"><a href="${modelURL(m.id)}">${highlight(m.model, q)}</a>${m.notes.some((n) => n.level === 'warning') ? ' <span class="badge warn" title="variant warning">!</span>' : ''}${m.downloads_only ? ' <span class="badge info" title="only on the file server">fs</span>' : ''}</td>`;
+      case 'thumb': { const im = m.images[0]; return `<td>${im ? `<a href="${modelURL(m.id)}" data-pv="${esc(m.id)}" tabindex="-1"><img class="th" loading="lazy" src="${esc(im.thumb || im.src)}" alt="${esc(m.model)}"></a>` : ''}</td>`; }
+      case 'model': return `<td class="m"><a href="${modelURL(m.id)}" data-pv="${esc(m.id)}">${highlight(m.model, q)}</a>${m.notes.some((n) => n.level === 'warning') ? ' <span class="badge warn" title="variant warning">!</span>' : ''}${m.downloads_only ? ' <span class="badge info" title="only on the file server">fs</span>' : ''}</td>`;
       case 'files': { const a = m.files.filter((f) => f.type === 'archive').length, d = m.files.length - a; return `<td class="dim">${a ? a + '🗜 ' : ''}${d ? d + '📕' : ''}</td>`; }
       case 'tags': return `<td>${m.tags.slice(0, 6).map((t) => `<span class="tag" data-tag="${esc(t)}">${esc(t)}</span>`).join(' ')}</td>`;
       default: { const v = val(m, k); return `<td class="${v ? '' : 'na'}" title="${esc(v)}">${v ? esc(String(v).length > 34 ? String(v).slice(0, 32) + '…' : v) : '—'}</td>`; }
@@ -180,7 +180,7 @@
     return `<div class="cards">${list.map((m) => {
       const p = m.params, im = m.images[0];
       const kv = [['size', p.size], ['res', p.resolution], ['mcu', p.mcu_family], ['touch', p.touch], ['iface', p.interface], ['flash', p.flash], ['psram', p.psram]].filter((x) => x[1]);
-      return `<div class="card"><a href="${modelURL(m.id)}" class="im" style="background-image:url('${im ? esc(im.src) : ''}')"><span class="vend">${esc(m.vendor)}</span></a>
+      return `<div class="card"><a href="${modelURL(m.id)}" class="im" data-pv="${esc(m.id)}" style="background-image:url('${im ? esc(im.thumb || im.src) : ''}')"><span class="vend">${esc(m.vendor)}</span></a>
         <div class="bd"><a class="md" href="${modelURL(m.id)}">${highlight(m.model, q)}</a>
         <div class="kv">${kv.map(([k, v]) => `<span>${k}</span><span>${esc(v)}</span>`).join('')}</div>
         <div class="tags">${m.tags.filter((t) => !t.startsWith('vendor:')).slice(0, 8).map((t) => `<span class="tag" data-tag="${esc(t)}">${esc(t)}</span>`).join('')}</div></div></div>`;
@@ -190,14 +190,14 @@
     const { list, counts, fallback } = compute();
     renderFacets(counts);
     $('#count').innerHTML = `<b>${list.length}</b> / ${MODELS.length} boards${fallback ? ' <span class="na">(no exact match – showing any-term results)</span>' : ''}`;
+    hidePop();
     $('#results').innerHTML = list.length ? (st.view === 'cards' ? renderCards(list) : renderTable(list))
-      : `<div class="empty"><pre>  ┌──────────────────────┐\n  │  0 matches. grep -v  │\n  └──────────────────────┘</pre><br>try fewer terms or <a href="#" id="clearall">reset filters</a></div>`;
+      : `<div class="empty">No boards match. Try fewer terms or <a href="#" id="clearall">reset filters</a>.</div>`;
     $('#vtable').classList.toggle('on', st.view === 'table');
     $('#vcards').classList.toggle('on', st.view === 'cards');
     $('#colsmenu').style.display = st.view === 'table' ? '' : 'none';
     $('#sort').value = st.sort;
-    $('#dir').textContent = st.dir === 'asc' ? '↑ asc' : '↓ desc';
-    $('#promptcmd').textContent = 'ls ./boards' + (st.q ? ` | grep -i "${st.q}"` : '') + Object.entries(st.f).filter(([, s]) => s.size).map(([k, s]) => ` | filter ${k}=${[...s].join(',')}`).join('');
+    $('#dir').textContent = st.dir === 'asc' ? '↑ Asc' : '↓ Desc';
     writeHash();
     window.__lastList = list;
   }
@@ -258,6 +258,60 @@
   }
   function reset() { st.q = ''; st.f = {}; st.sort = 'size'; st.dir = 'asc'; $('#q').value = ''; render(); }
 
+  // ---------- hover preview (mouse hover + keyboard focus; no-op on touch – tap opens the detail page)
+  const POP_KEYS = [['size', 'Size'], ['resolution', 'Resolution'], ['panel', 'Panel'], ['touch', 'Touch'], ['interface', 'Display interface'], ['driver_ic', 'Display driver'],
+    ['mcu', 'MCU'], ['coprocessor', 'Co-processor'], ['frequency', 'CPU'], ['flash', 'Flash'], ['psram', 'PSRAM'], ['sram', 'SRAM'], ['wifi', 'Wi-Fi'], ['bt', 'Bluetooth'],
+    ['ethernet', 'Ethernet'], ['rs485', 'RS-485'], ['speaker', 'Speaker'], ['shell', 'Case'], ['dimensions', 'Dimensions'], ['voltage', 'Supply'], ['power', 'Power']];
+  const pop = document.createElement('div');
+  pop.className = 'pop'; pop.setAttribute('role', 'tooltip'); pop.id = 'boardpop';
+  document.body.appendChild(pop);
+  let popTimer = null, popFor = null, lastPointer = 'mouse';
+  function popHTML(m) {
+    const p = m.params, im = m.images.find((i) => i.kind === 'photo') || m.images[0];
+    const rows = POP_KEYS.filter(([k]) => p[k]).map(([k, l]) => `<dt>${l}</dt><dd title="${esc(p[k])}">${esc(String(p[k]).length > 60 ? String(p[k]).slice(0, 58) + '…' : p[k])}</dd>`).join('');
+    const ports = portsOf(m);
+    const warn = m.notes.find((n) => n.level === 'warning');
+    return `<div class="ph ${im ? '' : 'none'}">${im ? `<img src="${esc(im.thumb || im.src)}" data-hd="${esc(im.src)}" alt="${esc(m.model)}">${im.kind !== 'photo' ? `<div class="src">${esc(im.kind)} · ${esc(im.note || '')}</div>` : ''}` : 'no photo available'}</div>
+      <div class="inf"><h3>${esc(m.model)}</h3><div class="sub">${esc([m.vendor, p.category].filter(Boolean).join(' · '))}</div>
+      <dl>${rows}</dl>
+      ${ports.length ? `<h4>Ports, connectors &amp; interfaces</h4><ul class="ports">${ports.slice(0, 14).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+      ${warn ? `<div class="warnline">⚠ ${esc(warn.text.split('. ')[0])}.</div>` : ''}</div>`;
+  }
+  function placePop(anchor) {
+    const r = anchor.getBoundingClientRect(), vw = window.innerWidth, vh = window.innerHeight, gap = 14;
+    const pw = pop.offsetWidth, ph = pop.offsetHeight;
+    let x = r.right + gap;
+    if (x + pw > vw - 8) x = r.left - gap - pw;
+    if (x < 8) x = Math.max(8, Math.min(vw - pw - 8, r.left));
+    let y = r.top + r.height / 2 - ph / 2;
+    if (x < r.right && x + pw > r.left) y = r.bottom + gap + ph > vh - 8 ? r.top - gap - ph : r.bottom + gap;   // overlapping horizontally → above/below
+    y = Math.max(8, Math.min(vh - ph - 8, y));
+    pop.style.left = Math.round(x) + 'px'; pop.style.top = Math.round(y) + 'px';
+  }
+  function showPop(anchor) {
+    const m = BYID[anchor.dataset.pv];
+    if (!m) return;
+    popFor = anchor;
+    pop.innerHTML = popHTML(m);
+    pop.classList.add('on');
+    anchor.setAttribute('aria-describedby', 'boardpop');
+    placePop(anchor);
+    const img = pop.querySelector('img[data-hd]');
+    if (img && img.dataset.hd !== img.getAttribute('src')) { const hd = new Image(); hd.onload = () => { if (popFor === anchor) { img.src = hd.src; placePop(anchor); } }; hd.src = img.dataset.hd; }
+    if (img) img.onload = () => { if (popFor === anchor) placePop(anchor); };
+  }
+  function hidePop() { clearTimeout(popTimer); if (popFor) popFor.removeAttribute('aria-describedby'); popFor = null; pop.classList.remove('on'); }
+  function bindPop() {
+    const res = $('#results');
+    res.addEventListener('pointerover', (e) => { lastPointer = e.pointerType || 'mouse'; const a = e.target.closest('[data-pv]'); if (!a || lastPointer !== 'mouse') return; if (a === popFor) return; clearTimeout(popTimer); popTimer = setTimeout(() => showPop(a), 280); });
+    res.addEventListener('pointerout', (e) => { const a = e.target.closest('[data-pv]'); if (!a || (e.relatedTarget && a.contains(e.relatedTarget))) return; hidePop(); });
+    res.addEventListener('focusin', (e) => { const a = e.target.closest('[data-pv]'); if (a && lastPointer !== 'touch') { clearTimeout(popTimer); popTimer = setTimeout(() => showPop(a), 150); } });
+    res.addEventListener('focusout', hidePop);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hidePop(); });
+    window.addEventListener('scroll', () => { if (popFor) hidePop(); }, { passive: true, capture: true });
+    window.addEventListener('resize', () => { if (popFor) hidePop(); });
+  }
+
   header('models');
   readHash();
   Promise.all([getJSON('data/models.json'), getJSON('data/meta.json'), loadIndex('data/search-models.json', MODEL_INDEX_OPTS)]).then(([models, meta, idx]) => {
@@ -267,6 +321,7 @@
     $('#stats').innerHTML = `<span><b>${models.length}</b> boards</span>` + Object.entries(c).map(([v, n]) => `<span>${esc(v)}: <b>${n}</b></span>`).join('')
       + `<span><b>${meta.archives}</b> archives (${fmtBytes(meta.archive_bytes)})</span><span><b>${meta.hosted_blobs}</b> docs hosted</span><span>updated <b>${esc(meta.generated.slice(0, 10))}</b></span>`;
     bind();
+    bindPop();
     render();
     footer(meta);
   }).catch((e) => { $('#results').innerHTML = `<div class="empty">failed to load data: ${esc(e.message)}<br>serve the site over http (python3 -m http.server -d site)</div>`; });

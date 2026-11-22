@@ -11,8 +11,7 @@
   Promise.all([getJSON('data/models.json'), getJSON('data/meta.json')]).then(([models, meta]) => {
     const m = models.find((x) => x.id === id) || models.find((x) => x.model === id);
     if (!m) { $('#app').innerHTML = `<div class="empty"><pre>404: board "${esc(id)}" not found</pre><br><a href="index.html">← back to catalog</a></div>`; return; }
-    document.title = m.model + ' – GUITION//CATALOG';
-    $('#promptcmd').textContent = 'cat ./boards/' + m.model + '.spec';
+    document.title = m.model + ' – ESP32 Display Catalog';
     const L = meta.field_labels;
     const p = m.params;
     const srcFor = (key) => (m.specs_raw.find((r) => r.key === key) || {}).source;
@@ -23,6 +22,9 @@
       return `<tr><td>${esc(L[k] || k)}</td><td>${link}${s ? ` <a class="na" href="${esc(s)}" title="source: ${esc(s)}">↗</a>` : ''}</td></tr>`;
     }).join('');
     const imgs = m.images;
+    const host = (u) => { try { return new URL(u).host; } catch (e) { return ''; } };
+    const capOf = (im) => `${esc(im.kind === 'photo' ? 'Photo' : im.kind === 'diagram' ? 'Board diagram' : 'Drawing')} · ${im.w}×${im.h}${im.source_page ? ` · source: <a href="${esc(im.source_page)}" target="_blank" rel="noopener">${esc(host(im.source_page))}</a>` : im.orig ? ' · ' + esc(host(im.orig)) : ''}${im.note ? ' · ' + esc(im.note) : ''}`;
+    const ports = portsOf(m);
     const notes = m.notes.map((n) => `<div class="note ${esc(n.level)}"><b class="lvl">${n.level === 'warning' ? '⚠ WARNING' : 'ℹ NOTE'}</b> ${esc(n.text)}${n.sk ? `<br><i>SK: ${esc(n.sk)}</i>` : ''}${n.source ? `<div class="src">source: <a href="${esc(n.source)}">${esc(n.source)}</a></div>` : ''}</div>`).join('');
     const conflicts = m.conflicts.length ? `<div class="note warning"><b class="lvl">⚠ SOURCE CONFLICT</b> The manufacturer's own pages disagree:<ul>${m.conflicts.map((c) => `<li>${esc(c.field)}: ${Object.entries(c.values).map(([v, s]) => `<b>${esc(v)}</b> (${esc(s.join(', '))})`).join(' vs ')}</li>`).join('')}</ul>Check the spec PDF / archive.</div>` : '';
     const files = m.files.map((f) => {
@@ -48,8 +50,8 @@
     $('#app').innerHTML = `
       <div class="toolbar"><a href="index.html">← catalog</a><span class="na">/ ${esc(p.category || m.vendor)} /</span><b>${esc(m.model)}</b></div>
       <div class="dhead">
-        <div class="gallery">${imgs.length ? `<div class="main" id="gmain" style="background-image:url('${esc(imgs[0].src)}')"></div>
-          <div class="thumbs">${imgs.map((im, i) => `<img src="${esc(im.src)}" data-i="${i}" class="${i ? '' : 'sel'}" loading="lazy" alt="" title="${esc(im.note || im.orig)}">`).join('')}</div>` : '<div class="main empty">no image</div>'}</div>
+        <div class="gallery">${imgs.length ? `<div class="main" id="gmain" role="img" aria-label="${esc(m.model)}" style="background-image:url('${esc(imgs[0].src)}')"></div><div class="cap" id="gcap">${capOf(imgs[0])}</div>
+          <div class="thumbs">${imgs.map((im, i) => `<img src="${esc(im.thumb || im.src)}" data-i="${i}" class="${i ? '' : 'sel'}" loading="lazy" alt="${esc(im.kind)}" title="${esc(im.kind + (im.note ? ' – ' + im.note : ''))}">`).join('')}</div>` : '<div class="main empty"></div><div class="cap">No photo available for this board.</div>'}</div>
         <div class="dinfo">
           <h1>${esc(m.model)}</h1>
           <div class="sub">${esc(m.vendor)} · ${esc(m.title || '')}${m.aliases.length ? ' · aka ' + esc(m.aliases.join(', ')) : ''}</div>
@@ -60,14 +62,15 @@
         </div>
       </div>
       <div class="cols2">
-        <div class="sec"><h2>files & documentation</h2><div class="filelist">${files}</div></div>
-        <div class="sec"><h2>links</h2>${links || '<span class="na">none</span>'}</div>
+        <div class="sec"><h2>Files &amp; documentation</h2><div class="filelist">${files}</div></div>
+        <div class="sec"><h2>Links</h2>${links || '<span class="na">none</span>'}</div>
       </div>
-      ${pins ? `<div class="sec"><h2>pinout (community)</h2>${pins}</div>` : ''}
-      ${sibs.length ? `<div class="sec"><h2>variants / same family</h2><div class="tags">${sibs.map((s) => `<a class="tag" href="${modelURL(s.id)}">${esc(s.model)}</a>`).join('')}</div></div>` : ''}
-      <div class="sec"><h2>raw specs by source</h2>${raw}</div>
-      <div class="sec"><h2>sources</h2><ul>${m.sources.map((s) => `<li><a href="${esc(s)}">${esc(s)}</a></li>`).join('')}</ul></div>`;
-    $$('.thumbs img').forEach((t) => t.addEventListener('click', () => { $$('.thumbs img').forEach((x) => x.classList.remove('sel')); t.classList.add('sel'); $('#gmain').style.backgroundImage = `url('${t.getAttribute('src')}')`; $('#gmain').dataset.src = t.getAttribute('src'); }));
+      ${ports.length ? `<div class="sec"><h2>Ports, connectors &amp; interfaces</h2><div class="tags">${ports.map((x) => `<span class="tag">${esc(x)}</span>`).join('')}</div><div class="na" style="font-size:12px;margin-top:6px">From the manufacturer's spec rows (see “Raw specs by source”).</div></div>` : ''}
+      ${pins ? `<div class="sec"><h2>Pinout (community)</h2>${pins}</div>` : ''}
+      ${sibs.length ? `<div class="sec"><h2>Variants / same family</h2><div class="tags">${sibs.map((s) => `<a class="tag" href="${modelURL(s.id)}">${esc(s.model)}</a>`).join('')}</div></div>` : ''}
+      <div class="sec"><h2>Raw specs by source</h2>${raw}</div>
+      <div class="sec"><h2>Sources</h2><ul>${m.sources.map((s) => `<li><a href="${esc(s)}">${esc(s)}</a></li>`).join('')}</ul></div>`;
+    $$('.thumbs img').forEach((t) => t.addEventListener('click', () => { const im = imgs[+t.dataset.i]; $$('.thumbs img').forEach((x) => x.classList.remove('sel')); t.classList.add('sel'); $('#gmain').style.backgroundImage = `url('${im.src}')`; $('#gmain').dataset.src = im.src; $('#gcap').innerHTML = capOf(im); }));
     const gm = $('#gmain');
     if (gm) gm.addEventListener('click', () => { $('#lb img').src = gm.dataset.src || imgs[0].src; $('#lb').classList.add('on'); });
     $('#lb').addEventListener('click', () => $('#lb').classList.remove('on'));

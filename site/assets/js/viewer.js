@@ -99,6 +99,19 @@
     const mime = { pdf: 'application/pdf', png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg', gif: 'image/gif', webp: 'image/webp', svg: 'image/svg+xml', bmp: 'image/bmp' }[ext(f.path)] || 'application/octet-stream';
     return URL.createObjectURL(new Blob([b], { type: mime }));
   }
+  // fully offline: never load external resources from previewed documents (links stay clickable)
+  function blockExternal(root) {
+    root.querySelectorAll('img[src], source[src], source[srcset], img[srcset], video, audio, iframe, embed, object, link[href]').forEach((el) => {
+      const u = el.getAttribute('src') || el.getAttribute('href') || el.getAttribute('srcset') || el.getAttribute('data') || '';
+      if (!/^(https?:)?\/\//i.test(u)) { el.removeAttribute('srcset'); return; }
+      if (el.tagName === 'LINK') { el.remove(); return; }
+      const a = root.ownerDocument ? root.ownerDocument.createElement('a') : document.createElement('a');
+      a.href = u.replace(/^\/\//, 'https://'); a.target = '_blank'; a.rel = 'noopener'; a.className = 'ext-blocked';
+      a.textContent = (el.getAttribute('alt') || 'external image') + ' ↗';
+      el.replaceWith(a);
+    });
+    root.querySelectorAll('[style*="url("]').forEach((el) => { if (/url\(\s*['"]?(https?:)?\/\//i.test(el.getAttribute('style'))) el.removeAttribute('style'); });
+  }
   function rewriteRefs(container, basePath, attr) {
     container.querySelectorAll('[' + attr + ']').forEach((el) => {
       const v = el.getAttribute(attr);
@@ -126,7 +139,6 @@
     $('#vact').innerHTML = acts.join(' ');
     $('#cplink').onclick = () => navigator.clipboard && navigator.clipboard.writeText(location.href);
     if (push !== false) history.replaceState(null, '', viewerURL(slug, path));
-    $('#promptcmd').textContent = 'less "' + segs[segs.length - 1] + '"';
     const body = $('#vbody');
     body.innerHTML = '<div class="empty loading">loading</div>';
     const k = f.kind === 'code' || f.kind === 'text' ? 'code' : (f.kind === 'other' || f.kind === 'office' ? kindOf(path) : f.kind);
@@ -148,13 +160,15 @@
         const div = document.createElement('div');
         div.className = 'md-body';
         div.innerHTML = DOMPurify.sanitize(marked.parse(txt));
-        rewriteRefs(div, path, 'src'); rewriteRefs(div, path, 'href');
+        blockExternal(div); rewriteRefs(div, path, 'src'); rewriteRefs(div, path, 'href');
         div.querySelectorAll('pre code').forEach((c) => { try { hljs.highlightElement(c); } catch (e) { /* ignore */ } });
         body.innerHTML = ''; body.appendChild(div);
       } else if (k === 'html') {
         const txt = decode(await getBytes(f));
         const doc = new DOMParser().parseFromString(txt, 'text/html');
-        doc.querySelectorAll('script').forEach((s) => s.remove());
+        doc.querySelectorAll('script, base, meta[http-equiv]').forEach((s) => s.remove());
+        doc.querySelectorAll('style').forEach((st) => { st.textContent = st.textContent.replace(/@import[^;]+;/g, '').replace(/url\(\s*['"]?(https?:)?\/\/[^)]*\)/gi, 'none'); });
+        blockExternal(doc.documentElement);
         rewriteRefs(doc, path, 'src'); rewriteRefs(doc, path, 'href');
         doc.querySelectorAll('a[href]').forEach((a) => a.setAttribute('target', '_top'));
         const ifr = document.createElement('iframe');

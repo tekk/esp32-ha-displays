@@ -1,0 +1,119 @@
+# Monthly catalog update: checks guition.com, the Guition file server (pan.jczn1688.com), Waveshare and GitHub,
+# adds new boards / files, uploads large files to the `files-v1` release, rebuilds the site, commits + pushes,
+# then e-mails the summary with the log attached.
+#
+# Repository secrets used for the e-mail (the mail step is skipped when SMTP_SERVER or MAIL_TO is not set):
+#   SMTP_SERVER, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD, MAIL_TO, MAIL_FROM
+name: Monthly catalog update
+on:
+  schedule:
+    - cron: '0 6 15 * *'        # 06:00 UTC on the 15th of every month
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run – only detect and report, change nothing'
+        type: boolean
+        default: true
+      skip:
+        description: 'Comma list of sources to skip (pan,guition,waveshare,github)'
+        type: string
+        default: ''
+permissions:
+  contents: write                # commit/push + release asset upload
+  actions: write                 # start the Pages deploy (pushes made with GITHUB_TOKEN do not trigger workflows)
+concurrency:
+  group: monthly-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GUITION_CACHE: ${{ runner.temp }}/cache   # downloads live here and are deleted after processing (CI=true)
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
+      SKIP: ${{ inputs.skip }}
+      GIT_AUTHOR_NAME: github-actions[bot]
+      GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+          df -h .
+      - name: System tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libarchive-tools p7zip-full poppler-utils jq >/dev/null
+          sudo apt-get install -y -qq unrar >/dev/null 2>&1 || sudo apt-get install -y -qq unrar-free >/dev/null 2>&1 || true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Python deps
+        run: pip install -q requests beautifulsoup4 pillow fonttools brotli
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Run update
+        id: update
+        run: |
+          ARGS=()
+          [ -n "$DRY_RUN" ] && ARGS+=(--dry-run)
+          [ -n "$SKIP" ] && ARGS+=(--skip "$SKIP")
+          set +e
+          build/update.sh "${ARGS[@]}"
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          cat build/last_update/summary.md >> "$GITHUB_STEP_SUMMARY"
+          df -h .
+      - name: Deploy Pages when the update pushed a commit
+        if: ${{ !env.DRY_RUN }}
+        run: |
+          if jq -e '.pushed == true' build/last_update/stats.json >/dev/null; then
+            gh workflow run pages.yml --ref main && echo "Pages deploy started"
+          fi
+      - name: Upload log + stats
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: update-log-${{ github.run_id }}
+          path: build/last_update/
+          retention-days: 90
+      - name: Check mail settings
+        id: mailcfg
+        if: always()
+        env:
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: |
+          if [ -n "$SMTP_SERVER" ] && [ -n "$MAIL_TO" ]; then echo "send=1" >> "$GITHUB_OUTPUT"; else echo "::notice::SMTP_SERVER / MAIL_TO secrets not set – skipping e-mail"; fi
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          s = json.load(open('build/last_update/stats.json'))
+          tag = 'dry run' if s.get('dry_run') else ('ERRORS' if s['errors'] else 'OK')
+          print(f"subject=ESP32 display catalog update {s['started'][:10]}: {len(s['new_boards'])} new boards, "
+                f"{len(s['new_files'])} new / {len(s['changed_files'])} changed files [{tag}]")
+          PY
+      - name: Send e-mail
+        if: ${{ always() && steps.mailcfg.outputs.send == '1' }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT || 465 }}
+          secure: ${{ (secrets.SMTP_PORT || '465') == '465' }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: ${{ steps.mailcfg.outputs.subject }}
+          to: ${{ secrets.MAIL_TO }}
+          from: ${{ secrets.MAIL_FROM || secrets.SMTP_USERNAME }}
+          body: file://build/last_update/summary.md
+          convert_markdown: true
+          attachments: build/last_update/log.txt,build/last_update/stats.json
+      - name: Fail on update errors
+        if: ${{ steps.update.outputs.exit != '0' }}
+        run: |
+          echo "::error::update finished with errors – see the log artifact"
+          exit 1

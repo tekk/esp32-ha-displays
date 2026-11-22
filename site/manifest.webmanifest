@@ -1,0 +1,11 @@
+{
+  "name": "ESP32 Display Catalog",
+  "short_name": "ESP32 Displays",
+  "description": "Offline catalog of Guition and Waveshare ESP32 display boards",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0e0f11",
+  "theme_color": "#0e0f11",
+  "icons": [{ "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

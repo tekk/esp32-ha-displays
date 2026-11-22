@@ -1,0 +1,147 @@
+{
+ "_comment": "Manually verified extra photos per model (file name on docs.waveshare.com names the exact variant). replace_vendor=true drops the shared shop-page photos that show a different size/variant.",
+ "ESP32-P4-WIFI6-Touch-LCD-7": {
+  "replace_vendor": false,
+  "photos": [
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-7-1-b3fb9c67975ed41dd5ab900cba5f00a7.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-X",
+    "kind": "photo"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-7-details-intro-ef6edd5aef7620cef6e7e68953930c46.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-X",
+    "kind": "diagram",
+    "note": "onboard interfaces"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-7-details-intro-1-d402e8f1bc04b00593246eca93018d6d.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-X",
+    "kind": "diagram",
+    "note": "onboard interfaces"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-7-details-size-866c27299452c73edde5e643f0b013c8.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-X",
+    "kind": "drawing",
+    "note": "dimensions"
+   }
+  ]
+ },
+ "ESP32-P4-WIFI6-Touch-LCD-8": {
+  "replace_vendor": true,
+  "photos": [
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-8-1-2257632891a58eaaf19bc7a4d844e0bc.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-X",
+    "kind": "photo"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-8-details-size-37e69e415445788227fbc72bb305b57a.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-X",
+    "kind": "drawing",
+    "note": "dimensions"
+   }
+  ]
+ },
+ "ESP32-P4-WIFI6-Touch-LCD-10.1": {
+  "replace_vendor": true,
+  "photos": [
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-10.1-1-bd57a5942304d92d5954048cd676f20d.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-X",
+    "kind": "photo"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-10.1-details-size-54557c018e34373f91d098a46c6763cc.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-X",
+    "kind": "drawing",
+    "note": "dimensions"
+   }
+  ]
+ },
+ "ESP32-P4-WIFI6-Touch-LCD-3.4C": {
+  "replace_vendor": false,
+  "photos": [
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-3.4C-68629a68fcd475259d293154b83b8c20.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-XC",
+    "kind": "photo"
+   }
+  ]
+ },
+ "ESP32-P4-WIFI6-Touch-LCD-4C": {
+  "replace_vendor": true,
+  "photos": [
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-4C-1-f5315f7a2e17d4b07a4aff1d4d9dd08d.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-XC",
+    "kind": "photo"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-4C-details-intro-2e742ea21b95e674e10680c2fd6ef8c4.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-XC",
+    "kind": "diagram",
+    "note": "onboard interfaces"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-4C-details-size-1-bac4beb75fb101df57db334ad95d3066.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-XC",
+    "kind": "drawing",
+    "note": "dimensions"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-Touch-LCD-4C-details-size-2-06f8facc2df8ede1098cc15c03598dc9.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-XC",
+    "kind": "drawing",
+    "note": "dimensions"
+   }
+  ]
+ },
+ "ESP32-P4-Module-DEV-KIT-B": {
+  "replace_vendor": true,
+  "photos": [
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-Module-DEV-KIT-B-37c95bab8c328f81c991bf8f49e7de2f.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-Module-DEV-KIT",
+    "kind": "photo",
+    "note": "kit B contents"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-Module-DEV-KIT-details-inter-ef8905ee9df6bbfa16bed6e5ef93ea37.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-Module-DEV-KIT",
+    "kind": "diagram",
+    "note": "dev board interfaces (same board in kits A/B/C)"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-Module-DEV-KIT-details-size-474913e05ec6f94e44f7c9dee2ed8e1f.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-Module-DEV-KIT",
+    "kind": "drawing",
+    "note": "dimensions"
+   }
+  ]
+ },
+ "ESP32-P4-Module-DEV-KIT-C": {
+  "replace_vendor": true,
+  "photos": [
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-Module-DEV-KIT-C-024fbcce327c10bae188bbbdd36ae42f.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-Module-DEV-KIT",
+    "kind": "photo",
+    "note": "kit C contents"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-Module-DEV-KIT-details-inter-ef8905ee9df6bbfa16bed6e5ef93ea37.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-Module-DEV-KIT",
+    "kind": "diagram",
+    "note": "dev board interfaces (same board in kits A/B/C)"
+   },
+   {
+    "url": "https://docs.waveshare.com/assets/images/ESP32-P4-Module-DEV-KIT-details-size-474913e05ec6f94e44f7c9dee2ed8e1f.webp",
+    "source_page": "https://docs.waveshare.com/ESP32-P4-Module-DEV-KIT",
+    "kind": "drawing",
+    "note": "dimensions"
+   }
+  ]
+ }
+}

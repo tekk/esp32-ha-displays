@@ -228,6 +228,11 @@ def main():
     archives = load(os.path.join(RAW, 'archives.json'))
     docs_text = load(os.path.join(RAW, 'docs_text.json'))
     community = load(os.path.join(CUR, 'community.json'))
+    auto_c = os.path.join(ROOT, 'data', 'auto', 'community_auto.json')   # written by build/update.py (GitHub search)
+    if os.path.exists(auto_c):
+        known = {c['url'].lower() for c in community['repos']}
+        community['repos'] += [dict(c, desc=(c.get('desc') or '') + ' (auto-discovered)') for c in load(auto_c).get('repos', [])
+                               if c.get('match') and c['url'].lower() not in known]
     notes = load(os.path.join(CUR, 'notes.json'))['notes']
     pinouts = load(os.path.join(CUR, 'pinouts.json'))['pinouts']
     ws = load(os.path.join(CUR, 'waveshare.json'))

@@ -1,10 +1,9 @@
 /* full-text search over hosted documentation inside the archives (lazy-loaded prebuilt MiniSearch index) */
 (function () {
   'use strict';
-  window.promptText = 'grep -ri';
   header('docs');
   const app = $('#app');
-  app.innerHTML = `<div class="hero"><h1>&gt; docs-search<span class="cursor"></span></h1>
+  app.innerHTML = `<div class="hero"><h1>Documentation search</h1>
     <p class="na">Full-text search across extracted text of PDFs, READMEs, markdown and selected source files from all Guition archives (file names + first pages). Chinese supported (bigram search). Results open in the built-in viewer.</p></div>
     <div class="search"><input id="q" placeholder="e.g. JD9165, GT911 i2c address, 原理图, lvgl config, backlight pwm" autofocus></div>
     <div class="toolbar"><select id="arch" class="small"><option value="">all archives</option></select>

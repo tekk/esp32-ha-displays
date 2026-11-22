@@ -9,7 +9,11 @@ python3 build/process_archives.py   # unpack ZIP/RAR, manifests, extract docs in
 python3 build/build_site.py         # merge → site/data/models.json, archives.json, meta.json
 python3 build/fetch_extra.py        # Waveshare downloads + GitHub repo snapshots → ../guition-cache/extra
 python3 build/offline.py            # ≤24 MB → site/, larger → GitHub Release asset list (data/release_assets.json)
+python3 build/photos.py             # board photos → site/assets/img/{hd,th} (WebP ≤1600 px + thumbnails)
+python3 build/fonts.py              # self-hosted fonts (woff2 + licences) → site/assets/fonts
 node build/vendor.mjs               # copy JS libs into site/assets/vendor
 node build/build_index.mjs          # prebuilt MiniSearch indexes
+python3 build/gen_sw.py             # service worker precache list (offline / PWA)
 python3 tests/check_links.py
 # then: build/upload_release.sh   (needs `gh auth login`)
+# Incremental monthly update (what the GitHub Action runs): build/update.sh [--dry-run]

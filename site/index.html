@@ -2,34 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; frame-src 'self' blob: data:; worker-src 'self'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GUITION//CATALOG – ESP32 display boards (Guition + Waveshare ESP32-P4)</title>
+<title>ESP32 Display Catalog – ESP32 display boards (Guition + Waveshare ESP32-P4)</title>
 <meta name="description" content="Searchable, filterable catalog of all Guition ESP32 / ESP32-S3 / ESP32-P4 display boards and Waveshare ESP32-P4 HMI boards with specs, images, ZIP downloads and a built-in documentation browser.">
-<meta name="theme-color" content="#050806">
+<meta name="theme-color" content="#0e0f11">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
 <div class="wrap">
   <div class="hero">
-<pre class="ascii" aria-hidden="true"> ██████  ██    ██ ██ ████████ ██  ██████  ███    ██
-██       ██    ██ ██    ██    ██ ██    ██ ████   ██
-██   ███ ██    ██ ██    ██    ██ ██    ██ ██ ██  ██
-██    ██ ██    ██ ██    ██    ██ ██    ██ ██  ██ ██
- ██████   ██████  ██    ██    ██  ██████  ██   ████ //catalog</pre>
+<h1>ESP32 display boards</h1>
     <div class="stats" id="stats"><span class="loading">loading data</span></div>
   </div>
   <div class="layout">
     <aside class="sidebar">
       <div class="panel">
-        <h3>filters</h3>
+        <h3>Filters</h3>
         <div class="chips" id="chips"></div>
         <div id="facets"></div>
       </div>
     </aside>
     <main>
       <div class="search">
-        <span class="ps">$ grep -i</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ps" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="search models, params, tags…  e.g.  p4 mipi   ·   touch:capacitive size:7   ·   tag:knob" aria-label="Search">
         <kbd>/</kbd>
       </div>
@@ -39,11 +37,11 @@
         <label class="count">sort
           <select id="sort"></select></label>
         <button id="dir" title="toggle sort direction">↓</button>
-        <div class="colsmenu" id="colsmenu"><button id="colsbtn" title="choose table columns">columns ▾</button><div class="menu" id="colslist"></div></div>
-        <button id="vtable" title="table view">▤ table</button>
-        <button id="vcards" title="card view">▦ cards</button>
-        <button id="csv" title="export current list as CSV">⇩ csv</button>
-        <button id="reset" title="clear search and filters">✕ reset</button>
+        <div class="colsmenu" id="colsmenu"><button id="colsbtn" title="choose table columns">Columns</button><div class="menu" id="colslist"></div></div>
+        <button id="vtable" title="table view">Table</button>
+        <button id="vcards" title="card view">Cards</button>
+        <button id="csv" title="export current list as CSV">CSV</button>
+        <button id="reset" title="clear search and filters">Reset</button>
       </div>
       <div id="results"></div>
     </main>
@@ -51,7 +49,6 @@
 </div>
 <script src="assets/vendor/minisearch.js"></script>
 <script src="assets/js/common.js"></script>
-<script>promptText = 'ls -la ./boards | grep -i';</script>
 <script src="assets/js/catalog.js"></script>
 </body>
 </html>

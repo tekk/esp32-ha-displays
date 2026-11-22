@@ -12,7 +12,7 @@ import requests
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = json.load(open(os.path.join(ROOT, 'build', 'config.json')))
-CACHE = os.path.normpath(os.path.join(ROOT, CFG['cache_dir']))
+CACHE = os.path.normpath(os.environ.get('GUITION_CACHE') or os.path.join(ROOT, CFG['cache_dir']))
 BASE = CFG['pan_base']
 S = requests.Session()
 S.headers['User-Agent'] = 'guition-catalog-builder/1.0'

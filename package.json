@@ -7,15 +7,20 @@
   "scripts": {
     "vendor": "node build/vendor.mjs",
     "index": "node build/build_index.mjs",
-    "build": "python3 build/build_site.py && python3 build/offline.py && node build/build_index.mjs",
+    "build": "python3 build/build_site.py && python3 build/offline.py && python3 build/photos.py && node build/build_index.mjs && python3 build/gen_sw.py",
     "serve": "python3 -m http.server -d site 8080",
-    "release": "bash build/upload_release.sh"
+    "release": "bash build/upload_release.sh",
+    "update": "bash build/update.sh",
+    "test": "python3 tests/check_links.py && python3 tests/e2e.py"
   },
   "devDependencies": {
-    "minisearch": "^7.1.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/montserrat": "^5.3.0",
+    "@fontsource/roboto-condensed": "^5.3.0",
+    "@highlightjs/cdn-assets": "^11.10.0",
+    "dompurify": "^3.1.6",
     "jszip": "^3.10.1",
     "marked": "^14.1.0",
-    "dompurify": "^3.1.6",
-    "@highlightjs/cdn-assets": "^11.10.0"
+    "minisearch": "^7.1.0"
   }
 }

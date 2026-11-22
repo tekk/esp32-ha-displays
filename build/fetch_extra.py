@@ -6,7 +6,7 @@ import json, os, subprocess, sys, concurrent.futures as cf
 from urllib.parse import urlsplit, unquote
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = json.load(open(os.path.join(ROOT, 'build/config.json')))
-EXTRA = os.path.normpath(os.path.join(ROOT, CFG['offline']['extra_dir']))
+EXTRA = os.path.join(os.environ['GUITION_CACHE'], 'extra') if os.environ.get('GUITION_CACHE') else os.path.normpath(os.path.join(ROOT, CFG['offline']['extra_dir']))
 
 def curl(url, dst):
     if os.path.exists(dst) and os.path.getsize(dst) > 0:

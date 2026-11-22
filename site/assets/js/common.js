@@ -1,4 +1,4 @@
-/* shared helpers for GUITION//CATALOG (no build step, plain ES2019) */
+/* shared helpers for the ESP32 Display Catalog (no build step, plain ES2019) */
 (function (G) {
   'use strict';
   const cache = {};
@@ -31,13 +31,28 @@
     if (original) out.push(`<a class="btn" href="${G.esc(original)}" rel="noopener" target="_blank" title="original vendor server">↗ mirror: original</a>`);
     return out.join(' ');
   };
+  // broken-out ports / connectors / interfaces, collected from the raw spec rows (manufacturer wording)
+  const PORT_RE = /^(interfaces?|interface type|expansion|i\/o ports|io ports|usb|gpio|available gpio|expandable io|ethernet|rs-?485|can|camera|camera interface|audio|audio support|speaker interface|sd ?\/ ?tf|sd card( support| slot)?|tf card support|storage expansion|battery|rtc support|communication interface|communication|key interfaces|other interfaces|additional interfaces?|additional features|peripherals?)$/i;
+  G.portsOf = (m) => {
+    const out = [], seen = new Set();
+    const push = (t) => { t = t.replace(/\s+/g, ' ').trim().replace(/[.;,]$/, ''); const k = t.toLowerCase(); if (t && t.length < 90 && !seen.has(k) && !/^(details?|no|none|n\/a|-)$/i.test(t)) { seen.add(k); out.push(t); } };
+    for (const r of m.specs_raw || []) {
+      if (!PORT_RE.test(r.label.trim())) continue;
+      const v = String(r.value || '').trim();
+      if (/^(yes|supported|support|included|✓)$/i.test(v)) { push(r.label.replace(/ (support|interface)$/i, '') + (/interface/i.test(r.label) ? ' interface' : '')); continue; }
+      v.split(/\s*(?:[,;、，]|\s\+\s|\n)\s*/).forEach(push);
+    }
+    const p = m.params || {};
+    [['ethernet', 'Ethernet'], ['rs485', 'RS-485'], ['camera', 'Camera'], ['sd', 'SD / TF card'], ['battery', 'Battery connector']].forEach(([k, l]) => { if (p[k] && !/^no/i.test(p[k]) && ![...seen].some((x) => x.includes(l.toLowerCase().split(' ')[0]))) push(l + (/^yes$/i.test(p[k]) ? '' : ': ' + p[k])); });
+    return out;
+  };
+  if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
   G.header = (active) => {
-    const nav = [['index.html', 'catalog', 'models'], ['docs.html', 'docs-search', 'docs'], ['files.html', 'archives', 'files'], ['about.html', 'about', 'about']];
+    const nav = [['index.html', 'Boards', 'models'], ['docs.html', 'Docs search', 'docs'], ['files.html', 'Files', 'files'], ['about.html', 'About', 'about']];
     const el = document.createElement('header');
     el.className = 'topbar';
-    el.innerHTML = `<a class="brand" href="index.html">GUITION<span class="sl">//</span>CATALOG<small>esp32 display boards</small></a>
-      <nav class="nav">${nav.map(([h, t, k]) => `<a href="${h}" class="${k === active ? 'active' : ''}">./${t}</a>`).join('')}</nav>
-      <div class="prompt">root@guition:~$ <b id="promptcmd">${G.esc(G.promptText || 'ls -la ./boards')}</b> <span class="cursor"></span></div>`;
+    el.innerHTML = `<a class="brand" href="index.html">ESP32 Display Catalog<small>Guition · Waveshare</small></a>
+      <nav class="nav">${nav.map(([h, t, k]) => `<a href="${h}" class="${k === active ? 'active' : ''}">${t}</a>`).join('')}</nav>`;
     document.body.prepend(el);
   };
   G.footer = (meta) => {
