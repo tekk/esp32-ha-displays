@@ -69,12 +69,12 @@ def err(where, e):
     STATS['errors'].append(msg)
 
 
-def run(cmd, check=True, env=None, quiet=False):
+def run(cmd, check=True, env=None, quiet=False, log_output=True):
     log('$', ' '.join(cmd) if isinstance(cmd, list) else cmd)
     p = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, env=env, shell=isinstance(cmd, str))
     out = (p.stdout or '') + (p.stderr or '')
     lines = out.rstrip().splitlines()
-    for l in (lines[-25:] if quiet else lines[-200:]):
+    for l in ([] if not log_output else lines[-25:] if quiet else lines[-200:]):
         LOG.write('    ' + l + '\n')
     LOG.flush()
     if check and p.returncode:
@@ -323,7 +323,7 @@ def step_waveshare():
 
 # ---------------------------------------------------------------- 4. GitHub
 def gh_api(path):
-    p = run(['gh', 'api', '-H', 'Accept: application/vnd.github+json', path], check=True, quiet=True)
+    p = run(['gh', 'api', '-H', 'Accept: application/vnd.github+json', path], check=True, log_output=False)
     return json.loads(p.stdout)
 
 
@@ -366,7 +366,7 @@ def step_github():
             err('github search ' + q, e)
     new, low = [], []
     for url, it in sorted(found.items()):
-        if url.lower() in known:
+        if url.lower() in known or it['full_name'].lower() == CFG['offline']['release_repo'].lower():
             continue
         text = norm(it['full_name'] + ' ' + (it.get('description') or ''))
         hits = sorted(p for p in prefixes if norm(p) in text)
