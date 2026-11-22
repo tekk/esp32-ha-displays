@@ -5,25 +5,29 @@
     ['vendor', 'Vendor'], ['category', 'Category'], ['mcu_family', 'MCU family'], ['size', 'Size'], ['resolution', 'Resolution'],
     ['panel', 'Panel'], ['touch', 'Touch'], ['interface', 'Display interface'], ['shape', 'Shape'], ['driver_ic', 'Display driver'],
     ['flash', 'Flash'], ['psram', 'PSRAM'], ['sram', 'SRAM'], ['frequency', 'CPU frequency'], ['coprocessor', 'Co-processor'],
-    ['wifi', 'Wi-Fi'], ['bt', 'Bluetooth'], ['speaker', 'Speaker'], ['shell', 'Case / shell'], ['tags', 'Tags'],
+    ['wifi', 'Wi-Fi'], ['bt', 'Bluetooth'], ['speaker', 'Speaker'], ['shell', 'Case / shell'], ['feat', 'Features'], ['tags', 'Tags'],
   ];
-  const OPEN_DEFAULT = new Set(['vendor', 'category', 'mcu_family', 'size', 'resolution', 'touch', 'interface', 'tags']);
+  const OPEN_DEFAULT = new Set(['vendor', 'category', 'mcu_family', 'size', 'resolution', 'touch', 'interface', 'feat', 'tags']);
+  // PSRAM, flash, touch, display interface, Wi-Fi/BT, speaker, case and files are shown as pictograms in the
+  // single Features column, which is always the last column
   const COLS = [
     ['thumb', '', true], ['model', 'Model', true], ['vendor', 'Vendor', true], ['size', 'Size', true], ['resolution', 'Resolution', true],
-    ['panel', 'Panel', true], ['touch', 'Touch', true], ['interface', 'Interface', true], ['mcu_family', 'MCU', true], ['mcu', 'MCU part', false],
-    ['flash', 'Flash', true], ['psram', 'PSRAM', true], ['sram', 'SRAM', false], ['frequency', 'CPU', false], ['driver_ic', 'Driver', false],
-    ['wifi', 'Wi-Fi', false], ['bt', 'BT', false], ['speaker', 'Speaker', false], ['shell', 'Case', false], ['category', 'Category', false],
-    ['dimensions', 'Dimensions', false], ['files', 'Files', true], ['tags', 'Tags', false],
+    ['panel', 'Panel', true], ['mcu_family', 'MCU', true], ['mcu', 'MCU part', false], ['sram', 'SRAM', false], ['frequency', 'CPU', false],
+    ['driver_ic', 'Driver', false], ['category', 'Category', false], ['dimensions', 'Dimensions', false], ['tags', 'Tags', false],
+    ['features', 'Features', true],
   ];
   const SORTS = [['relevance', 'relevance'], ['model', 'model'], ['vendor', 'vendor'], ['size', 'size'], ['resolution', 'resolution (pixels)'],
     ['panel', 'panel'], ['touch', 'touch'], ['interface', 'interface'], ['mcu_family', 'MCU'], ['flash', 'flash'], ['psram', 'PSRAM'], ['sram', 'SRAM'],
-    ['frequency', 'CPU frequency'], ['driver_ic', 'driver IC'], ['category', 'category'], ['files', 'number of files']];
+    ['frequency', 'CPU frequency'], ['driver_ic', 'driver IC'], ['category', 'category'], ['features', 'number of features']];
   let MODELS = [], BYID = {}, INDEX = null, META = null;
+  const FEATBYNAME = {};
   const st = { q: '', f: {}, sort: 'size', dir: 'asc', view: 'table', cols: null, closed: new Set(), open: new Set() };
 
   const val = (m, k) => {
     if (k === 'tags') return m.tags;
+    if (k === 'feat') return (m.features || []).map((f) => f.name);
     if (k === 'files') return m.files.length;
+    if (k === 'features') return (m.features || []).length;
     const v = m.params[k];
     return v == null ? '' : v;
   };
@@ -35,6 +39,7 @@
       case 'flash': case 'psram': case 'sram': { const b = toBytes(p[k]); return b == null ? Infinity : b; }
       case 'frequency': { const n = parseFloat((/(\d+(?:\.\d+)?)\s*MHz/i.exec(p.frequency || '') || [])[1]); return isNaN(n) ? Infinity : n; }
       case 'files': return m.files.length;
+      case 'features': return (m.features || []).length;
       case 'model': return m.model.toLowerCase();
       default: return String(val(m, k) || '\uffff').toLowerCase();
     }
@@ -78,10 +83,11 @@
     }
     return { kv, free: free.join(' ') };
   }
-  const KEY_ALIAS = { tag: 'tags', mcu: 'mcu', size: 'size', res: 'resolution', touch: 'touch', panel: 'panel', iface: 'interface', vendor: 'vendor', driver: 'driver_ic', cat: 'category' };
+  const KEY_ALIAS = { feat: 'feat', feature: 'feat', has: 'feat', tag: 'tags', mcu: 'mcu', size: 'size', res: 'resolution', touch: 'touch', panel: 'panel', iface: 'interface', vendor: 'vendor', driver: 'driver_ic', cat: 'category' };
   function kvMatch(m, k, v) {
     k = KEY_ALIAS[k] || k;
     if (k === 'tags') return m.tags.some((t) => t.toLowerCase().includes(v));
+    if (k === 'feat') return (m.features || []).some((f) => f.name.toLowerCase().includes(v) || f.id.includes(v) || f.label.toLowerCase().includes(v));
     if (k === 'size') { const n = parseFloat(v); if (!isNaN(n) && m.params.size_in != null) return Math.abs(m.params.size_in - n) < 0.051; }
     if (k === 'mcu') return [m.params.mcu, m.params.mcu_family].some((x) => (x || '').toLowerCase().includes(v));
     const x = m.params[k];
@@ -152,7 +158,7 @@
       return `<div class="facet ${closed ? 'closed' : ''}" data-k="${k}"><h4><span>${esc(label)} <span class="na">(${nonEmpty})</span></span><span class="tw">${closed ? '+' : '−'}</span></h4>
         ${entries.length > 12 ? `<input class="small ffilter" placeholder="filter ${esc(label.toLowerCase())}…">` : ''}
         <div class="fv">${entries.map(([v, n]) => `<label class="${n ? '' : 'zero'}" data-v="${esc(v.toLowerCase())}"><input type="checkbox" value="${esc(v)}" ${sel.has(v) ? 'checked' : ''}>
-          <span>${v === '∅' ? '<span class="na">(unknown)</span>' : esc(v)}</span><span class="n">${n}</span></label><div class="bar" style="width:${Math.round((n / max) * 100)}%"></div>`).join('')}</div></div>`;
+          <span>${k === 'feat' && FEATBYNAME[v] ? `<svg class="fac-ic fc-${esc(FEATBYNAME[v].category)}" width="14" height="14" aria-hidden="true"><use href="${FEAT_SPRITE}#f-${esc(FEATBYNAME[v].icon)}"/></svg>` : ''}${v === '∅' ? '<span class="na">(unknown)</span>' : esc(v)}</span><span class="n">${n}</span></label><div class="bar" style="width:${Math.round((n / max) * 100)}%"></div>`).join('')}</div></div>`;
     }).join('');
     $('#facets').innerHTML = html;
     const chips = [];
@@ -164,13 +170,13 @@
     switch (k) {
       case 'thumb': { const im = m.images[0]; return `<td>${im ? `<a href="${modelURL(m.id)}" data-pv="${esc(m.id)}" tabindex="-1"><img class="th" loading="lazy" src="${esc(im.thumb || im.src)}" alt="${esc(m.model)}"></a>` : ''}</td>`; }
       case 'model': return `<td class="m"><a href="${modelURL(m.id)}" data-pv="${esc(m.id)}">${highlight(m.model, q)}</a>${m.notes.some((n) => n.level === 'warning') ? ' <span class="badge warn" title="variant warning">!</span>' : ''}${m.downloads_only ? ' <span class="badge info" title="only on the file server">fs</span>' : ''}</td>`;
-      case 'files': { const a = m.files.filter((f) => f.type === 'archive').length, d = m.files.length - a; return `<td class="dim">${a ? a + '🗜 ' : ''}${d ? d + '📕' : ''}</td>`; }
+      case 'features': return `<td class="feats">${ficons(m, 18, { click: true }) || '<span class="na">—</span>'}</td>`;
       case 'tags': return `<td>${m.tags.slice(0, 6).map((t) => `<span class="tag" data-tag="${esc(t)}">${esc(t)}</span>`).join(' ')}</td>`;
       default: { const v = val(m, k); return `<td class="${v ? '' : 'na'}" title="${esc(v)}">${v ? esc(String(v).length > 34 ? String(v).slice(0, 32) + '…' : v) : '—'}</td>`; }
     }
   };
   function renderTable(list) {
-    const cols = COLS.filter((c) => st.cols.has(c[0]));
+    const cols = COLS.filter((c) => c[0] !== 'features' && st.cols.has(c[0])).concat([COLS.find((c) => c[0] === 'features')]);
     const head = cols.map(([k, l]) => `<th data-sort="${k === 'thumb' ? '' : k}">${esc(l)}${st.sort === k ? ` <span class="ar">${st.dir === 'asc' ? '▲' : '▼'}</span>` : ''}</th>`).join('');
     const q = parseQuery(st.q).free;
     return `<div class="tblwrap"><table class="grid"><thead><tr>${head}</tr></thead><tbody>${list.map((m) => `<tr>${cols.map((c) => cell(m, c[0], q)).join('')}</tr>`).join('')}</tbody></table></div>`;
@@ -179,10 +185,11 @@
     const q = parseQuery(st.q).free;
     return `<div class="cards">${list.map((m) => {
       const p = m.params, im = m.images[0];
-      const kv = [['size', p.size], ['res', p.resolution], ['mcu', p.mcu_family], ['touch', p.touch], ['iface', p.interface], ['flash', p.flash], ['psram', p.psram]].filter((x) => x[1]);
+      const kv = [['size', p.size], ['res', p.resolution], ['mcu', p.mcu_family], ['panel', p.panel]].filter((x) => x[1]);
       return `<div class="card"><a href="${modelURL(m.id)}" class="im" data-pv="${esc(m.id)}" style="background-image:url('${im ? esc(im.thumb || im.src) : ''}')"><span class="vend">${esc(m.vendor)}</span></a>
         <div class="bd"><a class="md" href="${modelURL(m.id)}">${highlight(m.model, q)}</a>
         <div class="kv">${kv.map(([k, v]) => `<span>${k}</span><span>${esc(v)}</span>`).join('')}</div>
+        ${(m.features || []).length ? `<div class="feats">${ficons(m, 18, { click: true })}</div>` : ''}
         <div class="tags">${m.tags.filter((t) => !t.startsWith('vendor:')).slice(0, 8).map((t) => `<span class="tag" data-tag="${esc(t)}">${esc(t)}</span>`).join('')}</div></div></div>`;
     }).join('')}</div>`;
   }
@@ -211,7 +218,7 @@
     const list = window.__lastList || [];
     const keys = ['model', 'vendor', 'category', 'size', 'resolution', 'panel', 'touch', 'interface', 'mcu', 'mcu_family', 'frequency', 'sram', 'psram', 'rom', 'flash', 'driver_ic', 'wifi', 'bt', 'speaker', 'shell', 'dimensions'];
     const q = (s) => '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"';
-    const rows = [keys.concat(['tags', 'url']).join(',')].concat(list.map((m) => keys.map((k) => q(k === 'model' ? m.model : k === 'vendor' ? m.vendor : m.params[k])).concat([q(m.tags.join('; ')), q(new URL(modelURL(m.id), location.href).href)]).join(',')));
+    const rows = [keys.concat(['features', 'tags', 'url']).join(',')].concat(list.map((m) => keys.map((k) => q(k === 'model' ? m.model : k === 'vendor' ? m.vendor : m.params[k])).concat([q((m.features || []).map((f) => f.label).join('; ')), q(m.tags.join('; ')), q(new URL(modelURL(m.id), location.href).href)]).join(',')));
     const a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([rows.join('\n')], { type: 'text/csv' }));
     a.download = 'guition-catalog.csv';
@@ -238,7 +245,9 @@
     $('#chips').addEventListener('click', (e) => { const c = e.target.closest('.chip'); if (c) toggle(c.dataset.k, c.dataset.v); });
     $('#results').addEventListener('click', (e) => {
       const th = e.target.closest('th[data-sort]');
-      if (th && th.dataset.sort) { const k = th.dataset.sort; if (st.sort === k) st.dir = st.dir === 'asc' ? 'desc' : 'asc'; else { st.sort = k; st.dir = ['files', 'flash', 'psram', 'sram', 'frequency'].includes(k) ? 'desc' : 'asc'; } render(); return; }
+      if (th && th.dataset.sort) { const k = th.dataset.sort; if (st.sort === k) st.dir = st.dir === 'asc' ? 'desc' : 'asc'; else { st.sort = k; st.dir = ['files', 'features', 'flash', 'psram', 'sram', 'frequency'].includes(k) ? 'desc' : 'asc'; } render(); return; }
+      const fi = e.target.closest('.fi.fclick');
+      if (fi) { e.preventDefault(); toggle('feat', fi.dataset.fname); return; }
       const tg = e.target.closest('.tag[data-tag]');
       if (tg) { e.preventDefault(); toggle('tags', tg.dataset.tag); return; }
       if (e.target.id === 'clearall') { e.preventDefault(); reset(); }
@@ -252,16 +261,17 @@
     $('#reset').addEventListener('click', reset);
     $('#colsbtn').addEventListener('click', (e) => { e.stopPropagation(); $('#colsmenu').classList.toggle('open'); });
     document.addEventListener('click', (e) => { if (!e.target.closest('#colsmenu')) $('#colsmenu').classList.remove('open'); });
-    $('#colslist').innerHTML = COLS.filter((c) => c[0] !== 'model').map(([k, l]) => `<label><input type="checkbox" value="${k}" ${st.cols.has(k) ? 'checked' : ''}> ${esc(l || 'image')}</label>`).join('');
+    $('#results').addEventListener('keydown', (e) => { const fi = e.target.closest && e.target.closest('.fi.fclick'); if (fi && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); toggle('feat', fi.dataset.fname); } });
+    $('#colslist').innerHTML = COLS.filter((c) => c[0] !== 'model' && c[0] !== 'features').map(([k, l]) => `<label><input type="checkbox" value="${k}" ${st.cols.has(k) ? 'checked' : ''}> ${esc(l || 'image')}</label>`).join('');
     $('#colslist').addEventListener('change', (e) => { e.target.checked ? st.cols.add(e.target.value) : st.cols.delete(e.target.value); render(); });
     window.addEventListener('hashchange', () => { readHash(); qi.value = st.q; render(); });
   }
   function reset() { st.q = ''; st.f = {}; st.sort = 'size'; st.dir = 'asc'; $('#q').value = ''; render(); }
 
   // ---------- hover preview (mouse hover + keyboard focus; no-op on touch – tap opens the detail page)
-  const POP_KEYS = [['size', 'Size'], ['resolution', 'Resolution'], ['panel', 'Panel'], ['touch', 'Touch'], ['interface', 'Display interface'], ['driver_ic', 'Display driver'],
-    ['mcu', 'MCU'], ['coprocessor', 'Co-processor'], ['frequency', 'CPU'], ['flash', 'Flash'], ['psram', 'PSRAM'], ['sram', 'SRAM'], ['wifi', 'Wi-Fi'], ['bt', 'Bluetooth'],
-    ['ethernet', 'Ethernet'], ['rs485', 'RS-485'], ['speaker', 'Speaker'], ['shell', 'Case'], ['dimensions', 'Dimensions'], ['voltage', 'Supply'], ['power', 'Power']];
+  // flash / PSRAM / touch / display interface / wireless / audio … are listed as pictograms below the table
+  const POP_KEYS = [['size', 'Size'], ['resolution', 'Resolution'], ['panel', 'Panel'], ['driver_ic', 'Display driver'], ['touch_ic', 'Touch IC'],
+    ['mcu', 'MCU'], ['coprocessor', 'Co-processor'], ['frequency', 'CPU'], ['sram', 'SRAM'], ['dimensions', 'Dimensions'], ['voltage', 'Supply'], ['power', 'Power']];
   const pop = document.createElement('div');
   pop.className = 'pop'; pop.setAttribute('role', 'tooltip'); pop.id = 'boardpop';
   document.body.appendChild(pop);
@@ -269,12 +279,12 @@
   function popHTML(m) {
     const p = m.params, im = m.images.find((i) => i.kind === 'photo') || m.images[0];
     const rows = POP_KEYS.filter(([k]) => p[k]).map(([k, l]) => `<dt>${l}</dt><dd title="${esc(p[k])}">${esc(String(p[k]).length > 60 ? String(p[k]).slice(0, 58) + '…' : p[k])}</dd>`).join('');
-    const ports = portsOf(m);
+    const feats = m.features || [];
     const warn = m.notes.find((n) => n.level === 'warning');
     return `<div class="ph ${im ? '' : 'none'}">${im ? `<img src="${esc(im.thumb || im.src)}" data-hd="${esc(im.src)}" alt="${esc(m.model)}">${im.kind !== 'photo' ? `<div class="src">${esc(im.kind)} · ${esc(im.note || '')}</div>` : ''}` : 'no photo available'}</div>
       <div class="inf"><h3>${esc(m.model)}</h3><div class="sub">${esc([m.vendor, p.category].filter(Boolean).join(' · '))}</div>
       <dl>${rows}</dl>
-      ${ports.length ? `<h4>Ports, connectors &amp; interfaces</h4><ul class="ports">${ports.slice(0, 14).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+      ${feats.length ? `<h4>Ports, connectors &amp; interfaces</h4><ul class="pfeat">${feats.map((f) => `<li class="fc-${esc(f.category)}"><svg width="16" height="16" aria-hidden="true"><use href="${FEAT_SPRITE}#f-${esc(f.icon)}"/></svg><span>${esc(f.label)}</span></li>`).join('')}</ul>` : ''}
       ${warn ? `<div class="warnline">⚠ ${esc(warn.text.split('. ')[0])}.</div>` : ''}</div>`;
   }
   function placePop(anchor) {
@@ -313,10 +323,11 @@
   }
 
   header('models');
+  bindTips();
   readHash();
   Promise.all([getJSON('data/models.json'), getJSON('data/meta.json'), loadIndex('data/search-models.json', MODEL_INDEX_OPTS)]).then(([models, meta, idx]) => {
     MODELS = models; META = meta; INDEX = idx;
-    models.forEach((m) => { BYID[m.id] = m; });
+    models.forEach((m) => { BYID[m.id] = m; (m.features || []).forEach((f) => { FEATBYNAME[f.name] = f; }); });
     const c = meta.counts;
     $('#stats').innerHTML = `<span><b>${models.length}</b> boards</span>` + Object.entries(c).map(([v, n]) => `<span>${esc(v)}: <b>${n}</b></span>`).join('')
       + `<span><b>${meta.archives}</b> archives (${fmtBytes(meta.archive_bytes)})</span><span><b>${meta.hosted_blobs}</b> docs hosted</span><span>updated <b>${esc(meta.generated.slice(0, 10))}</b></span>`;

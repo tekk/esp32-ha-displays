@@ -104,6 +104,7 @@ def py(script, *args):
 def rebuild_data():
     """build_site + offline (cheap, ~seconds): needed after every new file so offline.py can place it."""
     py('build_site.py')
+    py('features.py')          # normalized feature pictograms for every board (also new ones)
     py('offline.py')
 
 

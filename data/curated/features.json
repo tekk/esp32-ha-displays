@@ -1,0 +1,26 @@
+{
+ "_comment": "Hand-verified connector facts that the vendor spec tables do not state. Each entry: match (regex on model id), source (URL), features [{id, label, count?, connector?}]. Merged by build/features.py; an entry replaces the auto-derived feature with the same id.",
+ "entries": [
+  {"match": "^ESP32-2432S028", "source": "https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display/blob/main/PINS.md",
+   "features": [
+    {"id": "uart", "label": "Serial (UART) – P1, 4-pin 1.25 mm Molex PicoBlade (sold as \"JST 1.25\" / MX1.25)", "count": 1, "connector": "Molex PicoBlade 1.25 mm 4P"},
+    {"id": "gpio", "label": "GPIO – P3, 4-pin 1.25 mm Molex PicoBlade", "count": 1, "connector": "Molex PicoBlade 1.25 mm 4P"},
+    {"id": "i2c", "label": "I2C / GPIO – CN1, 4-pin 1.25 mm Molex PicoBlade", "count": 1, "connector": "Molex PicoBlade 1.25 mm 4P"},
+    {"id": "speaker", "label": "Speaker – P4, 2-pin 1.25 mm Molex PicoBlade (amplified)", "count": 1, "connector": "Molex PicoBlade 1.25 mm 2P"}]},
+  {"match": "^JC8048Q350", "source": "https://pan.jczn1688.com/directlink/1/HMI%20display/JC8048Q350.zip",
+   "features": [
+    {"id": "uart", "label": "Serial (UART) – MX1.25 4-pin connector", "count": 1, "connector": "MX1.25 4P"},
+    {"id": "speaker", "label": "Speaker – MX1.25 2-pin connector (≤ 3 W)", "count": 1, "connector": "MX1.25 2P"}]},
+  {"match": "^JC1060P470C_I_W$", "source": "https://github.com/zhing2006/esp-gbx/blob/main/docs/boards/jc1060p470.md",
+   "features": [
+    {"id": "i2c", "label": "I2C – CN4, SH1.0 4-pin (GND, 3V3, SCL, SDA)", "count": 1, "connector": "SH1.0 4P"},
+    {"id": "gpio", "label": "2× FPC 0.5 mm 14-pin expansion (GPIO)", "count": 2, "connector": "FPC 0.5 mm 14P"},
+    {"id": "rtc", "label": "RTC RX8025T with CR1220 backup cell", "count": 1},
+    {"id": "rgbled", "label": "WS2812 RGB LED", "count": 1},
+    {"id": "buttons", "label": "BOOT + RESET buttons", "count": 2}]},
+  {"match": "^JC4880P443", "source": "https://github.com/ultramcu/guition-jc4880p443c-i-w",
+   "features": [
+    {"id": "rs485", "label": "RS-485 (MAX485 on UART1, RS-485 build)", "count": 1},
+    {"id": "buttons", "label": "BOOT button", "count": 1}]}
+ ]
+}

@@ -25,6 +25,7 @@
     const host = (u) => { try { return new URL(u).host; } catch (e) { return ''; } };
     const capOf = (im) => `${esc(im.kind === 'photo' ? 'Photo' : im.kind === 'diagram' ? 'Board diagram' : 'Drawing')} · ${im.w}×${im.h}${im.source_page ? ` · source: <a href="${esc(im.source_page)}" target="_blank" rel="noopener">${esc(host(im.source_page))}</a>` : im.orig ? ' · ' + esc(host(im.orig)) : ''}${im.note ? ' · ' + esc(im.note) : ''}`;
     const ports = portsOf(m);
+    const feats = m.features || [];
     const notes = m.notes.map((n) => `<div class="note ${esc(n.level)}"><b class="lvl">${n.level === 'warning' ? '⚠ WARNING' : 'ℹ NOTE'}</b> ${esc(n.text)}${n.sk ? `<br><i>SK: ${esc(n.sk)}</i>` : ''}${n.source ? `<div class="src">source: <a href="${esc(n.source)}">${esc(n.source)}</a></div>` : ''}</div>`).join('');
     const conflicts = m.conflicts.length ? `<div class="note warning"><b class="lvl">⚠ SOURCE CONFLICT</b> The manufacturer's own pages disagree:<ul>${m.conflicts.map((c) => `<li>${esc(c.field)}: ${Object.entries(c.values).map(([v, s]) => `<b>${esc(v)}</b> (${esc(s.join(', '))})`).join(' vs ')}</li>`).join('')}</ul>Check the spec PDF / archive.</div>` : '';
     const files = m.files.map((f) => {
@@ -65,7 +66,8 @@
         <div class="sec"><h2>Files &amp; documentation</h2><div class="filelist">${files}</div></div>
         <div class="sec"><h2>Links</h2>${links || '<span class="na">none</span>'}</div>
       </div>
-      ${ports.length ? `<div class="sec"><h2>Ports, connectors &amp; interfaces</h2><div class="tags">${ports.map((x) => `<span class="tag">${esc(x)}</span>`).join('')}</div><div class="na" style="font-size:12px;margin-top:6px">From the manufacturer's spec rows (see “Raw specs by source”).</div></div>` : ''}
+      ${feats.length ? `<div class="sec"><h2>Ports, connectors &amp; interfaces</h2><div class="fgrid">${feats.map((f) => `<a class="fcell fc-${esc(f.category)}" href="index.html#f.feat=${encodeURIComponent(f.name)}" title="${esc(f.label)}${f.source ? '\nsource: ' + esc(f.source) : ''}"><svg width="40" height="40" aria-hidden="true"><use href="${FEAT_SPRITE}#f-${esc(f.icon)}"/></svg><span class="fl1">${esc(f.label)}</span>${f.connector && !f.label.includes(f.connector) ? `<span class="fl2">${esc(f.connector)}</span>` : ''}</a>`).join('')}</div>
+        <div class="na" style="font-size:12px;margin-top:8px">Derived only from stated sources: the manufacturer's spec rows${feats.some((f) => f.source && /github\.com/.test(f.source)) ? ' and community pin maps' : ''} (hover a cell for its source; see “Raw specs by source”). Click a cell to list every board with that feature.${ports.length ? ` Manufacturer wording: ${ports.map(esc).join(' · ')}.` : ''}</div></div>` : ''}
       ${pins ? `<div class="sec"><h2>Pinout (community)</h2>${pins}</div>` : ''}
       ${sibs.length ? `<div class="sec"><h2>Variants / same family</h2><div class="tags">${sibs.map((s) => `<a class="tag" href="${modelURL(s.id)}">${esc(s.model)}</a>`).join('')}</div></div>` : ''}
       <div class="sec"><h2>Raw specs by source</h2>${raw}</div>

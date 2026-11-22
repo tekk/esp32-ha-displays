@@ -28,7 +28,7 @@ ms.addAll(models.map((m) => ({
   aliases: (m.aliases || []).join(' '),
   title: m.title,
   vendor: m.vendor,
-  tags: (m.tags || []).join(' '),
+  tags: (m.tags || []).join(' ') + ' ' + (m.features || []).map((f) => f.name + ' ' + f.label).join(' '),
   params: Object.entries(m.params).map(([k, v]) => `${k} ${v}`).join(' ') + ' ' + (m.specs_raw || []).map((r) => `${r.label} ${r.value}`).join(' '),
   description: m.description,
   files: (m.files || []).map((f) => f.name).join(' '),

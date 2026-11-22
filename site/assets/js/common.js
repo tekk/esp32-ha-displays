@@ -31,6 +31,39 @@
     if (original) out.push(`<a class="btn" href="${G.esc(original)}" rel="noopener" target="_blank" title="original vendor server">↗ mirror: original</a>`);
     return out.join(' ');
   };
+  // feature pictograms (outline SVG sprite, colour per category via CSS .fc-<category>)
+  G.FEAT_SPRITE = 'assets/img/features.svg';
+  G.ficon = (f, size, opts) => {
+    opts = opts || {};
+    const tip = f.label + (f.connector && !f.label.includes(f.connector) ? ' – ' + f.connector : '');
+    return `<span class="fi fc-${G.esc(f.category)}${opts.click ? ' fclick' : ''}" tabindex="0" role="img" aria-label="${G.esc(tip)}" data-tip="${G.esc(tip)}" data-fname="${G.esc(f.name)}">`
+      + `<svg width="${size}" height="${size}" aria-hidden="true" focusable="false"><use href="${G.FEAT_SPRITE}#f-${G.esc(f.icon)}"/></svg></span>`;
+  };
+  G.ficons = (m, size, opts) => (m.features || []).map((f) => G.ficon(f, size, opts)).join('');
+  // one shared tooltip for every [data-tip] (mouse hover + keyboard focus); fixed-position so tables can't clip it
+  G.bindTips = () => {
+    if (G._tips) return;
+    const tip = document.createElement('div');
+    tip.className = 'tip'; tip.setAttribute('role', 'tooltip'); tip.id = 'ftip';
+    document.body.appendChild(tip);
+    G._tips = tip;
+    let cur = null, t = null;
+    const show = (el) => {
+      cur = el; tip.textContent = el.dataset.tip; tip.classList.add('on');
+      const r = el.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+      let x = r.left + r.width / 2 - w / 2, y = r.top - h - 8;
+      if (y < 6) y = r.bottom + 8;
+      x = Math.max(6, Math.min(window.innerWidth - w - 6, x));
+      tip.style.left = Math.round(x) + 'px'; tip.style.top = Math.round(y) + 'px';
+      el.setAttribute('aria-describedby', 'ftip');
+    };
+    const hide = () => { clearTimeout(t); if (cur) cur.removeAttribute('aria-describedby'); cur = null; tip.classList.remove('on'); };
+    document.addEventListener('pointerover', (e) => { const el = e.target.closest('[data-tip]'); if (el === cur) return; hide(); if (el && e.pointerType === 'mouse') t = setTimeout(() => show(el), 120); });
+    document.addEventListener('focusin', (e) => { const el = e.target.closest('[data-tip]'); hide(); if (el) show(el); });
+    document.addEventListener('focusout', hide);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hide(); });
+    window.addEventListener('scroll', () => { if (cur) hide(); }, { passive: true, capture: true });
+  };
   // broken-out ports / connectors / interfaces, collected from the raw spec rows (manufacturer wording)
   const PORT_RE = /^(interfaces?|interface type|expansion|i\/o ports|io ports|usb|gpio|available gpio|expandable io|ethernet|rs-?485|can|camera|camera interface|audio|audio support|speaker interface|sd ?\/ ?tf|sd card( support| slot)?|tf card support|storage expansion|battery|rtc support|communication interface|communication|key interfaces|other interfaces|additional interfaces?|additional features|peripherals?)$/i;
   G.portsOf = (m) => {

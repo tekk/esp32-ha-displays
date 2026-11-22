@@ -5,7 +5,7 @@ a shell file changes, which drops old caches."""
 import os, hashlib, glob, json
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, 'site')
-SHELL_GLOBS = ['*.html', 'manifest.webmanifest', 'assets/css/*.css', 'assets/js/*.js', 'assets/vendor/*', 'assets/fonts/*.woff2', 'assets/fonts/fonts.css', 'assets/favicon.svg',
+SHELL_GLOBS = ['*.html', 'manifest.webmanifest', 'assets/css/*.css', 'assets/js/*.js', 'assets/vendor/*', 'assets/fonts/*.woff2', 'assets/fonts/fonts.css', 'assets/favicon.svg', 'assets/img/features.svg',
                'data/models.json', 'data/meta.json', 'data/search-models.json', 'data/archives.json', 'data/offline.json']
 
 def main():

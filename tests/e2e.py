@@ -26,13 +26,29 @@ with sync_playwright() as p:
     pg.goto(BASE + 'index.html'); pg.wait_for_timeout(1500)
     res['fonts_loaded'] = pg.evaluate("document.fonts.check('14px Montserrat') && document.fonts.check('14px \"Roboto Condensed\"') && document.fonts.check('14px \"JetBrains Mono\"')")
     res['catalog_rows'] = pg.locator('table.grid tbody tr').count()
+    res['last_column'] = pg.locator('table.grid thead th').last.inner_text().strip()
+    res['header'] = [t.strip() for t in pg.locator('table.grid thead th').all_inner_texts()]
+    res['feature_icons'] = pg.locator('table.grid td.feats .fi').count()
+    res['sprite_ok'] = pg.evaluate("fetch('assets/img/features.svg').then(r=>r.ok)")
     shot(pg, '01-catalog.png')
+    # tooltip on a feature pictogram (mouse) + keyboard focus
+    fi = pg.locator('table.grid tbody tr').nth(20).locator('td.feats .fi').first
+    fi.hover(); pg.wait_for_timeout(500)
+    res['tooltip'] = pg.locator('#ftip.on').inner_text() if pg.locator('#ftip.on').count() else None
+    shot(pg, '07-features-tooltip.png')
+    pg.mouse.move(5, 5); pg.wait_for_timeout(200)
+    pg.locator('table.grid tbody tr').nth(25).locator('td.feats .fi').nth(1).focus(); pg.wait_for_timeout(300)
+    res['tooltip_focus'] = pg.locator('#ftip.on').count()
+    pg.keyboard.press('Enter'); pg.wait_for_timeout(600)
+    res['feature_filter_hash'] = pg.evaluate('location.hash')
+    res['feature_filter_rows'] = pg.locator('table.grid tbody tr').count()
+    pg.goto(BASE + 'index.html'); pg.wait_for_timeout(1200)
     # hover preview
     a = pg.locator('table.grid td.m a[data-pv]').nth(14)
     a.hover(); pg.wait_for_timeout(900)
     res['hover_visible'] = pg.locator('#boardpop.on').count()
     res['hover_title'] = pg.locator('#boardpop h3').inner_text() if res['hover_visible'] else None
-    res['hover_ports'] = pg.locator('#boardpop ul.ports li').count()
+    res['hover_ports'] = pg.locator('#boardpop ul.pfeat li').count()
     shot(pg, '02-hover-preview.png')
     pg.mouse.move(5, 5); pg.wait_for_timeout(300)
     res['hover_hidden_after'] = pg.locator('#boardpop.on').count() == 0
@@ -52,7 +68,20 @@ with sync_playwright() as p:
     pg.goto(BASE + 'model.html?id=' + mid); pg.wait_for_timeout(1500)
     res['model_h1'] = pg.locator('.dinfo h1').inner_text()
     res['model_files'] = pg.locator('.filelist .f').count()
+    res['model_feature_cells'] = pg.locator('.fgrid .fcell').count()
     shot(pg, '04-model-JC1060P470C_I_W_Y.png', full_page=True)
+    sec = pg.locator('.sec:has(.fgrid)')
+    if sec.count():
+        sec.screenshot(path=f'{SHOTS}/08-model-ports-grid-desktop.png') if SHOTS else None
+    mp = ctx.new_page(); mp.set_viewport_size({'width': 390, 'height': 844})
+    mid2 = [m['id'] for m in ms if m['model'] == 'ESP32-P4-WIFI6-Touch-LCD-7'][0]
+    mp.goto(BASE + 'model.html?id=' + mid2); mp.wait_for_timeout(1500)
+    sec = mp.locator('.sec:has(.fgrid)')
+    res['mobile_grid_cols'] = mp.evaluate("getComputedStyle(document.querySelector('.fgrid')).gridTemplateColumns.split(' ').length")
+    res['mobile_overflow'] = mp.evaluate("document.documentElement.scrollWidth > window.innerWidth + 1")
+    if sec.count() and SHOTS:
+        sec.screenshot(path=f'{SHOTS}/09-model-ports-grid-mobile.png')
+    mp.close()
     pg.goto(BASE + 'viewer.html?a=hmi-display-jc4880p443c-i-w'); pg.wait_for_timeout(3000)
     res['viewer_tree_nodes'] = pg.locator('#tree .n').count()
     shot(pg, '05-viewer-JC4880P443C_I_W.png')
@@ -76,5 +105,6 @@ print(json.dumps(res, indent=1, ensure_ascii=False))
 print('console errors:', len(errors)); [print(' ', e) for e in errors[:20]]
 print('bad responses:', len(bad)); [print(' ', e) for e in bad[:20]]
 print('blocked external requests:', len(external)); [print(' ', e) for e in external[:20]]
-ok = not errors and not bad and not external and res.get('hover_visible') and res.get('fonts_loaded')
+ok = (not errors and not bad and not external and res.get('hover_visible') and res.get('fonts_loaded') and (res.get('last_column') or '').lower() == 'features'
+      and res.get('feature_icons', 0) > 100 and res.get('tooltip') and res.get('model_feature_cells', 0) > 3 and not {'PSRAM', 'FILES'} & {h.upper() for h in res.get('header', [])})
 sys.exit(0 if ok else 1)

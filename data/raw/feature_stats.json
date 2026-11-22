@@ -1,0 +1,245 @@
+{
+ "models": 104,
+ "with_features": 99,
+ "by_feature": {
+  "flash": 68,
+  "disp-spi": 26,
+  "touch-cap": 59,
+  "wifi": 45,
+  "bt": 65,
+  "uart": 20,
+  "speaker": 63,
+  "battery": 23,
+  "case": 22,
+  "sd": 64,
+  "touch-res": 13,
+  "wifi6": 22,
+  "mic": 17,
+  "knob": 10,
+  "rgbled": 9,
+  "psram": 53,
+  "disp-qspi": 13,
+  "vibration": 1,
+  "gpio": 43,
+  "sensor": 12,
+  "i2c": 2,
+  "disp-rgb": 29,
+  "relay": 1,
+  "disp-dsi": 17,
+  "disp-8080": 4,
+  "rs485": 2,
+  "buttons": 3,
+  "ethernet": 3,
+  "rtc": 7,
+  "camera": 8,
+  "usb-c": 7,
+  "usb-a": 4,
+  "poe": 2
+ },
+ "categories": [
+  "audio",
+  "camera",
+  "display",
+  "io",
+  "memory",
+  "misc",
+  "power",
+  "storage",
+  "touch",
+  "usb",
+  "wired",
+  "wireless"
+ ],
+ "definitions": {
+  "sd": {
+   "category": "storage",
+   "name": "microSD slot",
+   "icon": "sd"
+  },
+  "psram": {
+   "category": "memory",
+   "name": "PSRAM",
+   "icon": "psram"
+  },
+  "flash": {
+   "category": "memory",
+   "name": "Flash",
+   "icon": "flash"
+  },
+  "disp-spi": {
+   "category": "display",
+   "name": "SPI display",
+   "icon": "disp-spi"
+  },
+  "disp-qspi": {
+   "category": "display",
+   "name": "QSPI display",
+   "icon": "disp-qspi"
+  },
+  "disp-rgb": {
+   "category": "display",
+   "name": "RGB display",
+   "icon": "disp-rgb"
+  },
+  "disp-dsi": {
+   "category": "display",
+   "name": "MIPI-DSI display",
+   "icon": "disp-dsi"
+  },
+  "disp-8080": {
+   "category": "display",
+   "name": "8080 display",
+   "icon": "disp-8080"
+  },
+  "touch-cap": {
+   "category": "touch",
+   "name": "Capacitive touch",
+   "icon": "touch-cap"
+  },
+  "touch-res": {
+   "category": "touch",
+   "name": "Resistive touch",
+   "icon": "touch-res"
+  },
+  "wifi": {
+   "category": "wireless",
+   "name": "Wi-Fi",
+   "icon": "wifi"
+  },
+  "wifi6": {
+   "category": "wireless",
+   "name": "Wi-Fi 6",
+   "icon": "wifi6"
+  },
+  "bt": {
+   "category": "wireless",
+   "name": "Bluetooth",
+   "icon": "bt"
+  },
+  "usb-c": {
+   "category": "usb",
+   "name": "USB-C",
+   "icon": "usb-c"
+  },
+  "usb-a": {
+   "category": "usb",
+   "name": "USB-A",
+   "icon": "usb-a"
+  },
+  "ethernet": {
+   "category": "wired",
+   "name": "Ethernet",
+   "icon": "rj45"
+  },
+  "poe": {
+   "category": "wired",
+   "name": "PoE",
+   "icon": "poe"
+  },
+  "rs485": {
+   "category": "wired",
+   "name": "RS-485",
+   "icon": "rs485"
+  },
+  "can": {
+   "category": "wired",
+   "name": "CAN",
+   "icon": "can"
+  },
+  "uart": {
+   "category": "io",
+   "name": "Serial port",
+   "icon": "jst4"
+  },
+  "i2c": {
+   "category": "io",
+   "name": "I2C port",
+   "icon": "i2c"
+  },
+  "gpio": {
+   "category": "io",
+   "name": "GPIO",
+   "icon": "gpio"
+  },
+  "sensor": {
+   "category": "io",
+   "name": "Sensor port",
+   "icon": "sensor"
+  },
+  "speaker": {
+   "category": "audio",
+   "name": "Speaker",
+   "icon": "speaker"
+  },
+  "mic": {
+   "category": "audio",
+   "name": "Microphone",
+   "icon": "mic"
+  },
+  "jack-trs": {
+   "category": "audio",
+   "name": "3.5 mm jack",
+   "icon": "jack-trs"
+  },
+  "jack-trrs": {
+   "category": "audio",
+   "name": "3.5 mm TRRS jack",
+   "icon": "jack-trrs"
+  },
+  "camera": {
+   "category": "camera",
+   "name": "Camera",
+   "icon": "camera"
+  },
+  "battery": {
+   "category": "power",
+   "name": "Battery",
+   "icon": "battery"
+  },
+  "rtc": {
+   "category": "misc",
+   "name": "RTC",
+   "icon": "rtc"
+  },
+  "rgbled": {
+   "category": "misc",
+   "name": "RGB LED",
+   "icon": "rgbled"
+  },
+  "relay": {
+   "category": "misc",
+   "name": "Relay",
+   "icon": "relay"
+  },
+  "knob": {
+   "category": "misc",
+   "name": "Rotary knob",
+   "icon": "knob"
+  },
+  "vibration": {
+   "category": "misc",
+   "name": "Vibration motor",
+   "icon": "vibration"
+  },
+  "buttons": {
+   "category": "misc",
+   "name": "Buttons",
+   "icon": "buttons"
+  },
+  "ir": {
+   "category": "misc",
+   "name": "IR",
+   "icon": "ir"
+  },
+  "imu": {
+   "category": "misc",
+   "name": "IMU",
+   "icon": "imu"
+  },
+  "case": {
+   "category": "misc",
+   "name": "Enclosure",
+   "icon": "case"
+  }
+ }
+}

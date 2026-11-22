@@ -7,11 +7,12 @@
   "scripts": {
     "vendor": "node build/vendor.mjs",
     "index": "node build/build_index.mjs",
-    "build": "python3 build/build_site.py && python3 build/offline.py && python3 build/photos.py && node build/build_index.mjs && python3 build/gen_sw.py",
+    "build": "python3 build/build_site.py && python3 build/features.py && python3 build/offline.py && python3 build/photos.py && python3 build/icons.py && node build/build_index.mjs && python3 build/gen_sw.py",
     "serve": "python3 -m http.server -d site 8080",
     "release": "bash build/upload_release.sh",
     "update": "bash build/update.sh",
-    "test": "python3 tests/check_links.py && python3 tests/e2e.py"
+    "test": "python3 tests/check_links.py && python3 tests/e2e.py",
+    "icons": "python3 build/icons.py --sheet"
   },
   "devDependencies": {
     "@fontsource/jetbrains-mono": "^5.3.0",

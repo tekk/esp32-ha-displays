@@ -29,6 +29,8 @@ Statický, vyhľadávateľný katalóg všetkých displejových dosiek **Guition
 - detail modelu: všetky parametre (každý s odkazom na zdroj), galéria, PDF, archívy, komunitné odkazy, upozornenia na varianty, konflikty medzi zdrojmi výrobcu, pinouty
 - prehliadač archívov: strom súborov, náhľad obrázkov, PDF (natívny iframe), markdown, HTML (sandbox), kód so zvýraznením (UTF-8/GBK), malé archívy (≤ 20 MB) sa dajú celé otvoriť v prehliadači cez JSZip
 - fulltextové vyhľadávanie v dokumentácii (vrátane čínštiny)
+- **Features / piktogramy**: posledný stĺpec tabuľky „Features“ zobrazuje farebné outline piktogramy vlastností dosky (microSD, PSRAM, flash, typ displejového rozhrania, dotyk, Wi-Fi / Wi-Fi 6, Bluetooth, USB-C/A, Ethernet, PoE, RS-485, sériový port, I2C, GPIO, reproduktor, mikrofón, kamera, batéria, RTC, RGB LED, relé, knob …) s tooltipom (počty a typy konektorov, ak sú známe); klik na ikonu = filter. Stĺpce PSRAM, Flash, Touch, Interface a Files boli nahradené. Na stránke modelu je sekcia „Ports, connectors & interfaces“ responzívny grid (piktogram + popis). Faceta „Features“ a dotaz `feat:psram`.
+  Dáta: `models.json → features[] = {id, category, name, icon, label, count?, connector?, source}` generuje `build/features.py` iba zo zdrojových údajov (parametre výrobcu, spec riadky, komunitné pinouty, ručne overené konektory v `data/curated/features.json` so zdrojom); nejasné = vynechané. Piktogramy: `build/icons.py` → `site/assets/img/features.svg` (SVG sprite, 24×24, stroke 1.5, `currentColor`, farba podľa kategórie v CSS), náhľad `screenshots/pictograms-sheet.png` (`npm run icons`).
 - **hover náhľad**: podržanie myši (alebo fokus klávesnicou) nad názvom modelu / náhľadom otvorí veľkú kartu – HD fotka vľavo, parametre, porty/konektory, rozhrania, bezdrôtové moduly, MCU/flash/PSRAM vpravo; na dotykových zariadeniach sa nezobrazuje
 - **plne offline**: žiadne externé požiadavky (CSP `default-src 'self'`, fonty a knižnice lokálne, externé obrázky v náhľadoch HTML dokumentov sa blokujú); service worker (`site/sw.js`) + `manifest.webmanifest` → web funguje aj bez siete (PWA)
 
@@ -57,7 +59,7 @@ Limity: web ~11 300 súborov / ~740 MB, žiadny súbor > 24 MB → spĺňa Cloud
 2. **guition.com** – tabuľka modelov EN/SK + produktové stránky zo sitemap → nové dosky, nové PDF/obrázky;
 3. **Waveshare** – vyhľadávanie ESP32-P4 v e-shope (nové displejové dosky sa *hlásia* na ručnú kuráciu – parametre sa nevymýšľajú), HEAD všetkých odkazovaných súborov (Content-Length/ETag);
 4. **GitHub** – vyhľadávanie nových komunitných repozitárov pre dosky Guition (odkaz k modelu, ak repo menuje číslo modelu a má ≥ 3 ★ alebo licenciu; licencované sa zrkadlia), `pushed_at` zrkadlených repozitárov → obnovenie snapshotu;
-5. rebuild (`build_site → offline → photos → build_index → gen_sw → check_links`), commit + push (iba ak sa niečo zmenilo).
+5. rebuild (`build_site → features → offline → photos → build_index → gen_sw → check_links`), commit + push (iba ak sa niečo zmenilo).
 
 ```bash
 build/update.sh --dry-run          # iba zistí a vypíše zmeny
