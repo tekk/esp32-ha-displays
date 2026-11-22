@@ -35,7 +35,12 @@ for i in $(seq 0 $((n-1))); do
   asset=$(jq -r ".assets[$i].asset" data/release_assets.json)
   src=$(jq -r ".assets[$i].src" data/release_assets.json)
   if jq -e ".assets[$i].parts" data/release_assets.json >/dev/null; then
-    ( cd "$STAGE" && [ -f "$asset.001" ] || split -b "$(jq -r .offline.split_part_bytes build/config.json)" -d -a 3 --numeric-suffixes=1 "$OLDPWD/$src" "$asset." )
+    bytes=$(jq -r .offline.split_part_bytes build/config.json)
+    src_abs=$(realpath "$src")
+    if [ ! -f "$STAGE/$asset.001" ] || [ "$(cat "$STAGE/$asset".0* | wc -c)" != "$(stat -L -c %s "$src_abs")" ]; then
+      rm -f "$STAGE/$asset".0*
+      split -b "$bytes" -d -a 3 --numeric-suffixes=1 "$src_abs" "$STAGE/$asset."
+    fi
     for p in $(jq -r ".assets[$i].parts[]" data/release_assets.json); do upload "$STAGE/$p" || FAIL=1; done
   else
     ln -sfn "$(realpath "$src")" "$STAGE/$asset"
