@@ -36,8 +36,9 @@
   G.ficon = (f, size, opts) => {
     opts = opts || {};
     const tip = f.label + (f.connector && !f.label.includes(f.connector) ? ' – ' + f.connector : '');
-    return `<span class="fi fc-${G.esc(f.category)}${opts.click ? ' fclick' : ''}" tabindex="0" role="img" aria-label="${G.esc(tip)}" data-tip="${G.esc(tip)}" data-fname="${G.esc(f.name)}">`
-      + `<svg width="${size}" height="${size}" aria-hidden="true" focusable="false"><use href="${G.FEAT_SPRITE}#f-${G.esc(f.icon)}"/></svg></span>`;
+    return `<span class="fi fc-${G.esc(f.category)}${f.value ? ' fhasv' : ''}${opts.click ? ' fclick' : ''}" style="--s:${size}px" tabindex="0" role="img" aria-label="${G.esc(tip)}" data-tip="${G.esc(tip)}" data-fname="${G.esc(f.name)}">`
+      + `<svg width="${size}" height="${size}" aria-hidden="true" focusable="false"><use href="${G.FEAT_SPRITE}#f-${G.esc(f.icon)}"/></svg>`
+      + (f.value ? `<b class="fv" aria-hidden="true">${G.esc(f.value)}</b>` : '') + '</span>';
   };
   G.ficons = (m, size, opts) => (m.features || []).map((f) => G.ficon(f, size, opts)).join('');
   // one shared tooltip for every [data-tip] (mouse hover + keyboard focus); fixed-position so tables can't clip it
@@ -84,7 +85,7 @@
     const nav = [['index.html', 'Boards', 'models'], ['docs.html', 'Docs search', 'docs'], ['files.html', 'Files', 'files'], ['about.html', 'About', 'about']];
     const el = document.createElement('header');
     el.className = 'topbar';
-    el.innerHTML = `<a class="brand" href="index.html">ESP32 Display Catalog<small>Guition · Waveshare</small></a>
+    el.innerHTML = `<a class="brand" href="index.html">ESP32 Display Catalog<small>Guition · Waveshare · M5Stack · LilyGO · Elecrow · Seeed · more</small></a>
       <nav class="nav">${nav.map(([h, t, k]) => `<a href="${h}" class="${k === active ? 'active' : ''}">${t}</a>`).join('')}</nav>`;
     document.body.prepend(el);
   };

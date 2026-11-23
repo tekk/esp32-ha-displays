@@ -1,0 +1,1273 @@
+{
+ "vendor": "Elecrow",
+ "slug": "elecrow",
+ "category": "Elecrow CrowPanel",
+ "listing": "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html",
+ "image_note": "official Elecrow product photo (elecrow.com)",
+ "_note": "Hand-curated from the official product / docs pages listed in each board's sources. spec_rows = verbatim vendor spec table rows. Empty = not stated.",
+ "boards": [
+  {
+   "id": "elecrow-crowpanel-2-4-basic",
+   "model": "CrowPanel 2.4\" Basic",
+   "title": "Elecrow CrowPanel ESP32 2.4\" HMI – ESP32 240×320 SPI resistive",
+   "series": "CrowPanel Basic",
+   "sources": [
+    "https://www.elecrow.com/esp32-display-2-4-inch-intelligent-spi-tft-lcd-touch-screen-hmi-display.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio)",
+    "buttons": "BOOT + Reset",
+    "battery": "Battery connector PH2.0-2P, 3.7–4.2 V",
+    "speaker": "Speaker connector (8 Ω 2 W recommended)",
+    "uart": "UART (HY2.0-4P)",
+    "i2c": "I2C (HY2.0-4P)",
+    "size": "2.4\"",
+    "resolution": "240x320",
+    "panel": "TN",
+    "touch": "Resistive",
+    "driver_ic": "ILI9341V",
+    "interface": "SPI",
+    "mcu": "ESP32-WROOM-32-N4",
+    "mcu_family": "ESP32",
+    "frequency": "240 MHz",
+    "flash": "4MB",
+    "sram": "520KB",
+    "sd": "TF card slot",
+    "gpio": "GPIO_D (HY2.0-4P)"
+   },
+   "spec_rows": [
+    [
+     "Model",
+     "2.4 inches-CrowPanel ESP32 display"
+    ],
+    [
+     "Main Processor",
+     "ESP32-WROOM-32-N4"
+    ],
+    [
+     "Resolution",
+     "240*320"
+    ],
+    [
+     "Touch Type",
+     "Resistive Touch Screen"
+    ],
+    [
+     "Display Type",
+     "TN Panel"
+    ],
+    [
+     "Screen",
+     "TFT-LCD Screen"
+    ],
+    [
+     "Display driver",
+     "ILI9341V"
+    ],
+    [
+     "External power supply",
+     "DC5V-2A"
+    ],
+    [
+     "Battery voltage",
+     "3.7-4.2V"
+    ],
+    [
+     "Interface",
+     "1*TF Card Slot, 1* I2C, 1* GPIO, 1*Speak, 1* UART1, 1*UART0"
+    ],
+    [
+     "Button",
+     "BOOT Button and Reset Button"
+    ],
+    [
+     "Active Area",
+     "36.72*48.96mm(W*H)"
+    ],
+    [
+     "Working Temperature",
+     "-20℃～70℃"
+    ],
+    [
+     "Storage Temperature",
+     "-30℃～80℃"
+    ]
+   ],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/2/_/2.4_esp32_hmi_display.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Elecrow-RD/CrowPanel-2.4-HMI-ESP32-Display-240x320",
+     "url": "https://github.com/Elecrow-RD/CrowPanel-2.4-HMI-ESP32-Display-240x320",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-2-8-basic",
+   "model": "CrowPanel 2.8\" Basic",
+   "title": "Elecrow CrowPanel ESP32 2.8\" HMI – ESP32 320×240 SPI resistive",
+   "series": "CrowPanel Basic",
+   "sources": [
+    "https://www.elecrow.com/esp32-display-2-8-inch-hmi-display-spi-tft-lcd-touch-screen.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio)",
+    "buttons": "BOOT + Reset",
+    "battery": "Battery connector PH2.0-2P, 3.7–4.2 V",
+    "speaker": "Speaker connector (8 Ω 2 W recommended)",
+    "uart": "UART (HY2.0-4P)",
+    "i2c": "I2C (HY2.0-4P)",
+    "size": "2.8\"",
+    "resolution": "320x240",
+    "panel": "TN",
+    "touch": "Resistive",
+    "driver_ic": "ILI9341V",
+    "interface": "SPI",
+    "mcu": "ESP32-WROOM-32-N4",
+    "mcu_family": "ESP32",
+    "frequency": "240 MHz",
+    "flash": "4MB",
+    "sram": "520KB",
+    "sd": "TF card slot",
+    "gpio": "GPIO_D (HY2.0-4P)"
+   },
+   "spec_rows": [
+    [
+     "Model",
+     "2.8 inches CrowPanel ESP32 display"
+    ],
+    [
+     "Main Processor",
+     "ESP32-WROOM-32-N4"
+    ],
+    [
+     "Resolution",
+     "320*240"
+    ],
+    [
+     "Touch Type",
+     "Resistive Touch Screen"
+    ],
+    [
+     "Display Type",
+     "TN Panel"
+    ],
+    [
+     "Screen",
+     "TFT-LCD Screen"
+    ],
+    [
+     "Display driver",
+     "ILI9341V"
+    ],
+    [
+     "External power supply",
+     "DC5V-2A"
+    ],
+    [
+     "Battery voltage",
+     "3.7-4.2V"
+    ],
+    [
+     "Interface",
+     "1*TF Card Slot, 1* I2C, 1* GPIO, 1*Speak, 1* UART1, 1*UART0"
+    ],
+    [
+     "Button",
+     "BOOT Button and Reset Button"
+    ],
+    [
+     "Active Area",
+     "43.2*57.6mm(W*H)"
+    ],
+    [
+     "Working Temperature",
+     "-20℃～70℃"
+    ],
+    [
+     "Storage Temperature",
+     "-30℃～80℃"
+    ],
+    [
+     "Recommended speaker specifications",
+     "8Ω, 2W)"
+    ]
+   ],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/2/_/2.8_hmi_esp32_display.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-3-5-basic",
+   "model": "CrowPanel 3.5\" Basic",
+   "title": "Elecrow CrowPanel ESP32 3.5\" HMI – ESP32-WROVER 480×320 SPI resistive",
+   "series": "CrowPanel Basic",
+   "sources": [
+    "https://www.elecrow.com/esp32-display-3-5-inch-hmi-display-spi-tft-lcd-touch-screen.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio)",
+    "buttons": "BOOT + Reset",
+    "battery": "Battery connector PH2.0-2P, 3.7–4.2 V",
+    "speaker": "Speaker connector (8 Ω 2 W recommended)",
+    "uart": "UART (HY2.0-4P)",
+    "i2c": "I2C (HY2.0-4P)",
+    "size": "3.5\"",
+    "resolution": "480x320",
+    "panel": "TN",
+    "touch": "Resistive",
+    "driver_ic": "ILI9488",
+    "interface": "SPI",
+    "mcu": "ESP32-WROVER-B",
+    "mcu_family": "ESP32",
+    "frequency": "240 MHz",
+    "flash": "4MB",
+    "psram": "8MB",
+    "sram": "520KB",
+    "sd": "TF card slot",
+    "gpio": "GPIO_D (HY2.0-4P)"
+   },
+   "spec_rows": [
+    [
+     "Model",
+     "3.5 inches module-CrowPanel ESP32 display"
+    ],
+    [
+     "Main Processor",
+     "ESP32-WROVER-B"
+    ],
+    [
+     "Resolution",
+     "480*320"
+    ],
+    [
+     "Touch Type",
+     "Resistive Touch Screen"
+    ],
+    [
+     "Display Type",
+     "TN Panel"
+    ],
+    [
+     "Screen",
+     "TFT-LCD Screen"
+    ],
+    [
+     "Display driver",
+     "ILI9488"
+    ],
+    [
+     "External power supply",
+     "DC5V-2A"
+    ],
+    [
+     "Battery voltage",
+     "3.7-4.2V"
+    ],
+    [
+     "Interface",
+     "1*TF Card Slot, 1* I2C, 1* GPIO, 1*Speak, 1* UART1, 1*UART0"
+    ],
+    [
+     "Button",
+     "BOOT Button and Reset Button"
+    ],
+    [
+     "Active Area",
+     "48.96*73.44mm(W*H)"
+    ],
+    [
+     "Working Temperature",
+     "-20℃～70℃"
+    ],
+    [
+     "Storage Temperature",
+     "-30℃～80℃"
+    ],
+    [
+     "Recommended speaker specifications",
+     "8Ω, 2W)"
+    ]
+   ],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/3/_/3.5_hmi_esp32_display_2.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-4-3-basic",
+   "model": "CrowPanel 4.3\" Basic",
+   "title": "Elecrow CrowPanel ESP32 4.3\" HMI – ESP32-S3 480×272 RGB resistive",
+   "series": "CrowPanel Basic",
+   "sources": [
+    "https://www.elecrow.com/esp32-display-4-3-inch-hmi-display-rgb-tft-lcd-touch-screen.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio)",
+    "buttons": "BOOT + Reset",
+    "battery": "Battery connector PH2.0-2P, 3.7–4.2 V",
+    "speaker": "Speaker connector (8 Ω 2 W recommended)",
+    "uart": "UART (HY2.0-4P)",
+    "size": "4.3\"",
+    "resolution": "480x272",
+    "panel": "TN",
+    "touch": "Resistive",
+    "driver_ic": "NV3047",
+    "interface": "RGB",
+    "mcu": "ESP32-S3-WROOM-1-N4R2",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "4MB",
+    "psram": "2MB",
+    "sram": "512KB",
+    "sd": "TF card slot",
+    "gpio": "2x GPIO (HY2.0-4P)"
+   },
+   "spec_rows": [
+    [
+     "Model",
+     "4.3 inches -CrowPanel ESP32 display"
+    ],
+    [
+     "Main Processor",
+     "ESP32-S3-WROOM-1-N4R2"
+    ],
+    [
+     "Resolution",
+     "480*272"
+    ],
+    [
+     "Touch Type",
+     "Resistive Touch Screen"
+    ],
+    [
+     "Display Type",
+     "TN Panel"
+    ],
+    [
+     "Screen",
+     "TFT-LCD Screen"
+    ],
+    [
+     "Display driver",
+     "NV3047"
+    ],
+    [
+     "External power supply",
+     "DC5V-2A"
+    ],
+    [
+     "Battery voltage",
+     "3.7-4.2V"
+    ],
+    [
+     "Interface",
+     "1*TF Card Slot, 2* GPIO, 1*Speak, 2* UART1, 1*UART0"
+    ],
+    [
+     "Button",
+     "BOOT Button and Reset Button"
+    ],
+    [
+     "Active Area",
+     "95.04*53.86mm(W*H)"
+    ],
+    [
+     "Working Temperature",
+     "-20℃～70℃"
+    ],
+    [
+     "Storage Temperature",
+     "-30℃～80℃"
+    ],
+    [
+     "Recommended speaker specifications",
+     "8Ω, 2W)"
+    ]
+   ],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/4/_/4.3_hmi_esp32_display_1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-5-0-basic",
+   "model": "CrowPanel 5.0\" Basic",
+   "title": "Elecrow CrowPanel ESP32 5.0\" HMI – ESP32-S3 800×480 RGB capacitive",
+   "series": "CrowPanel Basic",
+   "sources": [
+    "https://www.elecrow.com/esp32-display-5-inch-hmi-display-rgb-tft-lcd-touch-screen-support-lvgl.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio)",
+    "buttons": "BOOT + Reset",
+    "battery": "Battery connector PH2.0-2P, 3.7–4.2 V",
+    "speaker": "Speaker connector (8 Ω 2 W recommended)",
+    "uart": "UART (HY2.0-4P)",
+    "i2c": "2x I2C (HY2.0-4P)",
+    "size": "5.0\"",
+    "resolution": "800x480",
+    "panel": "TN",
+    "touch": "Capacitive",
+    "driver_ic": "ILI6122 & ILI5960",
+    "interface": "RGB",
+    "mcu": "ESP32-S3-WROOM-1-N4R8",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "4MB",
+    "psram": "8MB",
+    "sram": "512KB",
+    "gpio": "2x GPIO (HY2.0-4P)"
+   },
+   "spec_rows": [
+    [
+     "Model",
+     "5.0 inch CrowPanel ESP32 display"
+    ],
+    [
+     "Main Processor",
+     "ESP32-S3-WROOM-1-N4R8"
+    ],
+    [
+     "Resolution",
+     "800*480"
+    ],
+    [
+     "Touch Type",
+     "Capacitive Touch Screen"
+    ],
+    [
+     "Display Type",
+     "TN Panel"
+    ],
+    [
+     "Screen",
+     "TFT-LCD Screen"
+    ],
+    [
+     "Display driver",
+     "ILI6122 & ILI5960"
+    ],
+    [
+     "External power supply",
+     "DC5V-2A"
+    ],
+    [
+     "Battery voltage",
+     "3.7-4.2V"
+    ],
+    [
+     "Interface",
+     "2*UART0,2*GPIO,2*I2C,1*Battery"
+    ],
+    [
+     "Button",
+     "BOOT Button and Reset Button"
+    ],
+    [
+     "Active Area",
+     "108*64.8mm(W*H)"
+    ],
+    [
+     "Working Temperature",
+     "-20℃～70℃"
+    ],
+    [
+     "Storage Temperature",
+     "-30℃～80℃"
+    ],
+    [
+     "HS CODE",
+     "8524919090"
+    ],
+    [
+     "Recommended speaker specifications",
+     "8Ω, 2W)"
+    ],
+    [
+     "Youtuber",
+     "Vaclav Chaloupka"
+    ],
+    [
+     "Youtuber",
+     "NR.electronics"
+    ],
+    [
+     "Project Author",
+     "Adrirobot"
+    ]
+   ],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32_hmi_display_5inch_1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-7-0-basic",
+   "model": "CrowPanel 7.0\" Basic",
+   "title": "Elecrow CrowPanel ESP32 7.0\" HMI – ESP32-S3 800×480 RGB capacitive",
+   "series": "CrowPanel Basic",
+   "sources": [
+    "https://www.elecrow.com/esp32-display-7-inch-hmi-display-rgb-tft-lcd-touch-screen-support-lvgl.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio)",
+    "buttons": "BOOT + Reset",
+    "battery": "Battery connector PH2.0-2P, 3.7–4.2 V",
+    "speaker": "Speaker connector (8 Ω 2 W recommended)",
+    "uart": "UART (HY2.0-4P)",
+    "i2c": "2x I2C (HY2.0-4P)",
+    "size": "7.0\"",
+    "resolution": "800x480",
+    "panel": "TN",
+    "touch": "Capacitive",
+    "driver_ic": "EK9716BD3 & EK73002ACGB",
+    "interface": "RGB",
+    "mcu": "ESP32-S3-WROOM-1-N4R8",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "4MB",
+    "psram": "8MB",
+    "sram": "512KB",
+    "sd": "TF card slot",
+    "gpio": "2x GPIO (HY2.0-4P)",
+    "sku": "DIS08070H"
+   },
+   "spec_rows": [
+    [
+     "Model",
+     "7.0 inch -CrowPanel ESP32 display"
+    ],
+    [
+     "Main Processor",
+     "ESP32-S3-WROOM-1-N4R8"
+    ],
+    [
+     "Resolution",
+     "800*480"
+    ],
+    [
+     "Flash",
+     "4MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Touch Type",
+     "Capacitive Touch Screen"
+    ],
+    [
+     "Display Type",
+     "TN Panel"
+    ],
+    [
+     "Screen",
+     "TFT-LCD Screen"
+    ],
+    [
+     "Display driver",
+     "EK9716BD3 & EK73002ACGB"
+    ],
+    [
+     "External power supply",
+     "DC5V-2A"
+    ],
+    [
+     "Battery voltage",
+     "3.7-4.2V"
+    ],
+    [
+     "Interface",
+     "2*UART0,2*GPIO,2*I2C,1*Battery"
+    ],
+    [
+     "Button",
+     "BOOT Button and Reset Button"
+    ],
+    [
+     "Active Area",
+     "153.84*85.63mm(W*H)"
+    ],
+    [
+     "Working Temperature",
+     "-20℃～70℃"
+    ],
+    [
+     "Storage Temperature",
+     "-30℃～80℃"
+    ],
+    [
+     "Recommended speaker specifications",
+     "8Ω, 2W)"
+    ],
+    [
+     "Youtuber",
+     "Bytes N Bits"
+    ],
+    [
+     "Youtuber",
+     "FlixMySwitch"
+    ],
+    [
+     "Youtuber",
+     "Jason Yeager"
+    ]
+   ],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32_hmi_7inch_display_1.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "Elecrow wiki",
+     "url": "https://www.elecrow.com/wiki/esp32-display-702727-intelligent-touch-screen-wi-fi26ble-800480-hmi-display.html",
+     "type": "vendor"
+    },
+    {
+     "title": "GitHub: Elecrow-RD/CrowPanel-7.0-HMI-ESP32-Display-800x480",
+     "url": "https://github.com/Elecrow-RD/CrowPanel-7.0-HMI-ESP32-Display-800x480",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-advance-2-4",
+   "model": "CrowPanel Advance 2.4\"",
+   "title": "Elecrow CrowPanel Advance 2.4\" – ESP32-S3 N16R8 320×240 IPS capacitive",
+   "series": "CrowPanel Advance",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-advance-2-4-hmi-esp32-320x240-ips-ai-display-artificial-intelligent-touchscreen-1.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-S3-WROOM-1-N16R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5.0 and BLE",
+    "panel": "IPS",
+    "touch": "Capacitive (single touch)",
+    "brightness": "400 cd/m² (typ.)",
+    "sd": "SD card slot",
+    "mic": "Microphone (not usable together with SD card)",
+    "speaker": "Speaker port with audio amplifier",
+    "charger": "Battery charge management",
+    "usb": "USB (USB-to-UART)",
+    "uart": "UART",
+    "i2c": "I2C",
+    "connectivity": "Optional replaceable wireless module (vendor): Zigbee / Thread / Matter (ESP32-H2), LoRa, nRF2401, Wi-Fi HaLow, Wi-Fi 6",
+    "size": "2.4\"",
+    "resolution": "320x240",
+    "driver_ic": "ST7789",
+    "buzzer": "Buzzer"
+   },
+   "spec_rows": [],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32_advance_hmi_2.4inch_display.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "The product page lists \"Resolution 800*480\" for this 2.4\" model; the Elecrow series comparison table and the Advance user manual state 320*240, which is used here."
+   ]
+  },
+  {
+   "id": "elecrow-crowpanel-advance-2-8",
+   "model": "CrowPanel Advance 2.8\"",
+   "title": "Elecrow CrowPanel Advance 2.8\" – ESP32-S3 N16R8 320×240 IPS capacitive",
+   "series": "CrowPanel Advance",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-advance-2-8-hmi-esp32-ai-display-320x240-artificial-ips-intelligent-touchscreen.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-S3-WROOM-1-N16R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5.0 and BLE",
+    "panel": "IPS",
+    "touch": "Capacitive (single touch)",
+    "brightness": "400 cd/m² (typ.)",
+    "sd": "SD card slot",
+    "mic": "Microphone (not usable together with SD card)",
+    "speaker": "Speaker port with audio amplifier",
+    "charger": "Battery charge management",
+    "usb": "USB (USB-to-UART)",
+    "uart": "UART",
+    "i2c": "I2C",
+    "connectivity": "Optional replaceable wireless module (vendor): Zigbee / Thread / Matter (ESP32-H2), LoRa, nRF2401, Wi-Fi HaLow, Wi-Fi 6",
+    "size": "2.8\"",
+    "resolution": "320x240",
+    "driver_ic": "ST7789",
+    "buzzer": "Buzzer",
+    "rtc": "RTC clock"
+   },
+   "spec_rows": [],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32_advance_hmi_2.8inch_display.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-advance-3-5",
+   "model": "CrowPanel Advance 3.5\"",
+   "title": "Elecrow CrowPanel Advance 3.5\" – ESP32-S3 N16R8 480×320 IPS capacitive",
+   "series": "CrowPanel Advance",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-advance-3-5-hmi-esp32-ai-display-480x320-artificial-intelligent-ips-touch-screen.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-S3-WROOM-1-N16R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5.0 and BLE",
+    "panel": "IPS",
+    "touch": "Capacitive (single touch)",
+    "brightness": "400 cd/m² (typ.)",
+    "sd": "SD card slot",
+    "mic": "Microphone (not usable together with SD card)",
+    "speaker": "Speaker port with audio amplifier",
+    "charger": "Battery charge management",
+    "usb": "USB (USB-to-UART)",
+    "uart": "UART",
+    "i2c": "I2C",
+    "connectivity": "Optional replaceable wireless module (vendor): Zigbee / Thread / Matter (ESP32-H2), LoRa, nRF2401, Wi-Fi HaLow, Wi-Fi 6",
+    "size": "3.5\"",
+    "resolution": "480x320",
+    "driver_ic": "ILI9488",
+    "rtc": "RTC clock"
+   },
+   "spec_rows": [],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32_advance_hmi_3.5inch_display.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-advance-4-3",
+   "model": "CrowPanel Advance 4.3\"",
+   "title": "Elecrow CrowPanel Advance 4.3\" – ESP32-S3 N16R8 800×480 IPS capacitive",
+   "series": "CrowPanel Advance",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-advance-4-3-hmi-esp32-800x480-ai-display-ips-touch-artificial-intelligent-screen.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-S3-WROOM-1-N16R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5.0 and BLE",
+    "panel": "IPS",
+    "touch": "Capacitive (single touch)",
+    "brightness": "400 cd/m² (typ.)",
+    "sd": "SD card slot",
+    "mic": "Microphone (not usable together with SD card)",
+    "speaker": "Speaker port with audio amplifier",
+    "charger": "Battery charge management",
+    "usb": "USB (USB-to-UART)",
+    "uart": "UART",
+    "i2c": "I2C",
+    "connectivity": "Optional replaceable wireless module (vendor): Zigbee / Thread / Matter (ESP32-H2), LoRa, nRF2401, Wi-Fi HaLow, Wi-Fi 6",
+    "size": "4.3\"",
+    "resolution": "800x480",
+    "driver_ic": "ST7265",
+    "rtc": "RTC clock"
+   },
+   "spec_rows": [],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32_advance_hmi_4.3inch_display1_1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-advance-5-0",
+   "model": "CrowPanel Advance 5.0\"",
+   "title": "Elecrow CrowPanel Advance 5.0\" – ESP32-S3 N16R8 800×480 IPS capacitive",
+   "series": "CrowPanel Advance",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-advance-5-0-hmi-esp32-ai-display-800x480-ips-artificial-intelligent-touch-screen.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-S3-WROOM-1-N16R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5.0 and BLE",
+    "panel": "IPS",
+    "touch": "Capacitive (single touch)",
+    "brightness": "400 cd/m² (typ.)",
+    "sd": "SD card slot",
+    "mic": "Microphone (not usable together with SD card)",
+    "speaker": "Speaker port with audio amplifier",
+    "charger": "Battery charge management",
+    "usb": "USB (USB-to-UART)",
+    "uart": "UART",
+    "i2c": "I2C",
+    "connectivity": "Optional replaceable wireless module (vendor): Zigbee / Thread / Matter (ESP32-H2), LoRa, nRF2401, Wi-Fi HaLow, Wi-Fi 6",
+    "size": "5.0\"",
+    "resolution": "800x480",
+    "driver_ic": "ST7262",
+    "rtc": "RTC clock"
+   },
+   "spec_rows": [],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32_advance_hmi_5inch_display_1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-advance-7-0",
+   "model": "CrowPanel Advance 7.0\"",
+   "title": "Elecrow CrowPanel Advance 7.0\" – ESP32-S3 N16R8 800×480 IPS capacitive",
+   "series": "CrowPanel Advance",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-advance-7-hmi-esp32-ai-display-800x480-ai-ips-touch-screen.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-S3-WROOM-1-N16R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5.0 and BLE",
+    "panel": "IPS",
+    "touch": "Capacitive (single touch)",
+    "brightness": "400 cd/m² (typ.)",
+    "sd": "SD card slot",
+    "mic": "Microphone (not usable together with SD card)",
+    "speaker": "Speaker port with audio amplifier",
+    "charger": "Battery charge management",
+    "usb": "USB (USB-to-UART)",
+    "uart": "UART",
+    "i2c": "I2C",
+    "connectivity": "Optional replaceable wireless module (vendor): Zigbee / Thread / Matter (ESP32-H2), LoRa, nRF2401, Wi-Fi HaLow, Wi-Fi 6",
+    "size": "7.0\"",
+    "resolution": "800x480",
+    "driver_ic": "SC7277 (product page) / GW1076 (series table)",
+    "rtc": "RTC clock"
+   },
+   "spec_rows": [],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32_advance_hmi_7inch_display.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "Display driver differs between the product page (SC7277) and the series comparison table (GW1076-i2); both are listed."
+   ]
+  },
+  {
+   "id": "elecrow-crowpanel-p4-5-0",
+   "model": "CrowPanel Advanced 5.0\" ESP32-P4",
+   "title": "Elecrow CrowPanel Advanced 5\" ESP32-P4 – 800×480 IPS, ESP32-C6 Wi-Fi 6",
+   "series": "CrowPanel ESP32-P4",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-advanced-5inch-esp32-p4-hmi-ai-display-800x480-ips-touch-screen-with-wifi-6.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-P4NRW32 (RISC-V dual-core up to 400 MHz + LP core 40 MHz)",
+    "mcu_family": "ESP32-P4",
+    "coprocessor": "ESP32-C6",
+    "frequency": "400 MHz",
+    "flash": "16MB",
+    "psram": "32MB",
+    "wifi": "2.4 GHz Wi-Fi 6 (ESP32-C6)",
+    "bt": "Bluetooth 5.3 and BLE",
+    "panel": "IPS",
+    "touch": "Capacitive (single / 5-point)",
+    "brightness": "400 cd/m² (typ.)",
+    "color_depth": "16.7M (8-bit)",
+    "usb": "USB 2.0",
+    "uart": "UART",
+    "i2c": "I2C",
+    "speaker": "2x speakers",
+    "gpio": "GPIO pin header",
+    "connectivity": "Optional module (vendor): Zigbee, LoRa, nRF2401, Matter, Thread, Wi-Fi HaLow",
+    "size": "5.0\"",
+    "resolution": "800x480",
+    "driver_ic": "ST7265"
+   },
+   "spec_rows": [],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/c/r/crowpanel_esp32-p4_5inch_hmi_display_1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-p4-7-0",
+   "model": "CrowPanel Advanced 7.0\" ESP32-P4",
+   "title": "Elecrow CrowPanel Advanced 7\" ESP32-P4 – 1024×600 IPS, ESP32-C6 Wi-Fi 6",
+   "series": "CrowPanel ESP32-P4",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-advanced-7inch-esp32-p4-hmi-ai-display-1024x600-ips-touch-screen-with-wifi-6-compatible-with-arduino-lvgl-micropython.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-P4NRW32 (RISC-V dual-core up to 400 MHz + LP core 40 MHz)",
+    "mcu_family": "ESP32-P4",
+    "coprocessor": "ESP32-C6",
+    "frequency": "400 MHz",
+    "flash": "16MB",
+    "psram": "32MB",
+    "wifi": "2.4 GHz Wi-Fi 6 (ESP32-C6)",
+    "bt": "Bluetooth 5.3 and BLE",
+    "panel": "IPS",
+    "touch": "Capacitive (single / 5-point)",
+    "brightness": "400 cd/m² (typ.)",
+    "color_depth": "16.7M (8-bit)",
+    "usb": "USB 2.0",
+    "uart": "UART",
+    "i2c": "I2C",
+    "speaker": "2x speakers",
+    "gpio": "GPIO pin header",
+    "connectivity": "Optional module (vendor): Zigbee, LoRa, nRF2401, Matter, Thread, Wi-Fi HaLow",
+    "size": "7.0\"",
+    "resolution": "1024x600",
+    "driver_ic": "EK79007"
+   },
+   "spec_rows": [],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32-p4_7inch_display_1_2.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-p4-9-0",
+   "model": "CrowPanel Advanced 9.0\" ESP32-P4",
+   "title": "Elecrow CrowPanel Advanced 9\" ESP32-P4 – 1024×600 IPS, ESP32-C6 Wi-Fi 6",
+   "series": "CrowPanel ESP32-P4",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-advanced-9inch-esp32-p4-hmi-ai-display-1024x600-ips-touch-screen-wifi-6-support.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-P4NRW32 (RISC-V dual-core up to 400 MHz + LP core 40 MHz)",
+    "mcu_family": "ESP32-P4",
+    "coprocessor": "ESP32-C6",
+    "frequency": "400 MHz",
+    "flash": "16MB",
+    "psram": "32MB",
+    "wifi": "2.4 GHz Wi-Fi 6 (ESP32-C6)",
+    "bt": "Bluetooth 5.3 and BLE",
+    "panel": "IPS",
+    "touch": "Capacitive (single / 5-point)",
+    "brightness": "400 cd/m² (typ.)",
+    "color_depth": "16.7M (8-bit)",
+    "usb": "USB 2.0",
+    "uart": "UART",
+    "i2c": "I2C",
+    "speaker": "2x speakers",
+    "gpio": "GPIO pin header",
+    "connectivity": "Optional module (vendor): Zigbee, LoRa, nRF2401, Matter, Thread, Wi-Fi HaLow",
+    "size": "9.0\"",
+    "resolution": "1024x600",
+    "driver_ic": "EK79007"
+   },
+   "spec_rows": [],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32-p4_9inch_hmi_display_1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-p4-10-1",
+   "model": "CrowPanel Advanced 10.1\" ESP32-P4",
+   "title": "Elecrow CrowPanel Advanced 10.1\" ESP32-P4 – 1024×600 IPS, ESP32-C6 Wi-Fi 6",
+   "series": "CrowPanel ESP32-P4",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-advanced-10-1inch-esp32-p4-hmi-ai-display-1024x600-ips-touch-screen-wifi-6.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-P4NRW32 (RISC-V dual-core up to 400 MHz + LP core 40 MHz)",
+    "mcu_family": "ESP32-P4",
+    "coprocessor": "ESP32-C6",
+    "frequency": "400 MHz",
+    "flash": "16MB",
+    "psram": "32MB",
+    "wifi": "2.4 GHz Wi-Fi 6 (ESP32-C6)",
+    "bt": "Bluetooth 5.3 and BLE",
+    "panel": "IPS",
+    "touch": "Capacitive (single / 5-point)",
+    "brightness": "400 cd/m² (typ.)",
+    "color_depth": "16.7M (8-bit)",
+    "usb": "USB 2.0",
+    "uart": "UART",
+    "i2c": "I2C",
+    "speaker": "2x speakers",
+    "gpio": "GPIO pin header",
+    "connectivity": "Optional module (vendor): Zigbee, LoRa, nRF2401, Matter, Thread, Wi-Fi HaLow",
+    "size": "10.1\"",
+    "resolution": "1024x600",
+    "driver_ic": "EK79007"
+   },
+   "spec_rows": [],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32-p4_10.1inch_hmi_display.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-rotary-1-28",
+   "model": "CrowPanel 1.28\" Rotary",
+   "title": "Elecrow CrowPanel 1.28\" HMI rotary knob – ESP32-S3 240×240 round IPS touch",
+   "series": "CrowPanel Rotary",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-1-28inch-hmi-esp32-rotary-display-240-240-ips-round-touch-knob-screen.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "size": "1.28\"",
+    "resolution": "240x240",
+    "shape": "Round",
+    "panel": "IPS",
+    "touch": "Capacitive",
+    "mcu": "ESP32-S3R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "psram": "8MB",
+    "flash": "16MB",
+    "wifi": "802.11 a/b/g/n, 2.4 GHz",
+    "bt": "Bluetooth Low Energy and Bluetooth 5.0",
+    "uart": "UART (ZX-MX 1.25-4P)",
+    "i2c": "I2C (ZX-MX 1.25-4P)",
+    "encoder": "Rotary knob with press switch",
+    "buttons": "RESET, BOOT, knob press",
+    "rgbled": "LED ambient light",
+    "shell": "Yes – aluminium alloy + plastic + acrylic",
+    "dimensions": "48 x 48 x 33 mm",
+    "sku": "DHE38128D"
+   },
+   "spec_rows": [
+    [
+     "Main Chip",
+     "ESP32-S3R8"
+    ]
+   ],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/1/_/1.28inch_rotary_knob_screen_2.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-crowpanel-rotary-2-1",
+   "model": "CrowPanel 2.1\" Rotary",
+   "title": "Elecrow CrowPanel 2.1\" HMI rotary knob – ESP32-S3 480×480 round IPS touch",
+   "series": "CrowPanel Rotary",
+   "sources": [
+    "https://www.elecrow.com/crowpanel-2-1inch-hmi-esp32-rotary-display-480-480-ips-round-touch-knob-screen.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.1\"",
+    "resolution": "480x480",
+    "shape": "Round",
+    "panel": "IPS",
+    "touch": "Capacitive",
+    "mcu": "ESP32-S3R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "psram": "8MB",
+    "flash": "16MB",
+    "wifi": "802.11 a/b/g/n, 2.4 GHz",
+    "bt": "Bluetooth Low Energy and Bluetooth 5.0",
+    "uart": "1x UART1, 1x UART0 (ZX-MX 1.25-4P)",
+    "i2c": "I2C (ZX-MX 1.25-4P)",
+    "encoder": "Rotary knob with press switch",
+    "buttons": "RESET, BOOT, knob press",
+    "shell": "Yes – plastic + acrylic",
+    "dimensions": "79 x 79 x 30 mm",
+    "sku": "DHE03921D"
+   },
+   "spec_rows": [
+    [
+     "Main Chip",
+     "ESP32-S3R8"
+    ],
+    [
+     "Module",
+     "DC5V"
+    ],
+    [
+     "Main Chip",
+     "3.3V"
+    ]
+   ],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/2/_/2.1inch_rotary_knob_screen_1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "elecrow-esp-terminal-3-5",
+   "model": "ESP Terminal 3.5\"",
+   "title": "Elecrow ESP Terminal – ESP32-S3 3.5\" 480×320 16-bit parallel capacitive",
+   "series": "ESP Terminal",
+   "sources": [
+    "https://www.elecrow.com/esp-terminal-with-esp32-3-5-inch-parallel-480x320-tft-capacitive-touch-display-rgb-by-chip-ili9488.html",
+    "https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html"
+   ],
+   "description": "",
+   "params": {
+    "size": "3.5\"",
+    "resolution": "480x320",
+    "panel": "TFT",
+    "touch": "Capacitive",
+    "touch_ic": "FT6236",
+    "driver_ic": "ILI9488",
+    "interface": "8080 (16-bit parallel)",
+    "mcu": "ESP32-S3 module",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "802.11 b/g/n, 2.4 GHz",
+    "bt": "BLE 5",
+    "grove": "4x Crowtail (HY2.0-4P: analog, digital, UART, I2C)",
+    "sd": "Micro TF card slot",
+    "battery": "LiPo battery interface PH2.0",
+    "shell": "Acrylic shell (in package)",
+    "dimensions": "106 x 66 x 13 mm"
+   },
+   "spec_rows": [
+    [
+     "Wi-Fi Protocol",
+     "802.11b/g/n (802.11n up to 150Mbps) Wi-Fi Frequency Range: 2.402GHz - 2.483Ghz"
+    ],
+    [
+     "Driver chip",
+     "ILI9488 (16-bit parallel line)"
+    ],
+    [
+     "OperatingVoltage",
+     "DC 5V-500mA"
+    ],
+    [
+     "USB power supply",
+     "6.86mA"
+    ],
+    [
+     "Lithium battery power supply",
+     "3.23mA"
+    ],
+    [
+     "LiPo Battery Interface",
+     "PH2.0"
+    ],
+    [
+     "Operating temperature",
+     "-10°C ~ 65°C"
+    ],
+    [
+     "Active Area",
+     "73.63(L)*49.79mm(W)"
+    ],
+    [
+     "Appearance Dimensions",
+     "106(L)x66mm(W)*13mm(H)"
+    ],
+    [
+     "New Arduino Uno R4 Coming in May",
+     "Upgraded configuration with USB-C and Wi-Fi support"
+    ]
+   ],
+   "images": [
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/e/s/esp32_terminal_dlc35010_1_6_1_02.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  }
+ ]
+}

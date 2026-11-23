@@ -29,6 +29,7 @@ with sync_playwright() as p:
     res['last_column'] = pg.locator('table.grid thead th').last.inner_text().strip()
     res['header'] = [t.strip() for t in pg.locator('table.grid thead th').all_inner_texts()]
     res['feature_icons'] = pg.locator('table.grid td.feats .fi').count()
+    res['value_badges'] = pg.locator('table.grid td.feats .fi .fv').count()
     res['sprite_ok'] = pg.evaluate("fetch('assets/img/features.svg').then(r=>r.ok)")
     shot(pg, '01-catalog.png')
     # tooltip on a feature pictogram (mouse) + keyboard focus
@@ -82,6 +83,24 @@ with sync_playwright() as p:
     if sec.count() and SHOTS:
         sec.screenshot(path=f'{SHOTS}/09-model-ports-grid-mobile.png')
     mp.close()
+    # new manufacturers: facet + a curated board (M5Stack Tab5) desktop + mobile
+    pg.goto(BASE + 'index.html#f.vendor=M5Stack&view=table'); pg.wait_for_timeout(1200)
+    res['vendor_m5_rows'] = pg.locator('table.grid tbody tr').count()
+    res['vendors'] = sorted({m['vendor'] for m in ms})
+    shot(pg, '10-catalog-manufacturer-M5Stack.png')
+    mid3 = [m['id'] for m in ms if m['model'] == 'Tab5'][0]
+    pg.goto(BASE + 'model.html?id=' + mid3); pg.wait_for_timeout(1500)
+    res['tab5_feature_cells'] = pg.locator('.fgrid .fcell').count()
+    res['tab5_has_thread'] = pg.locator('.fgrid .fcell:has-text("Thread")').count()
+    shot(pg, '11-model-M5Stack-Tab5-desktop.png', full_page=True)
+    mp = ctx.new_page(); mp.set_viewport_size({'width': 390, 'height': 844})
+    mp.goto(BASE + 'model.html?id=' + mid3); mp.wait_for_timeout(1500)
+    res['tab5_mobile_overflow'] = mp.evaluate("document.documentElement.scrollWidth > window.innerWidth + 1")
+    shot(mp, '13-model-M5Stack-Tab5-mobile.png')
+    sec = mp.locator('.sec:has(.fgrid)')
+    if sec.count() and SHOTS:
+        sec.screenshot(path=f'{SHOTS}/12-model-M5Stack-Tab5-ports-mobile.png')
+    mp.close()
     pg.goto(BASE + 'viewer.html?a=hmi-display-jc4880p443c-i-w'); pg.wait_for_timeout(3000)
     res['viewer_tree_nodes'] = pg.locator('#tree .n').count()
     shot(pg, '05-viewer-JC4880P443C_I_W.png')
@@ -106,5 +125,5 @@ print('console errors:', len(errors)); [print(' ', e) for e in errors[:20]]
 print('bad responses:', len(bad)); [print(' ', e) for e in bad[:20]]
 print('blocked external requests:', len(external)); [print(' ', e) for e in external[:20]]
 ok = (not errors and not bad and not external and res.get('hover_visible') and res.get('fonts_loaded') and (res.get('last_column') or '').lower() == 'features'
-      and res.get('feature_icons', 0) > 100 and res.get('tooltip') and res.get('model_feature_cells', 0) > 3 and not {'PSRAM', 'FILES'} & {h.upper() for h in res.get('header', [])})
+      and res.get('feature_icons', 0) > 100 and res.get('tooltip') and res.get('model_feature_cells', 0) > 3 and res.get('value_badges', 0) > 50 and res.get('vendor_m5_rows', 0) >= 10 and res.get('tab5_has_thread') and not res.get('tab5_mobile_overflow') and not {'PSRAM', 'FILES'} & {h.upper() for h in res.get('header', [])})
 sys.exit(0 if ok else 1)

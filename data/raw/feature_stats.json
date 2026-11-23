@@ -1,71 +1,74 @@
 {
- "models": 104,
- "with_features": 99,
+ "models": 185,
+ "with_features": 180,
  "by_feature": {
-  "flash": 68,
-  "disp-spi": 26,
-  "touch-cap": 59,
-  "wifi": 45,
-  "bt": 65,
-  "uart": 20,
-  "speaker": 63,
-  "battery": 23,
-  "case": 22,
-  "sd": 64,
-  "touch-res": 13,
-  "wifi6": 22,
-  "mic": 17,
-  "knob": 10,
-  "rgbled": 9,
-  "psram": 53,
-  "disp-qspi": 13,
-  "vibration": 1,
-  "gpio": 43,
+  "disp-spi": 55,
+  "touch-cap": 110,
+  "flash": 147,
+  "wifi": 145,
+  "bt": 145,
+  "uart": 38,
+  "speaker": 99,
+  "battery": 58,
+  "case": 31,
+  "touch-res": 17,
+  "sd": 117,
+  "mic": 46,
+  "knob": 18,
+  "rgbled": 12,
+  "disp-qspi": 20,
+  "psram": 116,
+  "vibration": 5,
+  "gpio": 63,
   "sensor": 12,
-  "i2c": 2,
-  "disp-rgb": 29,
-  "relay": 1,
-  "disp-dsi": 17,
-  "disp-8080": 4,
-  "rs485": 2,
-  "buttons": 3,
-  "ethernet": 3,
-  "rtc": 7,
-  "camera": 8,
-  "usb-c": 7,
-  "usb-a": 4,
+  "i2c": 26,
+  "disp-rgb": 41,
+  "relay": 2,
+  "disp-dsi": 21,
+  "disp-8080": 7,
+  "thread": 27,
+  "zigbee": 27,
+  "matter": 27,
+  "rs485": 8,
+  "buttons": 35,
+  "ethernet": 5,
+  "rtc": 33,
+  "camera": 17,
+  "charger": 20,
+  "usb-c": 43,
+  "imu": 17,
+  "ir": 4,
+  "grove": 19,
+  "keyboard": 4,
+  "buzzer": 16,
+  "dc-in": 5,
+  "nfc": 1,
+  "disp-epd": 9,
+  "jack-trs": 3,
+  "als": 2,
+  "lora": 7,
+  "gps": 3,
+  "usb-a": 5,
+  "can": 4,
   "poe": 2
  },
- "categories": [
-  "audio",
-  "camera",
-  "display",
-  "io",
-  "memory",
-  "misc",
-  "power",
-  "storage",
-  "touch",
-  "usb",
-  "wired",
-  "wireless"
- ],
+ "categories": {
+  "display": "Display interface",
+  "input": "Touch & controls",
+  "psram": "PSRAM",
+  "flash": "Flash",
+  "storage": "Storage",
+  "wifi": "Wi-Fi",
+  "bluetooth": "Bluetooth",
+  "radio": "Thread / Zigbee / Matter / other radios",
+  "usb": "USB",
+  "wired": "Wired / industrial",
+  "io": "I/O ports & sensors",
+  "audio": "Audio",
+  "camera": "Camera",
+  "power": "Power"
+ },
  "definitions": {
-  "sd": {
-   "category": "storage",
-   "name": "microSD slot",
-   "icon": "sd"
-  },
-  "psram": {
-   "category": "memory",
-   "name": "PSRAM",
-   "icon": "psram"
-  },
-  "flash": {
-   "category": "memory",
-   "name": "Flash",
-   "icon": "flash"
-  },
   "disp-spi": {
    "category": "display",
    "name": "SPI display",
@@ -91,30 +94,80 @@
    "name": "8080 display",
    "icon": "disp-8080"
   },
+  "disp-epd": {
+   "category": "display",
+   "name": "E-paper display",
+   "icon": "disp-epd"
+  },
   "touch-cap": {
-   "category": "touch",
+   "category": "input",
    "name": "Capacitive touch",
    "icon": "touch-cap"
   },
   "touch-res": {
-   "category": "touch",
+   "category": "input",
    "name": "Resistive touch",
    "icon": "touch-res"
   },
+  "psram": {
+   "category": "psram",
+   "name": "PSRAM",
+   "icon": "psram"
+  },
+  "flash": {
+   "category": "flash",
+   "name": "Flash",
+   "icon": "flash"
+  },
+  "sd": {
+   "category": "storage",
+   "name": "microSD slot",
+   "icon": "sd"
+  },
   "wifi": {
-   "category": "wireless",
+   "category": "wifi",
    "name": "Wi-Fi",
    "icon": "wifi"
   },
-  "wifi6": {
-   "category": "wireless",
-   "name": "Wi-Fi 6",
-   "icon": "wifi6"
-  },
   "bt": {
-   "category": "wireless",
+   "category": "bluetooth",
    "name": "Bluetooth",
    "icon": "bt"
+  },
+  "thread": {
+   "category": "radio",
+   "name": "Thread",
+   "icon": "thread"
+  },
+  "zigbee": {
+   "category": "radio",
+   "name": "Zigbee",
+   "icon": "zigbee"
+  },
+  "matter": {
+   "category": "radio",
+   "name": "Matter",
+   "icon": "matter"
+  },
+  "lora": {
+   "category": "radio",
+   "name": "LoRa",
+   "icon": "lora"
+  },
+  "gps": {
+   "category": "radio",
+   "name": "GNSS / GPS",
+   "icon": "gps"
+  },
+  "nfc": {
+   "category": "radio",
+   "name": "NFC / RFID",
+   "icon": "nfc"
+  },
+  "ir": {
+   "category": "radio",
+   "name": "IR",
+   "icon": "ir"
   },
   "usb-c": {
    "category": "usb",
@@ -156,6 +209,11 @@
    "name": "I2C port",
    "icon": "i2c"
   },
+  "grove": {
+   "category": "io",
+   "name": "Grove port",
+   "icon": "grove"
+  },
   "gpio": {
    "category": "io",
    "name": "GPIO",
@@ -165,6 +223,11 @@
    "category": "io",
    "name": "Sensor port",
    "icon": "sensor"
+  },
+  "relay": {
+   "category": "io",
+   "name": "Relay",
+   "icon": "relay"
   },
   "speaker": {
    "category": "audio",
@@ -186,6 +249,11 @@
    "name": "3.5 mm TRRS jack",
    "icon": "jack-trrs"
   },
+  "buzzer": {
+   "category": "audio",
+   "name": "Buzzer",
+   "icon": "buzzer"
+  },
   "camera": {
    "category": "camera",
    "name": "Camera",
@@ -196,48 +264,58 @@
    "name": "Battery",
    "icon": "battery"
   },
+  "charger": {
+   "category": "power",
+   "name": "Battery charger",
+   "icon": "charger"
+  },
+  "dc-in": {
+   "category": "power",
+   "name": "Wide-range DC input",
+   "icon": "dc-in"
+  },
   "rtc": {
-   "category": "misc",
+   "category": "io",
    "name": "RTC",
    "icon": "rtc"
   },
-  "rgbled": {
-   "category": "misc",
-   "name": "RGB LED",
-   "icon": "rgbled"
-  },
-  "relay": {
-   "category": "misc",
-   "name": "Relay",
-   "icon": "relay"
-  },
-  "knob": {
-   "category": "misc",
-   "name": "Rotary knob",
-   "icon": "knob"
-  },
-  "vibration": {
-   "category": "misc",
-   "name": "Vibration motor",
-   "icon": "vibration"
-  },
-  "buttons": {
-   "category": "misc",
-   "name": "Buttons",
-   "icon": "buttons"
-  },
-  "ir": {
-   "category": "misc",
-   "name": "IR",
-   "icon": "ir"
-  },
   "imu": {
-   "category": "misc",
+   "category": "io",
    "name": "IMU",
    "icon": "imu"
   },
+  "als": {
+   "category": "io",
+   "name": "Light / proximity sensor",
+   "icon": "als"
+  },
+  "keyboard": {
+   "category": "input",
+   "name": "Keyboard",
+   "icon": "keyboard"
+  },
+  "knob": {
+   "category": "input",
+   "name": "Rotary knob",
+   "icon": "knob"
+  },
+  "buttons": {
+   "category": "input",
+   "name": "Buttons",
+   "icon": "buttons"
+  },
+  "vibration": {
+   "category": "input",
+   "name": "Vibration motor",
+   "icon": "vibration"
+  },
+  "rgbled": {
+   "category": "input",
+   "name": "RGB LED",
+   "icon": "rgbled"
+  },
   "case": {
-   "category": "misc",
+   "category": "io",
    "name": "Enclosure",
    "icon": "case"
   }

@@ -1008,6 +1008,150 @@
 "original": "https://www.guition.com/icms/upload/fb081940d6fc11f09850077a33e1404f/file/productmanager-productfile/8e23ff8b670e435fa919fbe6ab2f0cb5/Directory/JC-ESP32P4-M3-DEV Specifications-EN_1776046921880.pdf",
 "kind": "vendor-file"
 },
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/472/Sch_M5_AtomS3_v1.0.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5_AtomS3_v1.0_267a5b.pdf",
+"size": 364272,
+"sha256": "de57d7dc001da15e33558525867c3b20b36dd7c396f079c25374669ad0ff270a",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/472/Sch_M5_AtomS3_v1.0.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/472/Sch_AtomS3_IMU.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_AtomS3_IMU_c6a98e.pdf",
+"size": 80849,
+"sha256": "6e878be53facd2a097f545b608b05801fd984d203b85903856ca12960b4453d6",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/472/Sch_AtomS3_IMU.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/680/Sch_M5_AtomS3R_v0.4.1.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5_AtomS3R_v0.4.1_25c353.pdf",
+"size": 445185,
+"sha256": "d1a2b292411174fadf8305c57678fbe232cbb51d9a07868251e5984017a814e6",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/680/Sch_M5_AtomS3R_v0.4.1.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/481/Sch_M5Cardputer.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5Cardputer_2428c4.pdf",
+"size": 717743,
+"sha256": "6016c1fe6099b9e3f0d0c88f07a3fba1aa44a3da8a7a91dd7040ad0fffa2041e",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/481/Sch_M5Cardputer.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/481/Sch_M5cardputer_Base.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5cardputer_Base_214180.pdf",
+"size": 24076,
+"sha256": "29542fe18b8687e4bd5fe7c533decd6a21e434cac8ac4b3f4cb1a6dd407be2cc",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/481/Sch_M5cardputer_Base.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/522/Sch_M5StampS3_v0.2.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5StampS3_v0.2_33e3a0.pdf",
+"size": 348884,
+"sha256": "6d92e1aef6577838b9abffcf1adf6c86e1b0c8374fcd372af451bb58ef19eb94",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/522/Sch_M5StampS3_v0.2.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1178/Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58_59af01.pdf",
+"size": 878155,
+"sha256": "9553f5ee22b6e5f29a385388192e42c5ff76f16281b6f7ea9418f7b62a2d48b0",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1178/Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1150/Sch_StampS3_v0.3.3.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_StampS3_v0.3.3_e73adc.pdf",
+"size": 369766,
+"sha256": "2f9610aecc5a5d2ee51b33c75df31cf90c7639d2997e7a2bb147ba8d46b46966",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1150/Sch_StampS3_v0.3.3.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/512/Sch_M5StickC_Plus2_v0.5.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5StickC_Plus2_v0.5_804d11.pdf",
+"size": 488279,
+"sha256": "75017af5c47c7e56904469f032e7d71a63803651a6e8af070d427f125e88e6cd",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/512/Sch_M5StickC_Plus2_v0.5.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/499/Sch_M5Dial.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5Dial_8e8492.pdf",
+"size": 669195,
+"sha256": "66be81ef2255363bbac105bffb959c33daad6239a0caa6e17f68660d1f6cd99d",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/499/Sch_M5Dial.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/coreink/coreink_sch.pdf": {
+"type": "local",
+"url": "files/m5stack/coreink_sch_51f426.pdf",
+"size": 311441,
+"sha256": "182ea9c6e90bdc7696aacb26db054a1f4125f7640aa505e3d9a2301163e334b5",
+"original": "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/coreink/coreink_sch.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/480/M5-Core-Schematic_20171206.pdf": {
+"type": "local",
+"url": "files/m5stack/M5-Core-Schematic_20171206_140430.pdf",
+"size": 891864,
+"sha256": "eee2755593110b6e7ce508b02a5af48b64e236b34ad0e150214cb6eee588271b",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/480/M5-Core-Schematic_20171206.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/486/Sch_Core2_v1.1_2023-07-20.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_Core2_v1.1_2023-07-20_bcf2c2.pdf",
+"size": 1207439,
+"sha256": "8d24bd11700bb5f0af8f2c8eaa609cb39653cea69d898fd9961a39ff257a099b",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/486/Sch_Core2_v1.1_2023-07-20.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/490/Sch_M5_CoreS3_v1.0.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5_CoreS3_v1.0_d84a1c.pdf",
+"size": 1537792,
+"sha256": "58a15454eccb11d2668e1a9a3ad85943b9a58b104c5f1ed137b790192ec27c04",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/490/Sch_M5_CoreS3_v1.0.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/559/SCH_DinBase_V1.1.pdf": {
+"type": "local",
+"url": "files/m5stack/SCH_DinBase_V1.1_8eca3c.pdf",
+"size": 138135,
+"sha256": "91298e0fbfb2b73b92f8d53a6f24dd68f543e40adba93f3be1b686b515515af2",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/559/SCH_DinBase_V1.1.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/498/Sch_M5_CoreS3_SE_v1.0.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5_CoreS3_SE_v1.0_7c91d4.pdf",
+"size": 1353846,
+"sha256": "ff105808b6073ab487c63e0af776418a58bcf386c2b63f97e3083f5698847e2f",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/498/Sch_M5_CoreS3_SE_v1.0.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/647/Tough-Schematics-PDF.pdf": {
+"type": "local",
+"url": "files/m5stack/Tough-Schematics-PDF_972654.pdf",
+"size": 713049,
+"sha256": "0ca43ae786abc18a20b3cf9292e444a311a8f8acd661a56bfdcea8e631e2c3ab",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/647/Tough-Schematics-PDF.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/647/Tough-Ext-Board-Schematics-PDF.pdf": {
+"type": "local",
+"url": "files/m5stack/Tough-Ext-Board-Schematics-PDF_e13366.pdf",
+"size": 226342,
+"sha256": "595a3eeaa636df7ef4208b31395d03d99db272bbe442e3233f4254d16bbb641a",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/647/Tough-Ext-Board-Schematics-PDF.pdf",
+"kind": "vendor-file"
+},
 "https://files.waveshare.com/wiki/ESP32-P4-WIFI6-Touch-LCD-XC/ESP32-P4-WIFI6-Touch-LCD-XC-Schematic.pdf": {
 "type": "local",
 "url": "files/waveshare/ESP32-P4-WIFI6-Touch-LCD-XC-Schematic_2cd490.pdf",
@@ -1040,6 +1184,30 @@
 "kind": "vendor-file",
 "type": "local",
 "url": "files/waveshare/Esp32-p4_technical_reference_manual_en.pdf"
+},
+"https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/m5paper/M5_PAPER_SCH.pdf": {
+"type": "local",
+"url": "files/m5stack/M5_PAPER_SCH_02bac4.pdf",
+"size": 10984165,
+"sha256": "885e5b4aed56b3a429096b20892f50f1679efd772e6d6b1729bfd677db57a8c2",
+"original": "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/m5paper/M5_PAPER_SCH.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/517/sch_papers3_V1.0.pdf": {
+"type": "local",
+"url": "files/m5stack/sch_papers3_V1.0_b51a05.pdf",
+"size": 496381,
+"sha256": "f6a2abd5ae19f0ea4f9bdd5003306194308962db5f65d30754b2cbbea2a081c6",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/517/sch_papers3_V1.0.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/Tab5_Schematics_PDF.pdf": {
+"type": "local",
+"url": "files/m5stack/Tab5_Schematics_PDF_e282a8.pdf",
+"size": 2319940,
+"sha256": "13cf3fd9954d39aa198e57b1bb94ec56af7d49107c80a245acc5bd90ac8ea329",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/Tab5_Schematics_PDF.pdf",
+"kind": "vendor-file"
 },
 "https://files.waveshare.com/wiki/ESP32-P4-Module-DEV-KIT/ESP32-P4-Module-DEV-KIT.pdf": {
 "type": "local",

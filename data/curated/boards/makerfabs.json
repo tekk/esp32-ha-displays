@@ -1,0 +1,169 @@
+{
+ "vendor": "Makerfabs",
+ "slug": "makerfabs",
+ "category": "Makerfabs MaTouch",
+ "listing": "https://www.makerfabs.com/",
+ "image_note": "official Makerfabs product photo",
+ "_note": "Hand-curated from the official product / docs pages listed in each board's sources. spec_rows = verbatim vendor spec table rows. Empty = not stated.",
+ "boards": [
+  {
+   "id": "makerfabs-matouch-esp32-s3-parallel-3-5",
+   "model": "MaTouch ESP32-S3 Parallel TFT 3.5\" ILI9488",
+   "title": "Makerfabs MaTouch ESP32-S3 Parallel TFT with Touch 3.5\" (ILI9488, 16-bit parallel)",
+   "series": "MaTouch",
+   "sources": [
+    "https://www.makerfabs.com/esp32-s3-parallel-tft-with-touch-ili9488.html"
+   ],
+   "description": "",
+   "params": {
+    "size": "3.5\"",
+    "resolution": "480x320",
+    "panel": "TFT",
+    "interface": "8080 (16-bit parallel)",
+    "driver_ic": "ILI9488",
+    "touch": "Capacitive",
+    "touch_ic": "FT6236",
+    "mcu": "ESP32-S3-WROOM-1-N16R8",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "Wi-Fi",
+    "bt": "Bluetooth 5.0",
+    "usb": "Dual USB Type-C (USB-to-UART CP2104 + native USB)",
+    "buttons": "Flash + reset",
+    "grove": "Mabee: 1x I2C, 1x GPIO",
+    "sd": "MicroSD",
+    "dimensions": "66 x 84.3 x 12 mm"
+   },
+   "spec_rows": [
+    [
+     "Controller",
+     "PCB Antenna, 16MB Flash, 8MB PSRAM, ESP32-S3-WROOM-1-N16R8"
+    ],
+    [
+     "Wireless",
+     "Wifi & Bluetooth 5.0"
+    ],
+    [
+     "LCD",
+     "3.5inch TFT LCD"
+    ],
+    [
+     "Resolution",
+     "480*320"
+    ],
+    [
+     "LCD interface",
+     "16bit parallel"
+    ],
+    [
+     "LCD Driver",
+     "ili9488"
+    ],
+    [
+     "Touch Panel",
+     "Capacitive"
+    ],
+    [
+     "Touch Panel Driver",
+     "FT6236"
+    ],
+    [
+     "USB",
+     "Dual USB Type-C (one for USB-to-UART and one for native USB)"
+    ],
+    [
+     "UART to UART Chip",
+     "CP2104"
+    ],
+    [
+     "Power Supply",
+     "USB Type-C 5.0V (4.0V~5.25V)"
+    ],
+    [
+     "Button",
+     "Flash button and reset button"
+    ],
+    [
+     "Mabee interface",
+     "1*I2C; 1*GPIO"
+    ],
+    [
+     "MicroSD",
+     "Yes"
+    ],
+    [
+     "Operation temperature",
+     "-40℃ to +85℃"
+    ],
+    [
+     "Dimension",
+     "66mm*84.3mm*12mm"
+    ]
+   ],
+   "images": [
+    "https://www.makerfabs.com/media/catalog/product/cache/6ab262b0af1e33517c917f0f4bd15d2d/e/s/esp32-s3-parallel-tft-with-touch-ili9488.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "makerfabs-matouch-esp32-s3-rotary-2-1",
+   "model": "MaTouch ESP32-S3 Rotary IPS 2.1\" ST7701",
+   "title": "Makerfabs MaTouch ESP32-S3 Rotary IPS Display with Touch 2.1\" – 480×480 RGB round knob",
+   "series": "MaTouch",
+   "sources": [
+    "https://www.makerfabs.com/matouch-esp32-s3-rotary-ips-display-with-touch-2-1-st7701.html"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.1\"",
+    "resolution": "480x480",
+    "shape": "Round",
+    "panel": "IPS",
+    "interface": "RGB",
+    "interface_detail": "RGB 5/6/5",
+    "driver_ic": "ST7701",
+    "touch": "Capacitive",
+    "mcu": "ESP32-S3",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "Wi-Fi",
+    "bt": "Bluetooth 5.0",
+    "encoder": "Mechanical rotary encoder with push",
+    "color_depth": "65K",
+    "sku": "MTE21RO"
+   },
+   "spec_rows": [
+    [
+     "Summary",
+     "2.1\" 480×480 IPS touch with encoder, ESP32-S3, Wi-Fi/BLE 5.0, USB-powered"
+    ],
+    [
+     "Display",
+     "480*480 IPS, capacitive touch, RGB 5/6/5, up to 75 FPS, 65K color"
+    ],
+    [
+     "Encoder",
+     "Mechanical rotary encoder, clockwise/anti-clockwise, press"
+    ],
+    [
+     "Controller",
+     "ESP32-S3, 8M PSRAM, 16M flash"
+    ],
+    [
+     "Wireless",
+     "Wifi & Bluetooth 5.0"
+    ]
+   ],
+   "images": [
+    "https://www.makerfabs.com/media/catalog/product/cache/6ab262b0af1e33517c917f0f4bd15d2d/m/a/matouch_esp32-s3_rotary_ips_display_with_touch_2.1_st7701-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  }
+ ]
+}

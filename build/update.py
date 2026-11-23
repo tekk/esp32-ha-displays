@@ -20,7 +20,7 @@ Usage:   build/update.sh [--dry-run] [--no-push] [--no-upload] [--keep-downloads
 Env:     GUITION_CACHE  download dir (default: config cache_dir); CI=true deletes downloads after use.
          GH_TOKEN/GITHUB_TOKEN for gh (release upload, GitHub search).
 This script never sends e-mail; the workflow does that from the files above."""
-import argparse, datetime, hashlib, json, os, re, shutil, subprocess, sys, time, traceback
+import argparse, datetime, glob, hashlib, json, os, re, shutil, subprocess, sys, time, traceback
 from urllib.parse import urlsplit, unquote
 import requests
 
@@ -38,7 +38,7 @@ ap.add_argument('--no-push', action='store_true', help='commit locally but do no
 ap.add_argument('--no-commit', action='store_true')
 ap.add_argument('--no-upload', action='store_true', help='do not upload release assets')
 ap.add_argument('--keep-downloads', action='store_true', help='keep downloaded files (default on a workstation)')
-ap.add_argument('--skip', default='', help='comma list: pan,guition,waveshare,github')
+ap.add_argument('--skip', default='', help='comma list: pan,guition,waveshare,vendors,github')
 ap.add_argument('--max-download-gb', type=float, default=10.0, help='stop downloading new files after this much')
 A = ap.parse_args()
 SKIP = set(x for x in A.skip.split(',') if x)
@@ -243,6 +243,9 @@ def ws_urls():
     for g in list(ws['common'].values()) + ws['models']:
         files += [f['url'] for f in g.get('files', [])]
         pages.update(g.get('sources', []))
+    cw = jload('data/curated/boards/waveshare.json', {'boards': []})     # extra hand-curated Waveshare boards (S3 / C6 / more P4)
+    for b in cw['boards']:
+        pages.update(b.get('sources', []))
     return list(dict.fromkeys(files)), pages
 
 
@@ -252,15 +255,15 @@ def step_waveshare():
     files, pages = ws_urls()
     # 3a. new ESP32-P4 products in the shop
     found = set()
-    for q in ('ESP32-P4', 'ESP32-P4 display', 'ESP32-P4 LCD'):
+    for q in ('ESP32-P4', 'ESP32-P4 display', 'ESP32-P4 LCD', 'ESP32-S3 Touch LCD', 'ESP32-S3 AMOLED', 'ESP32-C6 Touch LCD'):
         r = S.get('https://www.waveshare.com/catalogsearch/result/', params={'q': q}, timeout=60)
         r.raise_for_status()
         for u in re.findall(r'href="(https://www\.waveshare\.com/[a-z0-9.\-]+\.htm)"', r.text):
-            if re.search(r'esp32-p4', u, re.I):
+            if re.search(r'esp32-(p4|s3|c6|c5)', u, re.I):
                 found.add(u)
     disp = {u for u in found if re.search(r'lcd|amoled|oled|display|touch|knob|screen', u, re.I)}
     known = set(seen['products']) | {u for u in pages if u.startswith('https://www.waveshare.com/')}
-    log(f'waveshare: {len(found)} ESP32-P4 shop products found ({len(disp)} with a display), {len(disp - known)} display products not in the catalog')
+    log(f'waveshare: {len(found)} ESP32-P4/S3/C6 shop products found ({len(disp)} with a display), {len(disp - known)} display products not in the catalog')
     found -= disp - known          # display products stay 'candidates' every run until curated into waveshare.json
     for u in sorted(disp - known):
         STATS['waveshare_candidates'].append(u)
@@ -320,6 +323,76 @@ def step_waveshare():
             err('waveshare ' + u, e)
     seen['products'] = sorted(set(seen['products']) | found)
     json.dump(seen, open(seen_f, 'w'), indent=1)
+
+
+# ---------------------------------------------------------------- 3c. other manufacturers (curated boards)
+# Listing pages of the other vendors are scanned for display products that are not yet in
+# data/curated/boards/<vendor>.json. Candidates are only REPORTED (specs must be curated by hand,
+# with a source for every value) – nothing is auto-added.
+VENDOR_LISTINGS = [
+    # (vendor, listing URL, regex for product links, display-product filter, URL prefix)
+    ('M5Stack', 'https://docs.m5stack.com/sitemap.xml', r'/en/core/[A-Za-z0-9_%.\-]+',
+     r'^core|^tab|dial|paper|cardputer|atoms3(?!-lite)|stick|tough|ink|meter|display|nesso', 'https://docs.m5stack.com'),
+    ('LilyGO', 'https://lilygo.cc/products.json?limit=250', r'"handle":"([a-z0-9\-]+)"',
+     r't-display|amoled|t-deck|t-rgb|t-panel|t-encoder|^t4|^t5|t-circle|t-qt|t-dongle|t-hmi|lcd|e-?paper|touch', 'https://lilygo.cc/products/'),
+    ('Elecrow', 'https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html', r'https://www\.elecrow\.com/[a-z0-9\-]+\.html',
+     r'crowpanel|esp32-.*(display|hmi|lcd|terminal)', ''),
+    ('Makerfabs', 'https://www.makerfabs.com/catalogsearch/result/?q=matouch', r'https://www\.makerfabs\.com/[a-z0-9\-]+\.html',
+     r'matouch.*(esp32|display|tft|ips|amoled)|esp32-s3-parallel', ''),
+    ('Seeed Studio', 'https://wiki.seeedstudio.com/reterminal_e10xx_main_page/', r'reTerminal E10\d\d', r'.', 'name:'),
+]
+
+
+def _norm_url(u):
+    return re.sub(r'[?#].*$', '', u).rstrip('/').lower()
+
+
+def step_vendors():
+    seen_f = os.path.join(AUTO, 'vendors_seen.json')
+    seen = jload(seen_f, {}) if os.path.exists(seen_f) else {}
+    known, names, sources = set(), set(), []
+    for f in sorted(glob.glob(os.path.join(ROOT, 'data/curated/boards/*.json'))):
+        d = jload(f)
+        for b in d['boards']:
+            for u in b.get('sources', []) + [l.get('url', '') for l in b.get('links', [])]:
+                known.add(_norm_url(u))
+            sources += b.get('sources', [])[:1]
+            names.add(b['model'].lower())
+    STATS.setdefault('vendor_candidates', [])
+    for vendor, url, rx, flt, prefix in VENDOR_LISTINGS:
+        try:
+            r = S.get(url, timeout=60); r.raise_for_status()
+            hits = set(re.findall(rx, r.text))
+            cand = set()
+            for h in hits:
+                if not re.search(flt, h.rstrip('/').rsplit('/', 1)[-1], re.I):
+                    continue
+                if prefix == 'name:':
+                    if not any(h.lower() in n for n in names):
+                        cand.add(h)
+                    continue
+                full = (prefix + h) if prefix and not h.startswith('http') else h
+                if _norm_url(full) not in known:
+                    cand.add(full)
+            new = sorted(cand - set(seen.get(vendor, [])))
+            log(f'{vendor}: {len(hits)} listed, {len(cand)} display-like not curated, {len(new)} new since last run')
+            for c in new:
+                STATS['vendor_candidates'].append(f'[{vendor}] {c}')
+            seen[vendor] = sorted(set(seen.get(vendor, [])) | cand)
+        except Exception as e:
+            err('vendor listing ' + vendor, e)
+    # curated source pages still alive?
+    for u in dict.fromkeys(sources):
+        try:
+            h = S.head(u, timeout=40, allow_redirects=True)
+            if h.status_code in (405, 403):
+                h = S.get(u, timeout=40, stream=True); h.close()
+            if h.status_code >= 400:
+                STATS['warnings'].append(f'curated source HTTP {h.status_code}: {u}')
+        except Exception as e:
+            STATS['warnings'].append(f'curated source unreachable: {u} ({e.__class__.__name__})')
+    if not A.dry_run:
+        json.dump(seen, open(seen_f, 'w'), indent=1)
 
 
 # ---------------------------------------------------------------- 4. GitHub
@@ -459,7 +532,7 @@ def finish():
           f"| New boards | {len(STATS['new_boards'])} |", f"| New files | {len(STATS['new_files'])} |",
           f"| Changed files | {len(STATS['changed_files'])} |", f"| Removed upstream (kept) | {len(STATS['removed_upstream'])} |",
           f"| New community repos | {len(STATS['new_repos'])} |", f"| Updated mirrored repos | {len(STATS['updated_repos'])} |",
-          f"| Waveshare candidates (manual) | {len(STATS['waveshare_candidates'])} |", f"| Release assets uploaded | {len(STATS['uploaded_assets'])} |",
+          f"| Waveshare candidates (manual) | {len(STATS['waveshare_candidates'])} |", f"| Other-vendor candidates (manual) | {len(STATS.get('vendor_candidates', []))} |", f"| Release assets uploaded | {len(STATS['uploaded_assets'])} |",
           f"| Errors | {len(STATS['errors'])} |", '']
     def sec(title, items, fmt):
         if items:
@@ -471,6 +544,7 @@ def finish():
     sec('New community repositories', STATS['new_repos'], lambda x: f"{x['url']} (license: {x['license'] or 'none'})")
     sec('Updated mirrored repositories', STATS['updated_repos'], lambda x: x['repo'])
     sec('Waveshare products to curate', STATS['waveshare_candidates'], str)
+    sec('Other-manufacturer products to curate (data/curated/boards/)', STATS.get('vendor_candidates', []), str)
     sec('Errors', STATS['errors'], str)
     sec('Warnings', STATS['warnings'], str)
     if STATS['commit']:
@@ -486,7 +560,7 @@ def main():
     log(f"update start ({'DRY RUN' if A.dry_run else 'live'}), cache {CACHE}, delete-after {DELETE_AFTER}")
     shutil.disk_usage(ROOT) and log('disk free: %.1f GB' % (shutil.disk_usage(ROOT).free / 1e9))
     before = model_ids()
-    for name, fn in (('pan', step_pan), ('guition', step_guition), ('waveshare', step_waveshare), ('github', step_github)):
+    for name, fn in (('pan', step_pan), ('guition', step_guition), ('waveshare', step_waveshare), ('vendors', step_vendors), ('github', step_github)):
         if name in SKIP:
             log('skip', name); continue
         log(f'== {name}')

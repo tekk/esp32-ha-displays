@@ -1,0 +1,2341 @@
+{
+ "vendor": "M5Stack",
+ "slug": "m5stack",
+ "category": "M5Stack (all-in-one controllers)",
+ "listing": "https://docs.m5stack.com/en/products?id=core",
+ "image_note": "official M5Stack docs product photo",
+ "_note": "Hand-curated from the official product / docs pages listed in each board's sources. spec_rows = verbatim vendor spec table rows. Empty = not stated.",
+ "boards": [
+  {
+   "id": "m5stack-cores3",
+   "model": "CoreS3",
+   "title": "M5Stack CoreS3 – ESP32-S3 2.0\" IPS touch controller",
+   "series": "M5Stack Core",
+   "sources": [
+    "https://docs.m5stack.com/en/core/CoreS3"
+   ],
+   "description": "CoreS3 is the third-generation main controller of the M5Stack development kit series, based on the ESP32-S3 solution featuring a dual-core Xtensa LX7 processor running at 240 MHz with built-in Wi-Fi. It integrates 16MB Flash and 8MB PSRAM. Programs can be downloaded through the USB Type-C port, and OTG & CDC functions are supported for connecting USB devices and flashing firmware.",
+   "params": {
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "panel": "IPS",
+    "touch": "Capacitive",
+    "touch_ic": "FT6336U",
+    "driver_ic": "ILI9342C / ILI9342E",
+    "interface": "SPI",
+    "mcu": "ESP32-S3 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "16MB",
+    "psram": "8MB Quad",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth LE (SoC radio; not listed separately in the vendor spec table)",
+    "camera": "GC0308 0.3 MP",
+    "als": "LTR-553ALS-WA proximity / ambient light",
+    "imu": "BMI270 6-axis + BMM150 magnetometer",
+    "rtc": "BM8563",
+    "speaker": "1 W, AW88298 16-bit I2S amplifier",
+    "audio": "ES7210 codec, dual microphone input",
+    "mic": "2x microphone (ES7210)",
+    "pmu": "AXP2101",
+    "sd": "microSD",
+    "dc_in": "DinBase DC 9–24 V (DC5521)",
+    "usb": "USB Type-C (OTG / CDC)",
+    "battery": "500 mAh (DinBase)",
+    "dimensions": "54.0 x 54.0 x 15.5 mm (main unit)",
+    "sku": "K128"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Quad"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Touch IPS LCD",
+     "2.0\" @320 × 240 ILI9342C / ILI9342E"
+    ],
+    [
+     "Camera",
+     "GC0308 0.3MP"
+    ],
+    [
+     "Proximity Sensor",
+     "LTR-553ALS-WA"
+    ],
+    [
+     "Power Management",
+     "AXP2101"
+    ],
+    [
+     "DC Power Port",
+     "Input: DC 9–24V, compatible with DC5521 (5.5 × 2.1 mm) plug, center positive"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "Speaker",
+     "16-bit I2S amplifier AW88298 @1W"
+    ],
+    [
+     "Audio Codec",
+     "ES7210, dual-microphone input"
+    ],
+    [
+     "Product Size",
+     "Whole set (CoreS3+DinBase): 69.0 × 54.0 × 31.5mm Main unit (CoreS3): 54.0 × 54.0 × 15.5mm"
+    ]
+   ],
+   "images": [
+    "https://static-cdn.m5stack.com/resource/docs/products/core/CoreS3/img-96063e2a-637a-4d11-ac47-1ce4f1cdfd3e.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5_CoreS3_v1.0.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/490/Sch_M5_CoreS3_v1.0.pdf",
+     "host": true
+    },
+    {
+     "name": "SCH_DinBase_V1.1.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/559/SCH_DinBase_V1.1.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5CoreS3",
+     "url": "https://github.com/m5stack/M5CoreS3",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-cores3-se",
+   "model": "CoreS3 SE",
+   "title": "M5Stack CoreS3 SE – lightweight CoreS3 without camera/IMU",
+   "series": "M5Stack Core",
+   "sources": [
+    "https://docs.m5stack.com/en/core/CoreS3-SE"
+   ],
+   "description": "CoreS3-SE is a lightweight version of the third-generation CoreS3 main controller in the M5Stack development kit series. It is powered by the ESP32-S3 solution, featuring a dual-core Xtensa LX7 processor with a main frequency of 240 MHz, and integrates (2.4G) Wi-Fi connectivity. The board is equipped with 16MB Flash and 8MB PSRAM. Programs can be downloaded via the USB Type-C interface, which supports OTG and CDC functions, making it convenient for connecting external USB devices and flashing firmware.",
+   "params": {
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "panel": "IPS",
+    "touch": "Capacitive",
+    "touch_ic": "FT6336U",
+    "driver_ic": "ILI9342C",
+    "interface": "SPI",
+    "mcu": "ESP32-S3 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "16MB",
+    "psram": "8MB Quad",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth LE (SoC radio; not listed separately in the vendor spec table)",
+    "rtc": "BM8563",
+    "speaker": "1 W, AW88298 16-bit I2S amplifier",
+    "audio": "ES7210 codec, dual microphone input",
+    "mic": "2x microphone (ES7210)",
+    "pmu": "AXP2101",
+    "usb": "USB Type-C (USB OTG, USB Serial/JTAG)",
+    "sku": "K128-SE"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "USB",
+     "USB OTG, USB Serial/JTAG"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Quad"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Touch",
+     "FT6336U@Capacitive touch, touch area pixels 320 x 280"
+    ],
+    [
+     "LCD Screen",
+     "2.0\"@320 x 240 ILI9342C, SPI communication"
+    ],
+    [
+     "Power Management Chip",
+     "AXP2101"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "Speaker",
+     "1W@9028"
+    ],
+    [
+     "Amplifier",
+     "16bits-I2S amplifier chip AW88298"
+    ],
+    [
+     "Audio Decoder Chip",
+     "ES7210, Dual-microphone input"
+    ],
+    [
+     "BUS Pins",
+     "G0/G1/G2/G5/G6/G7/G8/G9/G10/G11/G12/G13/G14/G17/G18/G35/G36/G37/G43/G44"
+    ],
+    [
+     "Lithium Battery Charging Current",
+     "5V@198mA"
+    ],
+    [
+     "Max Grove Output Current (Battery Power)",
+     "DC 4.2V@940mA"
+    ],
+    [
+     "Max Grove Output Current (USB Power)",
+     "DC 5V@680mA"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Power Consumption",
+     "Battery Power: Standby Mode: DC 4.2V@104.64uA; Working Mode: DC 4.2V@109.67mA USB Power: Working Mode: DC 5V@166.27mA"
+    ],
+    [
+     "Product Size",
+     "54.0 x 54.0 x 15.5mm"
+    ]
+   ],
+   "images": [
+    "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/products/core/M5CORES3%20SE/4.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5_CoreS3_SE_v1.0.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/498/Sch_M5_CoreS3_SE_v1.0.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5CoreS3",
+     "url": "https://github.com/m5stack/M5CoreS3",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/CoreS3-UserDemo",
+     "url": "https://github.com/m5stack/CoreS3-UserDemo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-core2-v1-1",
+   "model": "Core2 v1.1",
+   "title": "M5Stack Core2 v1.1 – ESP32 2.0\" IPS touch controller",
+   "series": "M5Stack Core",
+   "sources": [
+    "https://docs.m5stack.com/en/core/core2_v1.1"
+   ],
+   "description": "Core2 v1.1 is the iterative version of the second-generation host in the M5Stack development kit series, further enhancing the functionality based on the original generation host. It features a power management chip solution of AXP2101+INA3221, offering more comprehensive hardware functions, adding an RTC battery to meet the needs of low-power applications and precise timing functions. Its core controller is equipped with an ESP32-D0WDQ6-V3, featuring two independently controllable Xtensa® 32-bit LX6 processors, with a main frequency of up to 240MHz, supporting WiFi functionality, and onboard 16MB Flash and 8MB PSRAM. Programs can be downloaded via the TYPE-C interface, and the robust configuration meets the resource demands of complex applications. The front is equipped with a 2.0-inch integrated capacitive touch screen, providing users with a smoother human-computer interaction experie",
+   "params": {
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "panel": "IPS",
+    "touch": "Capacitive",
+    "touch_ic": "FT6336U",
+    "driver_ic": "ILI9342C / ILI9342E",
+    "interface": "SPI",
+    "mcu": "ESP32-D0WDQ6-V3 (dual-core LX6, 240 MHz)",
+    "mcu_family": "ESP32",
+    "frequency": "240 MHz",
+    "sram": "520KB",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio; not listed separately in the vendor spec table)",
+    "speaker": "1 W, NS4168 I2S amplifier",
+    "mic": "SPM1423 MEMS microphone",
+    "imu": "MPU6886",
+    "rtc": "BM8563",
+    "pmu": "AXP2101 + INA3221",
+    "vibration": "Vibration motor",
+    "battery": "500 mAh @ 3.7 V",
+    "usb": "USB Type-C (CH9102F USB-UART)",
+    "grove": "HY2.0-4P (I2C + I/O + UART)",
+    "sd": "microSD",
+    "buttons": "Power, RST + 3 virtual touch buttons",
+    "dimensions": "54.0 x 54.0 x 16.5 mm",
+    "sku": "K010-V11"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Host Interface",
+     "USB Type-C x 1, GROVE (I2C+I/O+UART) x 1"
+    ],
+    [
+     "LED",
+     "Blue power indicator LED"
+    ],
+    [
+     "Button",
+     "Power button, RST button, screen virtual buttons * 3"
+    ],
+    [
+     "Vibration Alert",
+     "Vibration motor"
+    ],
+    [
+     "IPS LCD Screen",
+     "2.0\"@320 x 240 ILI9342C / ILI9342E"
+    ],
+    [
+     "Capacitive Touch IC",
+     "FT6336U"
+    ],
+    [
+     "Speaker Amplifier",
+     "1W (Size: 0928)"
+    ],
+    [
+     "Microphone",
+     "SPM1423"
+    ],
+    [
+     "I2S Amplifier",
+     "NS4168"
+    ],
+    [
+     "IMU",
+     "MPU6886"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "PMU",
+     "AXP2101"
+    ],
+    [
+     "Current Meter",
+     "INA3221"
+    ],
+    [
+     "USB Chip",
+     "CH9102F"
+    ],
+    [
+     "DC-DC Boost",
+     "SY7088"
+    ],
+    [
+     "Lithium Battery",
+     "500mAh @ 3.7V"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D antenna"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 60°C"
+    ],
+    [
+     "Base Screw Spec",
+     "Hex socket countersunk head M3"
+    ],
+    [
+     "Reserved Internal PCB Ports",
+     "Battery port (Spec: MX1.25-2P) USB cable port (Spec: 1.25mm-4P)"
+    ],
+    [
+     "Case Material",
+     "Plastic ( PC )"
+    ],
+    [
+     "Product Size",
+     "54.0 x 54.0 x 16.5mm"
+    ]
+   ],
+   "images": [
+    "https://static-cdn.m5stack.com/resource/docs/products/core/Core2%20v1.1/img-1a949091-da2c-4fbb-bf4f-bce108cb43ec.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_Core2_v1.1_2023-07-20.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/486/Sch_Core2_v1.1_2023-07-20.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Tools",
+     "url": "https://github.com/m5stack/M5Tools",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Core2",
+     "url": "https://github.com/m5stack/M5Core2",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-basic-v2-7",
+   "model": "Basic v2.7",
+   "title": "M5Stack Basic v2.7 – ESP32 2.0\" IPS controller with 3 buttons",
+   "series": "M5Stack Core",
+   "sources": [
+    "https://docs.m5stack.com/en/core/basic_v2.7"
+   ],
+   "description": "Basic v2.7 is a cost-effective IoT entry-level main controller. It uses the Espressif ESP32 chip, equipped with 2 low-power Xtensa® 32-bit LX6 microprocessors, with a main frequency of up to 240 MHz . It has onboard 16 MB FLASH memory, integrated with a 2.0-inch full-color high-definition IPS display panel , speaker , TFCard slot , and other peripherals. The full-cover casing ensures the stability of circuit operation even in complex industrial application scenarios. The internal bus provides multiple common interface resources (ADC/DAC/I2C/UART/SPI, etc.), with 15 x IO leads on the bottom bus, offering strong expandability. It is suitable for various product prototype development, industrial control, and smart building application scenarios.",
+   "params": {
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "panel": "IPS",
+    "touch": "None",
+    "driver_ic": "ILI9342C",
+    "interface": "SPI",
+    "mcu": "ESP32-D0WDQ6-V3 (dual-core LX6, 240 MHz)",
+    "mcu_family": "ESP32",
+    "frequency": "240 MHz",
+    "sram": "520KB",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio; not listed separately in the vendor spec table)",
+    "speaker": "1 W speaker",
+    "battery": "110 mAh @ 3.7 V",
+    "buttons": "3x physical buttons",
+    "usb": "USB Type-C",
+    "grove": "HY2.0-4P (I2C)",
+    "sd": "microSD",
+    "dimensions": "54.0 x 54.0 x 17.0 mm",
+    "sku": "K001-V27"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Input Power",
+     "5V@500mA"
+    ],
+    [
+     "Interface",
+     "USB Type-C x1, I2C x1"
+    ],
+    [
+     "Buttons",
+     "Physical buttons x 3"
+    ],
+    [
+     "LCD Screen",
+     "2.0\"@320 x 240 ILI9342C IPS panel, max brightness 853nit"
+    ],
+    [
+     "Speaker",
+     "1W-0928"
+    ],
+    [
+     "USB Chip",
+     "CH9102F"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D antenna"
+    ],
+    [
+     "Battery",
+     "110mAh @ 3.7V"
+    ],
+    [
+     "Casing Material",
+     "Plastic (PC)"
+    ],
+    [
+     "Product Size",
+     "54.0 x 54.0 x 17.0mm"
+    ]
+   ],
+   "images": [
+    "https://static-cdn.m5stack.com/resource/docs/products/core/basic_v2.7/basic_v2.7_01.webp"
+   ],
+   "files": [
+    {
+     "name": "M5-Core-Schematic_20171206.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/480/M5-Core-Schematic_20171206.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-tough",
+   "model": "Tough",
+   "title": "M5Stack Tough – industrial ESP32 2.0\" touch controller (IP-rated case)",
+   "series": "M5Stack Core",
+   "sources": [
+    "https://docs.m5stack.com/en/core/tough"
+   ],
+   "description": "Tough is an industrial-grade programmable embedded controller. It is equipped with the Espressif ESP32 main control chip, which integrates Wi-Fi and features a dual-core low-power Xtensa® 32-bit LX6 microprocessor with a main frequency of up to 240MHz . The board includes 8M PSRAM + 16MB Flash memory, a 2.0-inch 320x240 full-color IPS display, a high-sensitivity capacitive touch panel, and a variety of peripheral and expansion interfaces. The fully enclosed casing offers dustproof and waterproof protection, ensuring stable circuit operation even in complex industrial environments. This controller is suitable for scenarios such as industrial field control, smart buildings, and outdoor data acquisition nodes.",
+   "params": {
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "panel": "IPS",
+    "touch": "Capacitive",
+    "touch_ic": "CHSC6540",
+    "driver_ic": "ILI9342C",
+    "interface": "SPI",
+    "brightness": "853 nits (max)",
+    "mcu": "ESP32-D0WDQ6-V3 (dual-core LX6, 240 MHz)",
+    "mcu_family": "ESP32",
+    "frequency": "240 MHz",
+    "sram": "520KB",
+    "flash": "16MB",
+    "psram": "8MB Quad",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio; not listed separately in the vendor spec table)",
+    "speaker": "1 W, NS4168 I2S amplifier",
+    "rtc": "BM8563",
+    "pmu": "AXP192",
+    "rs485": "RS-485 (HY2.0-4P), 6–24 V power input",
+    "dc_in": "6–24 V via RS-485 port",
+    "usb": "USB Type-C (CH9102 USB-UART)",
+    "sd": "microSD (up to 16 GB)",
+    "shell": "Yes – UV-resistant plastic",
+    "dimensions": "76.0 x 58.0 x 41.6 mm",
+    "sku": "K034"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Quad"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Input Voltage",
+     "USB (5V@500mA) / RS485 interface power input (6 ~ 24V@1A)"
+    ],
+    [
+     "Interfaces",
+     "USB Type-C x 1, HY2.0-4P x 4 (RS485 / I2C / GPIO / UART interfaces)"
+    ],
+    [
+     "IPS LCD",
+     "2.0\" 320 x 240 ILI9342C full-color display, max brightness 853 nits"
+    ],
+    [
+     "Touch Controller",
+     "CHSC6540"
+    ],
+    [
+     "Speaker Setup",
+     "NS4168 16-bit I2S amplifier + 1W speaker"
+    ],
+    [
+     "RTC Clock Chip",
+     "BM8563"
+    ],
+    [
+     "PMU",
+     "AXP192"
+    ],
+    [
+     "USB Chip",
+     "CH9102 USB-TTL serial/programming interface"
+    ],
+    [
+     "microSD Slot",
+     "Supports memory cards up to 16GB"
+    ],
+    [
+     "Antenna",
+     "3D Wi-Fi antenna"
+    ],
+    [
+     "Casing Material",
+     "UV-resistant plastic"
+    ],
+    [
+     "Product Size",
+     "76.0 x 58.0 x 41.6 mm"
+    ]
+   ],
+   "images": [
+    "https://static-cdn.m5stack.com/resource/docs/products/core/tough/tough_01.webp"
+   ],
+   "files": [
+    {
+     "name": "Tough-Schematics-PDF.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/647/Tough-Schematics-PDF.pdf",
+     "host": true
+    },
+    {
+     "name": "Tough-Ext-Board-Schematics-PDF.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/647/Tough-Ext-Board-Schematics-PDF.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Tough",
+     "url": "https://github.com/m5stack/M5Tough",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Tools",
+     "url": "https://github.com/m5stack/M5Tools",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-tab5",
+   "model": "Tab5",
+   "title": "M5Stack Tab5 – ESP32-P4 5\" 1280×720 MIPI-DSI tablet with ESP32-C6 Wi-Fi 6",
+   "series": "M5Stack Tab",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Tab5"
+   ],
+   "description": "Tab5 is a highly expandable, portable smart-IoT terminal development device for developers, integrating a dual-core architecture and rich hardware resources. The main controller adopts the ESP32-P4 SoC based on the RISC-V architecture, with 16MB Flash and 32MB PSRAM. The wireless module uses the ESP32-C6-MINI-1U, supporting Wi-Fi 6. Its antenna system can freely switch between the built-in 3D antenna and an external MMCX antenna interface, flexibly adapting to various deployment environments to ensure data throughput and low-latency control.",
+   "params": {
+    "size": "5.0\"",
+    "resolution": "1280x720",
+    "panel": "IPS",
+    "touch": "Capacitive",
+    "touch_ic": "GT911 / ST7123 / ST7121",
+    "driver_ic": "ILI9881C / ST7123 / ST7121",
+    "interface": "MIPI-DSI",
+    "mcu": "ESP32-P4NRW32 (dual-core RISC-V 360 MHz + LP core 40 MHz)",
+    "mcu_family": "ESP32-P4",
+    "coprocessor": "ESP32-C6-MINI-1U",
+    "frequency": "360 MHz",
+    "flash": "16MB",
+    "psram": "32MB Octal",
+    "wifi": "2.4 GHz Wi-Fi 6, Thread, Zigbee (ESP32-C6)",
+    "bt": "Bluetooth LE (ESP32-C6 co-processor)",
+    "camera": "SC2356 2 MP, MIPI-CSI",
+    "audio": "ES8388 codec + ES7210 AEC front end",
+    "mic": "Dual microphone (AEC)",
+    "speaker": "1 W @ 8 Ω, NS4150B",
+    "jack": "3.5 mm headphone jack",
+    "usb": "USB Type-A (Host), USB Type-C (USB 2.0 device, charging)",
+    "rs485": "SIT3088, switchable 120 Ω terminator (HC1.25-6P)",
+    "dc_in": "6–24 V via RS-485 port",
+    "sd": "microSD",
+    "imu": "BMI270",
+    "rtc": "RX8130CE",
+    "charger": "IP2326",
+    "battery": "NP-F550 7.4 V 2000 mAh (removable)",
+    "grove": "HY2.0-4P",
+    "buttons": "Power, Reset/Boot",
+    "dimensions": "128.0 x 80.0 x 12.0 mm",
+    "sku": "C145 / K145"
+   },
+   "spec_rows": [
+    [
+     "Main Controller SoC",
+     "ESP32-P4NRW32@RISC-V 32-bit Dual-core 360MHz + LP Single-core 40MHz"
+    ],
+    [
+     "Wireless Module SoC",
+     "ESP32-C6-MINI-1U"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "32MB Octal"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi 6, Thread, Zigbee"
+    ],
+    [
+     "Antenna",
+     "Built-in 3D antenna & 2 x MMCX external antenna ports"
+    ],
+    [
+     "Display",
+     "Uses a 5‑inch IPS TFT display with a resolution of 1280×720 (720P), equipped with an integrated display and touch driver IC: ST7123 / ST7121"
+    ],
+    [
+     "Camera",
+     "SC2356 @ 2MP (1600×1200), via MIPI‑CSI interface"
+    ],
+    [
+     "Audio Chip",
+     "ES8388 codec, ES7210 AEC front end"
+    ],
+    [
+     "Microphone",
+     "Dual microphone system (AEC echo cancellation)"
+    ],
+    [
+     "Speaker",
+     "1W@8Ω NS4150B"
+    ],
+    [
+     "Headphone Jack",
+     "3.5mm"
+    ],
+    [
+     "USB Ports",
+     "USB Type-A (Host), USB Type-C (USB 2.0 Device, charging input)"
+    ],
+    [
+     "RS485 Port",
+     "SIT3088 (120Ω switchable terminal resistor) Power supply range: 6 ~ 24V"
+    ],
+    [
+     "Expansion Interface",
+     "1 x HY2.0-4P, 1 x M5-Bus, 1 x Ext.Port (2.54-10P), 1 x RS485 (HC1.25-6P), 1 x USB (MX1.25-4P)"
+    ],
+    [
+     "Storage Expansion",
+     "microSD card slot"
+    ],
+    [
+     "Extensible Stamp Interface",
+     "Stamp pads (support Cat.M / NB‑IoT / LoRaWAN and other modules)"
+    ],
+    [
+     "Motion Sensor",
+     "BMI270 six-axis (accelerometer + gyroscope, support interrupt wake-up)"
+    ],
+    [
+     "RTC",
+     "RTC Chip: RX8130CE (supports timed interrupt wake-up), RTC supercapacitor specification: 70000μF/3.3V, size Φ4.8×1.4mm"
+    ],
+    [
+     "Buttons",
+     "Power (power on/off), Reset/Boot (reset and download mode)"
+    ],
+    [
+     "Charging Management",
+     "IP2326 charging management chip"
+    ],
+    [
+     "Real-time Power Monitoring",
+     "INA226 (bus current / voltage monitoring)"
+    ],
+    [
+     "Battery",
+     "NP-F550 removable lithium battery, 7.4V@2000mAh (14.8 Wh)"
+    ],
+    [
+     "Battery Life",
+     "Under standard usage environment (screen brightness 50%, Wi‑Fi always on, background tasks running), Tab5 built-in battery discharges from full (8.23 V) to shutdown threshold (6.0 V), lasting about 6 hours."
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Product Size",
+     "Tab5: 128.0 x 80.0 x 12.0mm Tab5 Kit: 128.0 x 80.0 x 26.7mm"
+    ],
+    [
+     "PMS150G-U06",
+     "PA6/CIN-"
+    ],
+    [
+     "RX8130CE",
+     "INT(E_TRG)"
+    ]
+   ],
+   "images": [
+    "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/C145_01.webp"
+   ],
+   "files": [
+    {
+     "name": "Tab5_Schematics_PDF.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/Tab5_Schematics_PDF.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Tab5-UserDemo",
+     "url": "https://github.com/m5stack/M5Tab5-UserDemo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-dial",
+   "model": "Dial",
+   "title": "M5Stack Dial – ESP32-S3 1.28\" round touch knob with RFID",
+   "series": "M5Stack Dial",
+   "sources": [
+    "https://docs.m5stack.com/en/core/M5Dial"
+   ],
+   "description": "Dial is a versatile embedded development board equipped with a 1.28-inch circular TFT touch screen, powered by the Stamp-S3 as the main controller, and includes a built-in rotary encoder for precise knob position recording. Additionally, the board features an RFID detection module, RTC circuit, onboard buzzer, and a screen button for device interaction and wake-up alerts. In terms of power supply, the product supports a wide voltage input range of 6 ~ 36V DC and includes a lithium battery interface and charging circuit to meet various needs. Furthermore, the reserved PORT.A and PORT.B interfaces allow for easy expansion of I2C and GPIO devices. This product is suitable for smart home control, IoT projects, smart wearables, access control, industrial control, and educational maker projects.",
+   "params": {
+    "size": "1.28\"",
+    "resolution": "240x240",
+    "shape": "Round",
+    "panel": "TFT",
+    "touch": "Capacitive",
+    "touch_ic": "FT3267",
+    "driver_ic": "GC9A01",
+    "interface": "SPI",
+    "mcu": "ESP32-S3FN8 (StampS3, dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth LE (SoC radio; not listed separately in the vendor spec table)",
+    "encoder": "Rotary encoder, 16 detents / 64 pulses per rev",
+    "nfc": "WS1850S 13.56 MHz RFID (ISO/IEC 14443 A/B)",
+    "buzzer": "80 dB buzzer",
+    "rtc": "RTC (wake-up)",
+    "dc_in": "DC 6–36 V rear terminal (KF2EDGV 2.54-2P)",
+    "battery": "Battery connector MX1.25-2P (3.7 V)",
+    "usb": "USB Type-C (USB OTG, USB Serial/JTAG)",
+    "dimensions": "51.0 x 51.0 x 32.3 mm"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "USB",
+     "USB OTG, USB Serial/JTAG"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Power Supply",
+     "USB Type-C DC 5V Rear Power Terminal DC 6 ~ 36V Battery DC 3.7V"
+    ],
+    [
+     "Display Driver",
+     "GC9A01 1.28 Inch 240x240px"
+    ],
+    [
+     "Touch Driver",
+     "FT3267"
+    ],
+    [
+     "RFID",
+     "WS1850S @Tag Operating Frequency: 13.56 MHz, ISO/IEC 14443 Type A/Type B Protocol"
+    ],
+    [
+     "Encoder",
+     "Resolution: 16 Detents, 64 Pulses/Revolution"
+    ],
+    [
+     "Buzzer",
+     "80dB"
+    ],
+    [
+     "Battery Connector",
+     "MX1.25-2P"
+    ],
+    [
+     "Sleep Current (Battery-Powered)",
+     "DC 4.2V@1.9uA"
+    ],
+    [
+     "Operating Current (Rear Power Terminal)",
+     "DC 6V Input: DC 6V@140.6mA DC 12V Input: DC 12V@82.5mA DC 36V Input: DC 36V@28.1mA"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Power Connector",
+     "KF2EDGV-2.54-2P, Straight Pin, 2.54mm Pitch (2-Pin), Green"
+    ],
+    [
+     "Product Size",
+     "51.0 x 51.0 x 32.3mm"
+    ]
+   ],
+   "images": [
+    "https://static-cdn.m5stack.com/resource/docs/products/core/M5Dial/img-2afd549e-8af8-47b4-823a-e90e063a0139.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5Dial.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/499/Sch_M5Dial.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Dial",
+     "url": "https://github.com/m5stack/M5Dial",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Dial-UserDemo",
+     "url": "https://github.com/m5stack/M5Dial-UserDemo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-dinmeter",
+   "model": "DinMeter",
+   "title": "M5Stack DinMeter – 1/32 DIN ESP32-S3 1.14\" display with encoder",
+   "series": "M5Stack Dial",
+   "sources": [
+    "https://docs.m5stack.com/en/core/M5DinMeter"
+   ],
+   "description": "DinMeter is an embedded development board that adheres to the 1/32DIN standard, featuring a 1.14-inch ST7789 screen and a built-in rotary encoder with buttons for precise knob position recording. Additionally, it includes an RTC circuit, an onboard buzzer, and buttons for device interaction and wake-up alerts. The product is designed to support DC input ranging from 6V to 36V and includes a lithium battery interface and charging circuit to accommodate various power supply needs. The reserved PORT.A and PORT.B interfaces allow for easy expansion of I2C and GPIO devices. This product is suitable for applications such as parameter measurement and detection, smart home control, IoT projects, smart wearables, access control, industrial control, and educational maker projects.",
+   "params": {
+    "size": "1.14\"",
+    "resolution": "135x240",
+    "panel": "TFT",
+    "touch": "None",
+    "driver_ic": "ST7789V2",
+    "interface": "SPI",
+    "mcu": "ESP32-S3FN8 (StampS3, dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth LE (SoC radio; not listed separately in the vendor spec table)",
+    "encoder": "Rotary encoder with button",
+    "rtc": "RTC circuit",
+    "buzzer": "Onboard buzzer",
+    "dc_in": "Wide input 6–36 V",
+    "battery": "MX1.25-2P battery socket",
+    "charger": "100 mA charging",
+    "usb": "USB Type-C (USB OTG, USB Serial/JTAG)",
+    "grove": "2x Grove (PORT.A, PORT.B)",
+    "dimensions": "53.0 x 30.0 x 32.0 mm",
+    "sku": "K134"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "USB",
+     "USB OTG, USB Serial/JTAG"
+    ],
+    [
+     "Wide Voltage Input Range",
+     "6 ~ 36V"
+    ],
+    [
+     "Display Driver",
+     "ST7789V2"
+    ],
+    [
+     "Display Resolution",
+     "135 x 240"
+    ],
+    [
+     "Charging Current",
+     "100mA"
+    ],
+    [
+     "Grove Load Capacity",
+     "PORT.A Load Capacity: DC 5V/Max:220mA PORT.B Load Capacity: DC 5V/Max:220mA"
+    ],
+    [
+     "Standby Current (Battery Powered)",
+     "DC 4.2V@38.4uA"
+    ],
+    [
+     "Battery Socket Specification",
+     "MX1.25-2P"
+    ],
+    [
+     "Power Supply Method",
+     "USB/DC Power Supply / Battery"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Product Size",
+     "53.0 x 30.0 x 32.0mm"
+    ]
+   ],
+   "images": [
+    "https://static-cdn.m5stack.com/resource/docs/products/core/M5DinMeter/img-ae5aaf34-6458-47c7-89ee-280ec06fb542.webp"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5DinMeter",
+     "url": "https://github.com/m5stack/M5DinMeter",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5DinMeter-UserDemo",
+     "url": "https://github.com/m5stack/M5DinMeter-UserDemo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-cardputer",
+   "model": "Cardputer",
+   "title": "M5Stack Cardputer – ESP32-S3 card computer with 56-key keyboard and 1.14\" TFT",
+   "series": "M5Stack Cardputer",
+   "sources": [
+    "https://docs.m5stack.com/en/core/cardputer"
+   ],
+   "description": "Cardputer is a card-sized computer designed for engineers, featuring a Stamp-S3 as the main controller. For human-machine interaction, it is equipped with a 56-key keyboard and a 1.14-inch TFT screen. The onboard SPM1423 digital MEMS microphone supports recording or wake-up functions, while the built-in cavity speaker enables audio playback. An infrared emitter provides IR control capability. Expansion is provided via a Grove port for custom sensor connection, and a microSD card slot allows storage expansion. Power is supplied by an internal 120 mAh battery plus a 1400 mAh battery in the base, greatly extending battery life. Integrated charge, boost and buck circuits are included. The magnetic base can attach to metal surfaces and offers LEGO-compatible mounting holes. Cardputer is ideal for rapid functional prototyping, industrial control, smart-home systems and more.",
+   "params": {
+    "size": "1.14\"",
+    "resolution": "240x135",
+    "panel": "TFT",
+    "touch": "None",
+    "driver_ic": "ST7789V2",
+    "interface": "SPI",
+    "mcu": "ESP32-S3FN8 (StampS3, dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth LE (SoC radio; not listed separately in the vendor spec table)",
+    "keyboard": "56 keys (4 x 14)",
+    "speaker": "8 Ω 1 W, NS4168 I2S",
+    "mic": "SPM1423 MEMS microphone",
+    "ir": "IR emitter",
+    "sd": "microSD",
+    "battery": "120 mAh + 1400 mAh (in base)",
+    "grove": "HY2.0-4P",
+    "buttons": "Reset + user button",
+    "usb": "USB Type-C (USB OTG, USB Serial/JTAG)",
+    "dimensions": "84.0 x 54.0 x 19.7 mm",
+    "sku": "K132"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "USB",
+     "USB OTG, USB Serial/JTAG"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Storage",
+     "SD Card"
+    ],
+    [
+     "Keyboard",
+     "56 keys (4 x 14)"
+    ],
+    [
+     "Buttons",
+     "1 x Reset button + 1 x User button"
+    ],
+    [
+     "Grove",
+     "1 x HY2.0-4P"
+    ],
+    [
+     "Battery Capacity",
+     "120 mAh + 1400 mAh (in base)"
+    ],
+    [
+     "Screen",
+     "ST7789V2 @ 1.14 inch, 240 x 135 px"
+    ],
+    [
+     "Speaker",
+     "8 Ω @ 1 W I2S @ NS4168"
+    ],
+    [
+     "Microphone",
+     "MEMS microphone @ SPM1423"
+    ],
+    [
+     "IR Emitting Distance",
+     "410 cm at ∠0°, 170 cm at ∠45°, 66 cm at ∠90°"
+    ],
+    [
+     "Sleep Current",
+     "DC 4.2 V @ 0.26 µA"
+    ],
+    [
+     "Working Current",
+     "IR mode: DC 4.2 V @ 255.6 mA; Keyboard mode: DC 4.2 V @ 165.7 mA"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40 °C"
+    ],
+    [
+     "Product Size",
+     "84.0 x 54.0 x 19.7 mm"
+    ]
+   ],
+   "images": [
+    "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/481/K132-main-pictures_01.jpg"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5Cardputer.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/481/Sch_M5Cardputer.pdf",
+     "host": true
+    },
+    {
+     "name": "Sch_M5cardputer_Base.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/481/Sch_M5cardputer_Base.pdf",
+     "host": true
+    },
+    {
+     "name": "Sch_M5StampS3_v0.2.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/522/Sch_M5StampS3_v0.2.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Cardputer",
+     "url": "https://github.com/m5stack/M5Cardputer",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Cardputer-UserDemo",
+     "url": "https://github.com/m5stack/M5Cardputer-UserDemo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-cardputer-adv",
+   "model": "Cardputer-Adv",
+   "title": "M5Stack Cardputer-Adv – ESP32-S3 card computer, ES8311 audio, IMU",
+   "series": "M5Stack Cardputer",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Cardputer-Adv"
+   ],
+   "description": "Cardputer-Adv is a programmable card-sized computer powered by the Stamp-S3A core module (based on ESP32-S3FN8). It integrates a 1.14\" LCD display and a 56-key minimalist keyboard for convenient interaction and input operations. In terms of audio, it features an ES8311 audio codec, a high SNR MEMS microphone, an NS4150B amplifier, and a 1W speaker, providing high-quality audio input and output capabilities. Additionally, it has a 3.5mm audio output jack for connecting external headphones or speakers. Internally, it is equipped with a 1500mAh high-capacity lithium battery, combined with a low-power design and an independent power switch to ensure good battery life. It integrates a 6-axis motion sensor BMI270, an infrared emitter, a microSD card slot, and also provides an HY2.0-4P Grove port and an EXT 2.54-14P expansion bus for connecting sensors and other peripherals. The base contains m",
+   "params": {
+    "size": "1.14\"",
+    "resolution": "240x135",
+    "panel": "TFT",
+    "touch": "None",
+    "driver_ic": "ST7789V2",
+    "interface": "SPI",
+    "mcu": "ESP32-S3FN8 (StampS3A, dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "BLE (vendor lists BLE operating current)",
+    "keyboard": "56 keys (4 x 14)",
+    "audio": "ES8311 codec",
+    "speaker": "8 Ω 1 W, NS4150B",
+    "mic": "MEMS microphone (65 dB SNR)",
+    "imu": "BMI270",
+    "ir": "IR emitter",
+    "sd": "microSD",
+    "battery": "1500 mAh",
+    "grove": "HY2.0-4P + EXT 2.54-14P",
+    "dimensions": "84.0 x 54.0 x 19.6 mm"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "External Storage",
+     "microSD"
+    ],
+    [
+     "Display",
+     "ST7789V2@1.14\", 240 x 135px"
+    ],
+    [
+     "Keyboard",
+     "56 keys (4 x 14)"
+    ],
+    [
+     "Key Actuation",
+     "160gf"
+    ],
+    [
+     "Expansion Ports",
+     "HY2.0-4P + EXT 2.54-14P"
+    ],
+    [
+     "IR",
+     "1x IR emitter"
+    ],
+    [
+     "Audio Codec",
+     "ES8311"
+    ],
+    [
+     "Speaker",
+     "NS4150B amplifier + 8Ω@1W speaker"
+    ],
+    [
+     "Microphone",
+     "MEMS microphone, SNR: 65 dB"
+    ],
+    [
+     "IMU",
+     "BMI270"
+    ],
+    [
+     "Battery Capacity",
+     "1500mAh"
+    ],
+    [
+     "Operating Temp.",
+     "0 ~ 40°C"
+    ],
+    [
+     "Standby Current (Power Switch Set to OFF)",
+     "DC4.2V@0.23uA"
+    ],
+    [
+     "Operating Current",
+     "DC4.2V@120.2mA"
+    ],
+    [
+     "Wi-Fi Operating Current",
+     "DC4.2V@132.3mA"
+    ],
+    [
+     "BLE Operating Current",
+     "DC4.2V@154.6mA"
+    ],
+    [
+     "Product Size",
+     "84.0 x 54.0 x 19.6mm"
+    ],
+    [
+     "Release Date",
+     "Product Change"
+    ]
+   ],
+   "images": [
+    "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1178/Cardputer-Adv_01.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1178/Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58.pdf",
+     "host": true
+    },
+    {
+     "name": "Sch_StampS3_v0.3.3.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1150/Sch_StampS3_v0.3.3.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Cardputer",
+     "url": "https://github.com/m5stack/M5Cardputer",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-atoms3",
+   "model": "AtomS3",
+   "title": "M5Stack AtomS3 – 24 mm ESP32-S3 cube with 0.85\" IPS",
+   "series": "M5Stack Atom",
+   "sources": [
+    "https://docs.m5stack.com/en/core/AtomS3"
+   ],
+   "description": "AtomS3 is a highly integrated programmable controller based on the ESP32-S3 main controller. It integrates the ESP32-S3 main controller, Wi-Fi functionality, 8 MB on-chip Flash, and a 0.85-inch IPS screen . Below the screen, there is a programmable button function , a built-in 5V to 3.3V circuit, and a 6-axis gyroscope sensor MPU6886 . It has an onboard USB Type-C interface for power supply and firmware download, as well as a HY2.0-4P expansion port. The bottom reserves 6 GPIO and power pins for easy expansion applications. The product size is 24.0 x 24.0 x 13.0mm, suitable for various embedded smart device applications.",
+   "params": {
+    "size": "0.85\"",
+    "resolution": "128x128",
+    "panel": "IPS",
+    "touch": "None",
+    "driver_ic": "GC9107",
+    "interface": "SPI",
+    "mcu": "ESP32-S3FN8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB",
+    "wifi": "Wi-Fi (on-chip, per vendor description)",
+    "bt": "Bluetooth LE (SoC radio; not listed separately in the vendor spec table)",
+    "imu": "MPU6886",
+    "usb": "USB Type-C",
+    "buttons": "Programmable button (screen)",
+    "dimensions": "24.0 x 24.0 x 12.9 mm",
+    "sku": "C123"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "DC-DC",
+     "SY8089"
+    ],
+    [
+     "IMU",
+     "MPU6886 (I2CAddress: 0x68)"
+    ],
+    [
+     "TFT Driver IC",
+     "GC9107"
+    ],
+    [
+     "Resolution",
+     "128 x 128"
+    ],
+    [
+     "Operating Temp",
+     "0 ~ 40°C"
+    ],
+    [
+     "Power Supply",
+     "5V"
+    ],
+    [
+     "Power Method",
+     "TYPE C"
+    ],
+    [
+     "Output Voltage",
+     "3.3V"
+    ],
+    [
+     "Product Size",
+     "24.0 x 24.0 x 12.9mm"
+    ]
+   ],
+   "images": [
+    "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/products/core/AtomS3/4.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5_AtomS3_v1.0.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/472/Sch_M5_AtomS3_v1.0.pdf",
+     "host": true
+    },
+    {
+     "name": "Sch_AtomS3_IMU.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/472/Sch_AtomS3_IMU.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5AtomS3",
+     "url": "https://github.com/m5stack/M5AtomS3",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5AtomS3-UserDemo",
+     "url": "https://github.com/m5stack/M5AtomS3-UserDemo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-atoms3r",
+   "model": "AtomS3R",
+   "title": "M5Stack AtomS3R – ESP32-S3-PICO 8 MB PSRAM cube with 0.85\" IPS",
+   "series": "M5Stack Atom",
+   "sources": [
+    "https://docs.m5stack.com/en/core/AtomS3R"
+   ],
+   "description": "AtomS3R is a highly integrated IoT programmable controller based on the ESP32-S3 . It embeds an ESP32-S3-PICO-1-N8R8 SoC with on-chip Wi-Fi, 8MB Flash , and 8MB PSRAM . The device features a 0.85-inch color IPS display with a programmable button beneath it, an on-board 5 V-to-3.3 V power circuit, a three-axis BMM150 geomagnetic sensor, and a six-axis BMI270 IMU. Power supply and firmware downloading are handled through a USB Type-C connector, while a HY2.0-4P port and six GPIO plus power pins on the bottom make expansion easy. Compared with previous products, AtomS3R is equipped with an enhanced 3D antenna that offers better performance and higher stability. With dimensions of just 24.0 x 24.0 x 12.9 mm , it is ideal for a variety of embedded smart-device applications.",
+   "params": {
+    "size": "0.85\"",
+    "resolution": "128x128",
+    "panel": "IPS",
+    "touch": "None",
+    "driver_ic": "ST7735 (earlier: GC9107)",
+    "interface": "SPI",
+    "mcu": "ESP32-S3-PICO-1-N8R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB",
+    "psram": "8MB Octal",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth LE (SoC radio; not listed separately in the vendor spec table)",
+    "imu": "BMI270 6-axis + BMM150 magnetometer",
+    "ir": "IR emitter (12.46 m)",
+    "usb": "USB Type-C (USB OTG, USB Serial/JTAG)",
+    "sku": "C126"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3-PICO-1-N8R8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "USB",
+     "USB OTG, USB Serial/JTAG"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Octal"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "TFT Driver",
+     "ST7735"
+    ],
+    [
+     "Color IPS Resolution",
+     "128 x 128"
+    ],
+    [
+     "Infrared",
+     "180 ° FOV, transmission distance 12.46 m (unobstructed)"
+    ],
+    [
+     "Sleep Current",
+     "GPIO-5V supply: 5 V @ 11.63 µA Grove-5V supply: 5 V @ 10.75 µA USB-5V supply: 5 V @ 92.50 µA (incl. PD resistor loss)"
+    ],
+    [
+     "Bottom GPIO",
+     "G5 / G6 / G7 / G8 / G38 / G39"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40 °C"
+    ],
+    [
+     "Product Size",
+     "24.0 x 24.0 x 12.9 mm"
+    ],
+    [
+     "Release Date",
+     "Product Changes"
+    ]
+   ],
+   "images": [
+    "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/680/C126_AtomS3R_main_pictures_03.jpg"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5_AtomS3R_v0.4.1.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/680/Sch_M5_AtomS3R_v0.4.1.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5AtomS3",
+     "url": "https://github.com/m5stack/M5AtomS3",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-stickc-plus2",
+   "model": "StickC Plus2",
+   "title": "M5Stack StickC Plus2 – ESP32-PICO 1.14\" TFT stick",
+   "series": "M5Stack Stick",
+   "sources": [
+    "https://docs.m5stack.com/en/core/StickC-Plus2"
+   ],
+   "description": "StickC-Plus2 is the iterative version of StickC-Plus. It is powered by the ESP32-PICO-V3-02 chip, providing Wi-Fi connectivity. Within its compact body, it integrates a rich variety of hardware resources, including IR emitter, RTC, microphone, LED, IMU, buttons, buzzer, and more. It features a 1.14-inch TFT display driven by the ST7789V2 with a resolution of 135 × 240. The battery capacity has been increased to 200mAh, and the interface is compatible with both HAT and Unit series modules.",
+   "params": {
+    "size": "1.14\"",
+    "resolution": "135x240",
+    "panel": "TFT",
+    "touch": "None",
+    "driver_ic": "ST7789V2",
+    "interface": "SPI",
+    "mcu": "ESP32-PICO-V3-02 (dual-core, 240 MHz)",
+    "mcu_family": "ESP32",
+    "frequency": "240 MHz",
+    "flash": "8MB",
+    "psram": "2MB Quad",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio; not listed separately in the vendor spec table)",
+    "mic": "SPM1423 microphone",
+    "imu": "MPU6886",
+    "rtc": "BM8563",
+    "buzzer": "Onboard buzzer",
+    "ir": "IR emitter",
+    "buttons": "3x custom buttons",
+    "usb": "USB Type-C",
+    "grove": "HY2.0-4P (I2C + I/O + UART)",
+    "sku": "K016-P2"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-PICO-V3-02@Dual-Core Processor, up to 240MHz"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "PSRAM",
+     "2MB Quad"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Interface",
+     "USB Type-C x 1, HY2.0-4P (I2C+I/O+UART) x 1"
+    ],
+    [
+     "LCD Screen",
+     "1.14-inch, 135 x 240 Colorful TFT LCD, ST7789v2"
+    ],
+    [
+     "Microphone",
+     "SPM1423"
+    ],
+    [
+     "Button",
+     "Custom Button x 3"
+    ],
+    [
+     "LED",
+     "Green LED x 1 (Non-programmable) (Sleep State Indicator) Red LED x 1 (Shared control pin G19 with IR emitter tube)"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "Buzzer",
+     "Onboard Buzzer"
+    ],
+    [
+     "IMU",
+     "MPU6886"
+    ],
+    [
+     "Antenna",
+     "2.4 GHz 3D Antenna"
+    ],
+    [
+     "External Pins",
+     "G0, G25/G26, G36, G32, G33"
+    ],
+    [
+     "Battery",
+     "200mAh@3.7V, inside"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Shell Material",
+     "Plastic (PC)"
+    ],
+    [
+     "Product Size",
+     "48.0 x 24.0 x 13.5mm"
+    ]
+   ],
+   "images": [
+    "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/products/core/M5StickC%20PLUS2/4.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5StickC_Plus2_v0.5.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/512/Sch_M5StickC_Plus2_v0.5.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5StickCPlus2",
+     "url": "https://github.com/m5stack/M5StickCPlus2",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5StickCPlus2-UserDemo",
+     "url": "https://github.com/m5stack/M5StickCPlus2-UserDemo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-sticks3",
+   "model": "StickS3",
+   "title": "M5Stack StickS3 – ESP32-S3-PICO 1.14\" stick with ES8311 audio",
+   "series": "M5Stack Stick",
+   "sources": [
+    "https://docs.m5stack.com/en/core/StickS3"
+   ],
+   "description": "StickS3 is a compact and high-performance programmable controller designed for remote control and IoT applications. It is powered by the ESP32-S3-PICO-1-N8R8 main control chip, supporting 2.4 GHz Wi-Fi wireless communication, with built-in 8MB Flash and 8MB PSRAM to meet diverse application development needs, delivering excellent performance and scalability.",
+   "params": {
+    "size": "1.14\"",
+    "resolution": "135x240",
+    "panel": "LCD",
+    "touch": "None",
+    "driver_ic": "ST7789P3",
+    "interface": "SPI",
+    "mcu": "ESP32-S3-PICO-1-N8R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB",
+    "psram": "8MB Octal",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth LE (SoC radio; not listed separately in the vendor spec table)",
+    "imu": "BMI270",
+    "audio": "ES8311 24-bit codec",
+    "mic": "MEMS microphone (65 dB SNR)",
+    "speaker": "8 Ω 1 W, AW8737",
+    "battery": "250 mAh",
+    "usb": "USB Type-C",
+    "grove": "Grove (HY2.0-4P)",
+    "dimensions": "48.0 x 24.0 x 15.0 mm",
+    "sku": "K150"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3-PICO-1-N8R8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Octal"
+    ],
+    [
+     "IMU",
+     "BMI270"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Display",
+     "Model: ST7789P3 Resolution: 135x240"
+    ],
+    [
+     "Input Power",
+     "USB Type-C DC 5V"
+    ],
+    [
+     "Audio Codec",
+     "ES8311: 24-bit resolution, I2S protocol"
+    ],
+    [
+     "Microphone",
+     "MEMS microphone, Signal-to-Noise Ratio (SNR): 65 dB"
+    ],
+    [
+     "Speaker",
+     "AW8737 power amplifier + 8Ω@1W 2011 cavity speaker"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Battery Capacity",
+     "250mAh"
+    ],
+    [
+     "Grove Load Capacity",
+     "No load: 5V Max: 4.88V@0.38A"
+    ],
+    [
+     "Power Consumption",
+     "Power off: 4.2V@14.02uA L1 state: 4.2V@52.47uA L2 state: 4.2V@102.40uA L3A state: 4.2V@36.69mA Full load: 4.2V@519.02mA"
+    ],
+    [
+     "Product Size",
+     "48.0 x 24.0 x 15.0mm"
+    ]
+   ],
+   "images": [
+    "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1207/K150-stickS3_main-products_01.webp"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5PM1",
+     "url": "https://github.com/m5stack/M5PM1",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-papers3",
+   "model": "PaperS3",
+   "title": "M5Stack PaperS3 – ESP32-S3 4.7\" 960×540 touch e-paper",
+   "series": "M5Stack Paper",
+   "sources": [
+    "https://docs.m5stack.com/en/core/PaperS3"
+   ],
+   "description": "PaperS3 is a uniquely designed low-power touch-enabled e-ink screen main control device launched by M5Stack. The controller uses the ESP32-S3 . The front of the device is embedded with a 960 x 540 @ 4.7\" (touch and screen integrated) e-ink display, supporting 16-level grayscale display . Paired with the GT911 capacitive touch panel, it supports two-point touch and various gesture operations. Compared to previous products, PaperS3 adopts a full-screen structure. Compared to ordinary LCD screens, e-ink screens not only provide users with a better text reading experience but also offer advantages such as low power consumption and image retention when powered off.",
+   "params": {
+    "size": "4.7\"",
+    "resolution": "960x540",
+    "panel": "E-paper",
+    "epaper": "ET047TC1, 16-level grayscale",
+    "touch": "Capacitive",
+    "touch_ic": "GT911",
+    "mcu": "ESP32-S3R8 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "16MB",
+    "psram": "8MB Octal",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth LE (SoC radio; not listed separately in the vendor spec table)",
+    "sd": "microSD",
+    "imu": "BMI270",
+    "rtc": "BM8563",
+    "buzzer": "Passive buzzer",
+    "battery": "1800 mAh @ 3.7 V (MX1.25-2P)",
+    "charger": "LGS4056H",
+    "usb": "USB Type-C (OTG / CDC / MSC)",
+    "gpio": "HC1.25-4P (3V3, GND, 2x GPIO)",
+    "dimensions": "121.5 x 67.7 x 7.7 mm",
+    "sku": "C139"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3R8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Octal"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Storage",
+     "Supports microSD card expansion"
+    ],
+    [
+     "Display",
+     "4.7\" touch e-ink screen (full screen) @ET047TC1 Resolution: 960x540 pixels 16-level grayscale display"
+    ],
+    [
+     "Touch Function",
+     "Supports two-point touch and various gesture operations (GT911 capacitive touch panel)"
+    ],
+    [
+     "Sensor",
+     "Built-in gyroscope sensor BMI270 @ communication address: 0x68"
+    ],
+    [
+     "USB Function",
+     "OTG/CDC/MSC/Firmware Flashing"
+    ],
+    [
+     "Power Input",
+     "5V@500mA"
+    ],
+    [
+     "Peripheral Interface",
+     "HC1.25-4PLT (3v3 + GND + 2 x GPIO) peripheral interface (used for expanding sensors and devices), specification: 1 x 4P 1.25 pitch"
+    ],
+    [
+     "Battery",
+     "3.7V@1800mAh lithium battery @ charging chip: LGS4056H"
+    ],
+    [
+     "Battery Interface",
+     "MX1.25-2P"
+    ],
+    [
+     "Charging Current",
+     "DC 5V@331.5mA"
+    ],
+    [
+     "Power Management",
+     "PMS150G (power on/off and program download control) Built-in BM8563 RTC chip (supports sleep and wake-up functions) @ communication address: 0x51"
+    ],
+    [
+     "Button",
+     "1x physical button (for device control, power on/off, reset, download mode)"
+    ],
+    [
+     "Buzzer",
+     "Onboard passive buzzer"
+    ],
+    [
+     "Power Consumption",
+     "Low power mode: DC4.2V/9.28uA (main power off, gyroscope in low power mode) Standby mode: DC4.2V/949.58uA (main power off, gyroscope on) Operating mode: DC4.2V/154.02mA (main power on)"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Product Size",
+     "121.5 x 67.7 x 7.7mm"
+    ],
+    [
+     "EPD_ET047TC1",
+     "ESP32S3R8"
+    ]
+   ],
+   "images": [
+    "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/products/core/PaperS3/4.webp"
+   ],
+   "files": [
+    {
+     "name": "sch_papers3_V1.0.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/517/sch_papers3_V1.0.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5PaperS3-UserDemo",
+     "url": "https://github.com/m5stack/M5PaperS3-UserDemo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-paper",
+   "model": "M5Paper",
+   "title": "M5Stack M5Paper – ESP32 4.7\" 540×960 touch e-paper",
+   "series": "M5Stack Paper",
+   "sources": [
+    "https://docs.m5stack.com/en/core/m5paper"
+   ],
+   "description": "Paper is a touch-enabled e-ink screen main control device launched by M5Stack, with the controller using ESP32-D0WDQ6-V3. The front of the device is embedded with a 540 x 960 @4.7\" e-ink screen, supporting 16-level grayscale display. Paired with a GT911 capacitive touch panel, it supports two-point touch and various gesture operations. Compared to ordinary LCD screens, e-ink screens provide users with a better text reading experience and feature low power consumption and image retention when powered off.",
+   "params": {
+    "size": "4.7\"",
+    "resolution": "540x960",
+    "panel": "E-paper",
+    "epaper": "ED047TC1 via IT8951E controller, 16-level grayscale",
+    "touch": "Capacitive",
+    "touch_ic": "GT911",
+    "driver_ic": "IT8951E",
+    "interface": "SPI",
+    "mcu": "ESP32-D0WDQ6-V3 (dual-core LX6, 240 MHz)",
+    "mcu_family": "ESP32",
+    "frequency": "240 MHz",
+    "sram": "520KB",
+    "flash": "16MB",
+    "psram": "8MB Quad",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio; not listed separately in the vendor spec table)",
+    "sd": "microSD",
+    "rtc": "BM8563",
+    "grove": "3x HY2.0-4P",
+    "buttons": "Rotary switch + reset",
+    "usb": "USB Type-C"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Quad"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Interfaces",
+     "USB Type-C x 1, HY2.0-4P x 3, TF-card (microSD) slot"
+    ],
+    [
+     "E-ink Screen",
+     "Model: EPD*ED047TC1 540 x 960@4.7\" Grayscale: 16 levels Display area: 58.32 x 103.68mm Display driver IC: IT8951E"
+    ],
+    [
+     "Physical Buttons",
+     "Rotary switch x 1, reset button x 1"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D antenna"
+    ],
+    [
+     "Battery",
+     "1150mAh@3.7V"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 60°C"
+    ],
+    [
+     "Case Material",
+     "Plastic (PC)"
+    ],
+    [
+     "Product Size",
+     "118.6 x 67.0 x 10.0mm"
+    ]
+   ],
+   "images": [
+    "https://static-cdn.m5stack.com/resource/docs/products/core/m5paper/m5paper_01.webp"
+   ],
+   "files": [
+    {
+     "name": "M5_PAPER_SCH.pdf",
+     "url": "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/m5paper/M5_PAPER_SCH.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5EPD",
+     "url": "https://github.com/m5stack/M5EPD",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Paper_FactoryTest",
+     "url": "https://github.com/m5stack/M5Paper_FactoryTest",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5EPD_Todo",
+     "url": "https://github.com/m5stack/M5EPD_Todo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5EPD_Calculator",
+     "url": "https://github.com/m5stack/M5EPD_Calculator",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5EPD_TTFExample",
+     "url": "https://github.com/m5stack/M5EPD_TTFExample",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "m5stack-coreink",
+   "model": "CoreInk",
+   "title": "M5Stack CoreInk – ESP32-PICO 1.54\" 200×200 e-ink",
+   "series": "M5Stack Paper",
+   "sources": [
+    "https://docs.m5stack.com/en/core/coreink"
+   ],
+   "description": "CoreInk is a controller device with an E-Ink display launched by M5Stack, powered by the ESP32-PICO-D4. The front side integrates a 200x200 @ 1.54\" E-Ink screen that supports black / white display. Compared with conventional LCD screens, the E-Ink display provides a better text reading experience for users, while also offering low power consumption and image retention after power loss. For human-machine interaction, it provides a dial switch and physical buttons, and integrates an LED indicator and buzzer. It has a built-in 390mAh lithium battery, which, combined with the internal RTC (BM8563), enables scheduled sleep and wake-up functions, providing the device with excellent battery life. Independent power and reset (RST) buttons are located on the left side and bottom of the body for convenient operation and debugging. Rich peripheral interfaces (HY2.0-4P, M5-Bus, HAT module interface)",
+   "params": {
+    "size": "1.54\"",
+    "resolution": "200x200",
+    "panel": "E-paper",
+    "epaper": "GDEY0154D67, black/white",
+    "touch": "None",
+    "interface": "SPI",
+    "mcu": "ESP32-PICO-D4 (dual-core LX6, 240 MHz)",
+    "mcu_family": "ESP32",
+    "frequency": "240 MHz",
+    "sram": "520KB",
+    "flash": "4MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth (SoC radio; not listed separately in the vendor spec table)",
+    "rtc": "BM8563",
+    "buzzer": "Passive buzzer",
+    "buttons": "3-way dial switch, user, reset, power",
+    "grove": "HY2.0-4P",
+    "usb": "USB Type-C",
+    "sku": "K048"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-PICO-D4 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency up to 240 MHz"
+    ],
+    [
+     "SRAM",
+     "520 KB"
+    ],
+    [
+     "Flash",
+     "4 MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Input Voltage",
+     "5V @ 500mA"
+    ],
+    [
+     "Interface",
+     "USB Type-C x 1, HY2.0-4P x 1, M5-Bus female socket, top HAT expansion interface"
+    ],
+    [
+     "E-Ink Display",
+     "GDEY0154D67, SPI interface, 200 x 200 @ 1.54\", DPI: 184, 1-bit black/white display (grayscale: 2), viewing area: 27.0 x 27.0mm, dot pitch: 0.14 x 0.14mm, refresh time: 2s, partial refresh time: 0.26s"
+    ],
+    [
+     "Physical Buttons",
+     "Three-way dial switch x 1, user button x 1, reset button x 1, power button x 1"
+    ],
+    [
+     "LED",
+     "Green LED x 1"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "Buzzer",
+     "Passive buzzer x 1"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D antenna"
+    ],
+    [
+     "Battery",
+     "390mAh @ 3.7V"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 60°C"
+    ],
+    [
+     "Enclosure Material",
+     "Plastic (PC)"
+    ],
+    [
+     "Product Size",
+     "56.0 x 40.0 x 16.0mm"
+    ],
+    [
+     "Release Date",
+     "Product Changes"
+    ]
+   ],
+   "images": [
+    "https://static-cdn.m5stack.com/resource/docs/products/core/coreink/coreink_01.webp"
+   ],
+   "files": [
+    {
+     "name": "coreink_sch.pdf",
+     "url": "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/coreink/coreink_sch.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5_Hardware",
+     "url": "https://github.com/m5stack/M5_Hardware",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

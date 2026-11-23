@@ -1,0 +1,1545 @@
+{
+ "vendor": "LilyGO",
+ "slug": "lilygo",
+ "category": "LilyGO (T-series)",
+ "listing": "https://lilygo.cc/collections/display",
+ "image_note": "official LilyGO product photo (lilygo.cc)",
+ "_note": "Hand-curated from the official product / docs pages listed in each board's sources. spec_rows = verbatim vendor spec table rows. Empty = not stated.",
+ "boards": [
+  {
+   "id": "lilygo-t-display",
+   "model": "T-Display",
+   "title": "LilyGO T-Display – ESP32 1.14\" IPS dev board",
+   "series": "LilyGO T-Display",
+   "sources": [
+    "https://lilygo.cc/products/t-display"
+   ],
+   "description": "",
+   "params": {
+    "size": "1.14\"",
+    "resolution": "135x240",
+    "panel": "IPS",
+    "touch": "None",
+    "driver_ic": "ST7789V",
+    "interface": "SPI",
+    "mcu": "ESP32 (dual-core LX6)",
+    "mcu_family": "ESP32",
+    "flash": "4MB / 16MB (option)",
+    "wifi": "Wi-Fi 802.11 b/g/n",
+    "bt": "BT V4.2 + BLE",
+    "usb": "USB Type-C (CH9102 USB-serial)",
+    "buttons": "2x user buttons",
+    "battery": "Battery power detection"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32 Xtensa dual-core LX6 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-Fi 802.11 b/ g/ n, BL V4.2+BLE"
+    ],
+    [
+     "Programming Platform",
+     "Arduino-ide、Micropython"
+    ],
+    [
+     "Serial chip",
+     "CH9102"
+    ],
+    [
+     "Optional",
+     "Flash: 4M/16M"
+    ],
+    [
+     "Onboard functions",
+     "Buttons: l006+I007, battery power detection"
+    ],
+    [
+     "TFT Driver",
+     "ST7789"
+    ],
+    [
+     "TFT_MIS",
+     "N/A"
+    ],
+    [
+     "TFT_RST",
+     "N/A"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/LILYGO-T-DISPLAY_5_cd0e2152-00a0-4403-a557-f96f6ba0d1e4.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/TTGO-T-Display",
+     "url": "https://github.com/Xinyuan-LilyGO/TTGO-T-Display",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-display-s3",
+   "model": "T-Display S3",
+   "title": "LilyGO T-Display S3 – ESP32-S3 1.9\" 170×320 8-bit parallel TFT",
+   "series": "LilyGO T-Display",
+   "sources": [
+    "https://lilygo.cc/products/t-display-s3"
+   ],
+   "description": "",
+   "params": {
+    "size": "1.9\"",
+    "resolution": "170x320",
+    "panel": "TFT",
+    "driver_ic": "ST7789V",
+    "interface": "8080 (8-bit parallel)",
+    "mcu": "ESP32-S3R8 (dual-core LX7)",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "Wi-Fi 802.11",
+    "bt": "BLE 5 + BT mesh",
+    "buttons": "Boot + Reset + IO14",
+    "grove": "STEMMA QT / Qwiic JST-SH 1.0 mm 4-pin",
+    "battery": "Battery connector JST-GH 1.25 mm 2-pin, voltage detection"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-Fi 802.11, BLE 5 + BT mesh"
+    ],
+    [
+     "Programming Platform",
+     "Arduino-ide、 Micropython"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Onboard functions",
+     "Boot + Reset + IO14 Button"
+    ],
+    [
+     "LCD",
+     "1.9\" diagonal, Full-color TFT Display"
+    ],
+    [
+     "Drive Chip",
+     "ST7789V"
+    ],
+    [
+     "Resolution",
+     "170(H)RGB x320(V) 8-Bit Parallel Interface"
+    ],
+    [
+     "Working power supply",
+     "3.3v"
+    ],
+    [
+     "Support",
+     "STEMMA QT / Qwiic JST-SH 1.0mm 4-PIN"
+    ],
+    [
+     "Connector",
+     "JST-GH 1.25mm 2PIN"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/H569_03.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Display-S3",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Display-S3",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-display-s3-amoled",
+   "model": "T-Display S3 AMOLED",
+   "title": "LilyGO T-Display S3 AMOLED – ESP32-S3 1.91\" 240×536 QSPI AMOLED",
+   "series": "LilyGO T-Display",
+   "sources": [
+    "https://lilygo.cc/products/t-display-s3-amoled"
+   ],
+   "description": "",
+   "params": {
+    "size": "1.91\"",
+    "resolution": "240x536",
+    "panel": "AMOLED",
+    "driver_ic": "RM67162",
+    "interface": "QSPI",
+    "touch": "Touch and no-touch versions",
+    "mcu": "ESP32-S3R8 (dual-core LX7)",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth 5 (LE)",
+    "buttons": "Boot (IO0) + Reset + IO21",
+    "battery": "Battery voltage detection (IO04)"
+   },
+   "spec_rows": [
+    [
+     "V1.0",
+     "V2.0"
+    ],
+    [
+     "MCU",
+     "ESP32-S3R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi & Bluetooth5 (LE)"
+    ],
+    [
+     "Development",
+     "Arduino, PlatformIO-IDE, Micropython"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Onboard functions",
+     "Boot (IO00) + Reset + IO21 Button"
+    ],
+    [
+     "Resolution",
+     "240 X RGB X 536(H)"
+    ],
+    [
+     "Active Area",
+     "19.8*44.22mm"
+    ],
+    [
+     "Driver IC",
+     "RM67162"
+    ],
+    [
+     "Viewing Angle",
+     "IPS Full View Angle"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/products/T-Display-S3-AMOLED-lilygo_10.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/LilyGo-AMOLED-Series",
+     "url": "https://github.com/Xinyuan-LilyGO/LilyGo-AMOLED-Series",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-display-s3-pro",
+   "model": "T-Display S3 Pro",
+   "title": "LilyGO T-Display S3 Pro – ESP32-S3 2.33\" 222×480 touch IPS",
+   "series": "LilyGO T-Display",
+   "sources": [
+    "https://lilygo.cc/products/t-display-s3-pro"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.33\"",
+    "resolution": "222x480",
+    "panel": "IPS",
+    "touch": "Capacitive (multi-touch)",
+    "driver_ic": "ST7796",
+    "interface": "SPI",
+    "mcu": "ESP32-S3R8 (dual-core LX7)",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "Wi-Fi 802.11",
+    "bt": "BLE 5 + BT mesh",
+    "usb": "USB OTG",
+    "als": "LTR-553ALS-01 light + proximity sensor",
+    "buttons": "Boot + Reset + IO12 + IO16"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-Fi 802.11, BLE 5+BT mesh"
+    ],
+    [
+     "Programming Platform",
+     "Arduino-ide, Micropython"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Support",
+     "USB OTG"
+    ],
+    [
+     "Onboard functions",
+     "B oot+Reset+IO12+IO16"
+    ],
+    [
+     "Resolution",
+     "222(H)RGB x 480(V)"
+    ],
+    [
+     "Drive Chip",
+     "ST7796"
+    ],
+    [
+     "Features",
+     "D igital light sensor [ALS] & proximity sensor [PS]"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/K231_3.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Display-S3-Pro",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Display-S3-Pro",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Display-S3-Pro-MVSRBoard",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Display-S3-Pro-MVSRBoard",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-display-s3-long",
+   "model": "T-Display S3 Long",
+   "title": "LilyGO T-Display S3 Long – ESP32-S3 3.4\" 180×640 QSPI bar touch display",
+   "series": "LilyGO T-Display",
+   "sources": [
+    "https://lilygo.cc/products/t-display-s3-long"
+   ],
+   "description": "",
+   "params": {
+    "size": "3.4\"",
+    "resolution": "180x640",
+    "panel": "TFT",
+    "touch": "Capacitive",
+    "touch_ic": "CST3530",
+    "interface": "QSPI",
+    "mcu": "ESP32-S3R8 (dual-core LX7)",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "Wi-Fi 802.11",
+    "bt": "BLE 5 + BT mesh",
+    "sd": "TF card",
+    "buttons": "Boot + Reset, battery switch",
+    "color_depth": "565, 666"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-Fi 802.11, BLE 5 + BT mesh"
+    ],
+    [
+     "Programming Platform",
+     "Arduino-ide, VS Code"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Onboard functions",
+     "Boot + Reset Button, Battery Switch, TF Card Function"
+    ],
+    [
+     "Color depth",
+     "565, 666"
+    ],
+    [
+     "Chip",
+     "CST3530"
+    ],
+    [
+     "Resolution",
+     "180(H)RGB x640(V)"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/LILYGO-T-Display_-S3_-Long_6.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Display-S3-Long",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Display-S3-Long",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-rgb",
+   "model": "T-RGB",
+   "title": "LilyGO T-RGB – ESP32-S3 2.1\"/2.8\" round 480×480 RGB IPS touch",
+   "series": "LilyGO T-Display",
+   "sources": [
+    "https://lilygo.cc/products/t-rgb"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.1\" / 2.8\" (versions)",
+    "resolution": "480x480",
+    "shape": "Round",
+    "panel": "IPS",
+    "touch": "Capacitive",
+    "touch_ic": "FT3267 (2.1\" half circle) / CST820 (2.1\" full circle) / GT911 (2.8\")",
+    "driver_ic": "ST7701S",
+    "interface": "RGB",
+    "interface_detail": "3-wire SPI + 18-bit RGB",
+    "mcu": "ESP32-S3R8 (dual-core LX7)",
+    "mcu_family": "ESP32-S3",
+    "psram": "8MB (in-package, ESP32-S3R8)",
+    "wifi": "Wi-Fi 802.11",
+    "bt": "BLE 5 + BT mesh",
+    "sd": "TF card slot",
+    "buttons": "Boot, Reset",
+    "battery": "Battery voltage detection (IO04)"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-Fi 802.11, BLE 5 + BT mesh"
+    ],
+    [
+     "Programming Platform",
+     "Arduino-ide, VS Code"
+    ],
+    [
+     "PSRAM",
+     "16MB"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "Button",
+     "Boot; Reset"
+    ],
+    [
+     "Resolution",
+     "480(H) X 480(V) RGB Full Color"
+    ],
+    [
+     "Interface",
+     "3-wire SPI + 18bit RGB interface"
+    ],
+    [
+     "Drive IC",
+     "ST7701S"
+    ],
+    [
+     "Display Type",
+     "2.1-inch TFT LCD"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/products/T-RGB-Lilygo_6.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "The vendor spec table lists \"PSRAM 16MB / Flash 8MB\"; the stated chip ESP32-S3R8 has 8 MB in-package PSRAM (Espressif datasheet), so PSRAM is shown as 8 MB and flash is left open – verify on the board."
+   ],
+   "param_sources": {
+    "psram": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"
+   }
+  },
+  {
+   "id": "lilygo-t-panel-s3",
+   "model": "T-Panel S3",
+   "title": "LilyGO T-Panel S3 – ESP32-S3 + ESP32-H2 4\" 480×480 RGB panel (RS-485 / CAN option)",
+   "series": "LilyGO T-Panel",
+   "sources": [
+    "https://lilygo.cc/products/t-panel-s3"
+   ],
+   "description": "",
+   "params": {
+    "size": "4.0\"",
+    "resolution": "480x480",
+    "panel": "IPS",
+    "driver_ic": "ST7701S",
+    "interface": "RGB",
+    "interface_detail": "SPI + RGB",
+    "mcu": "ESP32-S3 + ESP32-H2 (802.15.4 co-processor)",
+    "mcu_family": "ESP32-S3",
+    "coprocessor": "ESP32-H2 (4MB flash; IEEE 802.15.4 + Bluetooth 5 LE)",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth 5 (LE)",
+    "grove": "2x Qwiic",
+    "sd": "TF card",
+    "buttons": "4x (S3 Boot + RST, H2 Boot + RST)",
+    "rs485": "RS-485 / CAN FD transceiver module (optional)",
+    "can": "CAN FD (optional module)",
+    "expansion": "XL9535 16-bit I2C I/O expander"
+   },
+   "spec_rows": [
+    [
+     "MCU1",
+     "ESP32-S3"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi + Bluetooth 5 (LE)"
+    ],
+    [
+     "MCU2",
+     "ESP32-H2"
+    ],
+    [
+     "Development",
+     "Arduino, PlatformIO-IDE, Micropython"
+    ],
+    [
+     "Visible pixels",
+     "480(W) 480(H)"
+    ],
+    [
+     "Interface",
+     "SPI+RGB"
+    ],
+    [
+     "Compatibility library",
+     "Arduino_ GFX, LVGL"
+    ],
+    [
+     "Onboard functions",
+     "QWiiCx2 + TF Card + Antenna ESP32 4 X Button= S3(Boot + RST) + H2(Boot + RST)"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/H719-LILYGO-T-PENAL_9.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Panel",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Panel",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Panel-Lite",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Panel-Lite",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-encoder-pro",
+   "model": "T-Encoder Pro",
+   "title": "LilyGO T-Encoder Pro – ESP32-S3 1.2\" 390×390 round AMOLED knob",
+   "series": "LilyGO knob",
+   "sources": [
+    "https://lilygo.cc/products/t-encoder-pro"
+   ],
+   "description": "",
+   "params": {
+    "size": "1.2\"",
+    "resolution": "390x390",
+    "shape": "Round",
+    "panel": "AMOLED",
+    "driver_ic": "CO5300",
+    "interface": "QSPI",
+    "mcu": "ESP32-S3R8",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth 5 (LE)",
+    "encoder": "Rotary encoder",
+    "buzzer": "Buzzer (IO17)",
+    "grove": "2x Qwiic 4-pin"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3 R8"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wireless protocol",
+     "2.4 GHz Wi-Fi and Bluetooth 5 (LE)"
+    ],
+    [
+     "Onboard functions",
+     "Buzzer PIN--IO17, 2 x Qwiic 4-Pin"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T-Encoder-Plus-LILYGO_8.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t4-s3",
+   "model": "T4 S3",
+   "title": "LilyGO T4 S3 – ESP32-S3 2.41\" 450×600 QSPI AMOLED touch",
+   "series": "LilyGO T-Display",
+   "sources": [
+    "https://lilygo.cc/products/t4-s3"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.41\"",
+    "resolution": "450x600",
+    "panel": "AMOLED",
+    "touch": "Touch screen (per product title; type not stated)",
+    "interface": "QSPI",
+    "brightness": "500 cd/m²",
+    "mcu": "ESP32-S3R8 (dual-core LX7)",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth 5 (LE)",
+    "sd": "microSD",
+    "buttons": "Boot + Reset"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi & Bluetooth 5 (LE)"
+    ],
+    [
+     "Development",
+     "Arduino, PlatformIO-IDE, Micropython"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Language",
+     "C, C++, Lua"
+    ],
+    [
+     "Onboard functions",
+     "Boot Button + Reset + Micro SD"
+    ],
+    [
+     "Active Area",
+     "36.2*48.96mm"
+    ],
+    [
+     "Brightness",
+     "500cd/m"
+    ],
+    [
+     "Resolution",
+     "450(W) x RGB x 600(H)"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T4-S3_4.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-deck",
+   "model": "T-Deck",
+   "title": "LilyGO T-Deck – ESP32-S3 2.8\" pocket device with keyboard, trackball, optional LoRa",
+   "series": "LilyGO T-Deck",
+   "sources": [
+    "https://lilygo.cc/products/t-deck"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.8\"",
+    "resolution": "320x240",
+    "panel": "IPS",
+    "driver_ic": "ST7789",
+    "interface": "SPI",
+    "mcu": "ESP32-S3FN16R8 (dual-core LX7)",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth 5 (LE)",
+    "keyboard": "Mini keyboard + trackball",
+    "mic": "Microphone",
+    "speaker": "Speaker",
+    "lora": "SX1262 (optional), +22 dBm, 433/868/915 MHz"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3FN16R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi & Bluetooth 5 (LE)"
+    ],
+    [
+     "Development",
+     "Arduino, PlatformlO-IDE, Micropython"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Onboard functions",
+     "Trackball , Microphone, Speaker"
+    ],
+    [
+     "Transmit power",
+     "+22dBm"
+    ],
+    [
+     "Frequency Optional",
+     "433/868/915Mhz"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/LILYGO-T-DECK_1_ebea5dda-65ab-4715-96e7-ff8148c6c700.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Deck",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Deck",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-deck-plus",
+   "model": "T-Deck Plus",
+   "title": "LilyGO T-Deck Plus – ESP32-S3 2.8\" keyboard device with LoRa + GPS",
+   "series": "LilyGO T-Deck",
+   "sources": [
+    "https://lilygo.cc/products/t-deck-plus"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.8\"",
+    "resolution": "320x240",
+    "panel": "IPS",
+    "driver_ic": "ST7789",
+    "interface": "SPI",
+    "mcu": "ESP32-S3FN16R8 (dual-core LX7)",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth 5 (LE)",
+    "keyboard": "Keyboard + trackball",
+    "mic": "Microphone",
+    "speaker": "Speaker",
+    "lora": "SX1262, +22 dBm, 433/868/915 MHz",
+    "gps": "GPS",
+    "sd": "TF card"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3FN16R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi & Bluetooth 5 (LE)"
+    ],
+    [
+     "Development",
+     "Arduino, PlatformlO-IDE, Micropython"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Onboard functions",
+     "GPS,TF Card ,Microphone,Speaker"
+    ],
+    [
+     "Transmit power",
+     "+22dBm"
+    ],
+    [
+     "Frequency Optional",
+     "433/868/915Mhz"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T-DECK-PLUS_7.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Deck",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Deck",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-deck-pro",
+   "model": "T-Deck Pro",
+   "title": "LilyGO T-Deck Pro – ESP32-S3 3.1\" e-paper keyboard device, LoRa + GPS (+4G option)",
+   "series": "LilyGO T-Deck",
+   "sources": [
+    "https://lilygo.cc/products/t-deck-pro"
+   ],
+   "description": "",
+   "params": {
+    "size": "3.1\"",
+    "resolution": "320x240",
+    "panel": "E-paper",
+    "epaper": "GDEQ031T10",
+    "driver_ic": "GDEQ031T10",
+    "mcu": "ESP32-S3FN16R8 (dual-core LX7)",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth 5 (LE)",
+    "lora": "SX1262",
+    "gps": "GPS",
+    "sd": "TF card",
+    "mic": "Microphone",
+    "speaker": "Speaker",
+    "battery": "1400 mAh (built-in)",
+    "connectivity": "Option: A7682E 4G modem or PCM5102A audio DAC"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-53FN16R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi, Bluetooth 5 (LE)"
+    ],
+    [
+     "Development",
+     "Arduino, Platform0-IDE, ESP-IDF"
+    ],
+    [
+     "Option",
+     "A7682E/ PCM5102A"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Onboard functions",
+     "GPS, TF Card, Microphone, Speaker"
+    ],
+    [
+     "Lora Chip",
+     "SX1262"
+    ],
+    [
+     "Battery (Built-in)",
+     "1400 mah"
+    ],
+    [
+     "Resolution",
+     "320x240"
+    ],
+    [
+     "Drive Chip",
+     "GDEQ031T10"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/LILYGO-T-DECK-PRO_9.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Deck-Pro",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Deck-Pro",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-circle-s3",
+   "model": "T-Circle S3",
+   "title": "LilyGO T-Circle S3 – ESP32-S3 0.75\" 160×160 round TFT with speaker + mic",
+   "series": "LilyGO round",
+   "sources": [
+    "https://lilygo.cc/products/t-circle-s3"
+   ],
+   "description": "",
+   "params": {
+    "size": "0.75\"",
+    "resolution": "160x160",
+    "shape": "Round",
+    "panel": "TFT",
+    "driver_ic": "GC9D01N",
+    "interface": "SPI",
+    "mcu": "ESP32-S3R8 (dual-core LX7)",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth 5 (LE)",
+    "speaker": "Speaker",
+    "mic": "Microphone",
+    "rgbled": "Three-colour LED",
+    "dimensions": "32 x 17 mm",
+    "charger": "USB charging 5 V 500 mA"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi & Bluetooth5 (LE)"
+    ],
+    [
+     "Development",
+     "Arduino, PlatformIO-IDE, ESP-IDF"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Size",
+     "32*17mm"
+    ],
+    [
+     "USB Charging",
+     "5v 500mA"
+    ],
+    [
+     "Driver IC",
+     "GC9D01N"
+    ],
+    [
+     "Resolution",
+     "160RGB X 160"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T-CIRCLE-LILYGO_1.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Circle",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Circle",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Circle-S3",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Circle-S3",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-display-p4",
+   "model": "T-Display P4",
+   "title": "LilyGO T-Display P4 – ESP32-P4 + ESP32-C6, 4.05\" TFT / 4.1\" AMOLED, LoRa, GPS, camera, Ethernet",
+   "series": "LilyGO T-Display",
+   "sources": [
+    "https://lilygo.cc/products/t-display-p4"
+   ],
+   "description": "",
+   "params": {
+    "size": "4.05\" TFT / 4.1\" AMOLED (versions)",
+    "touch": "Capacitive",
+    "mcu": "ESP32-P4 (dual-core RISC-V 360 MHz + LP 40 MHz)",
+    "mcu_family": "ESP32-P4",
+    "coprocessor": "ESP32-C6",
+    "frequency": "360 MHz",
+    "flash": "16MB",
+    "psram": "32MB",
+    "wifi": "2.4 GHz Wi-Fi 6 (802.11ax) via ESP32-C6",
+    "bt": "Bluetooth 5 (LE) via ESP32-C6",
+    "lora": "SX1262",
+    "gps": "L76K GNSS",
+    "camera": "OV2710 2 MP MIPI-CSI (1080p@30, 720p@60)",
+    "charger": "LGS4056H + BQ27220 fuel gauge",
+    "imu": "ICM20948 9-axis",
+    "rtc": "RTC",
+    "ethernet": "Ethernet",
+    "speaker": "I2S speaker",
+    "mic": "Microphone",
+    "vibration": "Motor",
+    "expansion": "XL9535 16-bit I2C GPIO expander; external keyboard board",
+    "dimensions": "63 x 109 x 22 mm"
+   },
+   "spec_rows": [
+    [
+     "MCU1",
+     "ESP32-P4,RISC-V Dual-core 360Mhz + Single 40Mhz"
+    ],
+    [
+     "Features",
+     "Powerfulimage and Voice processing JPEG Codec,ISP, PPA, H264 Encoder, MIPI CSI, MIPI DSI"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "32MB"
+    ],
+    [
+     "Platform",
+     "ESP-IDF,VS code"
+    ],
+    [
+     "MCU2",
+     "ESP32-C6"
+    ],
+    [
+     "Onboard function",
+     "Capacitive touch screen+TFT/AMOLED optional l2S Speaker & Microphone & Motor+ RTC+ Ethernet Expandablel/0 supports external Keyboard Board"
+    ],
+    [
+     "LoRa Module",
+     "SX1262"
+    ],
+    [
+     "Charge Management",
+     "LGs4056H"
+    ],
+    [
+     "I2C Battery Gauge",
+     "BQ27220"
+    ],
+    [
+     "Size",
+     "63 x109x22mm"
+    ],
+    [
+     "USB Charging",
+     "5V, 500mA"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/LILYGO-T-DisplayP4-H753_6.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Display-P4",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Display-P4",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t5-e-paper-s3-pro",
+   "model": "T5 E-Paper S3 Pro",
+   "title": "LilyGO T5 E-Paper S3 Pro – ESP32-S3 4.7\" 16-gray touch e-paper with LoRa",
+   "series": "LilyGO T5",
+   "sources": [
+    "https://lilygo.cc/products/t5-e-paper-s3-pro"
+   ],
+   "description": "",
+   "params": {
+    "size": "4.7\"",
+    "panel": "E-paper",
+    "epaper": "ED047TC1, 16 gray levels",
+    "touch": "Touch (type not stated)",
+    "mcu": "ESP32-S3-WROOM-1",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "BLE 5",
+    "rtc": "PCF8563",
+    "sd": "TF card",
+    "charger": "BQ25896 + BQ27220 fuel gauge",
+    "lora": "LoRa 433 / 868 / 915 MHz"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3-WROOM-1"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi& BLE 5"
+    ],
+    [
+     "Programming Environment",
+     "Arduino-IDE, VS Code"
+    ],
+    [
+     "Onboard function",
+     "Touch, RTC PCF8563, tf Card"
+    ],
+    [
+     "Battery Management Chip",
+     "BQ25896, BQ27220"
+    ],
+    [
+     "Support Baud",
+     "433Mhz, 868Mhz, 915Mhz"
+    ],
+    [
+     "Driver IC",
+     "ED047TC1"
+    ],
+    [
+     "Size",
+     "4.7 inch"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T5-4_7.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T5S3-4.7-e-paper-PRO",
+     "url": "https://github.com/Xinyuan-LilyGO/T5S3-4.7-e-paper-PRO",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-qt-pro",
+   "model": "T-QT Pro",
+   "title": "LilyGO T-QT Pro – ESP32-S3 0.85\" 128×128 round-corner IPS mini board",
+   "series": "LilyGO T-Display",
+   "sources": [
+    "https://lilygo.cc/products/t-qt-pro"
+   ],
+   "description": "",
+   "params": {
+    "size": "0.85\"",
+    "resolution": "128x128",
+    "panel": "LCD",
+    "driver_ic": "GC9A01",
+    "interface": "SPI",
+    "brightness": "260 cd/m²",
+    "mcu": "ESP32-S3FN4R2 / ESP32-S3FN8 (versions)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "4MB (FN4R2) / 8MB (FN8)",
+    "psram": "2MB (FN4R2 only)",
+    "wifi": "Wi-Fi 802.11 b/g/n",
+    "bt": "BT V5.0 + BLE",
+    "buttons": "IO0 + IO47",
+    "charger": "Battery charge / discharge"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3FN4R2 Xtensa LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-Fi 802.11 b/g/n, BL V5.0+BLE"
+    ],
+    [
+     "Programming Platform",
+     "Arduino-ide, Micropython"
+    ],
+    [
+     "Flash",
+     "4M"
+    ],
+    [
+     "PSRAM",
+     "2M"
+    ],
+    [
+     "Clock frequency",
+     "240Mhz"
+    ],
+    [
+     "Onboard functions",
+     "IO00+IO47"
+    ],
+    [
+     "LCD",
+     "Resolution: 128*128px"
+    ],
+    [
+     "Support",
+     "4-Wire SPI interface"
+    ],
+    [
+     "Display Area",
+     "15.2064(H)*15.2064(V)"
+    ],
+    [
+     "Display Colors",
+     "262K"
+    ],
+    [
+     "Brightness",
+     "260 cd/m2"
+    ],
+    [
+     "LCD Driver",
+     "GC9A01"
+    ],
+    [
+     "Screen Size",
+     "0.85 Inch LCD"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/products/H579-T-QT-Pro_2.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-QT",
+     "url": "https://github.com/Xinyuan-LilyGO/T-QT",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "lilygo-t-dongle-s3",
+   "model": "T-Dongle S3",
+   "title": "LilyGO T-Dongle S3 – ESP32-S3 USB dongle with 0.96\" IPS and TF slot",
+   "series": "LilyGO T-Display",
+   "sources": [
+    "https://lilygo.cc/products/t-dongle-s3"
+   ],
+   "description": "",
+   "params": {
+    "size": "0.96\"",
+    "resolution": "80x160",
+    "panel": "IPS",
+    "driver_ic": "ST7735",
+    "interface": "SPI",
+    "mcu": "ESP32-S3 (LX7)",
+    "mcu_family": "ESP32-S3",
+    "flash": "16MB",
+    "wifi": "Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5",
+    "sd": "TF card",
+    "buttons": "Boot button"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3 Xtensa LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-Fi 802.11 b/g/n, bluetooth5"
+    ],
+    [
+     "Platform",
+     "Arduino-ide、PlatformlO-ide、Micropython"
+    ],
+    [
+     "Onboard functions",
+     "16M Flash, Boot button, TF card"
+    ],
+    [
+     "Resolution",
+     "80 X 160, 0.96 diagonal"
+    ],
+    [
+     "Working Power Supply",
+     "3.3V"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T-Dongle-LILYGO_2.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Mac_Driver",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/CH9102_Driver",
+     "url": "https://github.com/Xinyuan-LilyGO/CH9102_Driver",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

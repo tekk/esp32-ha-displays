@@ -1,22 +1,22 @@
-# ESP32 Display Catalog (Guition · Waveshare)
+# ESP32 Display Catalog (Guition · Waveshare · M5Stack · LilyGO · Elecrow · Seeed · Makerfabs · DFRobot)
 
 Live: https://tekk.github.io/esp32-ha-displays/
 
-Statický, vyhľadávateľný katalóg všetkých displejových dosiek **Guition** (JC…, ESP32-…, „CYD“) a vybraných dosiek **Waveshare ESP32-P4**: parametre, obrázky, PDF špecifikácie, kompletný strom súborov každého ZIP/RAR archívu z oficiálneho file servera a vstavaný prehliadač dokumentácie.
-*Static, searchable catalog of all Guition display boards plus selected Waveshare ESP32-P4 boards – specs, images, spec PDFs, full file tree of every official archive and a built-in documentation browser.*
+Statický, vyhľadávateľný katalóg všetkých displejových dosiek **Guition** (JC…, ESP32-…, „CYD“) a vybraných ESP32 displejových dosiek ďalších výrobcov (**Waveshare** P4/S3/C6, **M5Stack**, **LilyGO**, **Elecrow CrowPanel**, **Seeed Studio** SenseCAP Indicator / reTerminal E10xx, **Makerfabs** MaTouch, **DFRobot** UNIHIKER K10): parametre, obrázky, PDF špecifikácie, kompletný strom súborov každého ZIP/RAR archívu z oficiálneho file servera a vstavaný prehliadač dokumentácie.
+*Static, searchable catalog of all Guition display boards plus selected ESP32 display boards from Waveshare, M5Stack, LilyGO, Elecrow, Seeed Studio, Makerfabs and DFRobot – specs, images, spec PDFs, full file tree of every official archive and a built-in documentation browser.*
 
 ## Čo obsahuje / Contents
 
 | | |
 |---|---|
 | `site/` | hotový statický web (nasadzuje sa iba tento priečinok) / the deployable static site |
-| `site/data/models.json` | 104 modelov (Guition 97, Waveshare 7), normalizované parametre + zdroj (URL) ku každej hodnote |
+| `site/data/models.json` | 185 modelov (Guition 97, Waveshare 24, Elecrow 19, M5Stack 17, LilyGO 17, Seeed Studio 8, Makerfabs 2, DFRobot 1), normalizované parametre + zdroj (URL) ku každej hodnote |
 | `site/data/archives.json` | 60 súborov z pan.jczn1688.com (8,7 GB) s mapovaním na modely |
 | `site/data/manifests/<slug>.json` | kompletný strom súborov každého archívu (`path,size,blob,kind`) |
 | `site/docs/b/` | extrahovaná dokumentácia (schémy, datasheety, README, vybrané demo zdrojáky), deduplikovaná podľa obsahu |
 | `site/data/search-*.json` | predpočítané MiniSearch indexy (modely + fulltext dokumentácie) |
 | `build/` | scraper + build skripty, limity v `build/config.json` |
-| `data/curated/` | ručne overené doplnky so zdrojom: Waveshare, komunitné repozitáre, varianty JC1060P470, pinouty, `photos.json` (overené fotky konkrétnych variantov) |
+| `data/curated/` | ručne overené doplnky so zdrojom: `boards/<vendor>.json` (dosky ďalších výrobcov, formát nižšie), Waveshare, komunitné repozitáre, varianty JC1060P470, pinouty, `photos.json` (overené fotky konkrétnych variantov) |
 | `data/auto/` | výsledky mesačného updatu (automaticky nájdené GitHub repozitáre, stav zrkadlených repozitárov, Waveshare kandidáti) |
 | `site/assets/img/hd`, `th` | fotky dosiek (WebP ≤ 1600 px, < 1 MB) + náhľady (≤ 400 px); zdrojová URL každej fotky je v `models.json → images[].orig/source_page` |
 | `site/assets/fonts/` | self-hosted Roboto Condensed, Montserrat, JetBrains Mono, Meslo LG (woff2 + licencie) |
@@ -24,13 +24,17 @@ Statický, vyhľadávateľný katalóg všetkých displejových dosiek **Guition
 
 ### Funkcie / Features
 - čistý minimalistický tmavý dizajn s bielym akcentom, tabuľka aj karty, triedenie podľa ľubovoľného stĺpca, výber stĺpcov, export CSV
-- fazetové filtre s počtami (vendor, kategória, MCU, veľkosť, rozlíšenie, rozhranie, dotyk, panel, driver IC, Wi-Fi/BT, flash/PSRAM, tagy …), stav filtrov v URL (dá sa zdieľať)
+- fazetové filtre s počtami (Manufacturer, kategória, MCU, veľkosť, rozlíšenie, rozhranie, dotyk, panel, driver IC, Wi-Fi/BT, flash/PSRAM, tagy …), stav filtrov v URL (dá sa zdieľať)
 - syntax dotazov: `mcu:esp32-p4 tag:rs485 7"` , klávesa `/` = vyhľadávanie
 - detail modelu: všetky parametre (každý s odkazom na zdroj), galéria, PDF, archívy, komunitné odkazy, upozornenia na varianty, konflikty medzi zdrojmi výrobcu, pinouty
 - prehliadač archívov: strom súborov, náhľad obrázkov, PDF (natívny iframe), markdown, HTML (sandbox), kód so zvýraznením (UTF-8/GBK), malé archívy (≤ 20 MB) sa dajú celé otvoriť v prehliadači cez JSZip
 - fulltextové vyhľadávanie v dokumentácii (vrátane čínštiny)
 - **Features / piktogramy**: posledný stĺpec tabuľky „Features“ zobrazuje farebné outline piktogramy vlastností dosky (microSD, PSRAM, flash, typ displejového rozhrania, dotyk, Wi-Fi / Wi-Fi 6, Bluetooth, USB-C/A, Ethernet, PoE, RS-485, sériový port, I2C, GPIO, reproduktor, mikrofón, kamera, batéria, RTC, RGB LED, relé, knob …) s tooltipom (počty a typy konektorov, ak sú známe); klik na ikonu = filter. Stĺpce PSRAM, Flash, Touch, Interface a Files boli nahradené. Na stránke modelu je sekcia „Ports, connectors & interfaces“ responzívny grid (piktogram + popis). Faceta „Features“ a dotaz `feat:psram`.
   Dáta: `models.json → features[] = {id, category, name, icon, label, count?, connector?, source}` generuje `build/features.py` iba zo zdrojových údajov (parametre výrobcu, spec riadky, komunitné pinouty, ručne overené konektory v `data/curated/features.json` so zdrojom); nejasné = vynechané. Piktogramy: `build/icons.py` → `site/assets/img/features.svg` (SVG sprite, 24×24, stroke 1.5, `currentColor`, farba podľa kategórie v CSS), náhľad `screenshots/pictograms-sheet.png` (`npm run icons`).
+- **Farby a hodnotové piktogramy / palette & value badges**: iba sýte farby (žiadna sivá), susedné kategórie sa striedajú teplá/studená, biela zostáva akcentom UI:
+  display `#3d7bff` · input `#ff8a1f` · PSRAM `#00e8d0` · flash `#ff3d9a` · storage `#2ee66b` · Wi-Fi `#ffd60a` · Bluetooth `#9a6bff` · radio (Thread/Zigbee/Matter/LoRa/GPS/NFC/IR) `#a8ff1f` · USB `#1fb6ff` · wired (Ethernet/PoE/RS-485/CAN) `#ff4545` · I/O `#e55cff` · audio `#ffab1f` · camera `#ff5c8a` · power `#5cff8f`.
+  Piktogramy s hodnotou nesú malý štítok s číslom: PSRAM N (MB), Flash N (MB), Wi-Fi 4/6, Bluetooth 4.2/5/5.3, Ethernet 100/1G. **Verzia Wi-Fi/BT sa odvodzuje z SoC** (datasheet Espressif uložený ako zdroj – `basis`): ESP32/S3 = Wi-Fi 4 2,4 GHz, C5 = Wi-Fi 6 dual-band, C6 = Wi-Fi 6, P4 cez C6 ko-procesor = Wi-Fi 6; ak SoC nie je známy, použije sa iba to, čo uvádza výrobca. **Thread / Zigbee / Matter** sa zobrazia iba pre dosky s rádiom 802.15.4 (ESP32-C6/H2/C5, aj ako ko-procesor) a tooltip výslovne uvádza, že ide o schopnosť SoC podľa datasheetu (vyžaduje firmvér). Tooltip každej ikony = presná hodnota + základ/zdroj.
+- **Dosky ďalších výrobcov / other manufacturers** – `data/curated/boards/<vendor>.json`: `{vendor, slug, category, listing, image_note, boards:[{id, model, title, series, sources[], description, params{}, spec_rows[[label,value]], images[url], files[{name,url,host}], links[], notes[], param_sources?}]}`. `params` používa rovnaké kľúče ako normalizované modely (`size, resolution, panel, interface, driver_ic, touch, touch_ic, mcu, mcu_family, coprocessor, flash, psram, wifi, bt, usb, speaker, mic, battery, rtc, imu, grove, lora, keyboard, encoder …`) a obsahuje iba hodnoty doslovne uvedené na zdrojovej stránke výrobcu; `spec_rows` sú doslovné riadky špecifikácie. Fotky sa sťahujú z oficiálnych URL (`photos.py` → WebP). Komunitné/neoficiálne repozitáre nových výrobcov sa nezrkadlia, iba odkazujú.
 - **hover náhľad**: podržanie myši (alebo fokus klávesnicou) nad názvom modelu / náhľadom otvorí veľkú kartu – HD fotka vľavo, parametre, porty/konektory, rozhrania, bezdrôtové moduly, MCU/flash/PSRAM vpravo; na dotykových zariadeniach sa nezobrazuje
 - **plne offline**: žiadne externé požiadavky (CSP `default-src 'self'`, fonty a knižnice lokálne, externé obrázky v náhľadoch HTML dokumentov sa blokujú); service worker (`site/sw.js`) + `manifest.webmanifest` → web funguje aj bez siete (PWA)
 
@@ -57,9 +61,10 @@ Limity: web ~11 300 súborov / ~740 MB, žiadny súbor > 24 MB → spĺňa Cloud
 `build/update.sh` (= `python3 build/update.py`) skontroluje všetky zdroje a pridá nové/zmenené veci:
 1. **pan.jczn1688.com** – nové/zmenené súbory (veľkosť + sha256 shardov) → stiahnutie, rozbalenie dokumentácie (`process_archives.py --only`), umiestnenie do `site/` alebo upload ako release asset, zmazanie lokálnej kópie;
 2. **guition.com** – tabuľka modelov EN/SK + produktové stránky zo sitemap → nové dosky, nové PDF/obrázky;
-3. **Waveshare** – vyhľadávanie ESP32-P4 v e-shope (nové displejové dosky sa *hlásia* na ručnú kuráciu – parametre sa nevymýšľajú), HEAD všetkých odkazovaných súborov (Content-Length/ETag);
-4. **GitHub** – vyhľadávanie nových komunitných repozitárov pre dosky Guition (odkaz k modelu, ak repo menuje číslo modelu a má ≥ 3 ★ alebo licenciu; licencované sa zrkadlia), `pushed_at` zrkadlených repozitárov → obnovenie snapshotu;
-5. rebuild (`build_site → features → offline → photos → build_index → gen_sw → check_links`), commit + push (iba ak sa niečo zmenilo).
+3. **Waveshare** – vyhľadávanie ESP32-P4/S3/C6 v e-shope (nové displejové dosky sa *hlásia* na ručnú kuráciu – parametre sa nevymýšľajú), HEAD všetkých odkazovaných súborov (Content-Length/ETag);
+4. **Ďalší výrobcovia** – M5Stack (docs sitemap), LilyGO (`products.json`), Elecrow (ESP32 display series), Makerfabs (MaTouch), Seeed (reTerminal E10xx wiki): nové displejové produkty, ktoré ešte nie sú v `data/curated/boards/`, sa *hlásia* v `summary.md` (raz, stav v `data/auto/vendors_seen.json`); kontrola dostupnosti zdrojových stránok kurátorovaných dosiek (varovania). Waveshare vyhľadávanie pokrýva aj ESP32-S3/C6 dotykové LCD/AMOLED;
+5. **GitHub** – vyhľadávanie nových komunitných repozitárov pre dosky Guition (odkaz k modelu, ak repo menuje číslo modelu a má ≥ 3 ★ alebo licenciu; licencované sa zrkadlia), `pushed_at` zrkadlených repozitárov → obnovenie snapshotu;
+6. rebuild (`build_site → features → offline → photos → build_index → gen_sw → check_links`), commit + push (iba ak sa niečo zmenilo).
 
 ```bash
 build/update.sh --dry-run          # iba zistí a vypíše zmeny

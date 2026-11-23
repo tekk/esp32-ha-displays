@@ -93,7 +93,7 @@ for k, labels in SPEC_MAP.items():
 
 FIELD_LABELS = {
     'vendor': 'Vendor', 'category': 'Category', 'series': 'Series', 'size': 'Size', 'size_in': 'Size (in)', 'resolution': 'Resolution',
-    'shape': 'Shape', 'panel': 'Panel', 'touch': 'Touch', 'touch_ic': 'Touch IC', 'touch_points': 'Touch points', 'driver_ic': 'Display driver',
+    'shape': 'Shape', 'panel': 'Panel', 'touch': 'Touch', 'touch_ic': 'Touch IC', 'touch_points': 'Touch points', 'touch_detail': 'Touch detail', 'driver_ic': 'Display driver',
     'interface': 'Display interface', 'interface_detail': 'Interface detail', 'mcu': 'MCU', 'mcu_family': 'MCU family', 'coprocessor': 'Co-processor',
     'frequency': 'CPU frequency', 'sram': 'SRAM', 'psram': 'PSRAM', 'rom': 'ROM', 'flash': 'Flash', 'memory': 'Memory', 'wifi': 'Wi-Fi', 'bt': 'Bluetooth',
     'connectivity': 'Connectivity', 'speaker': 'Speaker interface', 'audio': 'Audio', 'camera': 'Camera', 'ethernet': 'Ethernet', 'poe': 'PoE',
@@ -102,6 +102,10 @@ FIELD_LABELS = {
     'voltage': 'Operating voltage', 'power': 'Power consumption', 'operating_temp': 'Operating temp.', 'storage_temp': 'Storage temp.',
     'viewing_angle': 'Viewing angle', 'contrast': 'Contrast', 'brightness': 'Brightness', 'color_depth': 'Colors', 'color_gamut': 'Color gamut',
     'backlight': 'Backlight', 'software': 'Software / dev support', 'form_factor': 'Form factor', 'display_module': 'Display module', 'sku': 'SKU',
+    'imu': 'IMU', 'ir': 'IR', 'keyboard': 'Keyboard', 'encoder': 'Rotary encoder', 'nfc': 'NFC / RFID', 'buzzer': 'Buzzer', 'lora': 'LoRa',
+    'gps': 'GNSS / GPS', 'dc_in': 'DC input', 'grove': 'Grove / HY2.0 port', 'charger': 'Battery charger', 'als': 'Light / proximity sensor',
+    'mic': 'Microphone', 'jack': 'Audio jack', 'buttons': 'Buttons', 'rgbled': 'RGB LED', 'can': 'CAN', 'epaper': 'E-paper', 'vibration': 'Vibration',
+    'uart': 'UART port', 'i2c': 'I2C port', 'relay': 'Relay', 'weight': 'Weight', 'pmu': 'Power management', 'sensors': 'Other sensors',
 }
 
 
@@ -451,6 +455,48 @@ def main():
             e['notes'].append({'level': 'info', 'text': n, 'source': g['sources'][0]})
         e['categories'].add('waveshare-esp32-p4')
 
+    # 5) other manufacturers – hand-curated, sourced board files (data/curated/boards/<vendor>.json)
+    bdir = os.path.join(ROOT, 'data/curated/boards')
+    for fn in sorted(os.listdir(bdir)) if os.path.isdir(bdir) else []:
+        if not fn.endswith('.json'):
+            continue
+        vf = json.load(open(os.path.join(bdir, fn)))
+        vslug = vf['slug']
+        for b in vf['boards']:
+            mid = b['model']
+            assert mid not in models, 'duplicate model ' + mid
+            e = get(mid)
+            e['vendor'] = vf['vendor']
+            e['id'] = b['id']
+            e['series'] = b.get('series', '')
+            e['titles'].append(b['title'])
+            if b.get('description'): e['intros'].append(b['description'])
+            e['sources'] += b['sources']
+            src0 = b['sources'][0]
+            for lab, val in b.get('spec_rows', []):
+                e['raw'].append({'label': lab, 'key': None, 'value': val, 'source': src0, 'src': vslug + ' spec table'})
+            params = dict(b['params'])
+            for k, v in params.items():
+                e['raw'].append({'label': FIELD_LABELS.get(k, k), 'key': k, 'value': v, 'source': b.get('param_sources', {}).get(k, src0), 'src': vslug})
+            params.setdefault('category', b.get('category') or vf['category'])
+            e['curated_params'] = params
+            for u in b.get('images', []):
+                e['images'].append({'src': u, 'orig': u, 'kind': 'product', 'note': b.get('image_note') or vf.get('image_note')})
+            for f in b.get('files', []):
+                ent = {'type': 'pdf' if f['url'].lower().split('?')[0].endswith('.pdf') else 'archive', 'name': f['name'], 'url': f['url'], 'origin': vslug}
+                if f.get('host'):
+                    try:
+                        ent['hosted'] = fetch_asset(f['url'], 'files/' + vslug, keep_name=True)
+                    except Exception as ex:
+                        ent['note'] = 'download failed: %s' % ex
+                e['files'].append(ent)
+            for i, u in enumerate(b['sources']):
+                e['links'].append({'title': (vf['vendor'] + ' product page / docs') if i == 0 else urlsplit(u).netloc, 'url': u, 'type': 'vendor'})
+            e['links'] += [dict(l) for l in b.get('links', [])]
+            for n in b.get('notes', []):
+                e['notes'].append({'level': 'info', 'text': n, 'source': src0})
+            e['categories'].add(vslug)
+
     # ---------------------------------------------------------- normalize
     out = []
     pdf_paths = [f['hosted'] for e in models.values() for f in e['files'] if f.get('hosted', '') and f['hosted'].startswith('files/guition/')]
@@ -470,7 +516,14 @@ def main():
             ordered = (pages + tab) if prefer_page else (tab + pages)
             vals = [norm(r['value']) for r in ordered if norm(r['value'])]
             return vals[0] if vals else ''
-        if e['vendor'] == 'Waveshare':
+        if e.get('curated_params') is not None:
+            P.update(e['curated_params'])
+            t0 = P.get('touch') or ''
+            nt = 'Capacitive' if re.search('capacit', t0, re.I) else 'Resistive' if re.search('resist', t0, re.I) else 'None' if re.match(r'(none|no)$', t0, re.I) else ''
+            if nt:
+                if nt != t0: P['touch_detail'] = t0
+                P['touch'] = nt
+        elif e['vendor'] == 'Waveshare':
             wp = e['ws_params']
             P.update({k: v for k, v in wp.items()})
         else:
@@ -524,7 +577,7 @@ def main():
         if not P.get('mcu') and e['vendor'] == 'Guition' and (P.get('category') in ('SPI Display Module', 'Parallel LCD Display', 'SPI LCD Display') or e.get('bare') or re.search(r'_(SPI|8080)_Module_', mid)):
             P['mcu_family'] = 'none (bare display)'
         P['vendor'] = e['vendor']
-        if e['vendor'] == 'Waveshare':
+        if e['vendor'] == 'Waveshare' and e.get('curated_params') is None:
             P['category'] = 'Waveshare ESP32-P4'
         P['size_in'] = num(P.get('size', ''))
         res = parse_res(P.get('resolution', ''))
@@ -604,6 +657,8 @@ def main():
             'conflicts': conflicts, 'pinouts': pins, 'specs_raw': e['raw'], 'sources': sorted(set(e['sources'])),
             'downloads_only': bool(e.get('downloads_only')),
         }
+        if e.get('curated_params') is not None:
+            rec['curated_vendor'] = True
         out.append(rec)
     # siblings (same base key)
     bykey = collections.defaultdict(list)

@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   const FACETS = [
-    ['vendor', 'Vendor'], ['category', 'Category'], ['mcu_family', 'MCU family'], ['size', 'Size'], ['resolution', 'Resolution'],
+    ['vendor', 'Manufacturer'], ['category', 'Category'], ['mcu_family', 'MCU family'], ['size', 'Size'], ['resolution', 'Resolution'],
     ['panel', 'Panel'], ['touch', 'Touch'], ['interface', 'Display interface'], ['shape', 'Shape'], ['driver_ic', 'Display driver'],
     ['flash', 'Flash'], ['psram', 'PSRAM'], ['sram', 'SRAM'], ['frequency', 'CPU frequency'], ['coprocessor', 'Co-processor'],
     ['wifi', 'Wi-Fi'], ['bt', 'Bluetooth'], ['speaker', 'Speaker'], ['shell', 'Case / shell'], ['feat', 'Features'], ['tags', 'Tags'],
@@ -11,7 +11,7 @@
   // PSRAM, flash, touch, display interface, Wi-Fi/BT, speaker, case and files are shown as pictograms in the
   // single Features column, which is always the last column
   const COLS = [
-    ['thumb', '', true], ['model', 'Model', true], ['vendor', 'Vendor', true], ['size', 'Size', true], ['resolution', 'Resolution', true],
+    ['thumb', '', true], ['model', 'Model', true], ['vendor', 'Manufacturer', true], ['size', 'Size', true], ['resolution', 'Resolution', true],
     ['panel', 'Panel', true], ['mcu_family', 'MCU', true], ['mcu', 'MCU part', false], ['sram', 'SRAM', false], ['frequency', 'CPU', false],
     ['driver_ic', 'Driver', false], ['category', 'Category', false], ['dimensions', 'Dimensions', false], ['tags', 'Tags', false],
     ['features', 'Features', true],

@@ -1,10 +1,11 @@
 /* model detail page */
 (function () {
   'use strict';
-  const ORDER = ['vendor', 'category', 'series', 'sku', 'size', 'resolution', 'shape', 'panel', 'driver_ic', 'interface', 'interface_detail', 'touch', 'touch_ic', 'touch_points',
+  const ORDER = ['vendor', 'category', 'series', 'sku', 'size', 'resolution', 'shape', 'panel', 'driver_ic', 'interface', 'interface_detail', 'touch', 'touch_detail', 'touch_ic', 'touch_points',
     'mcu', 'mcu_family', 'coprocessor', 'frequency', 'sram', 'psram', 'rom', 'flash', 'memory', 'wifi', 'bt', 'connectivity', 'camera', 'audio', 'speaker',
-    'ethernet', 'poe', 'rs485', 'usb', 'sd', 'rtc', 'battery', 'gpio', 'expansion', 'shell', 'glass', 'display_module', 'form_factor', 'dimensions', 'active_area', 'pixel_pitch',
-    'brightness', 'contrast', 'viewing_angle', 'color_depth', 'color_gamut', 'backlight', 'voltage', 'power', 'operating_temp', 'storage_temp', 'software'];
+    'ethernet', 'poe', 'rs485', 'can', 'lora', 'gps', 'nfc', 'ir', 'usb', 'sd', 'rtc', 'battery', 'charger', 'pmu', 'dc_in', 'mic', 'jack', 'buzzer',
+    'imu', 'als', 'sensors', 'keyboard', 'encoder', 'buttons', 'rgbled', 'vibration', 'grove', 'uart', 'i2c', 'relay', 'epaper', 'gpio', 'expansion', 'shell', 'glass', 'display_module', 'form_factor', 'dimensions', 'active_area', 'pixel_pitch',
+    'brightness', 'contrast', 'viewing_angle', 'color_depth', 'color_gamut', 'backlight', 'voltage', 'power', 'operating_temp', 'storage_temp', 'weight', 'software'];
   const FACETABLE = new Set(['vendor', 'category', 'mcu_family', 'size', 'resolution', 'panel', 'touch', 'interface', 'shape', 'driver_ic', 'flash', 'psram', 'sram', 'frequency', 'coprocessor', 'wifi', 'bt', 'speaker', 'shell']);
   const id = qparam('id');
   header('models');
@@ -66,7 +67,7 @@
         <div class="sec"><h2>Files &amp; documentation</h2><div class="filelist">${files}</div></div>
         <div class="sec"><h2>Links</h2>${links || '<span class="na">none</span>'}</div>
       </div>
-      ${feats.length ? `<div class="sec"><h2>Ports, connectors &amp; interfaces</h2><div class="fgrid">${feats.map((f) => `<a class="fcell fc-${esc(f.category)}" href="index.html#f.feat=${encodeURIComponent(f.name)}" title="${esc(f.label)}${f.source ? '\nsource: ' + esc(f.source) : ''}"><svg width="40" height="40" aria-hidden="true"><use href="${FEAT_SPRITE}#f-${esc(f.icon)}"/></svg><span class="fl1">${esc(f.label)}</span>${f.connector && !f.label.includes(f.connector) ? `<span class="fl2">${esc(f.connector)}</span>` : ''}</a>`).join('')}</div>
+      ${feats.length ? `<div class="sec"><h2>Ports, connectors &amp; interfaces</h2><div class="fgrid">${feats.map((f) => `<a class="fcell fc-${esc(f.category)}" href="index.html#f.feat=${encodeURIComponent(f.name)}" title="${esc(f.label)}${f.source ? '\nsource: ' + esc(f.source) : ''}${f.basis && f.basis !== f.source ? '\nbasis: ' + esc(f.basis) : ''}"><span class="fi${f.value ? ' fhasv' : ''}" style="--s:40px"><svg width="40" height="40" aria-hidden="true"><use href="${FEAT_SPRITE}#f-${esc(f.icon)}"/></svg>${f.value ? `<b class="fv">${esc(f.value)}</b>` : ''}</span><span class="fl1">${esc(f.label)}</span>${f.connector && !f.label.includes(f.connector) ? `<span class="fl2">${esc(f.connector)}</span>` : ''}</a>`).join('')}</div>
         <div class="na" style="font-size:12px;margin-top:8px">Derived only from stated sources: the manufacturer's spec rows${feats.some((f) => f.source && /github\.com/.test(f.source)) ? ' and community pin maps' : ''} (hover a cell for its source; see “Raw specs by source”). Click a cell to list every board with that feature.${ports.length ? ` Manufacturer wording: ${ports.map(esc).join(' · ')}.` : ''}</div></div>` : ''}
       ${pins ? `<div class="sec"><h2>Pinout (community)</h2>${pins}</div>` : ''}
       ${sibs.length ? `<div class="sec"><h2>Variants / same family</h2><div class="tags">${sibs.map((s) => `<a class="tag" href="${modelURL(s.id)}">${esc(s.model)}</a>`).join('')}</div></div>` : ''}

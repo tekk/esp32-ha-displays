@@ -1,0 +1,1997 @@
+{
+ "vendor": "Waveshare",
+ "slug": "waveshare",
+ "category": "Waveshare ESP32 touch LCD",
+ "listing": "https://www.waveshare.com/catalogsearch/result/?q=ESP32",
+ "image_note": "official Waveshare product photo",
+ "_note": "Hand-curated from the official product / docs pages listed in each board's sources. spec_rows = verbatim vendor spec table rows. Empty = not stated.",
+ "boards": [
+  {
+   "id": "waveshare-esp32-p4-wifi6-touch-lcd-3-5",
+   "model": "ESP32-P4-WIFI6-Touch-LCD-3.5",
+   "title": "Waveshare ESP32-P4 3.5\" 320×480 SPI touch dev board with ESP32-C6 Wi-Fi 6",
+   "series": "Waveshare P4",
+   "sources": [
+    "https://www.waveshare.com/esp32-p4-wifi6-touch-lcd-3.5.htm"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-P4 (RISC-V dual-core + LP core)",
+    "mcu_family": "ESP32-P4",
+    "psram": "32MB (in package)",
+    "wifi": "Wi-Fi 6 (per product name / page)",
+    "bt": "BLE 5",
+    "sd": "TF card slot",
+    "usb": "USB Type-C, USB 2.0 OTG HS",
+    "size": "3.5\"",
+    "resolution": "320x480",
+    "panel": "IPS",
+    "interface": "SPI",
+    "driver_ic": "ST7796",
+    "touch": "Capacitive",
+    "touch_ic": "FT6336",
+    "brightness": "220 cd/m²",
+    "coprocessor": "ESP32-C6H8",
+    "flash": "16MB",
+    "camera": "MIPI-CSI camera interface (OV5647 etc.)",
+    "battery": "3.7 V MX1.25 Li battery header",
+    "charger": "AXP2101 PMIC (battery charging)",
+    "buttons": "PWR + BOOT"
+   },
+   "spec_rows": [
+    [
+     "DISPLAY PANEL",
+     "IPS"
+    ],
+    [
+     "DISPLAY SIZE",
+     "3.5inch"
+    ],
+    [
+     "Display Resolution",
+     "320 × 480 resolution"
+    ],
+    [
+     "display color",
+     "262K"
+    ],
+    [
+     "Brightness",
+     "220cd/㎡"
+    ],
+    [
+     "Contrast Ratio",
+     "1100:1"
+    ],
+    [
+     "Communication Interface",
+     "SPI"
+    ],
+    [
+     "Display Driver",
+     "ST7796"
+    ],
+    [
+     "Touch Type",
+     "Capacitive touch"
+    ],
+    [
+     "Touch IC",
+     "FT6336"
+    ],
+    [
+     "Sensor",
+     "OV5647"
+    ],
+    [
+     "Pixel",
+     "5MP"
+    ],
+    [
+     "Feature",
+     "ESP32-P4-WIFI6-Touch-LCD-3.5"
+    ],
+    [
+     "Feature",
+     "is a high-performance development board based on ESP32-P4 controller with RISC-V 32-bit dual-core and single-core processors. Equipped with 3.5inch IPS touch display, highly integrated power management chip, and low-power audio codec chip, features rich human-machine interfaces including MIPI-CSI (w"
+    ],
+    [
+     "Feature",
+     "The ESP32-P4 chip integrates the Digital Signature Peripheral and a dedicated Key Management Unit, ensuring secure data and operations. Specifically designed for high-performance and high-security applications, to meet the higher requirements of embedded applications such as Human-Machine interactio"
+    ],
+    [
+     "Feature",
+     "High-performance MCU with RISC-V 32-bit dual-core and single-core processors"
+    ],
+    [
+     "Feature",
+     "Onboard ESP32-C6H8 module serving as a Wi-Fi 6 co-processor, extending Wi-Fi 6 and BLE 5 capabilities for ESP32-P4"
+    ],
+    [
+     "Feature",
+     "128KB HP ROM, 16KB LP ROM, 768KB HP L2MEM, 32KB LP Static RAM, 8KB TCM"
+    ],
+    [
+     "Feature",
+     "Powerful image and voice processing capability. Provides image and voice processing interfaces including JPEG Codec, Pixel Processing Accelerator, Image Signal Processor, H264 encoder"
+    ],
+    [
+     "Feature",
+     "32MB PSRAM in the chip's package, with onboard 16MB Nor Flash"
+    ],
+    [
+     "Feature",
+     "Onboard Type-C ports, more convenient, better device compatibility"
+    ],
+    [
+     "Feature",
+     "Onboard 3.5inch capacitive touch IPS display for clear color picture display, 320 × 480 resolution, 262K color"
+    ],
+    [
+     "Feature",
+     "Built-in ST7796 display driver and FT6336 capacitive touch chip, using SPI and I2C communication respectively, effectively saving the IO resources"
+    ],
+    [
+     "Feature",
+     "Onboard programmable PWM and BOOT buttons for easy custom function development"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-3.5-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-p4-wifi6-touch-lcd-4-3",
+   "model": "ESP32-P4-WIFI6-Touch-LCD-4.3",
+   "title": "Waveshare ESP32-P4 4.3\" 480×800 MIPI-DSI touch dev board with ESP32-C6 Wi-Fi 6",
+   "series": "Waveshare P4",
+   "sources": [
+    "https://www.waveshare.com/esp32-p4-wifi6-touch-lcd-4.3.htm"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-P4 (RISC-V dual-core + LP core)",
+    "mcu_family": "ESP32-P4",
+    "psram": "32MB (in package)",
+    "wifi": "Wi-Fi 6 (per product name / page)",
+    "bt": "BLE 5",
+    "sd": "TF card slot",
+    "usb": "USB Type-C, USB 2.0 OTG HS",
+    "size": "4.3\"",
+    "resolution": "480x800",
+    "panel": "IPS",
+    "interface": "MIPI-DSI",
+    "interface_detail": "MIPI-DSI 2-lane",
+    "driver_ic": "ST7701",
+    "touch": "Capacitive",
+    "touch_ic": "GT911",
+    "brightness": "500 cd/m²",
+    "coprocessor": "ESP32-C6-MINI",
+    "flash": "32MB",
+    "camera": "MIPI-CSI camera interface (OV5647 etc.)"
+   },
+   "spec_rows": [
+    [
+     "DISPLAY PANEL",
+     "IPS"
+    ],
+    [
+     "DISPLAY SIZE",
+     "4.3inch"
+    ],
+    [
+     "Display Resolution",
+     "480 × 800 resolution"
+    ],
+    [
+     "Viewing angle",
+     "160°"
+    ],
+    [
+     "Brightness",
+     "500cd/㎡"
+    ],
+    [
+     "Contrast Ratio",
+     "1000:1"
+    ],
+    [
+     "Communication Interface",
+     "MIPI-DSI 2-lane"
+    ],
+    [
+     "Display Driver",
+     "ST7701"
+    ],
+    [
+     "Touch Type",
+     "Capacitive touch"
+    ],
+    [
+     "Touch IC",
+     "GT911"
+    ],
+    [
+     "Sensor",
+     "OV5647"
+    ],
+    [
+     "Pixel",
+     "5MP"
+    ],
+    [
+     "Feature",
+     "ESP32-P4-WIFI6-Touch-LCD-4.3"
+    ],
+    [
+     "Feature",
+     "is a high-performance development board based on ESP32-P4 controller with RISC-V 32-bit dual-core and single-core processors. Equipped with 4.3inch 480 × 800 resolution IPS touch display, features rich human-machine interfaces including MIPI-CSI (with integrated Image Signal Processor), it also supp"
+    ],
+    [
+     "Feature",
+     "The ESP32-P4 chip integrates the Digital Signature Peripheral and a dedicated Key Management Unit, ensuring secure data and operations. Specifically designed for high-performance and high-security applications, to meet the higher requirements of embedded applications such as Human-Machine interactio"
+    ],
+    [
+     "Feature",
+     "High-performance MCU with RISC-V 32-bit dual-core and single-core processors"
+    ],
+    [
+     "Feature",
+     "Onboard ESP32-C6-MINI module serving as a Wi-Fi 6 co-processor, extending Wi-Fi 6 and BLE 5 capabilities for ESP32-P4"
+    ],
+    [
+     "Feature",
+     "128KB HP ROM, 16KB LP ROM, 768KB HP L2MEM, 32KB LP Static RAM, 8KB TCM"
+    ],
+    [
+     "Feature",
+     "Powerful image and voice processing capability. Provides image and voice processing interfaces including JPEG Codec, Pixel Processing Accelerator, Image Signal Processor, H264 encoder"
+    ],
+    [
+     "Feature",
+     "32MB PSRAM in the chip's package, with onboard 32MB Nor Flash"
+    ],
+    [
+     "Feature",
+     "Onboard Type-C ports, more convenient, better device compatibility"
+    ],
+    [
+     "Feature",
+     "Onboard 4.3inch capacitive touch IPS display for clear color picture display, 480 × 800 resolution"
+    ],
+    [
+     "Feature",
+     "Onboard 3.7V MX1.25 Lithium Batt recharge/discharge header"
+    ],
+    [
+     "Feature",
+     "Adapting I2C, UART, USB and multiple GPIOs for external device connection and debugging, enabling flexible peripheral configuration"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-4.3-1_2.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-p4-wifi6-touch-lcd-4b",
+   "model": "ESP32-P4-WIFI6-Touch-LCD-4B",
+   "title": "Waveshare ESP32-P4 4\" 720×720 IPS touch dev board with Ethernet, relay, dual mics",
+   "series": "Waveshare P4",
+   "sources": [
+    "https://www.waveshare.com/esp32-p4-wifi6-touch-lcd-4b.htm"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-P4 (RISC-V dual-core + LP core)",
+    "mcu_family": "ESP32-P4",
+    "psram": "32MB (in package)",
+    "wifi": "Wi-Fi 6 (per product name / page)",
+    "bt": "BLE 5",
+    "sd": "TF card slot",
+    "usb": "USB Type-C, USB 2.0 OTG HS",
+    "size": "4.0\"",
+    "resolution": "720x720",
+    "panel": "IPS",
+    "touch": "Capacitive",
+    "touch_ic": "GT911",
+    "brightness": "400 cd/m²",
+    "flash": "32MB",
+    "ethernet": "Ethernet port",
+    "mic": "Dual microphones (echo cancellation)",
+    "speaker": "Speaker header",
+    "rtc": "RTC battery header",
+    "battery": "Battery header",
+    "relay": "Relay"
+   },
+   "spec_rows": [
+    [
+     "Resolution",
+     "720 × 720"
+    ],
+    [
+     "Comm Interface",
+     "supports RGB565, RGB666, RGB888"
+    ],
+    [
+     "Display Panel",
+     "IPS"
+    ],
+    [
+     "Touch Type",
+     "Capacitive"
+    ],
+    [
+     "Touch Chip",
+     "GT911"
+    ],
+    [
+     "Brightness",
+     "400cd/m²"
+    ],
+    [
+     "Contrast Ratio",
+     "1200:1"
+    ],
+    [
+     "Viewing Angle",
+     "170°"
+    ],
+    [
+     "Outline Dimension (H×V)",
+     "86.5 × 86.5 (mm)"
+    ],
+    [
+     "Display Area (H×V)",
+     "71.93 × 71.93 (mm)"
+    ],
+    [
+     "Color",
+     "16.7M"
+    ],
+    [
+     "Feature",
+     "This product series is a high-performance development board based on ESP32-P4 controller with RISC-V 32-bit dual-core and single-core processors, onboard 4inch 720 × 720"
+    ],
+    [
+     "Feature",
+     "resolution IPS touch display."
+    ],
+    [
+     "Feature",
+     "It features rich Human-Machine interfaces including MIPI-CSI (with integrated Image Signal"
+    ],
+    [
+     "Feature",
+     "Processor), and supports USB OTG 2.0 HS for high-speed communication."
+    ],
+    [
+     "Feature",
+     "It also integrates the Digital Signature Peripheral and a dedicated Key Management Unit, ensuring"
+    ],
+    [
+     "Feature",
+     "secure data and operations. Specifically designed for high-performance and high-security"
+    ],
+    [
+     "Feature",
+     "applications, to meet the higher requirements of embedded applications such as Human-Machine"
+    ],
+    [
+     "Feature",
+     "interaction, efficient edge computing, and IO expansion."
+    ],
+    [
+     "Feature",
+     "High-performance MCU with RISC-V 32-bit dual-core and single-core processors"
+    ],
+    [
+     "Feature",
+     "128 KB HP ROM, 16 KB LP ROM, 768 KB HP L2MEM, 32 KB LP SRAM, 8 KB TCM"
+    ],
+    [
+     "Feature",
+     "Powerful image and voice processing capability. Provides image and voice processing interfaces"
+    ],
+    [
+     "Feature",
+     "including JPEG Codec, Pixel Processing Accelerator, Image Signal Processor, H264 encoder"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-4b-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "Wi-Fi 6 / BLE via an ESP32-C6 co-processor is implied by the product name (WIFI6); the co-processor module is not named on the page."
+   ]
+  },
+  {
+   "id": "waveshare-esp32-p4-wifi6-touch-lcd-5",
+   "model": "ESP32-P4-WIFI6-Touch-LCD-5",
+   "title": "Waveshare ESP32-P4 5\" 720×1280 MIPI-DSI touch dev board with ESP32-C6 Wi-Fi 6",
+   "series": "Waveshare P4",
+   "sources": [
+    "https://www.waveshare.com/esp32-p4-wifi6-touch-lcd-5.htm"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-P4 (RISC-V dual-core + LP core)",
+    "mcu_family": "ESP32-P4",
+    "psram": "32MB (in package)",
+    "wifi": "Wi-Fi 6 (per product name / page)",
+    "bt": "BLE 5",
+    "sd": "TF card slot",
+    "usb": "USB Type-C, USB 2.0 OTG HS",
+    "size": "5.0\"",
+    "resolution": "720x1280",
+    "panel": "IPS",
+    "interface": "MIPI-DSI",
+    "driver_ic": "HX8394",
+    "touch": "Capacitive",
+    "touch_ic": "GT911",
+    "brightness": "280 cd/m²",
+    "coprocessor": "ESP32-C6-MINI",
+    "flash": "32MB",
+    "camera": "MIPI-CSI camera interface (OV5647 etc.)"
+   },
+   "spec_rows": [
+    [
+     "DISPLAY PANEL",
+     "IPS"
+    ],
+    [
+     "DISPLAY SIZE",
+     "5inch"
+    ],
+    [
+     "Display Resolution",
+     "720 × 1280 resolution"
+    ],
+    [
+     "Viewing angle",
+     "178°"
+    ],
+    [
+     "Brightness",
+     "280cd/㎡"
+    ],
+    [
+     "Contrast Ratio",
+     "900:1"
+    ],
+    [
+     "Communication Interface",
+     "MIPI-DSI 2-lane"
+    ],
+    [
+     "Display Driver",
+     "HX8394"
+    ],
+    [
+     "Touch Type",
+     "Capacitive touch"
+    ],
+    [
+     "Touch IC",
+     "GT911"
+    ],
+    [
+     "Sensor",
+     "OV5647"
+    ],
+    [
+     "Pixel",
+     "5MP"
+    ],
+    [
+     "Feature",
+     "ESP32-P4-WIFI6-Touch-LCD-5"
+    ],
+    [
+     "Feature",
+     "is a high-performance development board based on ESP32-P4 controller with RISC-V 32-bit dual-core and single-core processors. Equipped with 5inch 720 × 1280 resolution IPS touch display, features rich human-machine interfaces including MIPI-CSI (with integrated Image Signal Processor), it also suppo"
+    ],
+    [
+     "Feature",
+     "The ESP32-P4 chip integrates the Digital Signature Peripheral and a dedicated Key Management Unit, ensuring secure data and operations. Specifically designed for high-performance and high-security applications, to meet the higher requirements of embedded applications such as Human-Machine interactio"
+    ],
+    [
+     "Feature",
+     "High-performance MCU with RISC-V 32-bit dual-core and single-core processors"
+    ],
+    [
+     "Feature",
+     "Onboard ESP32-C6-MINI module serving as a Wi-Fi 6 co-processor, extending Wi-Fi 6 and BLE 5 capabilities for ESP32-P4"
+    ],
+    [
+     "Feature",
+     "128KB HP ROM, 16KB LP ROM, 768KB HP L2MEM, 32KB LP Static RAM, 8KB TCM"
+    ],
+    [
+     "Feature",
+     "Powerful image and voice processing capability. Provides image and voice processing interfaces including JPEG Codec, Pixel Processing Accelerator, Image Signal Processor, H264 encoder"
+    ],
+    [
+     "Feature",
+     "32MB PSRAM in the chip's package, with onboard 32MB Nor Flash"
+    ],
+    [
+     "Feature",
+     "Onboard Type-C ports, more convenient, better device compatibility"
+    ],
+    [
+     "Feature",
+     "Onboard 5inch capacitive touch IPS display for clear color picture display, 720 × 1280 resolution"
+    ],
+    [
+     "Feature",
+     "Onboard 3.7V MX1.25 Lithium Batt recharge/discharge header"
+    ],
+    [
+     "Feature",
+     "Adapting I2C, UART, USB and multiple GPIOs for external device connection and debugging, enabling flexible peripheral configuration"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-5-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-p4-wifi6-touch-lcd-7b",
+   "model": "ESP32-P4-WIFI6-Touch-LCD-7B",
+   "title": "Waveshare ESP32-P4 7\" 1024×600 IPS touch board with RS-485, CAN, dual mics",
+   "series": "Waveshare P4",
+   "sources": [
+    "https://www.waveshare.com/esp32-p4-wifi6-touch-lcd-7b.htm"
+   ],
+   "description": "",
+   "params": {
+    "mcu": "ESP32-P4 (RISC-V dual-core + LP core)",
+    "mcu_family": "ESP32-P4",
+    "psram": "32MB (in package)",
+    "wifi": "Wi-Fi 6 (per product name / page)",
+    "bt": "BLE 5",
+    "sd": "TF card slot",
+    "usb": "USB Type-C, USB 2.0 OTG HS",
+    "size": "7.0\"",
+    "resolution": "1024x600",
+    "panel": "IPS",
+    "touch": "Capacitive",
+    "touch_ic": "GT911",
+    "brightness": "350 cd/m²",
+    "flash": "32MB",
+    "rs485": "RS-485",
+    "can": "CAN",
+    "mic": "Dual microphones (echo cancellation)",
+    "speaker": "Speaker header",
+    "rtc": "RTC battery holder",
+    "camera": "MIPI-CSI"
+   },
+   "spec_rows": [
+    [
+     "Resolution",
+     "1024 × 600"
+    ],
+    [
+     "Comm Interface",
+     "Supports RGB565, RGB666, RGB888"
+    ],
+    [
+     "Display Panel",
+     "IPS"
+    ],
+    [
+     "Touch Type",
+     "Capacitive touch"
+    ],
+    [
+     "Touch Chip",
+     "GT911"
+    ],
+    [
+     "Brightness",
+     "350cd/m²"
+    ],
+    [
+     "Contrast Ratio",
+     "600:1"
+    ],
+    [
+     "Viewing Angle",
+     "160°"
+    ],
+    [
+     "Outline Dimension (H×V)",
+     "99.17 × 164.28 (mm)"
+    ],
+    [
+     "Display Area (H×V)",
+     "86.42 × 154.58 (mm)"
+    ],
+    [
+     "Color",
+     "16.7M"
+    ],
+    [
+     "Feature",
+     "ESP32-P4-WIFI6-Touch-LCD-7B"
+    ],
+    [
+     "Feature",
+     "is a high-performance development board based on ESP32-P4 chip, with integrated RISC-V 32-bit dual-core and single-core processors. Equipped with 7inch 1024 × 600 touch display, features rich human-machine interfaces including MIPI-CSI (with integrated Image Signal Processor), it also supports USB O"
+    ],
+    [
+     "Feature",
+     "The ESP32-P4 chip integrates the Digital Signature Peripheral and a dedicated Key Management Unit, ensuring secure data and operations. Specifically designed for high-performance and high-security applications, to meet the higher requirements of embedded applications such as Human-Machine interactio"
+    ],
+    [
+     "Feature",
+     "High-performance MCU with RISC-V 32-bit dual-core and single-core processors"
+    ],
+    [
+     "Feature",
+     "128 KB HP ROM, 16 KB LP ROM, 768 KB HP L2MEM, 32 KB LP SRAM, 8 KB TCM"
+    ],
+    [
+     "Feature",
+     "Powerful image and voice processing capability. Provides image and voice processing interfaces"
+    ],
+    [
+     "Feature",
+     "including JPEG Codec, Pixel Processing Accelerator, Image Signal Processor, H264 encoder"
+    ],
+    [
+     "Feature",
+     "32MB PSRAM in the chip's package, with onboard 32MB Nor Flash"
+    ],
+    [
+     "Feature",
+     "Commonly used peripherals such as MIPI-CSI, MIPI-DSI, USB 2.0 OTG HS, SDIO 3.0 TF card slot, dual microphones (supports echo cancellation), speaker header and RTC battery holder, etc."
+    ],
+    [
+     "Feature",
+     "Adapting 2*12 GPIO header with 17 x remaining programmable GPIOs"
+    ],
+    [
+     "Feature",
+     "Onboard RS485, CAN, I2C, and UART headers for easy communication with industrial equipments"
+    ],
+    [
+     "Feature",
+     "Security features: Secure Boot, Flash Encryption, cryptographic accelerators, and TRNG. Additionally, hardware access protection mechanisms help to enable Access Permission Management and Privilege Separation"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-wifi6-touch-lcd-7b-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "Wi-Fi 6 / BLE via an ESP32-C6 co-processor is implied by the product name (WIFI6); the co-processor module is not named on the page."
+   ]
+  },
+  {
+   "id": "waveshare-esp32-p4-knob-touch-amoled-1-75",
+   "model": "ESP32-P4-Knob-Touch-AMOLED-1.75B",
+   "title": "Waveshare ESP32-P4 1.75\" 466×466 AMOLED knob in CNC metal case",
+   "series": "Waveshare P4",
+   "sources": [
+    "https://www.waveshare.com/esp32-p4-knob-touch-amoled-1.75.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "1.75\"",
+    "resolution": "466x466",
+    "shape": "Round",
+    "panel": "AMOLED",
+    "interface": "MIPI-DSI",
+    "driver_ic": "CO5300",
+    "touch": "Capacitive",
+    "touch_ic": "CST9217",
+    "brightness": "700 cd/m²",
+    "mcu": "ESP32-P4NRW32X",
+    "mcu_family": "ESP32-P4",
+    "coprocessor": "ESP32 (classic) co-processor",
+    "psram": "32MB (in package)",
+    "flash": "32MB",
+    "wifi": "2.4 GHz Wi-Fi (ESP32 co-processor)",
+    "bt": "Classic Bluetooth + BLE 4.2 (ESP32 co-processor)",
+    "sd": "TF card slot (1 GB card included)",
+    "mic": "Microphone",
+    "audio": "Audio decoder chip",
+    "encoder": "Dual rotary switches (knob)",
+    "vibration": "Vibration motor",
+    "jack": "3.5 mm audio jack",
+    "imu": "6-axis sensor",
+    "rtc": "RTC chip",
+    "shell": "Yes – CNC metal case"
+   },
+   "spec_rows": [
+    [
+     "display panel",
+     "AMOLED"
+    ],
+    [
+     "display size",
+     "1.75inch"
+    ],
+    [
+     "resolution",
+     "466 × 466 pixels"
+    ],
+    [
+     "display color",
+     "16.7M"
+    ],
+    [
+     "brightness",
+     "700cd/m²"
+    ],
+    [
+     "contrast ratio",
+     "100000:1"
+    ],
+    [
+     "Communication interface",
+     "MIPI"
+    ],
+    [
+     "Driver IC",
+     "CO5300"
+    ],
+    [
+     "Touch IC",
+     "CST9217"
+    ],
+    [
+     "Feature",
+     "The product is a high-performance, highly integrated microcontroller development board based on the ESP32-P4NRW32X chip. It is compact in size, with an onboard ESP32-P4 main controller and an ESP32 coprocessor. It features 1.75inch capacitive touch AMOLED display, highly integrated power management "
+    ],
+    [
+     "Feature",
+     "The ESP32-P4NRW32X chip integrates the Digital Signature Peripheral and a dedicated Key Management Unit, ensuring secure data and operations. It is specifically designed for high-performance and high-security applications, to meet the higher requirements of embedded applications such as Human-Machin"
+    ],
+    [
+     "Feature",
+     "High-performance MCU with RISC-V 32-bit dual-core and single-core processors"
+    ],
+    [
+     "Feature",
+     "Onboard ESP32 coprocessor, supporting 2.4GHz Wi-Fi, Classic Bluetooth, and BLE 4.2"
+    ],
+    [
+     "Feature",
+     "128KB HP ROM, 16KB LP ROM, 768KB HP L2MEM, 32KB LP Static RAM, 8KB TCM"
+    ],
+    [
+     "Feature",
+     "Powerful image and voice processing capability. Provides image and voice processing interfaces including JPEG Codec, Pixel Processing Accelerator, Image Signal Processor, H264 encoder"
+    ],
+    [
+     "Feature",
+     "32MB PSRAM in the chip's package, with onboard 32MB NOR Flash"
+    ],
+    [
+     "Feature",
+     "Onboard audio decoder chip, microphone, dual rotary switches, vibration motor, TF card slot, and highly integrated power management chip"
+    ],
+    [
+     "Feature",
+     "Comes with a 1GB TF card pre-installed in the TF card slot by default, supporting file storage via the USB port"
+    ],
+    [
+     "Feature",
+     "Security features: Secure Boot, Flash Encryption, hardware encryption accelerators, and hardware random number generator (RNG). Additionally, hardware access protection mechanisms help to enable Access Permission Management and Privilege Separation"
+    ],
+    [
+     "Feature",
+     "CNC process metal case with silver / black color options, nice looking and durable, easy to carry"
+    ],
+    [
+     "Feature",
+     "Intuitive Control at Your Fingertips"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-p4-knob-touch-amoled-1.75b-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "The shop page sells this board as ESP32-P4-Knob-Touch-AMOLED-1.75B; the co-processor is a classic ESP32 (Wi-Fi 4, BT Classic + BLE 4.2), not an ESP32-C6."
+   ]
+  },
+  {
+   "id": "waveshare-esp32-s3-touch-lcd-2-8",
+   "model": "ESP32-S3-Touch-LCD-2.8",
+   "title": "Waveshare ESP32-S3 2.8\" 240×320 touch dev board (IMU, RTC, speaker)",
+   "series": "Waveshare S3",
+   "sources": [
+    "https://www.waveshare.com/esp32-s3-touch-lcd-2.8.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.8\"",
+    "resolution": "240x320",
+    "touch": "Capacitive (optional, 5-point)",
+    "mcu": "ESP32-S3 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "psram": "8MB",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi (802.11 b/g/n)",
+    "bt": "Bluetooth 5 (LE)",
+    "speaker": "Onboard speaker",
+    "imu": "QMI8658 6-axis",
+    "rtc": "RTC",
+    "sd": "TF card slot",
+    "charger": "Battery recharge management"
+   },
+   "spec_rows": [
+    [
+     "Feature",
+     "This product is a microcontroller development board with 2.4GHz WiFi and Bluetooth BLE 5 support, integrates high-capacity Flash and PSRAM. Onboard 2.8inch LCD screen (optional for touch function) can smoothly run GUI programs such as LVGL. Combined with various peripheral interfaces, suitable for t"
+    ],
+    [
+     "Feature",
+     "Equipped with high-performance Xtensa 32-bit LX7 dual-core processor, up to 240MHz main frequency"
+    ],
+    [
+     "Feature",
+     "Supports 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth 5 (LE), with onboard antenna"
+    ],
+    [
+     "Feature",
+     "Built-in 512KB SRAM and 384KB ROM, with onboard 16MB Flash and 8MB PSRAM"
+    ],
+    [
+     "Feature",
+     "Onboard 2.8inch LCD display, 240×320 resolution, 262K color"
+    ],
+    [
+     "Feature",
+     "Optional for capacitive touch function controlled via I2C interface, 5-point touch, with interrupt support"
+    ],
+    [
+     "Feature",
+     "Adapting UART, I2C and some IO interfaces, integrates full-speed USB port"
+    ],
+    [
+     "Feature",
+     "Onboard speaker, QMI8658 6-axis sensor, RTC sensor, TF card slot and battery recharge management module, etc."
+    ],
+    [
+     "Feature",
+     "Supports accurate control such as flexible clock and multiple power modes to realize low power consumption in different scenarios"
+    ],
+    [
+     "Feature",
+     "Excellent display performance, 262K color, wide viewing angle"
+    ],
+    [
+     "Feature",
+     "Optional for capacitive touch function controlled via I2C interface for flexible operation and smooth UI interaction, 5-point touch, with interrupt support"
+    ],
+    [
+     "Feature",
+     "* the touch function is only available on ESP32-S3-Touch-LCD-2.8 version"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s3-touch-lcd-2.8-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-s3-touch-lcd-3-5",
+   "model": "ESP32-S3-Touch-LCD-3.5",
+   "title": "Waveshare ESP32-S3 3.5\" 320×480 SPI touch dev board (camera, IMU, AXP2101)",
+   "series": "Waveshare S3",
+   "sources": [
+    "https://www.waveshare.com/esp32-s3-touch-lcd-3.5.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "3.5\"",
+    "resolution": "320x480",
+    "panel": "IPS",
+    "interface": "SPI",
+    "driver_ic": "ST7796",
+    "touch": "Capacitive",
+    "touch_ic": "FT6336",
+    "brightness": "220 cd/m²",
+    "mcu": "ESP32-S3R8",
+    "mcu_family": "ESP32-S3",
+    "psram": "8MB",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi (802.11 b/g/n)",
+    "bt": "Bluetooth 5 (LE)",
+    "camera": "Camera interface",
+    "imu": "6-axis IMU",
+    "rtc": "RTC",
+    "sd": "TF card slot",
+    "charger": "AXP2101 PMIC",
+    "usb": "USB Type-C"
+   },
+   "spec_rows": [
+    [
+     "Display Panel",
+     "IPS"
+    ],
+    [
+     "Display Size",
+     "3.5 inch"
+    ],
+    [
+     "Resolution",
+     "320 × 480 pixels"
+    ],
+    [
+     "Display Colors",
+     "262K"
+    ],
+    [
+     "Brightness",
+     "220cd/㎡"
+    ],
+    [
+     "Contrast Ratio",
+     "1100:1"
+    ],
+    [
+     "Communication Interface",
+     "SPI"
+    ],
+    [
+     "Driver IC",
+     "ST7796"
+    ],
+    [
+     "Touch Type",
+     "Capacitive"
+    ],
+    [
+     "Touch IC",
+     "FT6336"
+    ],
+    [
+     "Feature",
+     "is a high-performance, highly integrated MCU board designed by Waveshare. Onboard 3.5inch capacitive touch IPS display, power management IC, 6-axis sensor (3-axis accelerometer and 3-axis gyroscope), RTC, low power audio codec, and so on, which makes it easy for you to develop and integrate into the"
+    ],
+    [
+     "Feature",
+     "Equipped with ESP32-S3R8 Xtensa 32-bit LX7 dual-core processor, up to 240MHz main frequency"
+    ],
+    [
+     "Feature",
+     "Supports 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth 5 (LE), with onboard antenna"
+    ],
+    [
+     "Feature",
+     "Built in 512KB of SRAM and 384KB ROM, with onboard 8MB PSRAM and an external 16MB Flash memory"
+    ],
+    [
+     "Feature",
+     "Type-C connector, improving device compatibility, easier to use"
+    ],
+    [
+     "Feature",
+     "Onboard 3.5inch capacitive touch display for clear color picture display, 320 × 480 resolution, 262K color"
+    ],
+    [
+     "Feature",
+     "Built-in ST7796 display driver and FT6336 capacitive touch chip, using SPI and I2C communication respectively, effectively saving the IO resources"
+    ],
+    [
+     "Feature",
+     "Onboard QMI8658 6-axis IMU (3-axis accelerometer and 3-axis gyroscope) for detecting motion gestures"
+    ],
+    [
+     "Feature",
+     "Onboard PCF85063 RTC chip, powered by main Lithium battery through AXP2101 chip, with reserved RTC battery header for connecting a backup battery, ensuring RTC function during the replacement of the main battery"
+    ],
+    [
+     "Feature",
+     "Onboard PWR and BOOT programmable buttons for easy custom function development"
+    ],
+    [
+     "Feature",
+     "Onboard 3.7V MX1.25 Lithium battery recharge/discharge header"
+    ],
+    [
+     "Feature",
+     "Adapting I2C, UART, USB, and multiple GPIO pins, for connecting peripherals and debugging"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s3-touch-lcd-3.5-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-s3-touch-lcd-4-3",
+   "model": "ESP32-S3-Touch-LCD-4.3",
+   "title": "Waveshare ESP32-S3 4.3\" 800×480 RGB touch board with CAN + RS-485",
+   "series": "Waveshare S3",
+   "sources": [
+    "https://www.waveshare.com/esp32-s3-touch-lcd-4.3.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "4.3\"",
+    "resolution": "800x480",
+    "interface": "RGB",
+    "touch": "Capacitive (5-point, touch version)",
+    "mcu": "ESP32-S3 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "psram": "8MB",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi (802.11 b/g/n)",
+    "bt": "Bluetooth 5 (LE)",
+    "can": "CAN",
+    "rs485": "RS-485",
+    "i2c": "I2C",
+    "sd": "TF card slot",
+    "battery": "3.7 V lithium battery (PH2.0)",
+    "color_depth": "65K"
+   },
+   "spec_rows": [
+    [
+     "Viewing Angle",
+     "Touch Type"
+    ],
+    [
+     "Sensor",
+     "Digital Input"
+    ],
+    [
+     "Feature",
+     "This product is a microcontroller development board with 2.4GHz WiFi and BLE 5 support, integrates high-capacity Flash and PSRAM. Onboard 4.3inch LCD screen can smoothly run GUI programs such as LVGL. Combined with various peripheral interfaces, suitable for the quick development of the HMI and othe"
+    ],
+    [
+     "Feature",
+     "Equipped with Xtensa 32-bit LX7 dual-core processor, up to 240MHz main frequency"
+    ],
+    [
+     "Feature",
+     "Supports 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth 5 (LE), with onboard antenna"
+    ],
+    [
+     "Feature",
+     "Built in 512KB of SRAM and 384KB ROM, with onboard 8MB PSRAM and 16MB Flash"
+    ],
+    [
+     "Feature",
+     "Onboard 4.3inch LCD display, 800×480 resolution, 65K color"
+    ],
+    [
+     "Feature",
+     "Supports 5-point capacitive touch control via I2C interface, with interrupt support (for touch version only)"
+    ],
+    [
+     "Feature",
+     "Onboard CAN, RS485, I2C interface and TF card slot, integrates full-speed USB port"
+    ],
+    [
+     "Feature",
+     "Supports flexible clock, module power supply independent setting, and other controls to realize low power consumption in different scenarios"
+    ],
+    [
+     "Feature",
+     "Excellent display performance, 160° viewing angle"
+    ],
+    [
+     "Feature",
+     "Supports multiple peripherals"
+    ],
+    [
+     "Feature",
+     "Supports the expansion of multiple peripherals via Sensor, CAN, RS485, and I2C interfaces"
+    ],
+    [
+     "Feature",
+     "for reference only, please refer to the Package Content for the detailed part list"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s3-touch-lcd-4.3-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "Display bus \"RGB\" is taken from the page heading (RGB LCD); the spec table cell is not machine-readable."
+   ]
+  },
+  {
+   "id": "waveshare-esp32-s3-touch-lcd-7",
+   "model": "ESP32-S3-Touch-LCD-7",
+   "title": "Waveshare ESP32-S3 7\" 800×480 RGB touch board with CAN + RS-485",
+   "series": "Waveshare S3",
+   "sources": [
+    "https://www.waveshare.com/esp32-s3-touch-lcd-7.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "7.0\"",
+    "resolution": "800x480",
+    "interface": "RGB",
+    "touch": "Capacitive (5-point, touch version)",
+    "mcu": "ESP32-S3 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "psram": "8MB",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi (802.11 b/g/n)",
+    "bt": "Bluetooth 5 (LE)",
+    "can": "CAN",
+    "rs485": "RS-485",
+    "i2c": "I2C",
+    "sd": "TF card slot",
+    "battery": "3.7 V lithium battery (PH2.0)",
+    "color_depth": "65K"
+   },
+   "spec_rows": [
+    [
+     "Feature",
+     "This product is a microcontroller development board with 2.4GHz WiFi and BLE 5 support, integrates high-capacity Flash and PSRAM. Onboard 7inch LCD screen can smoothly run GUI programs such as LVGL. Combined with various peripheral interfaces, suitable for the quick development of the HMI and other "
+    ],
+    [
+     "Feature",
+     "Equipped with Xtensa 32-bit LX7 dual-core processor, up to 240MHz main frequency"
+    ],
+    [
+     "Feature",
+     "Supports 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth 5 (LE), with onboard/external antenna"
+    ],
+    [
+     "Feature",
+     "Built in 512KB of SRAM and 384KB ROM, with onboard 8MB PSRAM and 16MB Flash"
+    ],
+    [
+     "Feature",
+     "Onboard 7inch LCD display, 800×480 resolution, 65K color"
+    ],
+    [
+     "Feature",
+     "Supports 5-point capacitive touch control via I2C interface, with interrupt support (for touch version only)"
+    ],
+    [
+     "Feature",
+     "Onboard CAN, RS485, I2C interface and TF card slot, integrates full-speed USB port"
+    ],
+    [
+     "Feature",
+     "Supports flexible clock, module power supply independent setting, and other control to realize low power consumption in different scenarios"
+    ],
+    [
+     "Feature",
+     "Excellent display performance, 170° viewing angle"
+    ],
+    [
+     "Feature",
+     "Supports multiple peripherals"
+    ],
+    [
+     "Feature",
+     "Supports the expansion of multiple peripherals via Sensor, CAN, RS485, and I2C interfaces"
+    ],
+    [
+     "Feature",
+     "for reference only, please refer to the Package Content for the detailed part list"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s3-touch-lcd-7-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-s3-touch-lcd-2-1",
+   "model": "ESP32-S3-Touch-LCD-2.1",
+   "title": "Waveshare ESP32-S3 2.1\" 480×480 round touch dev board (IMU, RTC)",
+   "series": "Waveshare S3",
+   "sources": [
+    "https://www.waveshare.com/esp32-s3-touch-lcd-2.1.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.1\"",
+    "resolution": "480x480",
+    "shape": "Round",
+    "panel": "IPS",
+    "driver_ic": "ST7701",
+    "touch": "Capacitive",
+    "touch_ic": "CST820",
+    "mcu": "ESP32-S3",
+    "mcu_family": "ESP32-S3",
+    "psram": "8MB",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "Bluetooth BLE 5",
+    "imu": "QMI8658 6-axis",
+    "rtc": "RTC",
+    "sd": "TF card slot",
+    "charger": "Battery recharge management",
+    "usb": "USB Type-C (USB-UART)"
+   },
+   "spec_rows": [
+    [
+     "Display Panel",
+     "IPS LCD"
+    ],
+    [
+     "Display Size",
+     "2.1inch"
+    ],
+    [
+     "Resolution",
+     "480 × 480 pixels"
+    ],
+    [
+     "Display Colors",
+     "262K"
+    ],
+    [
+     "Driver IC",
+     "ST7701"
+    ],
+    [
+     "Touch Interface",
+     "I2C"
+    ],
+    [
+     "Touch IC",
+     "CST820"
+    ],
+    [
+     "Touch Type",
+     "Capacitive touch"
+    ],
+    [
+     "Feature",
+     "is a microcontroller development board with 2.4GHz WiFi and Bluetooth BLE 5 support, integrates high-capacity Flash and PSRAM. Onboard 2.1inch capacitive touch screen can smoothly run GUI programs such as LVGL. Combined with various peripheral interfaces, suitable for the quick development of the HM"
+    ],
+    [
+     "Feature",
+     "Equipped with high-performance Xtensa 32-bit LX7 dual-core processor, up to 240MHz main frequency"
+    ],
+    [
+     "Feature",
+     "Supports 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth 5 (LE), with onboard antenna"
+    ],
+    [
+     "Feature",
+     "Built-in 512KB SRAM and 384KB ROM, with onboard 16MB Flash and 8MB PSRAM"
+    ],
+    [
+     "Feature",
+     "Onboard 2.1inch capacitive touch display, 480×480 resolution, 262K color"
+    ],
+    [
+     "Feature",
+     "Supports touch control via I2C interface, with interrupt support"
+    ],
+    [
+     "Feature",
+     "Adapting UART, I2C and some IO interfaces, integrates full-speed USB port"
+    ],
+    [
+     "Feature",
+     "Onboard QMI8658 6-axis sensor, RTC sensor, TF card slot and battery recharge management module, etc."
+    ],
+    [
+     "Feature",
+     "Supports accurate control such as flexible clock and multiple power modes to realize low power consumption in different scenarios"
+    ],
+    [
+     "Feature",
+     "Excellent display performance, 262K color, wide viewing angle"
+    ],
+    [
+     "Feature",
+     "Comprehensive SDK, dev resources, and tutorials to help you easily get started"
+    ],
+    [
+     "Feature",
+     "Supports multiple peripherals"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s3-touch-lcd-2.1-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-s3-touch-amoled-1-8",
+   "model": "ESP32-S3-Touch-AMOLED-1.8",
+   "title": "Waveshare ESP32-S3 1.8\" 368×448 QSPI AMOLED touch board",
+   "series": "Waveshare S3",
+   "sources": [
+    "https://www.waveshare.com/esp32-s3-touch-amoled-1.8.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "1.8\"",
+    "resolution": "368x448",
+    "panel": "AMOLED",
+    "interface": "QSPI",
+    "driver_ic": "CO5300",
+    "touch": "Capacitive",
+    "touch_ic": "CST820",
+    "brightness": "350 cd/m²",
+    "mcu": "ESP32-S3R8",
+    "mcu_family": "ESP32-S3",
+    "psram": "8MB",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi (802.11 b/g/n)",
+    "bt": "Bluetooth 5 (LE)",
+    "imu": "6-axis IMU",
+    "rtc": "RTC",
+    "sd": "TF card slot",
+    "charger": "AXP2101 PMIC",
+    "usb": "USB Type-C"
+   },
+   "spec_rows": [
+    [
+     "Display Panel",
+     "AMOLED"
+    ],
+    [
+     "Display Size",
+     "1.8 inch"
+    ],
+    [
+     "Resolution",
+     "368 × 448 pixels"
+    ],
+    [
+     "Display Colors",
+     "16.7M"
+    ],
+    [
+     "Brightness",
+     "350 cd/㎡"
+    ],
+    [
+     "Contrast Ratio",
+     "100000:1"
+    ],
+    [
+     "Communication Interface",
+     "QSPI"
+    ],
+    [
+     "Driver IC",
+     "CO5300"
+    ],
+    [
+     "Touch IC",
+     "CST820"
+    ],
+    [
+     "Feature",
+     "is a low-cost, high-performance MCU board designed by Waveshare, tiny size, with onboard 1.8inch AMOLED display, power management IC, 6-axis sensor (3-axis accelerometer and 3-axis gyroscope), RTC, low power audio codec, and so on, which makes it easy for you to develop and integrate it into the pro"
+    ],
+    [
+     "Feature",
+     "Equipped with ESP32-S3R8 Xtensa 32-bit LX7 dual-core processor, up to 240MHz main frequency"
+    ],
+    [
+     "Feature",
+     "Supports 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth 5 (LE), with onboard antenna"
+    ],
+    [
+     "Feature",
+     "Built in 512KB of SRAM and 384KB ROM, with onboard 8MB PSRAM and an external 16MB Flash memory"
+    ],
+    [
+     "Feature",
+     "Type-C connector, improving device compatibility, easier to use"
+    ],
+    [
+     "Feature",
+     "Onboard 1.8inch AMOLED display for clear color picture display, 368 × 448 resolution, 16.7M color"
+    ],
+    [
+     "Feature",
+     "Built-in CO5300 display driver and CST820 capacitive touch chip, using QSPI and I2C communication respectively, effectively saving the IO resources"
+    ],
+    [
+     "Feature",
+     "Onboard QMI8658 6-axis IMU (3-axis accelerometer and 3-axis gyroscope) for detecting motion gesture, counting steps, etc."
+    ],
+    [
+     "Feature",
+     "Onboard PCF85063 RTC chip, powered by main Lithium battery through AXP2101 chip, with reserved RTC battery pads for connecting a backup battery, ensuring RTC function during the replacement of the main battery"
+    ],
+    [
+     "Feature",
+     "Onboard PWR and BOOT programmable buttons for easy custom function development"
+    ],
+    [
+     "Feature",
+     "Onboard 3.7V MX1.25 Lithium battery recharge/discharge header, optional for 3.7V Lithium battery"
+    ],
+    [
+     "Feature",
+     "Reserved pads of 7 × GPIO, 1 × I2C, 1 × UART, and 1 × USB interface, for connecting peripherals and debugging"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s3-touch-amoled-1.8-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-s3-touch-amoled-2-41",
+   "model": "ESP32-S3-Touch-AMOLED-2.41",
+   "title": "Waveshare ESP32-S3 2.41\" 600×450 QSPI AMOLED touch board",
+   "series": "Waveshare S3",
+   "sources": [
+    "https://www.waveshare.com/esp32-s3-touch-amoled-2.41.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.41\"",
+    "resolution": "600x450",
+    "panel": "AMOLED",
+    "interface": "QSPI",
+    "driver_ic": "RM690B0",
+    "touch": "Capacitive",
+    "touch_ic": "FT6336",
+    "brightness": "800 cd/m²",
+    "mcu": "ESP32-S3R8",
+    "mcu_family": "ESP32-S3",
+    "psram": "8MB",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "bt": "BLE"
+   },
+   "spec_rows": [
+    [
+     "Display Panel",
+     "AMOLED"
+    ],
+    [
+     "Display Size",
+     "2.41 inch"
+    ],
+    [
+     "Resolution",
+     "600 × 450"
+    ],
+    [
+     "Display Colors",
+     "16.7M"
+    ],
+    [
+     "Brightness",
+     "800 cd/㎡"
+    ],
+    [
+     "Contrast Ratio",
+     "100000:1"
+    ],
+    [
+     "Communication Interface",
+     "QSPI"
+    ],
+    [
+     "Driver IC",
+     "RM690B0"
+    ],
+    [
+     "Touch IC",
+     "FT6336"
+    ],
+    [
+     "Feature",
+     "ESP32-S3 2.41inch AMOLED Touch Display Development Board, 600×450, 32-bit LX7 Dual-core Processor, Onboard Accelerometer And Gyroscope Sensor, ESP32 With Display"
+    ],
+    [
+     "Feature",
+     "ESP32-S3 2.41inch AMOLED Touch Display Development Board, 600×450, 32-bit LX7 Dual-core Processor, Onboard Accelerometer And Gyroscope Sensor, ESP32 With Display"
+    ],
+    [
+     "Feature",
+     "Touch Display Development Board"
+    ],
+    [
+     "Feature",
+     "Embedded with RM690B0 Display Driver and FT6336 Capacitive Touch Chip"
+    ],
+    [
+     "Feature",
+     "ESP32-S3-Touch-AMOLED-2.41"
+    ],
+    [
+     "Feature",
+     "standard version, without case"
+    ],
+    [
+     "Feature",
+     "ESP32-S3-Touch-AMOLED-2.41-B"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s3-touch-amoled-2.41-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-s3-knob-touch-lcd-1-8",
+   "model": "ESP32-S3-Knob-Touch-LCD-1.8",
+   "title": "Waveshare ESP32-S3 1.8\" 360×360 round QSPI knob display",
+   "series": "Waveshare S3",
+   "sources": [
+    "https://www.waveshare.com/esp32-s3-knob-touch-lcd-1.8.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "1.8\"",
+    "resolution": "360x360",
+    "shape": "Round",
+    "panel": "IPS",
+    "interface": "QSPI",
+    "driver_ic": "ST77916",
+    "touch": "Capacitive",
+    "touch_ic": "CST816",
+    "brightness": "600 cd/m²",
+    "mcu": "ESP32-S3",
+    "mcu_family": "ESP32-S3",
+    "psram": "8MB",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi (802.11 b/g/n)",
+    "bt": "Bluetooth 5 (LE) and Classic Bluetooth (vendor wording)",
+    "sd": "TF card slot",
+    "speaker": "Speaker",
+    "mic": "Microphone",
+    "encoder": "Knob encoder",
+    "vibration": "Vibration motor",
+    "jack": "3.5 mm jack",
+    "charger": "Battery recharge management",
+    "shell": "Yes – CNC metal case"
+   },
+   "spec_rows": [
+    [
+     "display panel",
+     "IPS"
+    ],
+    [
+     "display size",
+     "1.8 inch"
+    ],
+    [
+     "resolution",
+     "360 × 360"
+    ],
+    [
+     "display color",
+     "262K"
+    ],
+    [
+     "brightness",
+     "600cd/m²"
+    ],
+    [
+     "contrast ratio",
+     "1200:1"
+    ],
+    [
+     "Communication interface",
+     "QSPI"
+    ],
+    [
+     "Driver IC",
+     "ST77916"
+    ],
+    [
+     "Touch Type",
+     "Capacitive"
+    ],
+    [
+     "Touch IC",
+     "CST816"
+    ],
+    [
+     "Feature",
+     "This product is a high-performance, highly integrated MCU board designed by Waveshare, features ESP32-S3 and ESP32 dual MCUs control, integrated large-capacity Flash and PSRAM. Onboard 1.8inch touch LCD screen and multiple peripherals such as audio decoder chip and knob encoder, enabling rapid devel"
+    ],
+    [
+     "Feature",
+     "Equipped with ESP32-S3 and ESP32 dual MCUs, up to 4 cores and 240MHz main frequency"
+    ],
+    [
+     "Feature",
+     "Supports 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth 5 (LE) and Classic Bluetooth, with onboard antenna"
+    ],
+    [
+     "Feature",
+     "Built-in 512KB SRAM and 384KB ROM, with onboard 16MB Flash and 8MB PSRAM"
+    ],
+    [
+     "Feature",
+     "Onboard 1.8inch LCD display, 360 × 360 resolution, 262K color"
+    ],
+    [
+     "Feature",
+     "Supports touch control via I2C interface, with interrupt support"
+    ],
+    [
+     "Feature",
+     "Onboard audio decoder chip, microphone, knob encoder, vibration motor, TF card slot, and battery recharge management module"
+    ],
+    [
+     "Feature",
+     "CNC process metal case with blue / black color options, nice looking and durable, easy to carry"
+    ],
+    [
+     "Feature",
+     "Intuitive Control at Your Fingertips"
+    ],
+    [
+     "Feature",
+     "Supports 3x Pomodoro timer themes, Productive & Playful"
+    ],
+    [
+     "Feature",
+     "Precision-machined CNC metal case, options for blue / black color,"
+    ],
+    [
+     "Feature",
+     "Supports smartphone Bluetooth connection for music playback"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s3-knob-touch-lcd-1.8-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-s3-touch-lcd-1-28",
+   "model": "ESP32-S3-Touch-LCD-1.28",
+   "title": "Waveshare ESP32-S3 1.28\" 240×240 round touch board",
+   "series": "Waveshare S3",
+   "sources": [
+    "https://www.waveshare.com/esp32-s3-touch-lcd-1.28.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "1.28\"",
+    "resolution": "240x240",
+    "shape": "Round",
+    "touch": "Capacitive",
+    "mcu": "ESP32-S3 (dual-core LX7, 240 MHz)",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "sram": "512KB",
+    "psram": "2MB",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi (802.11 b/g/n)",
+    "bt": "Bluetooth 5 (BLE)",
+    "imu": "QMI8658 6-axis",
+    "battery": "3.7 V MX1.25 lithium battery header",
+    "usb": "USB Type-C",
+    "gpio": "6x GPIO via SH1.0 connector"
+   },
+   "spec_rows": [
+    [
+     "Feature",
+     "is a low-cost, high-performance MCU board designed by Waveshare, tiny size, with onboard 1.28inch capacitive touch display, Li-ion battery recharge manager, 6-axis sensor (3-axis accelerometer and 3-axis gyroscope), and so on, which makes it easy for you to develop and integrate it into products qui"
+    ],
+    [
+     "Feature",
+     "Equipped with Xtensa® 32-bit LX7 dual-core processor, up to 240MHz main frequency"
+    ],
+    [
+     "Feature",
+     "Supports 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth® 5 (BLE), with onboard antenna"
+    ],
+    [
+     "Feature",
+     "Built in 512KB of SRAM and 384KB ROM, with onboard 2MB PSRAM and an external 16MB Flash memory"
+    ],
+    [
+     "Feature",
+     "Type-C connector, keeps it up to date, easier to use"
+    ],
+    [
+     "Feature",
+     "Onboard 1.28inch capacitive touch display, 240×240 resolution, 65K color"
+    ],
+    [
+     "Feature",
+     "Onboard QMI8658 6-axis IMU (3-axis accelerometer and 3-axis gyroscope) for detecting motion gesture"
+    ],
+    [
+     "Feature",
+     "Onboard 3.7V MX1.25 lithium battery recharge/discharge header"
+    ],
+    [
+     "Feature",
+     "Adapting 6 × GPIO pins via SH1.0 connector"
+    ],
+    [
+     "Feature",
+     "Supports flexible clock, module power supply independent setting, and other controls to realize low power consumption in different scenarios"
+    ],
+    [
+     "Feature",
+     "Integrated with USB serial port full-speed controller, GPIO pins allows flexibly configuring pin functions"
+    ],
+    [
+     "Feature",
+     "Small size, touch more possibilities"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s3-touch-lcd-1.28-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-c6-touch-lcd-1-47",
+   "model": "ESP32-C6-Touch-LCD-1.47",
+   "title": "Waveshare ESP32-C6 1.47\" 172×320 SPI touch board (Wi-Fi 6)",
+   "series": "Waveshare C6",
+   "sources": [
+    "https://www.waveshare.com/esp32-c6-touch-lcd-1.47.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "1.47\"",
+    "resolution": "172x320",
+    "panel": "IPS",
+    "interface": "SPI",
+    "driver_ic": "JD9853",
+    "touch": "Capacitive",
+    "touch_ic": "AXS5106L",
+    "mcu": "ESP32-C6FH8 (RISC-V 160 MHz + LP core)",
+    "mcu_family": "ESP32-C6",
+    "frequency": "160 MHz",
+    "flash": "8MB",
+    "wifi": "2.4 GHz Wi-Fi 6 (802.11 ax/b/g/n)",
+    "bt": "Bluetooth 5 (LE)",
+    "sd": "TF card slot"
+   },
+   "spec_rows": [
+    [
+     "DISPLAY SIZE",
+     "1.47inch"
+    ],
+    [
+     "Resolution",
+     "172 × 320 pixels"
+    ],
+    [
+     "Display Driver",
+     "JD9853"
+    ],
+    [
+     "Touch Driver",
+     "AXS5106L"
+    ],
+    [
+     "Display Interface",
+     "4-wire SPI"
+    ],
+    [
+     "Touch Interface",
+     "I2C"
+    ],
+    [
+     "DISPLAY PANEL",
+     "IPS"
+    ],
+    [
+     "Touch Type",
+     "Capacitive"
+    ],
+    [
+     "Feature",
+     "uses ESP32-C6FH8 chip with 2.4GHz WiFi 6 and Bluetooth BLE 5 support, integrates 8MB Flash, Onboard 1.47inch IPS display can smoothly run GUI programs such as LVGL. It is suitable for the quick development of the HMI and other ESP32-C6 applications."
+    ],
+    [
+     "Feature",
+     "Equipped with a high-performance 32-bit RISC-V processor with clock speed up to 160 MHz, and a low-power 32-bit RISC-V processor with clock speed up to 20MHz"
+    ],
+    [
+     "Feature",
+     "Supports 2.4GHz Wi-Fi 6 (802.11 ax/b/g/n) and Bluetooth 5 (LE), with onboard antenna"
+    ],
+    [
+     "Feature",
+     "Built-in 320KB ROM, 512KB HP SRAM, and 16KB LP SRAM, integrates 8MB Flash"
+    ],
+    [
+     "Feature",
+     "Onboard 1.47inch capacitive touch LCD display, 172×320 resolution, 262K color"
+    ],
+    [
+     "Feature",
+     "Adapting multiple IO interfaces, supports full-speed USB standard"
+    ],
+    [
+     "Feature",
+     "Onboard TF card slot for external TF card storage of pictures or files"
+    ],
+    [
+     "Feature",
+     "Supports accurate control such as flexible clock and multiple power modes to realize low power consumption in different scenarios"
+    ],
+    [
+     "Feature",
+     "ESP32-C6 suitable for AIoT applications"
+    ],
+    [
+     "Feature",
+     "Equipped with a high-performance 32-bit RISC-V processor and a low-power 32-bit RISC-V processor, the main frequency is up to 160 MHz,"
+    ],
+    [
+     "Feature",
+     "Powerful AI Computing Capability & Reliable security features"
+    ],
+    [
+     "Feature",
+     "ESP32-C6 integrates 2.4GHz Wi-Fi 6 (802.11 ax/b/g/n) with 40 MHz of bandwidth support,"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-c6-touch-lcd-1.47-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  },
+  {
+   "id": "waveshare-esp32-c6-touch-lcd-2-8",
+   "model": "ESP32-C6-Touch-LCD-2.8",
+   "title": "Waveshare ESP32-C6 2.8\" 240×320 SPI touch board (Wi-Fi 6, IMU, SHTC3)",
+   "series": "Waveshare C6",
+   "sources": [
+    "https://www.waveshare.com/esp32-c6-touch-lcd-2.8.htm"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.8\"",
+    "resolution": "240x320",
+    "panel": "IPS",
+    "interface": "SPI",
+    "driver_ic": "ST7789",
+    "touch": "Capacitive",
+    "touch_ic": "CST3530",
+    "mcu": "ESP32-C6",
+    "mcu_family": "ESP32-C6",
+    "flash": "16MB",
+    "wifi": "Wi-Fi 6",
+    "bt": "Bluetooth 5",
+    "sd": "TF card slot",
+    "speaker": "Speaker",
+    "mic": "Microphone",
+    "imu": "6-axis IMU",
+    "rtc": "RTC",
+    "sensors": "SHTC3 temperature & humidity",
+    "charger": "Battery charge management",
+    "usb": "USB Type-C"
+   },
+   "spec_rows": [
+    [
+     "Display panel",
+     "IPS"
+    ],
+    [
+     "Display Size",
+     "2.8inch"
+    ],
+    [
+     "Display Resolution",
+     "240 × 320 pixels"
+    ],
+    [
+     "Display Color",
+     "262K"
+    ],
+    [
+     "communication interface",
+     "4-wire SPI"
+    ],
+    [
+     "Driver IC",
+     "ST7789"
+    ],
+    [
+     "Touch Type",
+     "Capacitive touch"
+    ],
+    [
+     "Touch IC",
+     "CST3530"
+    ],
+    [
+     "Feature",
+     "This product is designed by Waveshare with onboard 2.8inch LCD display, 6-axis sensor, temperature and humidity sensor, and TF card slot, providing the hardware foundation for display, sensing, voice, and multimedia storage. With these hardware resources, it supports fun interactive mini-games and v"
+    ],
+    [
+     "Feature",
+     "Equipped with the ESP32-C6-WROOM-1 series module, featuring a RISC-V 32-bit processor, up to 160MHz main frequency, and built-in 16MB Flash memory"
+    ],
+    [
+     "Feature",
+     "Integrated Wi-Fi 6, Bluetooth 5, and IEEE 802.15.4 (Zigbee 3.0 and Thread) wireless communications, with outstanding RF performance"
+    ],
+    [
+     "Feature",
+     "Onboard Batt recharge management module, with reserved 3.7V MX1.25 Lithium Batt header for connecting external Batt"
+    ],
+    [
+     "Feature",
+     "Type-C port, improving device compatibility, easier to use"
+    ],
+    [
+     "Feature",
+     "Onboard 2.8inch LCD display, 240 × 320 resolution, 262K color"
+    ],
+    [
+     "Feature",
+     "Supports capacitive touch controlled via I2C interface, with interrupt support"
+    ],
+    [
+     "Feature",
+     "Adapting UART, I2C and some IO interfaces, integrates full-speed USB port"
+    ],
+    [
+     "Feature",
+     "Onboard QMI8658 6-axis sensor, RTC sensor, SHTC3 temperature and humidity sensor, TF card slot, etc."
+    ],
+    [
+     "Feature",
+     "Supports accurate control such as flexible clock and multiple power modes to realize low power consumption in different scenarios"
+    ],
+    [
+     "Feature",
+     "Onboard ES8311 audio codec chip, NS4150B power amplifier chip, microphone, and speaker"
+    ],
+    [
+     "Feature",
+     "Supports ESP-IDF, Arduino, and other development environments, with rich resources for quick and easy development"
+    ]
+   ],
+   "images": [
+    "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-c6-touch-lcd-2.8-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": []
+  }
+ ]
+}

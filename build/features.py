@@ -11,19 +11,26 @@ SITE = os.path.join(ROOT, 'site')
 
 # id: (category, short name used for the facet, icon)
 DEF = {
-    'sd':       ('storage',  'microSD slot',      'sd'),
-    'psram':    ('memory',   'PSRAM',             'psram'),
-    'flash':    ('memory',   'Flash',             'flash'),
     'disp-spi': ('display',  'SPI display',       'disp-spi'),
     'disp-qspi':('display',  'QSPI display',      'disp-qspi'),
     'disp-rgb': ('display',  'RGB display',       'disp-rgb'),
     'disp-dsi': ('display',  'MIPI-DSI display',  'disp-dsi'),
     'disp-8080':('display',  '8080 display',      'disp-8080'),
-    'touch-cap':('touch',    'Capacitive touch',  'touch-cap'),
-    'touch-res':('touch',    'Resistive touch',   'touch-res'),
-    'wifi':     ('wireless', 'Wi-Fi',             'wifi'),
-    'wifi6':    ('wireless', 'Wi-Fi 6',           'wifi6'),
-    'bt':       ('wireless', 'Bluetooth',         'bt'),
+    'disp-epd': ('display',  'E-paper display',   'disp-epd'),
+    'touch-cap':('input',    'Capacitive touch',  'touch-cap'),
+    'touch-res':('input',    'Resistive touch',   'touch-res'),
+    'psram':    ('psram',    'PSRAM',             'psram'),     # facet name gets the size: "PSRAM 8 MB"
+    'flash':    ('flash',    'Flash',             'flash'),     # "Flash 16 MB"
+    'sd':       ('storage',  'microSD slot',      'sd'),
+    'wifi':     ('wifi',     'Wi-Fi',             'wifi'),      # "Wi-Fi 4" / "Wi-Fi 6"
+    'bt':       ('bluetooth','Bluetooth',         'bt'),        # "Bluetooth 5" / "Bluetooth 4.2 + Classic"
+    'thread':   ('radio',    'Thread',            'thread'),
+    'zigbee':   ('radio',    'Zigbee',            'zigbee'),
+    'matter':   ('radio',    'Matter',            'matter'),
+    'lora':     ('radio',    'LoRa',              'lora'),
+    'gps':      ('radio',    'GNSS / GPS',        'gps'),
+    'nfc':      ('radio',    'NFC / RFID',        'nfc'),
+    'ir':       ('radio',    'IR',                'ir'),
     'usb-c':    ('usb',      'USB-C',             'usb-c'),
     'usb-a':    ('usb',      'USB-A',             'usb-a'),
     'ethernet': ('wired',    'Ethernet',          'rj45'),
@@ -32,25 +39,60 @@ DEF = {
     'can':      ('wired',    'CAN',               'can'),
     'uart':     ('io',       'Serial port',       'jst4'),
     'i2c':      ('io',       'I2C port',          'i2c'),
+    'grove':    ('io',       'Grove port',        'grove'),
     'gpio':     ('io',       'GPIO',              'gpio'),
     'sensor':   ('io',       'Sensor port',       'sensor'),
+    'relay':    ('io',       'Relay',             'relay'),
     'speaker':  ('audio',    'Speaker',           'speaker'),
     'mic':      ('audio',    'Microphone',        'mic'),
     'jack-trs': ('audio',    '3.5 mm jack',       'jack-trs'),
     'jack-trrs':('audio',    '3.5 mm TRRS jack',  'jack-trrs'),
+    'buzzer':   ('audio',    'Buzzer',            'buzzer'),
     'camera':   ('camera',   'Camera',            'camera'),
     'battery':  ('power',    'Battery',           'battery'),
-    'rtc':      ('misc',     'RTC',               'rtc'),
-    'rgbled':   ('misc',     'RGB LED',           'rgbled'),
-    'relay':    ('misc',     'Relay',             'relay'),
-    'knob':     ('misc',     'Rotary knob',       'knob'),
-    'vibration':('misc',     'Vibration motor',   'vibration'),
-    'buttons':  ('misc',     'Buttons',           'buttons'),
-    'ir':       ('misc',     'IR',                'ir'),
-    'imu':      ('misc',     'IMU',               'imu'),
-    'case':     ('misc',     'Enclosure',         'case'),
+    'charger':  ('power',    'Battery charger',   'charger'),
+    'dc-in':    ('power',    'Wide-range DC input','dc-in'),
+    'rtc':      ('io',      'RTC',               'rtc'),
+    'imu':      ('io',      'IMU',               'imu'),
+    'als':      ('io',      'Light / proximity sensor', 'als'),
+    'keyboard': ('input',      'Keyboard',          'keyboard'),
+    'knob':     ('input',      'Rotary knob',       'knob'),
+    'buttons':  ('input',      'Buttons',           'buttons'),
+    'vibration':('input',      'Vibration motor',   'vibration'),
+    'rgbled':   ('input',      'RGB LED',           'rgbled'),
+    'case':     ('io',      'Enclosure',         'case'),
 }
+CATEGORY_NAMES = {'display': 'Display interface', 'input': 'Touch & controls', 'psram': 'PSRAM', 'flash': 'Flash', 'storage': 'Storage',
+                  'wifi': 'Wi-Fi', 'bluetooth': 'Bluetooth', 'radio': 'Thread / Zigbee / Matter / other radios', 'usb': 'USB',
+                  'wired': 'Wired / industrial', 'io': 'I/O ports & sensors', 'audio': 'Audio', 'camera': 'Camera', 'power': 'Power'}
+
+# Radio capabilities of Espressif SoCs (official datasheets). Used ONLY to qualify a radio the board vendor states
+# (Wi-Fi / Bluetooth present) with its version, and to list 802.15.4 protocols the SoC radio supports.
+DS = 'https://www.espressif.com/sites/default/files/documentation/{}_datasheet_en.pdf'
+SOC = {
+    'ESP32':    dict(wifi='4', wband='2.4 GHz', wstd='802.11 b/g/n', bt='4.2', bdesc='Bluetooth 4.2 BR/EDR (Classic) + BLE', ds=DS.format('esp32')),
+    'ESP32-S2': dict(wifi='4', wband='2.4 GHz', wstd='802.11 b/g/n', bt=None, ds=DS.format('esp32-s2')),
+    'ESP32-S3': dict(wifi='4', wband='2.4 GHz', wstd='802.11 b/g/n', bt='5', bdesc='Bluetooth 5 (LE)', ds=DS.format('esp32-s3')),
+    'ESP32-C3': dict(wifi='4', wband='2.4 GHz', wstd='802.11 b/g/n', bt='5', bdesc='Bluetooth 5 (LE)', ds=DS.format('esp32-c3')),
+    'ESP32-C5': dict(wifi='6', wband='dual-band 2.4 + 5 GHz', wstd='802.11ax', bt='5', bdesc='Bluetooth 5 (LE)', r154=True, ds=DS.format('esp32-c5')),
+    'ESP32-C6': dict(wifi='6', wband='2.4 GHz', wstd='802.11ax', bt='5.3', bdesc='Bluetooth 5.3 (LE)', r154=True, ds=DS.format('esp32-c6')),
+    'ESP32-H2': dict(wifi=None, bt='5.3', bdesc='Bluetooth 5.3 (LE)', r154=True, ds=DS.format('esp32-h2')),
+}
+
+
+def soc_of(text):
+    """'ESP32-S3R8' → 'ESP32-S3', 'ESP32-D0WDQ6-V3' / 'ESP32-PICO-D4' → 'ESP32'. Unknown chips (e.g. ESP32-S31) → None."""
+    t = (text or '').upper()
+    m = re.search(r'ESP32-(S2|S3|C3|C5|C6|H2)(?![0-9])', t)
+    if m:
+        return 'ESP32-' + m.group(1)
+    if re.search(r'ESP32-(D0WD|PICO-D4|PICO-V3|WROOM-32|WROVER|U4WDH|D2WD|SOLO)|^ESP32$|ESP32(?![-\w])', t):
+        return 'ESP32'
+    return None
+
+
 ORDER = list(DEF)
+GENERIC = None  # set in main()
 CONN_RE = re.compile(r'\b(MX|PH|SH|GH|HY|ZH|XH)\s?(\d\.\d+)(?:\s*mm)?[\s-]*(\d+)\s*P(?:in)?\b', re.I)
 NEG = re.compile(r'^\s*(no|none|n/?a|-|—|without.*|non-touch.*|not included|optional.*)\s*$', re.I)
 PERIPH_LIST = re.compile(r'LED PWM|MCPWM|RMT|TWAI|SDIO 3\.0', re.I)   # MCU peripheral lists, not board connectors
@@ -70,11 +112,15 @@ def derive(m, pinouts, curated):
     p = m['params']
     out = {}
 
-    def add(fid, label, src, count=None, connector=None):
+    def add(fid, label, src, count=None, connector=None, value=None, name=None, basis=None):
         if fid in out:
             return
-        cat, name, icon = DEF[fid]
-        f = {'id': fid, 'category': cat, 'name': name, 'icon': icon, 'label': label, 'source': src}
+        cat, nm, icon = DEF[fid]
+        f = {'id': fid, 'category': cat, 'name': name or nm, 'icon': icon, 'label': label, 'source': src}
+        if value:
+            f['value'] = str(value)
+        if basis:
+            f['basis'] = basis
         if count:
             f['count'] = count
         if connector:
@@ -104,10 +150,11 @@ def derive(m, pinouts, curated):
     # memory
     ps = mb(p.get('psram')) if p.get('psram') and not NEG.match(p['psram']) else None
     if ps:
-        add('psram', f"{ps} MB PSRAM" + (' (in package)' if re.search('package', p['psram'], re.I) else ''), src_of(r'PSRAM'))
+        add('psram', f"{ps} MB PSRAM" + (' (in package)' if re.search('package', p['psram'], re.I) else '') + (' – Octal' if re.search('octal|OPI', p['psram'], re.I) else ' – Quad' if re.search('quad|QSPI', p['psram'], re.I) else ''),
+            src_of(r'PSRAM'), value=ps, name=f'PSRAM {ps} MB')
     fl = mb(p.get('flash'))
     if fl:
-        add('flash', f"{fl} MB flash" + (' (NOR)' if 'NOR' in (p.get('flash') or '') else ''), src_of(r'flash'))
+        add('flash', f"{fl} MB flash" + (' (NOR)' if 'NOR' in (p.get('flash') or '') else ''), src_of(r'flash'), value=fl, name=f'Flash {fl} MB')
     # display interface
     di = (p.get('interface') or '')
     det = p.get('interface_detail') or ''
@@ -130,18 +177,47 @@ def derive(m, pinouts, curated):
         add('touch-cap', 'Capacitive touch' + (f' ({ic}' + (f', {p["touch_points"]} points' if p.get('touch_points') else '') + ')' if ic else '') + opt, src_of(r'touch'))
     elif t == 'Resistive':
         add('touch-res', 'Resistive touch' + (' (4-wire)' if '4-wire' in tr else '') + opt, src_of(r'touch'))
-    # wireless
+    # wireless – presence from the vendor, version from the SoC datasheet (main MCU or radio co-processor)
     w = ' '.join(str(p.get(k) or '') for k in ('wifi', 'connectivity', 'coprocessor')) + ' ' + ' '.join(v for l, v, s in raw if re.match(r'(wi-?fi|wireless|connectivity|co-?processor)', l, re.I))
-    c6 = re.search(r'ESP32-C6[\w-]*', w)
-    if re.search(r'wi-?fi\s*6|wifi6', w, re.I) or (c6 and re.search(r'yes|C6', p.get('wifi') or '', re.I)):
-        add('wifi6', 'Wi-Fi 6' + (' (2.4 GHz)' if '2.4' in w else '') + (f' via {c6.group(0)} co-processor' if c6 else ''), src_of(r'wi-?fi|C6'))
-    elif re.search(r'^yes|supported', p.get('wifi') or '', re.I) or re.search(r'wi-?fi', p.get('connectivity') or '', re.I):
-        add('wifi', 'Wi-Fi', src_of(r'wi-?fi'))
+    main_soc = soc_of(p.get('mcu') or '') or soc_of(p.get('mcu_family') or '')
+    co = soc_of(p.get('coprocessor') or '') or (soc_of(w) if soc_of(w) in ('ESP32-C6', 'ESP32-C5') else None)
+    rsoc = co if co and (main_soc is None or main_soc == co) else main_soc
+    if co and str(p.get('mcu_family') or '').startswith('ESP32-P4'):
+        rsoc = co
+    via = f' via {co} co-processor' if co and rsoc == co and str(p.get('mcu_family') or '').startswith('ESP32-P4') else ''
+    caps = SOC.get(rsoc) if rsoc else None
+    wifi_yes = re.search(r'^yes|supported|wi-?fi|2\.4', p.get('wifi') or '', re.I) or re.search(r'wi-?fi', p.get('connectivity') or '', re.I)
+    if wifi_yes and not re.match(r'^no', p.get('wifi') or '', re.I):
+        if caps and caps.get('wifi'):
+            v = caps['wifi']
+            add('wifi', f"Wi-Fi {v} ({caps['wstd']}, {caps['wband']}){via} – version from the {rsoc} datasheet", src_of(r'wi-?fi'),
+                value=v, name=f'Wi-Fi {v}', basis=caps['ds'])
+        elif re.search(r'wi-?fi\s*6|wifi6', w, re.I):
+            add('wifi', 'Wi-Fi 6' + (' (2.4 GHz)' if '2.4' in w else '') + ' – as stated by the vendor', src_of(r'wi-?fi'), value='6', name='Wi-Fi 6')
+        else:
+            add('wifi', 'Wi-Fi' + (' (2.4 GHz)' if '2.4' in w else ''), src_of(r'wi-?fi'))
     b = ' '.join(str(p.get(k) or '') for k in ('bt', 'connectivity')) + ' ' + ' '.join(v for l, v, s in raw if re.match(r'(bluetooth|wireless|connectivity)', l, re.I))
-    if re.search(r'^yes|supported|bluetooth|ble', (p.get('bt') or '') + ' ' + (p.get('connectivity') or ''), re.I) and not re.match(r'^no', p.get('bt') or '', re.I):
-        ver = re.search(r'(?:BLE|Bluetooth)\s*(5(?:\.\d)?)', b, re.I)
-        add('bt', ('Bluetooth ' + ver.group(1) + (' LE' if re.search(r'BLE|LE\b', b) else '') if ver else 'Bluetooth')
-            + (' + Classic' if re.search('classic', b, re.I) else '') + (f' via {c6.group(0)}' if c6 and 'C6' in (p.get('bt') or '') else ''), src_of(r'bluetooth|BLE'))
+    bt_yes = re.search(r'^yes|supported|bluetooth|ble', (p.get('bt') or '') + ' ' + (p.get('connectivity') or ''), re.I) and not re.match(r'^no', p.get('bt') or '', re.I)
+    if bt_yes:
+        if caps and caps.get('bt'):
+            v = caps['bt']
+            add('bt', f"{caps['bdesc']}{via} – version from the {rsoc} datasheet", src_of(r'bluetooth|BLE'), value=v,
+                name='Bluetooth ' + v + (' + Classic' if 'Classic' in caps['bdesc'] else ' LE'), basis=caps['ds'])
+        else:
+            ver = re.search(r'(?:BLE|Bluetooth)\s*(5(?:\.\d)?)', b, re.I)
+            add('bt', ('Bluetooth ' + ver.group(1) + (' LE' if re.search(r'BLE|LE\b', b) else '') if ver else 'Bluetooth')
+                + (' + Classic' if re.search('classic', b, re.I) else '') + (' – as stated by the vendor' if ver else ''), src_of(r'bluetooth|BLE'),
+                value=ver.group(1) if ver else None, name=('Bluetooth ' + ver.group(1)) if ver else None)
+    # 802.15.4 can come from the main SoC or any co-processor (e.g. ESP32-S3 + ESP32-H2 on LilyGO T-Panel)
+    r154 = next((x for x in (rsoc, co, main_soc) if x and SOC.get(x, {}).get('r154')), None)
+    if r154 and r154 != rsoc:
+        caps = SOC[r154]
+    if r154 and (wifi_yes or bt_yes or co == r154 or re.search(r'thread|zigbee|802\.15\.4', w, re.I)):
+        who = f'{r154} co-processor' if r154 != main_soc else r154
+        note = f'IEEE 802.15.4 radio of the {who} – SoC capability per the Espressif datasheet; needs firmware support'
+        add('thread', f'Thread (802.15.4) – {note}', caps['ds'], basis=caps['ds'])
+        add('zigbee', f'Zigbee (802.15.4) – {note}', caps['ds'], basis=caps['ds'])
+        add('matter', f'Matter-capable radio (Wi-Fi / Thread) – {who} capability per the Espressif datasheet; firmware-dependent', caps['ds'], basis=caps['ds'])
     # USB (only where stated)
     u = p.get('usb') or ''
     if u:
@@ -149,13 +225,17 @@ def derive(m, pinouts, curated):
         if nc:
             roles = re.findall(r'(USB-to-UART|UART|OTG HS|USB FS)\s*Type-C|Type-C\s*(UART)', u)
             add('usb-c', f'{nc}× USB-C' if nc > 1 else 'USB-C', src_of(r'USB'), nc)
-            out['usb-c']['label'] += ' (' + ', '.join(x for x in ['USB-to-UART' if 'UART' in u else '', 'USB 2.0 OTG HS' if re.search(r'OTG HS Type-C', u) else '', 'USB FS' if 'USB FS' in u else ''] if x) + ')'
+            roles = [x for x in ['USB-to-UART' if 'UART' in u else '', 'USB 2.0 OTG HS' if re.search(r'OTG HS Type-C', u) else '', 'USB FS' if 'USB FS' in u else '',
+                                 'USB OTG' if re.search(r'\bOTG\b', u) and 'OTG HS' not in u else '', 'USB-Serial/JTAG' if re.search(r'Serial/JTAG', u, re.I) else ''] if x]
+            if roles:
+                out['usb-c']['label'] += ' (' + ', '.join(roles) + ')'
         if na:
-            add('usb-a', 'USB-A host (USB 2.0 OTG HS' + (', host mode via jumper' if 'jumper' in u else '') + ')', src_of(r'USB'), na)
+            add('usb-a', 'USB-A host' + (' (USB 2.0 OTG HS' + (', host mode via jumper' if 'jumper' in u else '') + ')' if 'OTG HS' in u else ''), src_of(r'USB'), na)
     # wired / industrial
     e = p.get('ethernet') or (has(r'RJ45|ethernet') or (None, '', None))[1]
     if e:
-        add('ethernet', 'Ethernet RJ45' + (' 100 Mbps' if '100' in e else ''), src_of(r'RJ45|ethernet'))
+        sp = '1000' if re.search(r'1000|gigabit|1\s*G(bps)?\b', e, re.I) else '100' if '100' in e else None
+        add('ethernet', 'Ethernet RJ45' + (f' {sp} Mbps' if sp else ''), src_of(r'RJ45|ethernet'), value='1G' if sp == '1000' else sp)
     if p.get('poe'):
         add('poe', 'PoE' + (' – module header (PoE module not included)' if 'not included' in p['poe'] else ''), src_of(r'PoE'))
     if p.get('rs485') or has(r'RS-?485'):
@@ -182,7 +262,7 @@ def derive(m, pinouts, curated):
     # audio
     a = (p.get('audio') or '') + ' ' + ' '.join(v for l, v, s in raw if re.match(r'(audio|additional features|expansion|speaker)', l, re.I))
     sp = re.search(r'yes', p.get('speaker') or '', re.I) or re.search(r'speaker', a, re.I)
-    if sp and not re.match(r'^no', p.get('speaker') or '', re.I):
+    if sp and not m.get('curated_vendor') and not re.match(r'^no', p.get('speaker') or '', re.I):
         cn = conn(a)
         built = re.search(r'built-in speaker', a, re.I)
         drv = re.search(r'speaker driver|codec|amplifier', a, re.I)
@@ -201,7 +281,9 @@ def derive(m, pinouts, curated):
         add('jack-trs', '3.5 mm stereo jack', src_of(r'3\.5'))
     # camera
     cam = p.get('camera') or ''
-    if cam:
+    if cam and m.get('curated_vendor'):
+        add('camera', f'Camera: {cam}', src_of(r'camera|CSI'))
+    elif cam:
         lab = 'MIPI-CSI camera connector' + (' (15-pin, 2-lane)' if '15-pin' in cam else ' (2-lane)' if '2-lane' in cam else '')
         if 'OV5647' in cam:
             lab = 'OV5647 5 MP camera (MIPI-CSI 2-lane)'
@@ -234,6 +316,26 @@ def derive(m, pinouts, curated):
     sh = p.get('shell') or ''
     if sh and re.search(r'yes|included|metal', sh, re.I):
         add('case', 'Metal enclosure' if 'metal' in sh.lower() else 'Enclosure / shell', src_of(r'shell|case'))
+    # generic normalized params used by the curated vendor files (data/curated/boards/*.json); text = vendor wording
+    src0 = m['sources'][0] if m.get('sources') else None
+    P = lambda k: (p.get(k) or '').strip() if not NEG.match(p.get(k) or '') else ''
+    if P('epaper') or re.search(r'e-?paper|e-?ink|EPD', p.get('panel') or '', re.I):
+        add('disp-epd', 'E-paper display' + (f" ({P('epaper')})" if P('epaper') else ''), src_of(r'e-?ink|e-?paper|EPD'))
+    for k, fid, lab in (('speaker', 'speaker', 'Speaker'), ('lora', 'lora', 'LoRa'), ('gps', 'gps', 'GNSS / GPS'), ('nfc', 'nfc', 'NFC / RFID'), ('ir', 'ir', 'IR'),
+                        ('keyboard', 'keyboard', 'Keyboard'), ('encoder', 'knob', 'Rotary encoder'), ('buzzer', 'buzzer', 'Buzzer'),
+                        ('imu', 'imu', 'IMU'), ('als', 'als', 'Light / proximity sensor'), ('charger', 'charger', 'Battery charger'),
+                        ('dc_in', 'dc-in', 'DC input'), ('grove', 'grove', 'Grove port'), ('buttons', 'buttons', 'Buttons'),
+                        ('rgbled', 'rgbled', 'RGB LED'), ('can', 'can', 'CAN bus'), ('mic', 'mic', 'Microphone'), ('jack', 'jack-trs', '3.5 mm jack'),
+                        ('vibration', 'vibration', 'Vibration motor'), ('battery', 'battery', 'Battery'), ('rtc', 'rtc', 'RTC'),
+                        ('relay', 'relay', 'Relay'), ('uart', 'uart', 'Serial port (UART)'), ('i2c', 'i2c', 'I2C port')):
+        v = P(k)
+        if v and GENERIC.get(m['model']):
+            if fid == 'jack-trs' and 'TRRS' in v:
+                fid = 'jack-trrs'
+            n = re.search(r'(\d+)\s*[x×]', v)
+            out.pop(fid, None)   # curated vendor wording beats the generic label
+            add(fid, f'{lab}: {v}' if not v.lower().startswith(lab.lower().split()[0]) else v, src_of(re.escape(lab.split()[0])) or src0,
+                count=int(n.group(1)) if n and int(n.group(1)) > 1 else None, connector=conn(v))
     # community pin maps (curated, sourced)
     for pin in pinouts:
         if not re.search(pin['match'], m['model']):
@@ -259,13 +361,15 @@ def main():
     cur = json.load(open(os.path.join(ROOT, 'data/curated/features.json')))['entries']
     n = 0
     stats = {}
+    global GENERIC
+    GENERIC = {m['model']: True for m in models if m.get('curated_vendor')}
     for m in models:
         m['features'] = derive(m, pinouts, cur)
         n += bool(m['features'])
         for f in m['features']:
             stats[f['id']] = stats.get(f['id'], 0) + 1
     json.dump(models, open(mp, 'w'), ensure_ascii=False, separators=(',', ':'))
-    json.dump({'models': len(models), 'with_features': n, 'by_feature': stats, 'categories': sorted({v[0] for v in DEF.values()}),
+    json.dump({'models': len(models), 'with_features': n, 'by_feature': stats, 'categories': CATEGORY_NAMES,
                'definitions': {k: {'category': v[0], 'name': v[1], 'icon': v[2]} for k, v in DEF.items()}},
               open(os.path.join(ROOT, 'data/raw/feature_stats.json'), 'w'), indent=1)
     print(f'features: {n}/{len(models)} boards, {sum(stats.values())} features; ' + ', '.join(f'{k} {v}' for k, v in sorted(stats.items(), key=lambda x: -x[1])))

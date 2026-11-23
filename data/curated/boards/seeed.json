@@ -1,0 +1,950 @@
+{
+ "vendor": "Seeed Studio",
+ "slug": "seeed",
+ "category": "Seeed Studio (SenseCAP / reTerminal)",
+ "listing": "https://wiki.seeedstudio.com/reterminal_e10xx_main_page/",
+ "image_note": null,
+ "_note": "Hand-curated from the official product / docs pages listed in each board's sources. spec_rows = verbatim vendor spec table rows. Empty = not stated.",
+ "boards": [
+  {
+   "id": "seeed-sensecap-indicator-d1",
+   "model": "SenseCAP Indicator D1",
+   "title": "Seeed SenseCAP Indicator D1 – 4\" 480×480 ESP32-S3 + RP2040 touch panel",
+   "series": "SenseCAP Indicator",
+   "sources": [
+    "https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/",
+    "https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html",
+    "https://devices.esphome.io/devices/seeed-sensecap/"
+   ],
+   "description": "",
+   "params": {
+    "size": "3.95\"",
+    "resolution": "480x480",
+    "touch": "Capacitive",
+    "interface": "RGB",
+    "driver_ic": "ST7701S",
+    "touch_ic": "FT5x06",
+    "mcu": "ESP32-S3 (dual-core LX7, 240 MHz) + RP2040 co-MCU",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB (ESP32-S3) + 2MB (RP2040)",
+    "wifi": "802.11 b/g/n, 2.4 GHz",
+    "bt": "Bluetooth 5.0 LE",
+    "sd": "microSD up to 32 GB",
+    "buzzer": "MLT-8530 buzzer",
+    "grove": "2x Grove (ADC, I2C)",
+    "usb": "2x USB Type-C",
+    "buttons": "User button"
+   },
+   "spec_rows": [
+    [
+     "Screen",
+     "3.95 Inch, Capacitive RGB Touch Screen"
+    ],
+    [
+     "Screen Resolution",
+     "480 x 480 pixels"
+    ],
+    [
+     "Power Supply",
+     "5V-DC, 1A"
+    ],
+    [
+     "Battery",
+     "No battery, only powered by USB port"
+    ],
+    [
+     "Processor",
+     "ESP32-S3: Xtensa® dual-core 32-bit up to 240 MHz; RP2040: Dual ARM Cortex-M0+ up to 133MHz"
+    ],
+    [
+     "Flash",
+     "ESP32-S3: 8MB; RP2040: 2MB"
+    ],
+    [
+     "External Storage",
+     "Support up to 32GB Micro SD Card (not included)"
+    ],
+    [
+     "Wi-Fi",
+     "802.11b/g/n, 2.4GHz"
+    ],
+    [
+     "Bluetooth",
+     "Bluetooth 5.0 LE"
+    ],
+    [
+     "LoRa (SX1262)",
+     "LoRa and FSK Modem, +21dBm max TX power, -136dBm@SF12 BW=125KHz RX sensitivity, up to 5km (D1L / D1Pro)"
+    ],
+    [
+     "Sensors (optional)",
+     "CO2 (Sensirion SCD41), TVOC (SGP40), Grove AHT20 temperature & humidity (D1S / D1Pro)"
+    ],
+    [
+     "Buzzer",
+     "MLT-8530, resonant frequency 2700Hz"
+    ],
+    [
+     "Interfaces",
+     "2x Grove (ADC, I2C), 2x USB Type-C"
+    ]
+   ],
+   "images": [
+    "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Seeed-Studio/wiki-documents",
+     "url": "https://github.com/Seeed-Studio/wiki-documents",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Seeed-Solution/SenseCAP_Indicator_ESP32",
+     "url": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32",
+     "type": "official-github"
+    },
+    {
+     "title": "Dive into the hardware (wiki)",
+     "url": "https://wiki.seeedstudio.com/SenseCAP_Indicator_Dive_into_the_Hardware/",
+     "type": "vendor"
+    }
+   ],
+   "notes": [
+    "Display driver / touch IC / RGB bus are taken from the ESPHome device page (community), the wiki does not state them."
+   ],
+   "param_sources": {
+    "driver_ic": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "touch_ic": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "interface": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "lora": "https://wiki.seeedstudio.com/SenseCAP_Indicator_LoRa/",
+    "sensors": "https://wiki.seeedstudio.com/SenseCAP_Indicator_Native_Firmware/"
+   },
+   "image_note": "official Seeed wiki photo – all D1 variants share the same enclosure"
+  },
+  {
+   "id": "seeed-sensecap-indicator-d1s",
+   "model": "SenseCAP Indicator D1S",
+   "title": "Seeed SenseCAP Indicator D1S – 4\" 480×480 ESP32-S3 + RP2040 touch panel and air-quality sensors",
+   "series": "SenseCAP Indicator",
+   "sources": [
+    "https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/",
+    "https://www.seeedstudio.com/SenseCAP-Indicator-D1S-p-5645.html",
+    "https://devices.esphome.io/devices/seeed-sensecap/"
+   ],
+   "description": "",
+   "params": {
+    "size": "3.95\"",
+    "resolution": "480x480",
+    "touch": "Capacitive",
+    "interface": "RGB",
+    "driver_ic": "ST7701S",
+    "touch_ic": "FT5x06",
+    "mcu": "ESP32-S3 (dual-core LX7, 240 MHz) + RP2040 co-MCU",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB (ESP32-S3) + 2MB (RP2040)",
+    "wifi": "802.11 b/g/n, 2.4 GHz",
+    "bt": "Bluetooth 5.0 LE",
+    "sd": "microSD up to 32 GB",
+    "buzzer": "MLT-8530 buzzer",
+    "grove": "2x Grove (ADC, I2C)",
+    "usb": "2x USB Type-C",
+    "buttons": "User button",
+    "sensors": "SCD41 CO2, SGP40 tVOC, external Grove AHT20 T/H"
+   },
+   "spec_rows": [
+    [
+     "Screen",
+     "3.95 Inch, Capacitive RGB Touch Screen"
+    ],
+    [
+     "Screen Resolution",
+     "480 x 480 pixels"
+    ],
+    [
+     "Power Supply",
+     "5V-DC, 1A"
+    ],
+    [
+     "Battery",
+     "No battery, only powered by USB port"
+    ],
+    [
+     "Processor",
+     "ESP32-S3: Xtensa® dual-core 32-bit up to 240 MHz; RP2040: Dual ARM Cortex-M0+ up to 133MHz"
+    ],
+    [
+     "Flash",
+     "ESP32-S3: 8MB; RP2040: 2MB"
+    ],
+    [
+     "External Storage",
+     "Support up to 32GB Micro SD Card (not included)"
+    ],
+    [
+     "Wi-Fi",
+     "802.11b/g/n, 2.4GHz"
+    ],
+    [
+     "Bluetooth",
+     "Bluetooth 5.0 LE"
+    ],
+    [
+     "LoRa (SX1262)",
+     "LoRa and FSK Modem, +21dBm max TX power, -136dBm@SF12 BW=125KHz RX sensitivity, up to 5km (D1L / D1Pro)"
+    ],
+    [
+     "Sensors (optional)",
+     "CO2 (Sensirion SCD41), TVOC (SGP40), Grove AHT20 temperature & humidity (D1S / D1Pro)"
+    ],
+    [
+     "Buzzer",
+     "MLT-8530, resonant frequency 2700Hz"
+    ],
+    [
+     "Interfaces",
+     "2x Grove (ADC, I2C), 2x USB Type-C"
+    ]
+   ],
+   "images": [
+    "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Seeed-Studio/wiki-documents",
+     "url": "https://github.com/Seeed-Studio/wiki-documents",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Seeed-Solution/SenseCAP_Indicator_ESP32",
+     "url": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32",
+     "type": "official-github"
+    },
+    {
+     "title": "Dive into the hardware (wiki)",
+     "url": "https://wiki.seeedstudio.com/SenseCAP_Indicator_Dive_into_the_Hardware/",
+     "type": "vendor"
+    }
+   ],
+   "notes": [
+    "Display driver / touch IC / RGB bus are taken from the ESPHome device page (community), the wiki does not state them."
+   ],
+   "param_sources": {
+    "driver_ic": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "touch_ic": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "interface": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "lora": "https://wiki.seeedstudio.com/SenseCAP_Indicator_LoRa/",
+    "sensors": "https://wiki.seeedstudio.com/SenseCAP_Indicator_Native_Firmware/"
+   },
+   "image_note": "official Seeed wiki photo – all D1 variants share the same enclosure"
+  },
+  {
+   "id": "seeed-sensecap-indicator-d1l",
+   "model": "SenseCAP Indicator D1L",
+   "title": "Seeed SenseCAP Indicator D1L – 4\" 480×480 ESP32-S3 + RP2040 touch panel with LoRa",
+   "series": "SenseCAP Indicator",
+   "sources": [
+    "https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/",
+    "https://www.seeedstudio.com/SenseCAP-Indicator-D1L-p-5646.html",
+    "https://devices.esphome.io/devices/seeed-sensecap/"
+   ],
+   "description": "",
+   "params": {
+    "size": "3.95\"",
+    "resolution": "480x480",
+    "touch": "Capacitive",
+    "interface": "RGB",
+    "driver_ic": "ST7701S",
+    "touch_ic": "FT5x06",
+    "mcu": "ESP32-S3 (dual-core LX7, 240 MHz) + RP2040 co-MCU",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB (ESP32-S3) + 2MB (RP2040)",
+    "wifi": "802.11 b/g/n, 2.4 GHz",
+    "bt": "Bluetooth 5.0 LE",
+    "sd": "microSD up to 32 GB",
+    "buzzer": "MLT-8530 buzzer",
+    "grove": "2x Grove (ADC, I2C)",
+    "usb": "2x USB Type-C",
+    "buttons": "User button",
+    "lora": "Semtech SX1262 LoRa / FSK, +21 dBm"
+   },
+   "spec_rows": [
+    [
+     "Screen",
+     "3.95 Inch, Capacitive RGB Touch Screen"
+    ],
+    [
+     "Screen Resolution",
+     "480 x 480 pixels"
+    ],
+    [
+     "Power Supply",
+     "5V-DC, 1A"
+    ],
+    [
+     "Battery",
+     "No battery, only powered by USB port"
+    ],
+    [
+     "Processor",
+     "ESP32-S3: Xtensa® dual-core 32-bit up to 240 MHz; RP2040: Dual ARM Cortex-M0+ up to 133MHz"
+    ],
+    [
+     "Flash",
+     "ESP32-S3: 8MB; RP2040: 2MB"
+    ],
+    [
+     "External Storage",
+     "Support up to 32GB Micro SD Card (not included)"
+    ],
+    [
+     "Wi-Fi",
+     "802.11b/g/n, 2.4GHz"
+    ],
+    [
+     "Bluetooth",
+     "Bluetooth 5.0 LE"
+    ],
+    [
+     "LoRa (SX1262)",
+     "LoRa and FSK Modem, +21dBm max TX power, -136dBm@SF12 BW=125KHz RX sensitivity, up to 5km (D1L / D1Pro)"
+    ],
+    [
+     "Sensors (optional)",
+     "CO2 (Sensirion SCD41), TVOC (SGP40), Grove AHT20 temperature & humidity (D1S / D1Pro)"
+    ],
+    [
+     "Buzzer",
+     "MLT-8530, resonant frequency 2700Hz"
+    ],
+    [
+     "Interfaces",
+     "2x Grove (ADC, I2C), 2x USB Type-C"
+    ]
+   ],
+   "images": [
+    "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Seeed-Studio/wiki-documents",
+     "url": "https://github.com/Seeed-Studio/wiki-documents",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Seeed-Solution/SenseCAP_Indicator_ESP32",
+     "url": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32",
+     "type": "official-github"
+    },
+    {
+     "title": "Dive into the hardware (wiki)",
+     "url": "https://wiki.seeedstudio.com/SenseCAP_Indicator_Dive_into_the_Hardware/",
+     "type": "vendor"
+    }
+   ],
+   "notes": [
+    "Display driver / touch IC / RGB bus are taken from the ESPHome device page (community), the wiki does not state them."
+   ],
+   "param_sources": {
+    "driver_ic": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "touch_ic": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "interface": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "lora": "https://wiki.seeedstudio.com/SenseCAP_Indicator_LoRa/",
+    "sensors": "https://wiki.seeedstudio.com/SenseCAP_Indicator_Native_Firmware/"
+   },
+   "image_note": "official Seeed wiki photo – all D1 variants share the same enclosure"
+  },
+  {
+   "id": "seeed-sensecap-indicator-d1pro",
+   "model": "SenseCAP Indicator D1Pro",
+   "title": "Seeed SenseCAP Indicator D1Pro – 4\" 480×480 ESP32-S3 + RP2040 touch panel with LoRa and air-quality sensors",
+   "series": "SenseCAP Indicator",
+   "sources": [
+    "https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/",
+    "https://www.seeedstudio.com/SenseCAP-Indicator-D1Pro-p-5644.html",
+    "https://devices.esphome.io/devices/seeed-sensecap/"
+   ],
+   "description": "",
+   "params": {
+    "size": "3.95\"",
+    "resolution": "480x480",
+    "touch": "Capacitive",
+    "interface": "RGB",
+    "driver_ic": "ST7701S",
+    "touch_ic": "FT5x06",
+    "mcu": "ESP32-S3 (dual-core LX7, 240 MHz) + RP2040 co-MCU",
+    "mcu_family": "ESP32-S3",
+    "frequency": "240 MHz",
+    "flash": "8MB (ESP32-S3) + 2MB (RP2040)",
+    "wifi": "802.11 b/g/n, 2.4 GHz",
+    "bt": "Bluetooth 5.0 LE",
+    "sd": "microSD up to 32 GB",
+    "buzzer": "MLT-8530 buzzer",
+    "grove": "2x Grove (ADC, I2C)",
+    "usb": "2x USB Type-C",
+    "buttons": "User button",
+    "lora": "Semtech SX1262 LoRa / FSK, +21 dBm",
+    "sensors": "SCD41 CO2, SGP40 tVOC, external Grove AHT20 T/H"
+   },
+   "spec_rows": [
+    [
+     "Screen",
+     "3.95 Inch, Capacitive RGB Touch Screen"
+    ],
+    [
+     "Screen Resolution",
+     "480 x 480 pixels"
+    ],
+    [
+     "Power Supply",
+     "5V-DC, 1A"
+    ],
+    [
+     "Battery",
+     "No battery, only powered by USB port"
+    ],
+    [
+     "Processor",
+     "ESP32-S3: Xtensa® dual-core 32-bit up to 240 MHz; RP2040: Dual ARM Cortex-M0+ up to 133MHz"
+    ],
+    [
+     "Flash",
+     "ESP32-S3: 8MB; RP2040: 2MB"
+    ],
+    [
+     "External Storage",
+     "Support up to 32GB Micro SD Card (not included)"
+    ],
+    [
+     "Wi-Fi",
+     "802.11b/g/n, 2.4GHz"
+    ],
+    [
+     "Bluetooth",
+     "Bluetooth 5.0 LE"
+    ],
+    [
+     "LoRa (SX1262)",
+     "LoRa and FSK Modem, +21dBm max TX power, -136dBm@SF12 BW=125KHz RX sensitivity, up to 5km (D1L / D1Pro)"
+    ],
+    [
+     "Sensors (optional)",
+     "CO2 (Sensirion SCD41), TVOC (SGP40), Grove AHT20 temperature & humidity (D1S / D1Pro)"
+    ],
+    [
+     "Buzzer",
+     "MLT-8530, resonant frequency 2700Hz"
+    ],
+    [
+     "Interfaces",
+     "2x Grove (ADC, I2C), 2x USB Type-C"
+    ]
+   ],
+   "images": [
+    "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Seeed-Studio/wiki-documents",
+     "url": "https://github.com/Seeed-Studio/wiki-documents",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Seeed-Solution/SenseCAP_Indicator_ESP32",
+     "url": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32",
+     "type": "official-github"
+    },
+    {
+     "title": "Dive into the hardware (wiki)",
+     "url": "https://wiki.seeedstudio.com/SenseCAP_Indicator_Dive_into_the_Hardware/",
+     "type": "vendor"
+    }
+   ],
+   "notes": [
+    "Display driver / touch IC / RGB bus are taken from the ESPHome device page (community), the wiki does not state them."
+   ],
+   "param_sources": {
+    "driver_ic": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "touch_ic": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "interface": "https://devices.esphome.io/devices/seeed-sensecap/",
+    "lora": "https://wiki.seeedstudio.com/SenseCAP_Indicator_LoRa/",
+    "sensors": "https://wiki.seeedstudio.com/SenseCAP_Indicator_Native_Firmware/"
+   },
+   "image_note": "official Seeed wiki photo – all D1 variants share the same enclosure"
+  },
+  {
+   "id": "seeed-reterminal-e1001",
+   "model": "reTerminal E1001",
+   "title": "Seeed reTerminal E1001 – 7.5\" Monochrome (4-level grayscale) ESP32-S3 e-paper terminal",
+   "series": "reTerminal E",
+   "sources": [
+    "https://wiki.seeedstudio.com/reterminal_e10xx_main_page/",
+    "https://www.seeedstudio.com/reTerminal-E1001-p-6534.html"
+   ],
+   "description": "",
+   "params": {
+    "size": "7.5\"",
+    "resolution": "800x480",
+    "panel": "E-paper",
+    "epaper": "Monochrome (4-level grayscale) (GDEY075T7 panel, UC8179 controller)",
+    "touch": "None",
+    "mcu": "ESP32-S3",
+    "mcu_family": "ESP32-S3",
+    "psram": "8MB",
+    "flash": "32MB",
+    "wifi": "2.4 GHz Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5.0",
+    "sd": "microSD up to 32 GB",
+    "sensors": "Temperature & humidity sensor",
+    "buzzer": "Buzzer (sound alert)",
+    "battery": "2000 mAh (~3 months)",
+    "usb": "USB Type-C (5 V / 1 A input)",
+    "shell": "Yes – metal enclosure",
+    "dimensions": "176 × 120 × 53 mm (17 mm w/o stand)",
+    "expansion": "8-pin header UART / I²C / GPIO"
+   },
+   "spec_rows": [
+    [
+     "Display Size",
+     "7.5\""
+    ],
+    [
+     "Display Type",
+     "Monochrome (4-level grayscale)"
+    ],
+    [
+     "Resolution",
+     "800 × 480"
+    ],
+    [
+     "Refresh Rate",
+     "2–5 s"
+    ],
+    [
+     "Touch",
+     "—"
+    ],
+    [
+     "Processor",
+     "ESP32-S3 with 8 MB PSRAM"
+    ],
+    [
+     "Storage",
+     "32 MB Flash, microSD up to 32 GB"
+    ],
+    [
+     "Wireless",
+     "2.4 GHz Wi-Fi 802.11 b/g/n + Bluetooth 5.0"
+    ],
+    [
+     "On-board Sensors",
+     "Temperature & Humidity sensor"
+    ],
+    [
+     "Audio",
+     "Buzzer (sound alert); microphone reserved on E1001 / E1002 / E1003"
+    ],
+    [
+     "Battery",
+     "2000 mAh (~3 months)"
+    ],
+    [
+     "Power Input",
+     "USB-C 5 V / 1 A"
+    ],
+    [
+     "Enclosure",
+     "Metal"
+    ],
+    [
+     "Dimensions",
+     "176 × 120 × 53 mm (17 mm w/o stand)"
+    ],
+    [
+     "Expansion",
+     "8-pin header UART / I²C / GPIO"
+    ]
+   ],
+   "images": [
+    "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Seeed-Studio/wiki-documents",
+     "url": "https://github.com/Seeed-Studio/wiki-documents",
+     "type": "official-github"
+    },
+    {
+     "title": "Arduino cookbook (wiki)",
+     "url": "https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/",
+     "type": "vendor"
+    },
+    {
+     "title": "GitHub: Seeed-Studio/Seeed_GFX",
+     "url": "https://github.com/Seeed-Studio/Seeed_GFX",
+     "type": "official-github"
+    }
+   ],
+   "notes": [],
+   "param_sources": {
+    "epaper": "https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/"
+   }
+  },
+  {
+   "id": "seeed-reterminal-e1002",
+   "model": "reTerminal E1002",
+   "title": "Seeed reTerminal E1002 – 7.3\" Full Color (E Ink Spectra 6) ESP32-S3 e-paper terminal",
+   "series": "reTerminal E",
+   "sources": [
+    "https://wiki.seeedstudio.com/reterminal_e10xx_main_page/",
+    "https://www.seeedstudio.com/reTerminal-E1002-p-6533.html"
+   ],
+   "description": "",
+   "params": {
+    "size": "7.3\"",
+    "resolution": "800x480",
+    "panel": "E-paper",
+    "epaper": "Full Color (E Ink Spectra 6) (GDEP073E01 panel, ED2208 controller)",
+    "touch": "None",
+    "mcu": "ESP32-S3",
+    "mcu_family": "ESP32-S3",
+    "psram": "8MB",
+    "flash": "32MB",
+    "wifi": "2.4 GHz Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5.0",
+    "sd": "microSD up to 32 GB",
+    "sensors": "Temperature & humidity sensor",
+    "buzzer": "Buzzer (sound alert)",
+    "battery": "2000 mAh (~3 months)",
+    "usb": "USB Type-C (5 V / 1 A input)",
+    "shell": "Yes – metal enclosure",
+    "dimensions": "176 × 120 × 53 mm (17 mm w/o stand)",
+    "expansion": "8-pin header UART / I²C / GPIO"
+   },
+   "spec_rows": [
+    [
+     "Display Size",
+     "7.3\""
+    ],
+    [
+     "Display Type",
+     "Full Color (E Ink Spectra 6)"
+    ],
+    [
+     "Resolution",
+     "800 × 480"
+    ],
+    [
+     "Refresh Rate",
+     "15–20 s"
+    ],
+    [
+     "Touch",
+     "—"
+    ],
+    [
+     "Processor",
+     "ESP32-S3 with 8 MB PSRAM"
+    ],
+    [
+     "Storage",
+     "32 MB Flash, microSD up to 32 GB"
+    ],
+    [
+     "Wireless",
+     "2.4 GHz Wi-Fi 802.11 b/g/n + Bluetooth 5.0"
+    ],
+    [
+     "On-board Sensors",
+     "Temperature & Humidity sensor"
+    ],
+    [
+     "Audio",
+     "Buzzer (sound alert); microphone reserved on E1001 / E1002 / E1003"
+    ],
+    [
+     "Battery",
+     "2000 mAh (~3 months)"
+    ],
+    [
+     "Power Input",
+     "USB-C 5 V / 1 A"
+    ],
+    [
+     "Enclosure",
+     "Metal"
+    ],
+    [
+     "Dimensions",
+     "176 × 120 × 53 mm (17 mm w/o stand)"
+    ],
+    [
+     "Expansion",
+     "8-pin header UART / I²C / GPIO"
+    ]
+   ],
+   "images": [
+    "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Seeed-Studio/wiki-documents",
+     "url": "https://github.com/Seeed-Studio/wiki-documents",
+     "type": "official-github"
+    },
+    {
+     "title": "Arduino cookbook (wiki)",
+     "url": "https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/",
+     "type": "vendor"
+    },
+    {
+     "title": "GitHub: Seeed-Studio/Seeed_GFX",
+     "url": "https://github.com/Seeed-Studio/Seeed_GFX",
+     "type": "official-github"
+    }
+   ],
+   "notes": [],
+   "param_sources": {
+    "epaper": "https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/"
+   }
+  },
+  {
+   "id": "seeed-reterminal-e1003",
+   "model": "reTerminal E1003",
+   "title": "Seeed reTerminal E1003 – 10.3\" Monochrome (16-level grayscale) ESP32-S3 e-paper terminal",
+   "series": "reTerminal E",
+   "sources": [
+    "https://wiki.seeedstudio.com/reterminal_e10xx_main_page/"
+   ],
+   "description": "",
+   "params": {
+    "size": "10.3\"",
+    "resolution": "1404x1872",
+    "panel": "E-paper",
+    "epaper": "Monochrome (16-level grayscale)",
+    "touch": "Capacitive",
+    "mcu": "ESP32-S3",
+    "mcu_family": "ESP32-S3",
+    "psram": "8MB",
+    "flash": "32MB",
+    "wifi": "2.4 GHz Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5.0",
+    "sd": "microSD up to 32 GB",
+    "sensors": "Temperature & humidity sensor",
+    "buzzer": "Buzzer (sound alert)",
+    "battery": "3000 mAh (~6 months)",
+    "usb": "USB Type-C (5 V / 1 A input)",
+    "shell": "Yes – metal enclosure",
+    "dimensions": "224 × 187 × 18.6 mm",
+    "expansion": "Pin header UART / I²C / GPIO"
+   },
+   "spec_rows": [
+    [
+     "Display Size",
+     "10.3\""
+    ],
+    [
+     "Display Type",
+     "Monochrome (16-level grayscale)"
+    ],
+    [
+     "Resolution",
+     "1404 × 1872"
+    ],
+    [
+     "Refresh Rate",
+     "2–3 s"
+    ],
+    [
+     "Touch",
+     "Capacitive touch"
+    ],
+    [
+     "Processor",
+     "ESP32-S3 with 8 MB PSRAM"
+    ],
+    [
+     "Storage",
+     "32 MB Flash, microSD up to 32 GB"
+    ],
+    [
+     "Wireless",
+     "2.4 GHz Wi-Fi 802.11 b/g/n + Bluetooth 5.0"
+    ],
+    [
+     "On-board Sensors",
+     "Temperature & Humidity sensor"
+    ],
+    [
+     "Audio",
+     "Buzzer (sound alert); microphone reserved on E1001 / E1002 / E1003"
+    ],
+    [
+     "Battery",
+     "3000 mAh (~6 months)"
+    ],
+    [
+     "Power Input",
+     "USB-C 5 V / 1 A"
+    ],
+    [
+     "Enclosure",
+     "Metal"
+    ],
+    [
+     "Dimensions",
+     "224 × 187 × 18.6 mm"
+    ],
+    [
+     "Expansion",
+     "Pin header UART / I²C / GPIO"
+    ]
+   ],
+   "images": [
+    "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/2-reTerminal-E1003-Epaper-Display.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Seeed-Studio/wiki-documents",
+     "url": "https://github.com/Seeed-Studio/wiki-documents",
+     "type": "official-github"
+    },
+    {
+     "title": "Arduino cookbook (wiki)",
+     "url": "https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/",
+     "type": "vendor"
+    },
+    {
+     "title": "GitHub: Seeed-Studio/Seeed_GFX",
+     "url": "https://github.com/Seeed-Studio/Seeed_GFX",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "seeed-reterminal-e1004",
+   "model": "reTerminal E1004",
+   "title": "Seeed reTerminal E1004 – 13.3\" Full Color (E Ink Spectra 6) ESP32-S3 e-paper terminal",
+   "series": "reTerminal E",
+   "sources": [
+    "https://wiki.seeedstudio.com/reterminal_e10xx_main_page/"
+   ],
+   "description": "",
+   "params": {
+    "size": "13.3\"",
+    "resolution": "1200x1600",
+    "panel": "E-paper",
+    "epaper": "Full Color (E Ink Spectra 6)",
+    "touch": "None",
+    "mcu": "ESP32-S3",
+    "mcu_family": "ESP32-S3",
+    "psram": "8MB",
+    "flash": "32MB",
+    "wifi": "2.4 GHz Wi-Fi 802.11 b/g/n",
+    "bt": "Bluetooth 5.0",
+    "sd": "microSD up to 32 GB",
+    "sensors": "Temperature & humidity sensor",
+    "buzzer": "Buzzer (sound alert)",
+    "battery": "5000 mAh (~6 months)",
+    "usb": "USB Type-C (5 V / 1 A input)",
+    "shell": "Yes – metal enclosure",
+    "dimensions": "376 × 311 × 40 mm",
+    "expansion": "2 × 4 header UART / I²C / GPIO / ADC"
+   },
+   "spec_rows": [
+    [
+     "Display Size",
+     "13.3\""
+    ],
+    [
+     "Display Type",
+     "Full Color (E Ink Spectra 6)"
+    ],
+    [
+     "Resolution",
+     "1200 × 1600"
+    ],
+    [
+     "Refresh Rate",
+     "~20 s"
+    ],
+    [
+     "Touch",
+     "—"
+    ],
+    [
+     "Processor",
+     "ESP32-S3 with 8 MB PSRAM"
+    ],
+    [
+     "Storage",
+     "32 MB Flash, microSD up to 32 GB"
+    ],
+    [
+     "Wireless",
+     "2.4 GHz Wi-Fi 802.11 b/g/n + Bluetooth 5.0"
+    ],
+    [
+     "On-board Sensors",
+     "Temperature & Humidity sensor"
+    ],
+    [
+     "Audio",
+     "Buzzer (sound alert); microphone reserved on E1001 / E1002 / E1003"
+    ],
+    [
+     "Battery",
+     "5000 mAh (~6 months)"
+    ],
+    [
+     "Power Input",
+     "USB-C 5 V / 1 A"
+    ],
+    [
+     "Enclosure",
+     "Metal"
+    ],
+    [
+     "Dimensions",
+     "376 × 311 × 40 mm"
+    ],
+    [
+     "Expansion",
+     "2 × 4 header UART / I²C / GPIO / ADC"
+    ]
+   ],
+   "images": [
+    "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2-reterminal-e1004-epaper-display.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Seeed-Studio/wiki-documents",
+     "url": "https://github.com/Seeed-Studio/wiki-documents",
+     "type": "official-github"
+    },
+    {
+     "title": "Arduino cookbook (wiki)",
+     "url": "https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/",
+     "type": "vendor"
+    },
+    {
+     "title": "GitHub: Seeed-Studio/Seeed_GFX",
+     "url": "https://github.com/Seeed-Studio/Seeed_GFX",
+     "type": "official-github"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

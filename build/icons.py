@@ -15,7 +15,6 @@ ICONS = {
     # storage
     'sd': '<path d="M8 3h7.5L18 5.5V10l-1 1v2l1 1v6a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M9 5.5v3M11.5 5.5v3M14 5.5v3"/>',
     # memory
-    'psram': CHIP + '<path d="M9.5 9h5M9.5 12h5M9.5 15h5"/>',
     'flash': CHIP + '<path d="M12.75 8.5 10.5 12h3l-2.25 3.5"/>',
     # display interfaces (screen + the bus that drives it)
     'disp-spi': SCREEN + '<path d="M3 20h3v-2.5h3V20h3v-2.5h3V20h3v-2.5h3"/>',                 # serial clock / data
@@ -28,8 +27,6 @@ ICONS = {
     'touch-res': '<path d="M16 3.5 19.5 7 10 16.5l-4.25 1.25L7 13.5z"/><path d="M14 5.5 17.5 9"/><path d="M4 21h16"/>',
     # wireless
     'wifi': '<path d="M8.46 15.46a5 5 0 0 1 7.08 0"/><path d="M5.5 12.5a9.2 9.2 0 0 1 13 0"/><path d="M2.5 9.5a13.4 13.4 0 0 1 19 0"/><circle cx="12" cy="19" r="1"/>',
-    'wifi6': '<path d="M6.17 16.17a4 4 0 0 1 5.66 0"/><path d="M3.4 13.4a8 8 0 0 1 11.2 0"/><circle cx="9" cy="19" r="1"/>'
-             '<circle cx="18.5" cy="9" r="2.5"/><path d="M16 9c0-3.4 1.4-5.2 4-5.5"/>',
     'bt': '<path d="m7 7.5 10 9-5 4.5V3l5 4.5-10 9"/>',
     # usb
     'usb-c': '<rect x="2.5" y="8" width="19" height="8" rx="4"/><path d="M8 12h8"/>',
@@ -64,11 +61,26 @@ ICONS = {
     'ir': '<path d="M5 15.5V11a3 3 0 0 1 6 0v4.5"/><path d="M3.5 15.5h9M6.5 15.5V20M9.5 15.5V18.5"/><path d="M14.5 8.5a4.5 4.5 0 0 1 0 6.5"/><path d="M17.5 6a8.5 8.5 0 0 1 0 11.5"/>',
     'imu': '<path d="M12 12V3.5M12 12l7.4 4.3M12 12l-7.4 4.3"/><path d="m10 5.5 2-2 2 2"/><path d="m16.6 17.7 2.8-1.4-.6-2.9"/><path d="m5.2 13.4-.6 2.9 2.8 1.4"/>',
     'case': '<path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/>',
+    # --- phase 6 additions
+    'psram': '<path d="M2.5 7.5h19a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-8.25v-1.75h-2.5v1.75H2.5a.5.5 0 0 1-.5-.5V8a.5.5 0 0 1 .5-.5z"/><rect x="4.5" y="10" width="4" height="3.5" rx=".5"/><rect x="10" y="10" width="4" height="3.5" rx=".5"/><rect x="15.5" y="10" width="4" height="3.5" rx=".5"/><path d="M5 16.5v2M8 16.5v2M16 16.5v2M19 16.5v2"/>',
+    'thread': '<circle cx="12" cy="12" r="9"/><path d="M12 21V9.5a2.5 2.5 0 1 0-2.5 2.5H17"/>',
+    'zigbee': '<circle cx="12" cy="12" r="9"/><path d="M7.5 7.5h9l-9 9h9"/>',
+    'matter': '<circle cx="12" cy="5" r="2"/><circle cx="5" cy="17.5" r="2"/><circle cx="19" cy="17.5" r="2"/><path d="M11 6.75 6 15.75M13 6.75l5 9M7 17.5h10"/><path d="M12 7v4.5l-5.2 3M12 11.5l5.2 3"/>',
+    'lora': '<path d="M12 10v11M9 21h6"/><circle cx="12" cy="8" r="1.5"/><path d="M8.5 4.5a5 5 0 0 0 0 7M15.5 4.5a5 5 0 0 1 0 7M5.75 2a8.5 8.5 0 0 0 0 12M18.25 2a8.5 8.5 0 0 1 0 12"/>',
+    'nfc': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 9.5a4 4 0 0 1 0 5M11 8a6.5 6.5 0 0 1 0 8M14 6.75a8.5 8.5 0 0 1 0 10.5"/>',
+    'keyboard': '<rect x="2" y="6" width="20" height="12" rx="1.5"/><path d="M5.5 9.5h.01M9 9.5h.01M12.5 9.5h.01M16 9.5h.01M18.5 9.5h.01M5.5 12.5h.01M9 12.5h.01M12.5 12.5h.01M16 12.5h.01M18.5 12.5h.01M7.5 15.25h9"/>',
+    'buzzer': '<circle cx="10" cy="12" r="7"/><circle cx="10" cy="12" r="2"/><path d="M19.5 8.5a5 5 0 0 1 0 7"/>',
+    'disp-epd': SCREEN + '<path d="M6.5 6.5h8M6.5 9h11M6.5 11.5h6"/><path d="M8 18h8M10 21h4"/>',
+    'charger': '<rect x="2.5" y="7" width="16.5" height="10" rx="1.5"/><path d="M21.5 10.5v3"/><path d="M11.5 8.75 8.75 12.25h3.5l-2.75 3.5"/>',
+    'dc-in': '<path d="M3 12h4"/><rect x="7" y="8" width="7" height="8" rx="1"/><path d="M14 10h6.5M14 14h6.5"/><circle cx="10.5" cy="12" r="1"/>',
+    'grove': '<rect x="3" y="7" width="18" height="10" rx="1"/><path d="M8 7V5h8v2"/><path d="M7 11v2M10.33 11v2M13.67 11v2M17 11v2"/>',
+    'als': '<circle cx="12" cy="12" r="3.5"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/>',
+    'gps': '<path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.5"/>',
 }
-COLORS = {  # category → colour (all ≥ 4.5:1 on #0e0f11, hue-separated)
-    'storage': '#4ade80', 'memory': '#fbbf24', 'display': '#60a5fa', 'touch': '#22d3ee', 'wireless': '#a78bfa',
-    'usb': '#e2e8f0', 'wired': '#fb923c', 'io': '#e879f9', 'audio': '#f472b6', 'camera': '#f87171',
-    'power': '#a3e635', 'misc': '#94a3b8',
+COLORS = {  # vivid, hue-separated; neighbouring categories (in display order) alternate warm / cool
+    'display': '#3d7bff', 'input': '#ff8a1f', 'psram': '#00e8d0', 'flash': '#ff3d9a', 'storage': '#2ee66b',
+    'wifi': '#ffd60a', 'bluetooth': '#9a6bff', 'radio': '#a8ff1f', 'usb': '#1fb6ff', 'wired': '#ff4545',
+    'io': '#e55cff', 'audio': '#ffab1f', 'camera': '#ff5c8a', 'power': '#5cff8f',
 }
 
 
@@ -92,17 +104,33 @@ def main():
         from features import DEF
         cat_of = {v[2]: v[0] for v in DEF.values()}
         name_of = {v[2]: v[1] for v in DEF.values()}
+        icon_of = {k: v[2] for k, v in DEF.items()}
+        samples = {'psram': ['8', '16', '32'], 'flash': ['4', '16', '32'], 'wifi': ['4', '6'], 'bt': ['4.2', '5', '5.3'], 'rj45': ['100']}
+        def sv(k, n, c, val=None):
+            b = f'<b class="fv">{val}</b>' if val else ''
+            return f'<span class="fi{" fhasv" if val else ""}" style="color:{c};--s:{n}px"><svg width="{n}" height="{n}"><use href="#f-{k}"/></svg>{b}</span>'
         cells = []
         for k in ICONS:
-            c = COLORS[cat_of.get(k, 'misc')]
-            sv = lambda n: f'<svg width="{n}" height="{n}" style="color:{c}"><use href="#f-{k}"/></svg>'
-            cells.append(f'<div class="c"><div class="r">{sv(16)}{sv(24)}{sv(48)}</div><b>{k}</b><i>{name_of.get(k, "")} · {cat_of.get(k, "misc")}</i></div>')
+            cat = cat_of.get(k, 'io'); c = COLORS[cat]
+            vals = samples.get(k, [None])
+            for val in vals:
+                cells.append(f'<div class="c"><div class="r">{sv(k, 16, c, val)}{sv(k, 24, c, val)}{sv(k, 48, c, val)}</div><b>{k}{" · " + val if val else ""}</b><i>{name_of.get(k, "")} · {cat}</i></div>')
         legend = ''.join(f'<span><i style="background:{v}"></i>{k}</span>' for k, v in COLORS.items())
+        # table-row mock: a typical feature strip at 18 px, ordered like the site
+        order = [k for k in DEF]
+        demo = [('disp-qspi', None), ('touch-cap', None), ('psram', '8'), ('flash', '16'), ('sd', None), ('wifi', '6'), ('bt', '5.3'), ('thread', None), ('zigbee', None),
+                ('matter', None), ('usb-c', None), ('rj45', '100'), ('rs485', None), ('i2c', None), ('speaker', None), ('mic', None), ('camera', None), ('battery', None), ('imu', None), ('knob', None)]
+        strip = ''.join(sv(k, 18, COLORS[cat_of.get(k, 'io')], v) for k, v in demo)
         html = f'''<!doctype html><meta charset="utf-8"><style>body{{background:#0e0f11;color:#e6e6e6;font:12px/1.3 sans-serif;margin:20px}}
 .g{{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}}.c{{background:#16181b;border:1px solid #24272c;border-radius:8px;padding:10px}}
-.r{{display:flex;align-items:flex-end;gap:14px;height:52px}}b{{display:block;margin-top:6px}}i{{color:#888;font-style:normal;font-size:11px}}
+.r{{display:flex;align-items:flex-end;gap:16px;height:52px}}b{{display:block;margin-top:6px}}i{{color:#888;font-style:normal;font-size:11px}}
+.fi{{position:relative;display:inline-flex;line-height:0}}.fi.fhasv{{margin-right:clamp(4px,calc(var(--s)*.32),9px)}}
+.fi .fv{{position:absolute;right:clamp(-9px,calc(var(--s)*-.32),-4px);bottom:-3px;background:currentColor;border-radius:3px;padding:1px 2px;margin:0;
+ font:800 clamp(8px,calc(var(--s)*.36),14px)/1 "JetBrains Mono",monospace;letter-spacing:-.04em;box-shadow:0 0 0 1.5px #0e0f11;-webkit-text-fill-color:#0b0c0e}}
+.strip{{background:#16181b;border:1px solid #24272c;border-radius:8px;padding:10px 12px;margin:0 0 16px;display:flex;gap:6px;flex-wrap:wrap}}
 .lg span{{display:inline-flex;align-items:center;gap:5px;margin:0 12px 10px 0}}.lg i{{width:12px;height:12px;border-radius:3px;display:inline-block}}</style>
-{s}<h3>Feature pictograms – 16 / 24 / 48 px</h3><div class="lg">{legend}</div><div class="g">{"".join(cells)}</div>'''
+{s}<h3>Feature pictograms – 16 / 24 / 48 px (value badges: PSRAM / Flash MB, Wi-Fi gen, Bluetooth ver, Ethernet Mbps)</h3><div class="lg">{legend}</div>
+<div class="strip">{strip}</div><div class="g">{"".join(cells)}</div>'''
         open(os.path.join(ROOT, 'build/pictograms-sheet.html'), 'w').write(html)
 
 

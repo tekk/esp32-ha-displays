@@ -1,0 +1,46 @@
+{
+ "vendor": "DFRobot",
+ "slug": "dfrobot",
+ "category": "DFRobot",
+ "listing": "https://www.dfrobot.com/",
+ "image_note": "official DFRobot product photo",
+ "_note": "Hand-curated from the official product / docs pages listed in each board's sources. spec_rows = verbatim vendor spec table rows. Empty = not stated.",
+ "boards": [
+  {
+   "id": "dfrobot-unihiker-k10",
+   "model": "UNIHIKER K10",
+   "title": "DFRobot UNIHIKER K10 – ESP32-S3 2.8\" AI coding board with camera, mic, speaker",
+   "series": "UNIHIKER",
+   "sources": [
+    "https://www.dfrobot.com/product-2904.html"
+   ],
+   "description": "",
+   "params": {
+    "size": "2.8\"",
+    "mcu": "ESP32-S3",
+    "mcu_family": "ESP32-S3",
+    "wifi": "Wi-Fi",
+    "camera": "2 MP camera",
+    "mic": "Microphone",
+    "speaker": "Speaker",
+    "rgbled": "RGB lights",
+    "sensors": "Onboard sensors",
+    "sku": "DFR0992"
+   },
+   "spec_rows": [
+    [
+     "Introduction",
+     "UNIHIKER K10 is an ESP32-S3-based AI coding board for STEM learning and maker projects. A 2.8-inch color display, 2MP camera, microphone, speaker, RGB lights and onboard sensors."
+    ]
+   ],
+   "images": [
+    "https://dfimg.dfrobot.com/enshop/image/data/DFR0992-EN/K10.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "Only the facts stated in the product introduction are listed; resolution / memory are not taken from third-party sources."
+   ]
+  }
+ ]
+}

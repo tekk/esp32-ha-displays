@@ -1,7 +1,7 @@
 {
   "name": "ESP32 Display Catalog",
   "short_name": "ESP32 Displays",
-  "description": "Offline catalog of Guition and Waveshare ESP32 display boards",
+  "description": "Offline catalog of ESP32 display boards (Guition, Waveshare, M5Stack, LilyGO, Elecrow, Seeed, Makerfabs, DFRobot)",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
