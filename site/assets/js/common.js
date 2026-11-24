@@ -83,6 +83,8 @@
   if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
   G.header = (active) => {
     const nav = [['index.html', 'Boards', 'models'], ['docs.html', 'Docs search', 'docs'], ['files.html', 'Files', 'files'], ['about.html', 'About', 'about']];
+    const ex = document.querySelector('body > header.topbar');     // static header (SEO) already in the page
+    if (ex) { ex.querySelectorAll('.nav a').forEach((a) => a.classList.toggle('active', a.getAttribute('href') === (nav.find((n) => n[2] === active) || [])[0])); return; }
     const el = document.createElement('header');
     el.className = 'topbar';
     el.innerHTML = `<a class="brand" href="index.html">ESP32 Display Catalog<small>Guition · Waveshare · M5Stack · LilyGO · Elecrow · Seeed · more</small></a>
@@ -90,10 +92,13 @@
     document.body.prepend(el);
   };
   G.footer = (meta) => {
+    const txt = `Data from the official manufacturer sites (<a href="https://www.guition.com/model-selection">guition.com</a>, the Guition file server <a href="https://pan.jczn1688.com/">pan.jczn1688.com</a>, waveshare.com, docs.m5stack.com, lilygo.cc, elecrow.com, seeedstudio.com, makerfabs.com, dfrobot.com) and community repositories. `
+      + `Unofficial, not affiliated with any manufacturer. Every parameter links to its source; empty = unknown. ${meta ? 'Generated ' + G.esc(meta.generated) + '.' : ''}`;
+    const ex = document.querySelector('body > footer.footer');      // static footer (SEO directory) already in the page
+    if (ex) { const p = document.createElement('p'); p.innerHTML = txt; ex.appendChild(p); return; }
     const el = document.createElement('footer');
     el.className = 'footer';
-    el.innerHTML = `Data scraped from <a href="https://www.guition.com/model-selection">guition.com</a>, the official Guition file server <a href="https://pan.jczn1688.com/">pan.jczn1688.com</a>, <a href="https://www.waveshare.com/">waveshare.com</a> / <a href="https://docs.waveshare.com/">docs.waveshare.com</a> and community repositories. `
-      + `Unofficial, not affiliated with Guition or Waveshare. Every parameter links to its source; empty = unknown. ${meta ? 'Generated ' + G.esc(meta.generated) + '.' : ''}`;
+    el.innerHTML = txt;
     document.body.appendChild(el);
   };
   G.highlight = (text, q) => {

@@ -1,0 +1,914 @@
+{
+ "vendor": "LilyGO",
+ "slug": "lilygo",
+ "category": "LilyGO (T-series)",
+ "image_note": "official LilyGO product photo (lilygo.cc)",
+ "_note": "AUTO-DISCOVERED by build/autoadd.py from official product pages (verbatim values, empty = not stated). Move an entry to data/curated/boards/ after review; curated entries always win.",
+ "boards": [
+  {
+   "id": "lilygo-t-deck-max",
+   "model": "T-Deck Max",
+   "title": "T-Deck Max",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/t-deck-max"
+   ],
+   "description": "Item Description MCU ESP32-S3 Dual-core LX7 microprocessor Wireless Connectivity 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE) Development Support Arduino, PlatformIO-IDE, ESP-IDF Flash 16MB PSRAM 8MB Additional Chip XL9555 IO expansion chip Onboard Functions Microphone, Speaker, 4G + GPS Display 3.1 inch Front-light Low Power",
+   "params": {
+    "mcu": "ESP32-S3 Dual-core LX7 microprocessor",
+    "wifi": "2.4 GHz Wi-Fi & Bluetooth 5 (LE)",
+    "flash": "16MB",
+    "psram": "8MB",
+    "resolution": "320x240",
+    "size": "3.1\"",
+    "display": "3.1 inch Front-light Low Power E-Paper",
+    "bt": "Bluetooth 5 (LE)",
+    "panel": "E-Paper",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi & Bluetooth 5 (LE)"
+    ],
+    [
+     "Development Support",
+     "Arduino, PlatformIO-IDE, ESP-IDF"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Additional Chip",
+     "XL9555 IO expansion chip"
+    ],
+    [
+     "Onboard Functions",
+     "Microphone, Speaker, 4G + GPS"
+    ],
+    [
+     "Display",
+     "3.1 inch Front-light Low Power E-Paper"
+    ],
+    [
+     "Resolution",
+     "320 x 240"
+    ],
+    [
+     "Drive Chip",
+     "GDEQ031T10"
+    ],
+    [
+     "LoRa Transceiver",
+     "SX1262 Low Power LoRa Transceiver"
+    ],
+    [
+     "Transmit Power",
+     "+22dBm"
+    ],
+    [
+     "Frequency Options",
+     "433 / 868 / 915MHz"
+    ],
+    [
+     "Standard Express",
+     "25-30 Days"
+    ],
+    [
+     "YunTu Express",
+     "10-20 Days ( Company name can't be used consignee )"
+    ],
+    [
+     "DHL",
+     "10-17 Days"
+    ],
+    [
+     "FedEx",
+     "10-17 Days"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/LILYGO-T-DECK-MA_7.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Deck-Pro-MAX",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Deck-Pro-MAX",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  },
+  {
+   "id": "lilygo-t-display-c5",
+   "model": "T-Display C5",
+   "title": "T-Display C5",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/t-display-c5"
+   ],
+   "description": "Specifications MCU ESP32-C5, 2.4 and 5 GHz dual-band Wi-Fi 6 Wireless Connectivity Wi-Fi 802.11 ax/b/g/n, BLE 5 Platform Arduino-ide, ESP-IDF Onboard Functions 16MB Flash + 8MB PSRAM Display 1.9 inch ST7789 IPS LCD Resolution: 170 x 320, RGB565; 4-Wire SPI, 3.3V Battery Management Low Power BMU: AXP2602 LP Core Support",
+   "params": {
+    "mcu": "ESP32-C5, 2.4 and 5 GHz dual-band Wi-Fi 6",
+    "wifi": "Wi-Fi 802.11 ax/b/g/n, BLE 5",
+    "dimensions": "62 x 26 x 10mm",
+    "resolution": "170x320",
+    "flash": "16MB",
+    "psram": "8MB",
+    "size": "1.9\"",
+    "display": "1.9 inch ST7789 IPS LCD Resolution: 170 x 320, RGB565; 4-Wire SPI, 3.3V",
+    "bt": "BLE 5",
+    "panel": "IPS",
+    "mcu_family": "ESP32-C5"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-C5, 2.4 and 5 GHz dual-band Wi-Fi 6"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-Fi 802.11 ax/b/g/n, BLE 5"
+    ],
+    [
+     "Platform",
+     "Arduino-ide, ESP-IDF"
+    ],
+    [
+     "Onboard Functions",
+     "16MB Flash + 8MB PSRAM"
+    ],
+    [
+     "Display",
+     "1.9 inch ST7789 IPS LCD Resolution: 170 x 320, RGB565; 4-Wire SPI, 3.3V"
+    ],
+    [
+     "Battery Management",
+     "Low Power BMU: AXP2602"
+    ],
+    [
+     "LP Core",
+     "Supports ULP LP core (RISC-V) for independent sensor operation during deep sleep"
+    ],
+    [
+     "Dimensions",
+     "62 x 26 x 10mm"
+    ],
+    [
+     "USB Supply",
+     "5V 500mA"
+    ],
+    [
+     "Resolution",
+     "170 x 320, RGB565;"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/LILYGO-T-DISPLAY-C5_10.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Display-C5",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Display-C5",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Impulse-Plus",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Impulse-Plus",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  },
+  {
+   "id": "lilygo-t-display-s3-amoled-ds",
+   "model": "T-Display S3 AMOLED (DS)",
+   "title": "T-Display S3 AMOLED (DS)",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/t-display-s3-amoled-1-64"
+   ],
+   "description": "T-Display S3 AMOLED series in different size version —————————————— Specifications [Common part] MCU ESP32-S3R8 Dual-core LX7 microprocessor Wireless Connectivity 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE) Development Arduino, PlatformlO-IDE, ESP-IDF Flash 16MB PSRAM 8MB Bat Voltage Detection IO04 Specifications [Differen",
+   "params": {
+    "mcu": "ESP32-S3R8 Dual-core LX7 microprocessor",
+    "wifi": "2.4 GHz Wi-Fi & Bluetooth 5 (LE)",
+    "flash": "16MB",
+    "psram": "8MB",
+    "resolution": "466x466",
+    "driver_ic": "SH8601",
+    "panel": "AMOLED",
+    "display": "AMOLED",
+    "bt": "Bluetooth 5 (LE)",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3R8 Dual-core LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi & Bluetooth 5 (LE)"
+    ],
+    [
+     "Development",
+     "Arduino, PlatformlO-IDE, ESP-IDF"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Bat Voltage Detection",
+     "IO04"
+    ],
+    [
+     "Resolution",
+     "466 x 466 px"
+    ],
+    [
+     "Bus Interface",
+     "QSPI"
+    ],
+    [
+     "Driver IC",
+     "SH8601"
+    ],
+    [
+     "Screen type",
+     "AMOLED"
+    ],
+    [
+     "Compatibility library",
+     "Arduino_ GFX"
+    ],
+    [
+     "Room for improvements",
+     "Wish shipping was not through some sketchy delivery partner and was faster. (Said was out for delivery for 2 days, called and said, \"out for delivery means we will deliver it at some point in the next 5 days\" )"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T-Display-AMOLED-1_8_dab52018-1a9a-4f93-9f98-df57b5984f42.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Display-AMOLED-1.64",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Display-AMOLED-1.64",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Display-S3-AMOLED-1.43",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Display-S3-AMOLED-1.43",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  },
+  {
+   "id": "lilygo-t-dongle-s3-plus",
+   "model": "T-Dongle S3 Plus",
+   "title": "T-Dongle S3 Plus",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/t-dongle-s3-plus"
+   ],
+   "description": "Specifications MCU ESP32-S3, Xtensa LX7 microprocessor Wireless Connectivity Wi-Fi 802.11 b/g/n, bluetooth5 Platform Arduino-ide, PlatformIO-ide, Micropython Onboard Functions 16M Flash, Boot button, TF card, IR infrared emission and reception, RGB, Microphone Display 0.96 inch Full color ST7735 IPS LCD, Resolution: 80",
+   "params": {
+    "mcu": "ESP32-S3, Xtensa LX7 microprocessor",
+    "wifi": "Wi-Fi 802.11 b/g/n, bluetooth5",
+    "dimensions": "18 x 58 x 9mm",
+    "flash": "16MB",
+    "size": "0.96\"",
+    "resolution": "80x160",
+    "display": "0.96 inch Full color ST7735 IPS LCD, Resolution: 80 x 160, 0.96 diagonal",
+    "bt": "bluetooth5",
+    "panel": "IPS",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3, Xtensa LX7 microprocessor"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-Fi 802.11 b/g/n, bluetooth5"
+    ],
+    [
+     "Platform",
+     "Arduino-ide, PlatformIO-ide, Micropython"
+    ],
+    [
+     "Onboard Functions",
+     "16M Flash, Boot button, TF card, IR infrared emission and reception, RGB, Microphone"
+    ],
+    [
+     "Display",
+     "0.96 inch Full color ST7735 IPS LCD, Resolution: 80 x 160, 0.96 diagonal"
+    ],
+    [
+     "Encryption Chip",
+     "ATECC508A High-security Encryption Chip, Support HA-256, ECDSA, ECDH, RNG, Secure Boot"
+    ],
+    [
+     "Shell & Interface",
+     "Transparent shell, USB Type-A"
+    ],
+    [
+     "Features Note",
+     "Plus Version adds new features: Encryption, IR, and Mic"
+    ],
+    [
+     "Dimensions",
+     "18 x 58 x 9mm"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T-Dongle-S3-Plus-LILYGO_2.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T-Dongle-S3",
+     "url": "https://github.com/Xinyuan-LilyGO/T-Dongle-S3",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  },
+  {
+   "id": "lilygo-t-wrist-e-paper-1-54-inch-display",
+   "model": "T-Wrist E-paper 1.54 Inch Display",
+   "title": "T-Wrist E-paper 1.54 Inch Display",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/t-wrist-e-paper-1-54-inch-display"
+   ],
+   "description": "Specifications MCU ESP32 FLASH 4MB Bus Interfaces UART , SPL , 12C , CAN , 12S , SDIO Wireless Connectivity Wi-fi , Bluetooth V4.2 Optional version Basic / GNSS / Backlight Onboard functions Buttons : RST + 1035 , battery power detection 1 . 54 Inch SPI E-paper Display Grey level : 2 Resolution 200x200 Full refresh",
+   "params": {
+    "mcu": "ESP32",
+    "flash": "4MB",
+    "wifi": "Wi-fi , Bluetooth V4.2",
+    "resolution": "200x200",
+    "mcu_family": "ESP32",
+    "size": "1.54\""
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32"
+    ],
+    [
+     "FLASH",
+     "4MB"
+    ],
+    [
+     "Bus Interfaces",
+     "UART , SPL , 12C , CAN , 12S , SDIO"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-fi , Bluetooth V4.2"
+    ],
+    [
+     "Optional version",
+     "Basic / GNSS / Backlight"
+    ],
+    [
+     "Onboard functions",
+     "Buttons : RST + 1035 , battery power detection"
+    ],
+    [
+     "Resolution",
+     "200x200"
+    ],
+    [
+     "Full refresh time",
+     "2s"
+    ],
+    [
+     "Vibrating DC Motor",
+     "Strong vibration , low noise , fast speed"
+    ],
+    [
+     "LG77 GNSS module",
+     "supports GPS , GLONASS , Beidou"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/products/T-WristE-paper8.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/E-Paper-watch",
+     "url": "https://github.com/Xinyuan-LilyGO/E-Paper-watch",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  },
+  {
+   "id": "lilygo-t4",
+   "model": "T4",
+   "title": "T4",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/t4"
+   ],
+   "description": "Specifications MCU ESP32 Flash 4MB PSRAM 8MB Wireless Connectivity Wi-fi 802.11 b/g/n, BL V4.2+BLE Programming Platform Arduino-ide, Micropython Serial chip CH9102F QFN24 Display Optional 2. 2 Onboard functions Buttons: Boot+RST battery power detection ILI9341 TFT LCD Resolution 320x240 support 65K color display 4-wir",
+   "params": {
+    "mcu": "ESP32",
+    "flash": "4MB",
+    "psram": "8MB",
+    "wifi": "Wi-fi 802.11 b/g/n, BL V4.2+BLE",
+    "power": "3.3V",
+    "driver_ic": "ILI9341",
+    "display": "2. 2",
+    "resolution": "320x240",
+    "mcu_family": "ESP32"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32"
+    ],
+    [
+     "Flash",
+     "4MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-fi 802.11 b/g/n, BL V4.2+BLE"
+    ],
+    [
+     "Programming Platform",
+     "Arduino-ide, Micropython"
+    ],
+    [
+     "Serial chip",
+     "CH9102F QFN24"
+    ],
+    [
+     "Display Optional",
+     "2. 2"
+    ],
+    [
+     "Onboard functions",
+     "Buttons: Boot+RST battery power detection"
+    ],
+    [
+     "ILI9341 TFT LCD",
+     "Resolution 320x240"
+    ],
+    [
+     "Working Power Supply",
+     "3.3V"
+    ],
+    [
+     "Driver IC",
+     "ILI9341"
+    ],
+    [
+     "JST Connect type",
+     "JST GH 1. 25mm"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/products/T4V1.3ILI93412.4inchLCD4.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/TTGO-T4-TestCode",
+     "url": "https://github.com/Xinyuan-LilyGO/TTGO-T4-TestCode",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  },
+  {
+   "id": "lilygo-t5-e-paper",
+   "model": "T5 e-Paper",
+   "title": "T5 e-Paper",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/t5-4-7-inch-e-paper-v2-3"
+   ],
+   "description": "Due to the problem of the characteristics of the ink screen, it cannot be partially refreshed for a long time, otherwise, it will leave residual images and lead to irreversible damage. Specifications MCU ESP32-S3-WROOM-1-N16R8 Wireless Connectivity Wi-fi Bluetooth V5.0 Programming Environment Arduino-ide VS Code Onboar",
+   "params": {
+    "mcu": "ESP32-S3-WROOM-1-N16R8",
+    "wifi": "Wi-fi Bluetooth V5.0",
+    "flash": "16MB",
+    "psram": "8MB",
+    "driver_ic": "EDO47TC1",
+    "size": "4.7\"",
+    "resolution": "540x950",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3-WROOM-1-N16R8"
+    ],
+    [
+     "Wireless Connectivity",
+     "Wi-fi Bluetooth V5.0"
+    ],
+    [
+     "Programming Environment",
+     "Arduino-ide VS Code"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Driver IC",
+     "EDO47TC1"
+    ],
+    [
+     "Size",
+     "4.7 inch"
+    ],
+    [
+     "Resolution",
+     "540 x 950pixels"
+    ],
+    [
+     "Ultra Wide viewing angle",
+     "low power consumption"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/LILYGO-T5-E-PAPER_1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  },
+  {
+   "id": "lilygo-t5-e-paper-basic",
+   "model": "T5 e-Paper Basic",
+   "title": "T5 e-Paper Basic",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/t5-e-paper-basic"
+   ],
+   "description": "Specifications MCU ESP32-S3 Flash 16MB PSRAM 8MB Wireless Connectivity 2.4 GHz Wi-Fi, BLE Programming Environment Arduino-IDE, VS Code Onboard Functions I2C AXP2602 battery gauge, I/O expander XL9555 and TF Card Display 4.7-inch Ultra-low Power E-paper, Driver IC: ED047TC1, Size: 4.7 inch, Gray levels: 16, Resolution:",
+   "params": {
+    "mcu": "ESP32-S3",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi, BLE",
+    "size": "4.7\"",
+    "resolution": "540x960",
+    "display": "4.7-inch Ultra-low Power E-paper, Driver IC: ED047TC1, Size: 4.7 inch, Gray levels: 16, Resolution: 540 x 960, Ultra wide viewing angle, low power consumption",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi, BLE"
+    ],
+    [
+     "Programming Environment",
+     "Arduino-IDE, VS Code"
+    ],
+    [
+     "Onboard Functions",
+     "I2C AXP2602 battery gauge, I/O expander XL9555 and TF Card"
+    ],
+    [
+     "Display",
+     "4.7-inch Ultra-low Power E-paper, Driver IC: ED047TC1, Size: 4.7 inch, Gray levels: 16, Resolution: 540 x 960, Ultra wide viewing angle, low power consumption"
+    ],
+    [
+     "Color",
+     "Gray / Yellow"
+    ],
+    [
+     "Buttons",
+     "Build-in Button x 5 + BOOT (IO00) + Reset"
+    ],
+    [
+     "Others",
+     "USB, Battery area"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T5-Epaper_4.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T5-E-Paper-Basic",
+     "url": "https://github.com/Xinyuan-LilyGO/T5-E-Paper-Basic",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  },
+  {
+   "id": "lilygo-t5-e-paper-s3-pro-lite",
+   "model": "T5 E-Paper S3 Pro Lite",
+   "title": "T5 E-Paper S3 Pro Lite",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/t5-e-paper-s3-pro-lite"
+   ],
+   "description": "This Lite version features a streamlined design, with the GPS and LoRa modules removed. If you require these functionalities, please check out our [Pro Version/ Version with GPS] for more details. Anti-Glare(AG)Glass TreatmentReduce glare and reflections, enhance visibility Specifications MCU ESP32-S3-WROOM-1 Flash 16M",
+   "params": {
+    "mcu": "ESP32-S3-WROOM-1",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi& BLE 5",
+    "driver_ic": "ED047TC1",
+    "size": "4.7\"",
+    "resolution": "540x960",
+    "bt": "BLE 5",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32-S3-WROOM-1"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wireless Connectivity",
+     "2.4 GHz Wi-Fi& BLE 5"
+    ],
+    [
+     "Programming Environment",
+     "Arduino-IDE, VS Code"
+    ],
+    [
+     "Onboard function",
+     "RTc, Warm-toned backlight"
+    ],
+    [
+     "Battery Management Chip",
+     "BQ25896, BQ27220"
+    ],
+    [
+     "Driver IC",
+     "ED047TC1"
+    ],
+    [
+     "Size",
+     "4.7 inch"
+    ],
+    [
+     "Resolution",
+     "540 x 960"
+    ],
+    [
+     "P.S.",
+     "After requesting express shipping, delivery to Germany was regarding the distance super fast!"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T5-4.7-S3-PROLite-LILYGO_8.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Xinyuan-LilyGO/T5S3-4.7-e-paper-PRO",
+     "url": "https://github.com/Xinyuan-LilyGO/T5S3-4.7-e-paper-PRO",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  },
+  {
+   "id": "lilygo-t5-v2-4",
+   "model": "T5 V2.4",
+   "title": "T5 V2.4",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/t5-v2-4"
+   ],
+   "description": "Specifications MCU ESP32 Flash 4MB Wireless Protocol 2.4GHz Wi-Fi + Bluetooth V4.2 + BLE Onboard Functions Reset + Boot Button, Support TF Card Power Supply Support USB/3.7V Lipo battery power supply, battery switch Display 2.13 inch Low Power E-PAPER SPI Display, Resolution: 122 x 250, Work Temp: 0 ~ 50°C Display Vers",
+   "params": {
+    "mcu": "ESP32",
+    "flash": "4MB",
+    "wifi": "2.4GHz Wi-Fi + Bluetooth V4.2 + BLE",
+    "power": "Support USB/3.7V Lipo battery power supply, battery switch",
+    "size": "2.13\"",
+    "resolution": "122x250",
+    "display": "2.13 inch Low Power E-PAPER SPI Display, Resolution: 122 x 250, Work Temp: 0 ~ 50°C",
+    "mcu_family": "ESP32"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32"
+    ],
+    [
+     "Flash",
+     "4MB"
+    ],
+    [
+     "Wireless Protocol",
+     "2.4GHz Wi-Fi + Bluetooth V4.2 + BLE"
+    ],
+    [
+     "Onboard Functions",
+     "Reset + Boot Button, Support TF Card"
+    ],
+    [
+     "Power Supply",
+     "Support USB/3.7V Lipo battery power supply, battery switch"
+    ],
+    [
+     "Display",
+     "2.13 inch Low Power E-PAPER SPI Display, Resolution: 122 x 250, Work Temp: 0 ~ 50°C"
+    ],
+    [
+     "Display Version",
+     "DEPG0213BN (Gray: 2) / GDEM0213B74 (Gray: 4)"
+    ],
+    [
+     "Model",
+     "Q299-A / Q300-A"
+    ],
+    [
+     "Note",
+     "Different display require the corresponding github driver software."
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/LILYGO-T5-EPAPER_2.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  },
+  {
+   "id": "lilygo-t3-s3-e-paper",
+   "model": "T3 S3 E-paper",
+   "title": "T3 S3 E-paper",
+   "series": "",
+   "sources": [
+    "https://lilygo.cc/products/ts-s3-epaper"
+   ],
+   "description": "Specifications Support USB/3.7V Lipo battery power supply, Battery switch MCU ESP32S3FH4R2 Flash 4MB PSRAM 2MB Wireless protocol 2.4GHz Wi-Fi + Bluetooth 5.0 Onboard functions Reset + Boot Button, Support TF Card 2.13 inch E-Paper DEPG0213BN Resolution 250 x 122 Display size 48.55 x 23.70mm Sample Code For Reference [",
+   "params": {
+    "mcu": "ESP32S3FH4R2",
+    "flash": "4MB",
+    "psram": "2MB",
+    "wifi": "2.4GHz Wi-Fi + Bluetooth 5.0",
+    "resolution": "250x122",
+    "display": "48.55 x 23.70mm",
+    "bt": "Bluetooth 5.0",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "MCU",
+     "ESP32S3FH4R2"
+    ],
+    [
+     "Flash",
+     "4MB"
+    ],
+    [
+     "PSRAM",
+     "2MB"
+    ],
+    [
+     "Wireless protocol",
+     "2.4GHz Wi-Fi + Bluetooth 5.0"
+    ],
+    [
+     "Onboard functions",
+     "Reset + Boot Button, Support TF Card"
+    ],
+    [
+     "Resolution",
+     "250 x 122"
+    ],
+    [
+     "Display size",
+     "48.55 x 23.70mm"
+    ]
+   ],
+   "images": [
+    "https://lilygo.cc/cdn/shop/files/T3-S3-Epaper-lilygo_11.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "lilygo"
+   }
+  }
+ ]
+}

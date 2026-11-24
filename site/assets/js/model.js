@@ -12,7 +12,8 @@
   Promise.all([getJSON('data/models.json'), getJSON('data/meta.json')]).then(([models, meta]) => {
     const m = models.find((x) => x.id === id) || models.find((x) => x.model === id);
     if (!m) { $('#app').innerHTML = `<div class="empty"><pre>404: board "${esc(id)}" not found</pre><br><a href="index.html">← back to catalog</a></div>`; return; }
-    document.title = m.model + ' – ESP32 Display Catalog';
+    document.title = m.model + ' – ' + m.vendor + ' ESP32 display board – ESP32 Display Catalog';
+    const canon = document.createElement('link'); canon.rel = 'canonical'; canon.href = new URL('board/' + encodeURIComponent(m.id) + '/', location.href).href; document.head.appendChild(canon);
     const L = meta.field_labels;
     const p = m.params;
     const srcFor = (key) => (m.specs_raw.find((r) => r.key === key) || {}).source;
@@ -53,7 +54,7 @@
       <div class="toolbar"><a href="index.html">← catalog</a><span class="na">/ ${esc(p.category || m.vendor)} /</span><b>${esc(m.model)}</b></div>
       <div class="dhead">
         <div class="gallery">${imgs.length ? `<div class="main" id="gmain" role="img" aria-label="${esc(m.model)}" style="background-image:url('${esc(imgs[0].src)}')"></div><div class="cap" id="gcap">${capOf(imgs[0])}</div>
-          <div class="thumbs">${imgs.map((im, i) => `<img src="${esc(im.thumb || im.src)}" data-i="${i}" class="${i ? '' : 'sel'}" loading="lazy" alt="${esc(im.kind)}" title="${esc(im.kind + (im.note ? ' – ' + im.note : ''))}">`).join('')}</div>` : '<div class="main empty"></div><div class="cap">No photo available for this board.</div>'}</div>
+          <div class="thumbs">${imgs.map((im, i) => `<img src="${esc(im.thumb || im.src)}" data-i="${i}" class="${i ? '' : 'sel'}" loading="lazy" decoding="async" width="64" height="50" alt="${esc(m.model + ' – ' + im.kind)}" title="${esc(im.kind + (im.note ? ' – ' + im.note : ''))}">`).join('')}</div>` : '<div class="main empty"></div><div class="cap">No photo available for this board.</div>'}</div>
         <div class="dinfo">
           <h1>${esc(m.model)}</h1>
           <div class="sub">${esc(m.vendor)} · ${esc(m.title || '')}${m.aliases.length ? ' · aka ' + esc(m.aliases.join(', ')) : ''}</div>

@@ -1032,6 +1032,14 @@
 "original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/680/Sch_M5_AtomS3R_v0.4.1.pdf",
 "kind": "vendor-file"
 },
+"https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/M5StickC/20191118__StickC_A04_3110_Schematic_Rebuild_PinMap.pdf": {
+"type": "local",
+"url": "files/m5stack/20191118__StickC_A04_3110_Schematic_Rebuild_PinMap_02ea94.pdf",
+"size": 241675,
+"sha256": "695995060b3d1a2e6a18d0db64f370bc701066cfdc215b2839f96c3aba7f3d19",
+"original": "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/M5StickC/20191118__StickC_A04_3110_Schematic_Rebuild_PinMap.pdf",
+"kind": "vendor-file"
+},
 "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/481/Sch_M5Cardputer.pdf": {
 "type": "local",
 "url": "files/m5stack/Sch_M5Cardputer_2428c4.pdf",
@@ -1056,12 +1064,12 @@
 "original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/522/Sch_M5StampS3_v0.2.pdf",
 "kind": "vendor-file"
 },
-"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1178/Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58.pdf": {
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1127/Sch_M5Cardputer.pdf": {
 "type": "local",
-"url": "files/m5stack/Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58_59af01.pdf",
-"size": 878155,
-"sha256": "9553f5ee22b6e5f29a385388192e42c5ff76f16281b6f7ea9418f7b62a2d48b0",
-"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1178/Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58.pdf",
+"url": "files/m5stack/Sch_M5Cardputer_737273.pdf",
+"size": 717743,
+"sha256": "6016c1fe6099b9e3f0d0c88f07a3fba1aa44a3da8a7a91dd7040ad0fffa2041e",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1127/Sch_M5Cardputer.pdf",
 "kind": "vendor-file"
 },
 "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1150/Sch_StampS3_v0.3.3.pdf": {
@@ -1072,6 +1080,14 @@
 "original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1150/Sch_StampS3_v0.3.3.pdf",
 "kind": "vendor-file"
 },
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1178/Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58_59af01.pdf",
+"size": 878155,
+"sha256": "9553f5ee22b6e5f29a385388192e42c5ff76f16281b6f7ea9418f7b62a2d48b0",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1178/Sch_M5CardputerAdv_v1.0_2025_06_20_17_19_58.pdf",
+"kind": "vendor-file"
+},
 "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/512/Sch_M5StickC_Plus2_v0.5.pdf": {
 "type": "local",
 "url": "files/m5stack/Sch_M5StickC_Plus2_v0.5_804d11.pdf",
@@ -1080,12 +1096,44 @@
 "original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/512/Sch_M5StickC_Plus2_v0.5.pdf",
 "kind": "vendor-file"
 },
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/669/k016-p-StickC-Plus-sche.pdf": {
+"type": "local",
+"url": "files/m5stack/k016-p-StickC-Plus-sche_b62aef.pdf",
+"size": 560672,
+"sha256": "da0717dc357e0480f0eb4e174f2a93db6a3d00b2e0b70deed5f295a9757943cb",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/669/k016-p-StickC-Plus-sche.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1234/K016-P-SE-SCH_StickC-Plus-SE_SCH.pdf": {
+"type": "local",
+"url": "files/m5stack/K016-P-SE-SCH_StickC-Plus-SE_SCH_244608.pdf",
+"size": 360951,
+"sha256": "49be11fda8fa216cdd316a16db4a2eca30b6654f284c0aca52a465cbdea6c46f",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1234/K016-P-SE-SCH_StickC-Plus-SE_SCH.pdf",
+"kind": "vendor-file"
+},
 "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/499/Sch_M5Dial.pdf": {
 "type": "local",
 "url": "files/m5stack/Sch_M5Dial_8e8492.pdf",
 "size": 669195,
 "sha256": "66be81ef2255363bbac105bffb959c33daad6239a0caa6e17f68660d1f6cd99d",
 "original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/499/Sch_M5Dial.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/518/Sch_VAMeter_V1.2.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_VAMeter_V1.2_da876a.pdf",
+"size": 440608,
+"sha256": "9bac1af602f2ee93af2c794ee9ccc473ee2f21645af8eb8040daf87acab8ef2a",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/518/Sch_VAMeter_V1.2.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/518/Sch_VAMeter_base_V1.0.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_VAMeter_base_V1.0_569e7c.pdf",
+"size": 402282,
+"sha256": "0d7cbecb4d6dc8349bb48200ede42f68ce3840eb7c85f0d75e155e593277d28c",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/518/Sch_VAMeter_base_V1.0.pdf",
 "kind": "vendor-file"
 },
 "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/coreink/coreink_sch.pdf": {
@@ -1104,12 +1152,44 @@
 "original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/480/M5-Core-Schematic_20171206.pdf",
 "kind": "vendor-file"
 },
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/644/CORE2_V1.0_SCH.pdf": {
+"type": "local",
+"url": "files/m5stack/CORE2_V1.0_SCH_9bd8b2.pdf",
+"size": 292499,
+"sha256": "4a59d16291c7de9d9deda31fe154c8b5ac3c8f92209f6f8206d72f97afeea94f",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/644/CORE2_V1.0_SCH.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/CORE2_V1.0_SCH.pdf": {
+"type": "local",
+"url": "files/m5stack/CORE2_V1.0_SCH_d144d6.pdf",
+"size": 292499,
+"sha256": "4a59d16291c7de9d9deda31fe154c8b5ac3c8f92209f6f8206d72f97afeea94f",
+"original": "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/CORE2_V1.0_SCH.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1226/SCH_M5GO_Bottom2_SCH_Main_V1.3_AWS_Version_2026_01_30_10_06_42.pdf": {
+"type": "local",
+"url": "files/m5stack/SCH_M5GO_Bottom2_SCH_Main_V1.3_AWS_Version_2026_01_30_10_06_42_737de7.pdf",
+"size": 268446,
+"sha256": "10e007d004efaa888ee524af118f184d6eab7b1b8faef53bd2847cacfc6766ef",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1226/SCH_M5GO_Bottom2_SCH_Main_V1.3_AWS_Version_2026_01_30_10_06_42.pdf",
+"kind": "vendor-file"
+},
 "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/486/Sch_Core2_v1.1_2023-07-20.pdf": {
 "type": "local",
 "url": "files/m5stack/Sch_Core2_v1.1_2023-07-20_bcf2c2.pdf",
 "size": 1207439,
 "sha256": "8d24bd11700bb5f0af8f2c8eaa609cb39653cea69d898fd9961a39ff257a099b",
 "original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/486/Sch_Core2_v1.1_2023-07-20.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/486/core2_v1.3_SCH_2025_11_14_09_40_33.pdf": {
+"type": "local",
+"url": "files/m5stack/core2_v1.3_SCH_2025_11_14_09_40_33_d52256.pdf",
+"size": 252603,
+"sha256": "7b5def96336139b8ff3b91871ffa476c9b8cd845725263db82e4a8ad8881cea9",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/486/core2_v1.3_SCH_2025_11_14_09_40_33.pdf",
 "kind": "vendor-file"
 },
 "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/490/Sch_M5_CoreS3_v1.0.pdf": {
@@ -1136,6 +1216,14 @@
 "original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/498/Sch_M5_CoreS3_SE_v1.0.pdf",
 "kind": "vendor-file"
 },
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/464/Sch_Module-Gateway_H2_v0.4.pdf": {
+"type": "local",
+"url": "files/m5stack/Sch_Module-Gateway_H2_v0.4_5e5ee8.pdf",
+"size": 310518,
+"sha256": "32cc500d9d5eaab2258bbc4bc3c87b4d836c4def122d68c953e45243f9a32e47",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/464/Sch_Module-Gateway_H2_v0.4.pdf",
+"kind": "vendor-file"
+},
 "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/647/Tough-Schematics-PDF.pdf": {
 "type": "local",
 "url": "files/m5stack/Tough-Schematics-PDF_972654.pdf",
@@ -1150,6 +1238,14 @@
 "size": 226342,
 "sha256": "595a3eeaa636df7ef4208b31395d03d99db272bbe442e3233f4254d16bbb641a",
 "original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/647/Tough-Ext-Board-Schematics-PDF.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1302/CoreP4X_SCH_20261112.pdf": {
+"type": "local",
+"url": "files/m5stack/CoreP4X_SCH_20261112_075fe1.pdf",
+"size": 991573,
+"sha256": "60e1c626797a75300ec14fb94dc395643dbc72dd6de551c54c14154e2be07ecf",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1302/CoreP4X_SCH_20261112.pdf",
 "kind": "vendor-file"
 },
 "https://files.waveshare.com/wiki/ESP32-P4-WIFI6-Touch-LCD-XC/ESP32-P4-WIFI6-Touch-LCD-XC-Schematic.pdf": {
@@ -1184,6 +1280,22 @@
 "kind": "vendor-file",
 "type": "local",
 "url": "files/waveshare/Esp32-p4_technical_reference_manual_en.pdf"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1267/PaperMono_SCH_V0.6.2_20260522.pdf": {
+"type": "local",
+"url": "files/m5stack/PaperMono_SCH_V0.6.2_20260522_c9af43.pdf",
+"size": 1462039,
+"sha256": "b5abecac97cb043a6d1af7a673f2111d40d9254b0b5108635cb924d9b37ad6fa",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1267/PaperMono_SCH_V0.6.2_20260522.pdf",
+"kind": "vendor-file"
+},
+"https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1239/C151-SCH_PaperColor_V0.5_SCH_PDF_20260424_EN_2026_04_24_11_01_17.pdf": {
+"type": "local",
+"url": "files/m5stack/C151-SCH_PaperColor_V0.5_SCH_PDF_20260424_EN_2026_04_24_11_01_17_e3c1b1.pdf",
+"size": 900183,
+"sha256": "9f274d721209b2336e51407853b90f5423807538a6231d2044a6702234b0dd9e",
+"original": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1239/C151-SCH_PaperColor_V0.5_SCH_PDF_20260424_EN_2026_04_24_11_01_17.pdf",
+"kind": "vendor-file"
 },
 "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/m5paper/M5_PAPER_SCH.pdf": {
 "type": "local",

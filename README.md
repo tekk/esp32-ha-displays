@@ -10,14 +10,14 @@ Statický, vyhľadávateľný katalóg všetkých displejových dosiek **Guition
 | | |
 |---|---|
 | `site/` | hotový statický web (nasadzuje sa iba tento priečinok) / the deployable static site |
-| `site/data/models.json` | 185 modelov (Guition 97, Waveshare 24, Elecrow 19, M5Stack 17, LilyGO 17, Seeed Studio 8, Makerfabs 2, DFRobot 1), normalizované parametre + zdroj (URL) ku každej hodnote |
+| `site/data/models.json` | 280 modelov (Guition 97, Waveshare 78, M5Stack 39, LilyGO 28, Elecrow 19, Makerfabs 10, Seeed Studio 8, DFRobot 1; z toho 95 automaticky pridaných), normalizované parametre + zdroj (URL) ku každej hodnote |
 | `site/data/archives.json` | 60 súborov z pan.jczn1688.com (8,7 GB) s mapovaním na modely |
 | `site/data/manifests/<slug>.json` | kompletný strom súborov každého archívu (`path,size,blob,kind`) |
 | `site/docs/b/` | extrahovaná dokumentácia (schémy, datasheety, README, vybrané demo zdrojáky), deduplikovaná podľa obsahu |
 | `site/data/search-*.json` | predpočítané MiniSearch indexy (modely + fulltext dokumentácie) |
 | `build/` | scraper + build skripty, limity v `build/config.json` |
 | `data/curated/` | ručne overené doplnky so zdrojom: `boards/<vendor>.json` (dosky ďalších výrobcov, formát nižšie), Waveshare, komunitné repozitáre, varianty JC1060P470, pinouty, `photos.json` (overené fotky konkrétnych variantov) |
-| `data/auto/` | výsledky mesačného updatu (automaticky nájdené GitHub repozitáre, stav zrkadlených repozitárov, Waveshare kandidáti) |
+| `data/auto/` | `boards/<vendor>.json` = automaticky pridané dosky (build/autoadd.py), výsledky mesačného updatu (automaticky nájdené GitHub repozitáre, stav zrkadlených repozitárov, Waveshare kandidáti) |
 | `site/assets/img/hd`, `th` | fotky dosiek (WebP ≤ 1600 px, < 1 MB) + náhľady (≤ 400 px); zdrojová URL každej fotky je v `models.json → images[].orig/source_page` |
 | `site/assets/fonts/` | self-hosted Roboto Condensed, Montserrat, JetBrains Mono, Meslo LG (woff2 + licencie) |
 | `tests/` | `check_links.py` (lokálne odkazy, limity Pages), `e2e.py` (headless Chrome + screenshoty) |
@@ -39,6 +39,22 @@ Statický, vyhľadávateľný katalóg všetkých displejových dosiek **Guition
 - **plne offline**: žiadne externé požiadavky (CSP `default-src 'self'`, fonty a knižnice lokálne, externé obrázky v náhľadoch HTML dokumentov sa blokujú); service worker (`site/sw.js`) + `manifest.webmanifest` → web funguje aj bez siete (PWA)
 
 **Fotky / Photos.** Z oficiálnych zdrojov: guition.com (produktové galérie – výrobca publikuje max. 800×800 px), waveshare.com / docs.waveshare.com (1600×1200), obrázky „Structure/Dimension“ z oficiálnych archívov (iba ak archív patrí jednoznačne danému modelu). Nikdy sa nepoužije fotka inej dosky – pri zdieľaných produktových stránkach (napr. Waveshare 7/8/10.1") sa berú iba obrázky s názvom presného variantu (`data/curated/photos.json`). AliExpress (captcha) a eBay (403) sa nepoužívajú. `build/photos.py` → `data/raw/photo_stats.json`.
+
+### Automatické pridávanie dosiek / Auto-add of new boards
+`build/autoadd.py` (krok `vendors` mesačného updatu, aj samostatne) prechádza výpisy produktov výrobcov (Waveshare e-shop vyhľadávanie P4/S3/C6, M5Stack docs sitemap, LilyGO `products.json`, Elecrow ESP32 display series, Makerfabs MaTouch, Seeed reTerminal) a **novú ESP32 displejovú dosku pridá sám**:
+1. filter: stránka musí menovať ESP32 SoC **a** vstavaný displej s uvedenou veľkosťou/rozlíšením; kity/bundly/príslušenstvo (kit, keyboard, case, meshtastic, breakout …) sa preskočia; deduplikácia voči všetkým modelom, aliasom, SKU a zdrojovým URL;
+2. z oficiálnej produktovej stránky sa vezmú **iba doslovne uvedené hodnoty** (tabuľky špecifikácií, „Features“, „What's On Board“; neuvedené = prázdne), fotka (og:image / galéria s rovnakým slugom / M5Stack shop podľa rovnakého SKU), schémy (PDF), oficiálne GitHub odkazy; verzie Wi-Fi/BT a Thread/Zigbee/Matter dopočíta `features.py` z datasheetu SoC;
+3. zápis do `data/auto/boards/<vendor>.json` (poznámka „auto-added, not yet hand-reviewed“, tag `auto-added`); ručne kurátorované `data/curated/boards/` sa nikdy neprepisujú a majú prednosť;
+4. rebuild celého webu vrátane SEO + validácia (`check_links.py`, `check_seo.py`) – commit/push iba ak validácia prejde; `--dry-run` iba vypíše, čo *by* pridal.
+Výstup v `summary.md` / `stats.json`: `auto_added`, `auto_skipped` (len nové dôvody; stav `data/auto/autoadd_seen.json`).
+```bash
+python3 build/autoadd.py --dry-run                 # čo by sa pridalo
+python3 build/autoadd.py --dry-run --pretend-new   # test: tvári sa, že auto dosky ešte neexistujú
+python3 build/autoadd.py --url <produktová-URL> --print
+```
+
+### SEO
+`build/seo.py` (každý build): statické stránky `site/board/<id>/` (unikátny title/description/canonical, Open Graph, Twitter Card, JSON-LD `TechArticle` + `Product` + `BreadcrumbList`, fotka s alt/width/height, tabuľka parametrov so zdrojmi, features, oficiálne odkazy, odkaz do interaktívnej stránky `model.html?id=…`) a `site/vendor/<slug>/` (`CollectionPage` + `ItemList`); na `index.html`/`about`/`docs`/`files` canonical, OG/Twitter, JSON-LD `WebSite` + `ItemList`, statický `<header>`/`<footer>` s adresárom všetkých dosiek; `og-image.png` (1200×630, Pillow); `sitemap.xml` (lastmod sa mení iba pri zmene obsahu stránky, `data/raw/seo_state.json`) a `robots.txt`. Žiadne ceny/hodnotenia. Validácia: `tests/check_seo.py`. Staré odkazy `index.html#model=<id>` presmerujú na `model.html?id=<id>`.
 
 ### Dátové pravidlá / Data rules
 Žiadne vymyslené parametre. Každá hodnota pochádza z reálneho zdroja (guition.com tabuľka modelov EN/SK, produktové stránky, PDF, waveshare.com / docs.waveshare.com, komunitné repozitáre) a jej URL je uložená. Prázdne = neznáme. Ak si zdroje výrobcu odporujú, zobrazí sa varovanie „source conflict“.
@@ -62,9 +78,9 @@ Limity: web ~11 300 súborov / ~740 MB, žiadny súbor > 24 MB → spĺňa Cloud
 1. **pan.jczn1688.com** – nové/zmenené súbory (veľkosť + sha256 shardov) → stiahnutie, rozbalenie dokumentácie (`process_archives.py --only`), umiestnenie do `site/` alebo upload ako release asset, zmazanie lokálnej kópie;
 2. **guition.com** – tabuľka modelov EN/SK + produktové stránky zo sitemap → nové dosky, nové PDF/obrázky;
 3. **Waveshare** – vyhľadávanie ESP32-P4/S3/C6 v e-shope (nové displejové dosky sa *hlásia* na ručnú kuráciu – parametre sa nevymýšľajú), HEAD všetkých odkazovaných súborov (Content-Length/ETag);
-4. **Ďalší výrobcovia** – M5Stack (docs sitemap), LilyGO (`products.json`), Elecrow (ESP32 display series), Makerfabs (MaTouch), Seeed (reTerminal E10xx wiki): nové displejové produkty, ktoré ešte nie sú v `data/curated/boards/`, sa *hlásia* v `summary.md` (raz, stav v `data/auto/vendors_seen.json`); kontrola dostupnosti zdrojových stránok kurátorovaných dosiek (varovania). Waveshare vyhľadávanie pokrýva aj ESP32-S3/C6 dotykové LCD/AMOLED;
+4. **Ďalší výrobcovia (vrátane Waveshare)** – nové ESP32 displejové dosky sa **automaticky pridajú** (`build/autoadd.py`, viď nižšie), preskočené kandidáty sa hlásia v `summary.md`; kontrola dostupnosti zdrojových stránok kurátorovaných dosiek (varovania);
 5. **GitHub** – vyhľadávanie nových komunitných repozitárov pre dosky Guition (odkaz k modelu, ak repo menuje číslo modelu a má ≥ 3 ★ alebo licenciu; licencované sa zrkadlia), `pushed_at` zrkadlených repozitárov → obnovenie snapshotu;
-6. rebuild (`build_site → features → offline → photos → build_index → gen_sw → check_links`), commit + push (iba ak sa niečo zmenilo).
+6. rebuild (`build_site → features → offline → photos → seo → build_index → gen_sw → check_links → check_seo`), commit + push (iba ak sa niečo zmenilo).
 
 ```bash
 build/update.sh --dry-run          # iba zistí a vypíše zmeny

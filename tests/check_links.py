@@ -2,7 +2,7 @@
 import json, os, re, glob, sys
 S = os.path.join(os.path.dirname(__file__), '..', 'site')
 miss = []
-ex = lambda p: os.path.isfile(os.path.join(S, p))
+ex = lambda p: os.path.isfile(os.path.join(S, p + 'index.html' if p.endswith('/') else p))   # 'board/<id>/' → index.html
 models = json.load(open(f'{S}/data/models.json'))
 arch = json.load(open(f'{S}/data/archives.json'))
 for m in models:

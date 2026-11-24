@@ -10,13 +10,15 @@ data/release_assets.json, data/auto/*.json) plus size / shard sha256 / ETag / pu
 Sources checked
   1. pan.jczn1688.com file server  – new / changed files (size + shard sha256)
   2. guition.com model-selection (EN+SK) + sitemap product pages – new boards, new product files
-  3. Waveshare – ESP32-P4 shop search (new products are reported, never auto-added: specs need curation),
-                 HEAD of every referenced Waveshare download (Content-Length / ETag)
+  3. Waveshare – HEAD of every referenced Waveshare download (Content-Length / ETag)
+  3c. vendors – Waveshare, M5Stack, LilyGO, Elecrow, Makerfabs, Seeed listings: new ESP32 display boards are
+                 AUTO-ADDED by build/autoadd.py (verbatim specs from the official page, photo, features);
+                 non-ESP32 / display-less / kit pages and duplicates are skipped and reported
   4. GitHub – search for new Guition community repositories (auto-linked to matching boards),
               pushed_at of mirrored repositories (licensed snapshots are refreshed)
 
 Outputs: build/last_update/{log.txt,stats.json,summary.md}
-Usage:   build/update.sh [--dry-run] [--no-push] [--no-upload] [--keep-downloads] [--skip pan,guition,waveshare,github]
+Usage:   build/update.sh [--dry-run] [--no-push] [--no-upload] [--keep-downloads] [--skip pan,guition,waveshare,vendors,github]
 Env:     GUITION_CACHE  download dir (default: config cache_dir); CI=true deletes downloads after use.
          GH_TOKEN/GITHUB_TOKEN for gh (release upload, GitHub search).
 This script never sends e-mail; the workflow does that from the files above."""
@@ -243,9 +245,9 @@ def ws_urls():
     for g in list(ws['common'].values()) + ws['models']:
         files += [f['url'] for f in g.get('files', [])]
         pages.update(g.get('sources', []))
-    cw = jload('data/curated/boards/waveshare.json', {'boards': []})     # extra hand-curated Waveshare boards (S3 / C6 / more P4)
-    for b in cw['boards']:
-        pages.update(b.get('sources', []))
+    for extra in ('data/curated/boards/waveshare.json', 'data/auto/boards/waveshare.json'):   # hand-curated + auto-added boards
+        for b in jload(extra, {'boards': []})['boards']:
+            pages.update(b.get('sources', []))
     return list(dict.fromkeys(files)), pages
 
 
@@ -266,8 +268,9 @@ def step_waveshare():
     log(f'waveshare: {len(found)} ESP32-P4/S3/C6 shop products found ({len(disp)} with a display), {len(disp - known)} display products not in the catalog')
     found -= disp - known          # display products stay 'candidates' every run until curated into waveshare.json
     for u in sorted(disp - known):
-        STATS['waveshare_candidates'].append(u)
-        log('  candidate (needs manual curation, not auto-added):', u)
+        if 'vendors' in SKIP:          # otherwise step_vendors (autoadd) adds them automatically
+            STATS['waveshare_candidates'].append(u)
+            log('  candidate (vendors step skipped – not auto-added):', u)
     # 3b. referenced downloads changed?
     off = (jload('site/data/offline.json', {}).get('files') or {})
     changed = []
@@ -325,63 +328,24 @@ def step_waveshare():
     json.dump(seen, open(seen_f, 'w'), indent=1)
 
 
-# ---------------------------------------------------------------- 3c. other manufacturers (curated boards)
-# Listing pages of the other vendors are scanned for display products that are not yet in
-# data/curated/boards/<vendor>.json. Candidates are only REPORTED (specs must be curated by hand,
-# with a source for every value) – nothing is auto-added.
-VENDOR_LISTINGS = [
-    # (vendor, listing URL, regex for product links, display-product filter, URL prefix)
-    ('M5Stack', 'https://docs.m5stack.com/sitemap.xml', r'/en/core/[A-Za-z0-9_%.\-]+',
-     r'^core|^tab|dial|paper|cardputer|atoms3(?!-lite)|stick|tough|ink|meter|display|nesso', 'https://docs.m5stack.com'),
-    ('LilyGO', 'https://lilygo.cc/products.json?limit=250', r'"handle":"([a-z0-9\-]+)"',
-     r't-display|amoled|t-deck|t-rgb|t-panel|t-encoder|^t4|^t5|t-circle|t-qt|t-dongle|t-hmi|lcd|e-?paper|touch', 'https://lilygo.cc/products/'),
-    ('Elecrow', 'https://www.elecrow.com/esp32-display-series-hmi-touch-screen.html', r'https://www\.elecrow\.com/[a-z0-9\-]+\.html',
-     r'crowpanel|esp32-.*(display|hmi|lcd|terminal)', ''),
-    ('Makerfabs', 'https://www.makerfabs.com/catalogsearch/result/?q=matouch', r'https://www\.makerfabs\.com/[a-z0-9\-]+\.html',
-     r'matouch.*(esp32|display|tft|ips|amoled)|esp32-s3-parallel', ''),
-    ('Seeed Studio', 'https://wiki.seeedstudio.com/reterminal_e10xx_main_page/', r'reTerminal E10\d\d', r'.', 'name:'),
-]
-
-
-def _norm_url(u):
-    return re.sub(r'[?#].*$', '', u).rstrip('/').lower()
-
-
+# ---------------------------------------------------------------- 3c. new boards from all vendors (auto-add)
 def step_vendors():
-    seen_f = os.path.join(AUTO, 'vendors_seen.json')
+    """Discover new ESP32 display boards on the vendor sites and ADD them automatically (build/autoadd.py):
+    official product page → verbatim specs (unknown = empty) → photo → data/auto/boards/<vendor>.json.
+    Non-ESP32 / display-less / kit pages and duplicates are skipped with a reason. --dry-run only reports."""
+    import autoadd
+    seen_f = os.path.join(AUTO, 'autoadd_seen.json')
     seen = jload(seen_f, {}) if os.path.exists(seen_f) else {}
-    known, names, sources = set(), set(), []
+    added, skipped, _ = autoadd.run(dry_run=A.dry_run, log=log)
+    STATS['auto_added'] = [{'vendor': v, 'model': m, 'url': u} for v, m, u in added]
+    STATS['auto_skipped'] = [{'vendor': v, 'url': u, 'reason': r} for v, u, r in skipped if seen.get(u) != r]   # only new / changed reasons
+    STATS['auto_skipped_total'] = len(skipped)
+    log(f'vendors: {len(added)} board(s) {"would be " if A.dry_run else ""}auto-added, {len(skipped)} candidate(s) skipped '
+        f'({len(STATS["auto_skipped"])} new since the last run)')
+    # curated / auto source pages still alive?
+    sources = []
     for f in sorted(glob.glob(os.path.join(ROOT, 'data/curated/boards/*.json'))):
-        d = jload(f)
-        for b in d['boards']:
-            for u in b.get('sources', []) + [l.get('url', '') for l in b.get('links', [])]:
-                known.add(_norm_url(u))
-            sources += b.get('sources', [])[:1]
-            names.add(b['model'].lower())
-    STATS.setdefault('vendor_candidates', [])
-    for vendor, url, rx, flt, prefix in VENDOR_LISTINGS:
-        try:
-            r = S.get(url, timeout=60); r.raise_for_status()
-            hits = set(re.findall(rx, r.text))
-            cand = set()
-            for h in hits:
-                if not re.search(flt, h.rstrip('/').rsplit('/', 1)[-1], re.I):
-                    continue
-                if prefix == 'name:':
-                    if not any(h.lower() in n for n in names):
-                        cand.add(h)
-                    continue
-                full = (prefix + h) if prefix and not h.startswith('http') else h
-                if _norm_url(full) not in known:
-                    cand.add(full)
-            new = sorted(cand - set(seen.get(vendor, [])))
-            log(f'{vendor}: {len(hits)} listed, {len(cand)} display-like not curated, {len(new)} new since last run')
-            for c in new:
-                STATS['vendor_candidates'].append(f'[{vendor}] {c}')
-            seen[vendor] = sorted(set(seen.get(vendor, [])) | cand)
-        except Exception as e:
-            err('vendor listing ' + vendor, e)
-    # curated source pages still alive?
+        sources += [b['sources'][0] for b in jload(f)['boards'] if b.get('sources')]
     for u in dict.fromkeys(sources):
         try:
             h = S.head(u, timeout=40, allow_redirects=True)
@@ -392,6 +356,7 @@ def step_vendors():
         except Exception as e:
             STATS['warnings'].append(f'curated source unreachable: {u} ({e.__class__.__name__})')
     if not A.dry_run:
+        seen.update({u: r for _, u, r in skipped})
         json.dump(seen, open(seen_f, 'w'), indent=1)
 
 
@@ -532,7 +497,7 @@ def finish():
           f"| New boards | {len(STATS['new_boards'])} |", f"| New files | {len(STATS['new_files'])} |",
           f"| Changed files | {len(STATS['changed_files'])} |", f"| Removed upstream (kept) | {len(STATS['removed_upstream'])} |",
           f"| New community repos | {len(STATS['new_repos'])} |", f"| Updated mirrored repos | {len(STATS['updated_repos'])} |",
-          f"| Waveshare candidates (manual) | {len(STATS['waveshare_candidates'])} |", f"| Other-vendor candidates (manual) | {len(STATS.get('vendor_candidates', []))} |", f"| Release assets uploaded | {len(STATS['uploaded_assets'])} |",
+          f"| Waveshare candidates (manual) | {len(STATS['waveshare_candidates'])} |", f"| Boards auto-added from vendor sites | {len(STATS.get('auto_added', []))} |", f"| Candidates skipped (new reasons) | {len(STATS.get('auto_skipped', []))} |", f"| Release assets uploaded | {len(STATS['uploaded_assets'])} |",
           f"| Errors | {len(STATS['errors'])} |", '']
     def sec(title, items, fmt):
         if items:
@@ -544,7 +509,9 @@ def finish():
     sec('New community repositories', STATS['new_repos'], lambda x: f"{x['url']} (license: {x['license'] or 'none'})")
     sec('Updated mirrored repositories', STATS['updated_repos'], lambda x: x['repo'])
     sec('Waveshare products to curate', STATS['waveshare_candidates'], str)
-    sec('Other-manufacturer products to curate (data/curated/boards/)', STATS.get('vendor_candidates', []), str)
+    sec('Boards auto-added (data/auto/boards/ – verbatim from the official page, please review)' + (' – DRY RUN, nothing written' if A.dry_run else ''),
+        STATS.get('auto_added', []), lambda x: f"[{x['vendor']}] {x['model']} – {x['url']}")
+    sec('Skipped candidates (not an ESP32 display board / duplicate / unparseable)', STATS.get('auto_skipped', []), lambda x: f"[{x['vendor']}] {x['url']} – {x['reason']}")
     sec('Errors', STATS['errors'], str)
     sec('Warnings', STATS['warnings'], str)
     if STATS['commit']:
@@ -574,9 +541,11 @@ def main():
     try:
         rebuild_data()
         py('photos.py')
+        py('seo.py')               # static board/vendor pages, JSON-LD, sitemap.xml, robots.txt, og-image.png
         run(['node', 'build/build_index.mjs'])
         py('gen_sw.py')
         run([sys.executable, 'tests/check_links.py'])
+        run([sys.executable, 'tests/check_seo.py'])
     except Exception as e:
         err('rebuild', e)
         return

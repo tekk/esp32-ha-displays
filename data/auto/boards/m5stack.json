@@ -1,0 +1,4145 @@
+{
+ "vendor": "M5Stack",
+ "slug": "m5stack",
+ "category": "M5Stack (all-in-one controllers)",
+ "image_note": "official M5Stack docs product photo",
+ "_note": "AUTO-DISCOVERED by build/autoadd.py from official product pages (verbatim values, empty = not stated). Move an entry to data/curated/boards/ after review; curated entries always win.",
+ "boards": [
+  {
+   "id": "m5stack-cardputer-v1-1",
+   "model": "Cardputer v1.1",
+   "title": "M5Stack Cardputer v1.1",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Cardputer_v1.1",
+    "https://shop.m5stack.com/products/m5stack-cardputer-with-m5stamps3-v1-1"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz",
+    "usb": "USB OTG, USB Serial/JTAG",
+    "flash": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "battery": "120mAh + 1400mAh (in base)",
+    "speaker": "8Ω@1W I2S@NS4168",
+    "mic": "MEMS microphone @SPM1423",
+    "dimensions": "84.0 x 54.0 x 19.7mm",
+    "weight": "90.0g",
+    "size": "1.14\"",
+    "resolution": "240x135",
+    "display": "ST7789V2@1.14 Inch, 240 x 135px",
+    "mcu_family": "ESP32-S3",
+    "sku": "K132-V11"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "USB",
+     "USB OTG, USB Serial/JTAG"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "External Storage Expansion",
+     "microSD"
+    ],
+    [
+     "Keyboard",
+     "56 keys (4 x 14)"
+    ],
+    [
+     "Buttons",
+     "1 x Reset button + 1 x User button"
+    ],
+    [
+     "Grove",
+     "1 x HY2.0-4P"
+    ],
+    [
+     "Battery Capacity",
+     "120mAh + 1400mAh (in base)"
+    ],
+    [
+     "Display",
+     "ST7789V2@1.14 Inch, 240 x 135px"
+    ],
+    [
+     "Cavity Speaker",
+     "8Ω@1W I2S@NS4168"
+    ],
+    [
+     "Microphone",
+     "MEMS microphone @SPM1423"
+    ],
+    [
+     "Infrared Transmission Distance",
+     "Infrared transmission distance at ∠0° (straight line): 410cm At ∠90°: 66cm At ∠45°: 170cm"
+    ],
+    [
+     "Sleep Current",
+     "DC 4.2V@0.15uA"
+    ],
+    [
+     "Operating Current",
+     "In IR transmission mode: DC 4.2V/148.07mA In key mode: DC 4.2V/138.93mA"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Product Size",
+     "84.0 x 54.0 x 19.7mm"
+    ],
+    [
+     "Product Weight",
+     "90.0g"
+    ],
+    [
+     "Package Size",
+     "145.7 x 95.0 x 20.7mm"
+    ],
+    [
+     "Release Date",
+     "Product Changes"
+    ],
+    [
+     "/",
+     "First release"
+    ],
+    [
+     "LCD and RGB LED usage note",
+     "Since RGB and LCD backlight share the same power source, when the LCD backlight brightness is below 100%, RGB will not be powered properly. Please use the RGB function when the backlight is at full brightness."
+    ],
+    [
+     "Feature",
+     "Cavity speaker and SPM1423 digital MEMS microphone"
+    ],
+    [
+     "Feature",
+     "Infrared emitter for infrared control interactions"
+    ],
+    [
+     "Feature",
+     "Built-in 120mAh and base 1400mAh lithium batteries"
+    ],
+    [
+     "Feature",
+     "LEGO hole expansion compatibility"
+    ],
+    [
+     "Feature",
+     "1 x Hex Key L-Shape 1.5mm (For M2 Screw)"
+    ],
+    [
+     "Feature",
+     "Rapid function verification and prototyping"
+    ],
+    [
+     "Feature",
+     "Industrial control and automation"
+    ],
+    [
+     "Feature",
+     "Data acquisition and sensor monitoring"
+    ],
+    [
+     "Feature",
+     "Embedded system development and learning"
+    ],
+    [
+     "Feature",
+     "Wireless communication and IoT projects"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/K132_v11_19.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5Cardputer.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1127/Sch_M5Cardputer.pdf",
+     "host": true
+    },
+    {
+     "name": "Sch_StampS3_v0.3.3.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1150/Sch_StampS3_v0.3.3.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Cardputer",
+     "url": "https://github.com/m5stack/M5Cardputer",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Cardputer-UserDemo",
+     "url": "https://github.com/m5stack/M5Cardputer-UserDemo",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-core2",
+   "model": "Core2",
+   "title": "M5Stack Core2",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Core2",
+    "https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz",
+    "flash": "16MB",
+    "psram": "8MB Quad",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V@500mA",
+    "speaker": "NS4168",
+    "mic": "SPM1423",
+    "imu": "MPU6886",
+    "rtc": "BM8563",
+    "usb": "CP2104/CH9102F (two chip versions, no functional or usage differences)",
+    "battery": "500mAh@3.7V",
+    "dimensions": "54.0 x 54.0 x 16.5mm",
+    "weight": "54.9g",
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "display": "2.0\"@320 x 240 ILI9342C / ILI9342E",
+    "mcu_family": "ESP32",
+    "sku": "K010",
+    "touch": "Capacitive"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Quad"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Host Interface",
+     "USB Type-C x 1, GROVE (I2C+I/O+UART) x 1"
+    ],
+    [
+     "LED",
+     "Green power indicator LED"
+    ],
+    [
+     "Button",
+     "Power button, RST button, screen virtual buttons x 3"
+    ],
+    [
+     "Vibration Alert",
+     "Vibration motor"
+    ],
+    [
+     "IPS LCD Screen",
+     "2.0\"@320 x 240 ILI9342C / ILI9342E"
+    ],
+    [
+     "Capacitive Touch IC",
+     "FT6336U"
+    ],
+    [
+     "Speaker Amplifier",
+     "NS4168"
+    ],
+    [
+     "Microphone",
+     "SPM1423"
+    ],
+    [
+     "I2S Amplifier",
+     "NS4168"
+    ],
+    [
+     "IMU",
+     "MPU6886"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "PMU",
+     "AXP192"
+    ],
+    [
+     "USB Chip",
+     "CP2104/CH9102F (two chip versions, no functional or usage differences)"
+    ],
+    [
+     "DC-DC Boost",
+     "SY7088"
+    ],
+    [
+     "Lithium Battery",
+     "500mAh@3.7V"
+    ],
+    [
+     "Charging Parameters",
+     "Charging current: 0.219A Fully charged current (powered off): 0.055A Fully charged current (powered on): 0.147A"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D antenna"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 60°C"
+    ],
+    [
+     "Base Screw Spec",
+     "Hex socket countersunk head M3"
+    ],
+    [
+     "Reserved Internal PCB Ports",
+     "Battery port (Spec: MX1.25-2P) USB cable port (Spec: 1.25mm-4P)"
+    ],
+    [
+     "Product Size",
+     "54.0 x 54.0 x 16.5mm"
+    ],
+    [
+     "Product Weight",
+     "54.9g"
+    ],
+    [
+     "Package Size",
+     "80.0 x 59.9 x 21.6mm"
+    ],
+    [
+     "Single click the left power button",
+     "Power on"
+    ],
+    [
+     "Long-press the left power button",
+     "Power off"
+    ],
+    [
+     "Single click the bottom reset button",
+     "Reset"
+    ],
+    [
+     "LCD Pixels",
+     "320x240"
+    ],
+    [
+     "Feature",
+     "Developed based on ESP32, supports WiFi"
+    ],
+    [
+     "Feature",
+     "Built-in speaker, power indicator light, vibration motor, RTC, I2S amplifier, capacitive touch screen, power button, reset button"
+    ],
+    [
+     "Feature",
+     "Built-in lithium battery with power management chip"
+    ],
+    [
+     "Feature",
+     "Independent small board with built-in 6-axis IMU, PDM microphone"
+    ],
+    [
+     "Feature",
+     "1 x USB Type-C cable (20cm)"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/1_b5359a18-c82e-484f-8879-7d560bea0e66.webp"
+   ],
+   "files": [
+    {
+     "name": "CORE2_V1.0_SCH.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/644/CORE2_V1.0_SCH.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Tools",
+     "url": "https://github.com/m5stack/M5Tools",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Core2",
+     "url": "https://github.com/m5stack/M5Core2",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-core2-for-aws",
+   "model": "Core2 For AWS",
+   "title": "M5Stack Core2 For AWS",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Core2_For_AWS",
+    "https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V @ 500mA",
+    "speaker": "1W-0928",
+    "mic": "SPM1423",
+    "imu": "MPU6886",
+    "rtc": "BM8563",
+    "usb": "CP2104",
+    "sd": "Supports up to 16G",
+    "battery": "500mAh @ 3.7V",
+    "dimensions": "54.0 x 54.0 x 23.5mm",
+    "weight": "69.5g",
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "display": "2.0\"@320 x 240 ILI9342C / ILI9342E",
+    "mcu_family": "ESP32",
+    "sku": "K010-AWS",
+    "touch": "Capacitive"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Hardware Encryption Chip",
+     "ATECC608B-TNGTLSU-G (addr 0x35)"
+    ],
+    [
+     "Input Voltage",
+     "5V @ 500mA"
+    ],
+    [
+     "Host Interface",
+     "Type-C x1, POGO PIN x1, I2C x1, GPIO x1, UART x1"
+    ],
+    [
+     "Programmable LED",
+     "SK6812*10"
+    ],
+    [
+     "Button",
+     "Power button, RST button, screen virtual buttons * 3"
+    ],
+    [
+     "Vibration Alert",
+     "Vibration motor"
+    ],
+    [
+     "IPS LCD Screen",
+     "2.0\"@320 x 240 ILI9342C / ILI9342E"
+    ],
+    [
+     "Capacitive Touch IC",
+     "FT6336U"
+    ],
+    [
+     "Speaker",
+     "1W-0928"
+    ],
+    [
+     "Microphone",
+     "SPM1423"
+    ],
+    [
+     "I2S Amplifier",
+     "NS4168"
+    ],
+    [
+     "IMU",
+     "MPU6886"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "PMU",
+     "AXP192"
+    ],
+    [
+     "USB Chip",
+     "CP2104"
+    ],
+    [
+     "DC-DC Boost",
+     "SY7088"
+    ],
+    [
+     "TF Card Slot",
+     "Supports up to 16G"
+    ],
+    [
+     "Lithium Battery",
+     "500mAh @ 3.7V"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D antenna"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Case Material",
+     "Plastic ( PC )"
+    ],
+    [
+     "Product Size",
+     "54.0 x 54.0 x 23.5mm"
+    ],
+    [
+     "Product Weight",
+     "69.5g"
+    ],
+    [
+     "Package Size",
+     "90.0 x 60.0 x 30.0mm"
+    ],
+    [
+     "Single click the left power button",
+     "Power on"
+    ],
+    [
+     "Long-press the left power button",
+     "Power off"
+    ],
+    [
+     "Single click the bottom reset button",
+     "Reset"
+    ],
+    [
+     "LCD Pixels",
+     "320x240 TF Card supports up to 16GB"
+    ],
+    [
+     "Feature",
+     "Based on ESP32, supports WiFi"
+    ],
+    [
+     "Feature",
+     "Built-in ATECC608 hardware encryption chip"
+    ],
+    [
+     "Feature",
+     "Built-in speaker, power indicator, vibration motor, RTC, I2S amplifier, capacitive touchscreen, power button, reset button"
+    ],
+    [
+     "Feature",
+     "TF card slot (supports up to 16GB)"
+    ],
+    [
+     "Feature",
+     "Built-in lithium battery with power management chip"
+    ],
+    [
+     "Feature",
+     "Built-in 6-axis IMU, PDM microphone"
+    ],
+    [
+     "Feature",
+     "1 x USB Type-C cable (50cm)"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/products/1_3f420584-fb2f-48c3-bd01-17f083de0880.jpg"
+   ],
+   "files": [
+    {
+     "name": "CORE2_V1.0_SCH.pdf",
+     "url": "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/CORE2_V1.0_SCH.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Tools",
+     "url": "https://github.com/m5stack/M5Tools",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Core2",
+     "url": "https://github.com/m5stack/M5Core2",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/Core2-for-AWS-IoT-Kit",
+     "url": "https://github.com/m5stack/Core2-for-AWS-IoT-Kit",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-core2-for-aws-v1-3",
+   "model": "Core2 For AWS v1.3",
+   "title": "M5Stack Core2 For AWS v1.3",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Core2_For_AWS_v1.3",
+    "https://shop.m5stack.com/products/m5stack-core2-for-aws-kit-v1-3"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V @ 500mA",
+    "speaker": "1W-0928",
+    "mic": "SPM1423",
+    "imu": "BMI270",
+    "rtc": "BM8563",
+    "battery": "500mAh @ 3.7V",
+    "dimensions": "54.0 x 54.0 x 23.7mm",
+    "weight": "72.1g",
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "display": "2.0\"@320 x 240 ILI9342C / ILI9342E",
+    "mcu_family": "ESP32",
+    "sku": "K010-AWS-V13"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Hardware Crypto Chip",
+     "ATECC608B-TNGTLSU-G (addr 0x35)"
+    ],
+    [
+     "Input Voltage",
+     "5V @ 500mA"
+    ],
+    [
+     "Host Interface",
+     "USB Type-C x1, Pogo Pin x1, I2C x1, GPIO x1, UART x1"
+    ],
+    [
+     "Programmable LED",
+     "SK6812 x 10"
+    ],
+    [
+     "Buttons",
+     "Power button, RST button, Screen virtual buttons x 3"
+    ],
+    [
+     "Vibration Alert",
+     "Vibration motor"
+    ],
+    [
+     "IPS LCD",
+     "2.0\"@320 x 240 ILI9342C / ILI9342E"
+    ],
+    [
+     "Capacitive Touch IC",
+     "FT6336U"
+    ],
+    [
+     "Speaker",
+     "1W-0928"
+    ],
+    [
+     "Microphone",
+     "SPM1423"
+    ],
+    [
+     "I2S Amplifier",
+     "NS4168"
+    ],
+    [
+     "IMU",
+     "BMI270"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "PMU",
+     "AXP192"
+    ],
+    [
+     "USB-TTL",
+     "CH9102F"
+    ],
+    [
+     "DC-DC Boost",
+     "SY7088"
+    ],
+    [
+     "Battery",
+     "500mAh @ 3.7V"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D Antenna"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Housing Material",
+     "Plastic ( PC )"
+    ],
+    [
+     "Product Size",
+     "54.0 x 54.0 x 23.7mm"
+    ],
+    [
+     "Product Weight",
+     "72.1g"
+    ],
+    [
+     "Package Size",
+     "90.0 x 60.0 x 30.0mm"
+    ],
+    [
+     "Single click the left power button",
+     "Power on"
+    ],
+    [
+     "Long-press the left power button",
+     "Power off"
+    ],
+    [
+     "Single click the bottom reset button",
+     "Reset"
+    ],
+    [
+     "Feature",
+     "ESP32-D0WDQ6-V3 main controller"
+    ],
+    [
+     "Feature",
+     "Built-in ATECC608 hardware cryptographic chip"
+    ],
+    [
+     "Feature",
+     "Independent peripheral expansion board"
+    ],
+    [
+     "Feature",
+     "Built-in BMI270 6-axis IMU"
+    ],
+    [
+     "Feature",
+     "HY2.0-4P expansion interface"
+    ],
+    [
+     "Feature",
+     "1 x USB Type-C Cable (50cm)"
+    ],
+    [
+     "Feature",
+     "1 x Hex Key L-Shape 2.5mm (For M3 Screw)"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/1_004aaa95-1c43-4000-85ff-984eb676cc4f.webp"
+   ],
+   "files": [
+    {
+     "name": "CORE2_V1.0_SCH.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/644/CORE2_V1.0_SCH.pdf",
+     "host": true
+    },
+    {
+     "name": "SCH_M5GO_Bottom2_SCH_Main_V1.3_AWS_Version_2026_01_30_10_06_42.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1226/SCH_M5GO_Bottom2_SCH_Main_V1.3_AWS_Version_2026_01_30_10_06_42.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Tools",
+     "url": "https://github.com/m5stack/M5Tools",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Core2",
+     "url": "https://github.com/m5stack/M5Core2",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/Core2-for-AWS-IoT-Kit",
+     "url": "https://github.com/m5stack/Core2-for-AWS-IoT-Kit",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-core2-v1-3",
+   "model": "Core2 v1.3",
+   "title": "M5Stack Core2 v1.3",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Core2_v1.3",
+    "https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-v1-3"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V @ 500mA",
+    "mic": "SPM1423",
+    "speaker": "NS4168",
+    "imu": "BMI270",
+    "rtc": "BM8563",
+    "battery": "3.7V @ 500mAh",
+    "dimensions": "54.0 x 54.0 x 16.5mm",
+    "weight": "58.8g",
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "display": "2.0\"@320 x 240 ILI9342C / ILI9342E",
+    "mcu_family": "ESP32",
+    "sku": "K010-V13",
+    "touch": "Capacitive"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Input Voltage",
+     "5V @ 500mA"
+    ],
+    [
+     "Host Interface",
+     "USB Type-C x 1, GROVE (I2C+I/O+UART) x 1"
+    ],
+    [
+     "LED",
+     "Green Power Indicator"
+    ],
+    [
+     "Buttons",
+     "Power Button, RST Button, Screen Virtual Buttons x 3"
+    ],
+    [
+     "Vibration Alert",
+     "Vibration Motor"
+    ],
+    [
+     "IPS LCD Screen",
+     "2.0\"@320 x 240 ILI9342C / ILI9342E"
+    ],
+    [
+     "Capacitive Touch IC",
+     "FT6336U"
+    ],
+    [
+     "Microphone",
+     "SPM1423"
+    ],
+    [
+     "I2S Amplifier",
+     "NS4168"
+    ],
+    [
+     "IMU",
+     "BMI270"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "PMU",
+     "AXP192"
+    ],
+    [
+     "USB-TTL",
+     "CH9102F"
+    ],
+    [
+     "Lithium Battery",
+     "3.7V @ 500mAh"
+    ],
+    [
+     "RTC Battery",
+     "MS412FE 3V 1.0mAh Rechargeable Micro Lithium Battery"
+    ],
+    [
+     "Charging Parameters",
+     "Charging Current: 0.219A Current After Full Charge (Power Off): 0.055A Current When Fully Charged (Power On): 0.147A"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D Antenna"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 60°C"
+    ],
+    [
+     "Base Screw Specification",
+     "Hex Countersunk M3"
+    ],
+    [
+     "Internal PCB Reserved Interface",
+     "Battery Interface (Spec: MX1.25-2P), USB Line Interface (Spec: 1.25mm-4P)"
+    ],
+    [
+     "Product Size",
+     "54.0 x 54.0 x 16.5mm"
+    ],
+    [
+     "Product Weight",
+     "58.8g"
+    ],
+    [
+     "Package Size",
+     "80.0 x 59.9 x 21.6mm"
+    ],
+    [
+     "Product Compare",
+     "Core2 v1.3"
+    ],
+    [
+     "Core2 v1.1",
+     "Core2"
+    ],
+    [
+     "MPU6886",
+     "MPU6886"
+    ],
+    [
+     "PMIC",
+     "AXP192"
+    ],
+    [
+     "AXP2101",
+     "AXP192"
+    ],
+    [
+     "CH9102",
+     "CP2104/CH9102"
+    ],
+    [
+     "Power Indicator Color",
+     "Green"
+    ],
+    [
+     "Blue",
+     "Green"
+    ],
+    [
+     "Single click the left power button",
+     "Power on"
+    ],
+    [
+     "Long-press the left power button",
+     "Power off"
+    ],
+    [
+     "Single click the bottom reset button",
+     "Reset"
+    ],
+    [
+     "Feature",
+     "2.0\" Color Capacitive Touchscreen"
+    ],
+    [
+     "Feature",
+     "Standalone Peripheral Expansion Board"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/1_3129c02c-c533-4fbd-99f7-e8ae7695b5a6.webp"
+   ],
+   "files": [
+    {
+     "name": "CORE2_V1.0_SCH.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/644/CORE2_V1.0_SCH.pdf",
+     "host": true
+    },
+    {
+     "name": "core2_v1.3_SCH_2025_11_14_09_40_33.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/486/core2_v1.3_SCH_2025_11_14_09_40_33.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Tools",
+     "url": "https://github.com/m5stack/M5Tools",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Core2",
+     "url": "https://github.com/m5stack/M5Core2",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-corep4x",
+   "model": "CoreP4X",
+   "title": "M5Stack CoreP4X",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/CoreP4X"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-P4NRW32X @ 32-bit dual-core RISC-V processor at 400MHz and low-power single-core processor at 40MHz",
+    "flash": "16MB",
+    "psram": "32MB",
+    "ethernet": "10/100Mbps Ethernet, IP101GRI",
+    "mic": "ES7210 audio ADC, dual MEMS microphones, AEC support",
+    "speaker": "AW8737A amplifier, 8Ω@1W speaker",
+    "imu": "LSM6DS3TR-C 6-axis motion sensor",
+    "rtc": "RX8130CE",
+    "usb": "1x USB Type-C (Debug / USB Device, DC 5V input) 1x USB Type-C (USB-OTG, DC 5V output) 1x USB-A (USB Host, DC 5V output)",
+    "size": "2.64\"",
+    "resolution": "480x480",
+    "display": "2.64\" LCD touchscreen, 480x480 resolution, ST7102 driver, MIPI DSI (2-lane) interface",
+    "mcu_family": "ESP32-P4",
+    "connectivity": "Supports Wi-Fi expansion with Stamp-AddOn C6 For P4 (module not included)",
+    "touch_detail": "CST3530 touch controller, up to 5 touch points"
+   },
+   "spec_rows": [
+    [
+     "Core Module",
+     "Stamp-P4X"
+    ],
+    [
+     "SoC",
+     "ESP32-P4NRW32X @ 32-bit dual-core RISC-V processor at 400MHz and low-power single-core processor at 40MHz"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "32MB"
+    ],
+    [
+     "Ethernet",
+     "10/100Mbps Ethernet, IP101GRI"
+    ],
+    [
+     "Wi-Fi",
+     "Supports Wi-Fi expansion with Stamp-AddOn C6 For P4 (module not included)"
+    ],
+    [
+     "Display",
+     "2.64\" LCD touchscreen, 480x480 resolution, ST7102 driver, MIPI DSI (2-lane) interface"
+    ],
+    [
+     "Touch",
+     "CST3530 touch controller, up to 5 touch points"
+    ],
+    [
+     "Audio Codec",
+     "ES8311 Audio Codec, 24-bit resolution, I2S audio interface"
+    ],
+    [
+     "Microphone",
+     "ES7210 audio ADC, dual MEMS microphones, AEC support"
+    ],
+    [
+     "Speaker",
+     "AW8737A amplifier, 8Ω@1W speaker"
+    ],
+    [
+     "IMU",
+     "LSM6DS3TR-C 6-axis motion sensor"
+    ],
+    [
+     "RTC",
+     "RX8130CE"
+    ],
+    [
+     "IR",
+     "Transmission and reception"
+    ],
+    [
+     "Storage Expansion",
+     "microSD card slot"
+    ],
+    [
+     "USB Interfaces",
+     "1x USB Type-C (Debug / USB Device, DC 5V input) 1x USB Type-C (USB-OTG, DC 5V output) 1x USB-A (USB Host, DC 5V output)"
+    ],
+    [
+     "Expansion Interfaces",
+     "HY2.0-4P (PORT.A), M5-Bus"
+    ],
+    [
+     "Onboard Expansion Connectors",
+     "PH2.0-2P battery connector, PH2.0-4P USB breakout connector"
+    ],
+    [
+     "Base PwrCom PoE Power Expansion Connector",
+     "PH2.0-6P"
+    ],
+    [
+     "Stamp-P4X BTB Expansion Interfaces",
+     "Wi-Fi (SDIO): HC-PBB40C-20DS-0.4V-2.5-02 MIPI CSI (2-lane): AXE516127D"
+    ],
+    [
+     "Power Management",
+     "Stamp Timer Power2 (M5PM1) with multi-level power management, low-power wake-up, and two battery charging current settings (180/650mA)"
+    ],
+    [
+     "Peripheral Management",
+     "M5IOE1 I/O expander"
+    ],
+    [
+     "Input Power",
+     "USB Type-C DC 5V, M5-Bus DC 5V, DC 3.7V battery input"
+    ],
+    [
+     "Two battery charging current settings",
+     "180/650mA"
+    ],
+    [
+     "Long press",
+     "Enter download mode"
+    ],
+    [
+     "Single click",
+     "Power on / reset"
+    ],
+    [
+     "Double click",
+     "Power off"
+    ],
+    [
+     "Feature",
+     "Stamp-P4X core module with ESP32-P4NRW32X"
+    ],
+    [
+     "Feature",
+     "CST3530 touch controller with multi-touch support"
+    ],
+    [
+     "Feature",
+     "CNC-machined aluminum alloy display frame"
+    ],
+    [
+     "Feature",
+     "AW8737A Audio AMP + 1W@8Ω speaker"
+    ],
+    [
+     "Feature",
+     "ES7210 Audio ADC + dual MEMS microphone inputs with acoustic echo cancellation (AEC)"
+    ],
+    [
+     "Feature",
+     "10/100M Ethernet with IP101GRI PHY"
+    ],
+    [
+     "Feature",
+     "IR transmission and reception"
+    ],
+    [
+     "Feature",
+     "Base PwrCom PoE power expansion connector"
+    ],
+    [
+     "Feature",
+     "Wi-Fi expansion interface compatible with"
+    ],
+    [
+     "Feature",
+     "MIPI CSI (2-lane) expansion interface"
+    ],
+    [
+     "Feature",
+     "1x USB Type-C (Debug / USB Device, DC 5V input)"
+    ],
+    [
+     "Feature",
+     "1x USB Type-C (USB-OTG, DC 5V output)"
+    ],
+    [
+     "Feature",
+     "1x USB-A (USB Host, DC 5V output)"
+    ]
+   ],
+   "images": [],
+   "files": [
+    {
+     "name": "CoreP4X_SCH_20261112.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1302/CoreP4X_SCH_20261112.pdf",
+     "host": true
+    }
+   ],
+   "links": [],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed.",
+    "No product photo could be verified on the page."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-cores3-lite",
+   "model": "CoreS3-Lite",
+   "title": "M5Stack CoreS3-Lite",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/CoreS3-Lite",
+    "https://shop.m5stack.com/products/m5stack-cores3-lite-esp32s3-iot-dev-kit"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-S3 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz",
+    "usb": "USB OTG, USB Serial/JTAG",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "driver_ic": "2.0\" @ 320 x 240 ILI9342C / ILI9342E",
+    "touch_ic": "FT6336U",
+    "camera": "GC0308 @ 0.3MP",
+    "rtc": "BM8563",
+    "speaker": "16-bit I2S amplifier chip AW88298 @ 1W",
+    "dimensions": "54.0 x 54.0 x 16.5mm",
+    "weight": "54.0g",
+    "imu": "✅",
+    "mic": "✅",
+    "battery": "200 mAh",
+    "resolution": "320x240",
+    "size": "2.0\"",
+    "display": "2.0\" @ 320 x 240 ILI9342C / ILI9342E",
+    "panel": "IPS",
+    "mcu_family": "ESP32-S3",
+    "sku": "K128-Lite",
+    "touch_detail": "✅"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "USB",
+     "USB OTG, USB Serial/JTAG"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Display Driver",
+     "2.0\" @ 320 x 240 ILI9342C / ILI9342E"
+    ],
+    [
+     "Touch Driver",
+     "FT6336U"
+    ],
+    [
+     "Camera",
+     "GC0308 @ 0.3MP"
+    ],
+    [
+     "Proximity Sensor",
+     "LTR-553ALS-WA"
+    ],
+    [
+     "Power Management IC",
+     "AXP2101"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "Speaker",
+     "16-bit I2S amplifier chip AW88298 @ 1W"
+    ],
+    [
+     "Audio Codec Chip",
+     "ES7210, dual microphone input"
+    ],
+    [
+     "Product Size",
+     "54.0 x 54.0 x 16.5mm"
+    ],
+    [
+     "Product Weight",
+     "54.0g"
+    ],
+    [
+     "Package Size",
+     "133.0 x 93.5 x 22.5mm"
+    ],
+    [
+     "Chip",
+     "Address"
+    ],
+    [
+     "GC0308",
+     "0x21"
+    ],
+    [
+     "LTR553",
+     "0x23"
+    ],
+    [
+     "AXP2101",
+     "0x34"
+    ],
+    [
+     "AW88298",
+     "0x36"
+    ],
+    [
+     "FT6336",
+     "0x38"
+    ],
+    [
+     "ES7210",
+     "0x40"
+    ],
+    [
+     "BM8563",
+     "0x51"
+    ],
+    [
+     "AW9523",
+     "0x58"
+    ],
+    [
+     "BMI270",
+     "0x69"
+    ],
+    [
+     "BMM150",
+     "0x10"
+    ],
+    [
+     "Hardware Peripheral",
+     "CoreS3-Lite"
+    ],
+    [
+     "CoreS3",
+     "CoreS3-SE"
+    ],
+    [
+     "Camera (GC0308)",
+     "✅"
+    ],
+    [
+     "✅",
+     "❌"
+    ],
+    [
+     "Proximity Sensor (LTR-553ALS-WA)",
+     "✅"
+    ],
+    [
+     "IMU (BMI270)",
+     "✅"
+    ],
+    [
+     "Compass (BMM150)",
+     "✅"
+    ],
+    [
+     "Microphone",
+     "✅"
+    ],
+    [
+     "PMIC (AXP2101)",
+     "✅"
+    ],
+    [
+     "Touch",
+     "✅"
+    ],
+    [
+     "Back Cover",
+     "Cover For CoreS3"
+    ],
+    [
+     "Base DIN",
+     "❌"
+    ],
+    [
+     "Battery Capacity",
+     "200 mAh"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/1_26a29136-73df-4a7d-bade-0db76370d60d.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5_CoreS3_v1.0.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/490/Sch_M5_CoreS3_v1.0.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5CoreS3",
+     "url": "https://github.com/m5stack/M5CoreS3",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-cores3-thread-br",
+   "model": "CoreS3 Thread BR",
+   "title": "M5Stack CoreS3 Thread BR",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/CoreS3_Thread_BR",
+    "https://shop.m5stack.com/products/m5stack-thread-border-router"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-S3 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "camera": "GC0308@0.3MP",
+    "rtc": "BM8563",
+    "speaker": "16bits-I2S Power Amplifier AW88298@1W",
+    "dimensions": "54.0 x 54.0 x 38.1mm",
+    "weight": "91.0g",
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "display": "2.0\"@320 x 240 ILI9342C / ILI9342E",
+    "mcu_family": "ESP32-S3",
+    "sku": "K149"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Touch IPS LCD",
+     "2.0\"@320 x 240 ILI9342C / ILI9342E"
+    ],
+    [
+     "Camera",
+     "GC0308@0.3MP"
+    ],
+    [
+     "Proximity Sensor",
+     "LTR-553ALS-WA"
+    ],
+    [
+     "Power Management",
+     "AXP2101"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "Speaker",
+     "16bits-I2S Power Amplifier AW88298@1W"
+    ],
+    [
+     "Audio Codec",
+     "ES7210, Dual Microphone Input"
+    ],
+    [
+     "RCP",
+     "ESP32-H2-MINI-1 @ RISC-V 32-bit Single-core, 96 MHz"
+    ],
+    [
+     "Base DIN Battery",
+     "Charging IC: TP4057 Battery Capacity: 500mAh"
+    ],
+    [
+     "DC Power Port",
+     "Input: DC 9–24V, compatible with DC5521 (5.5 × 2.1 mm) plug, center positive"
+    ],
+    [
+     "Product Size",
+     "54.0 x 54.0 x 38.1mm"
+    ],
+    [
+     "Product Weight",
+     "91.0g"
+    ],
+    [
+     "Package Size",
+     "101.0 x 64.0 x 41.0mm"
+    ],
+    [
+     "Feature",
+     "9-axis IMU Sensor: BMI270 + BMM150"
+    ],
+    [
+     "Feature",
+     "Proximity Sensor LTR-553ALS-WA"
+    ],
+    [
+     "Feature",
+     "Hi-Fi Power Amplifier AW88298 + 1W Speaker"
+    ],
+    [
+     "Feature",
+     "Built-in 500mAh lithium battery"
+    ],
+    [
+     "Feature",
+     "Supports DC 9 ~ 24V input power supply"
+    ],
+    [
+     "Feature",
+     "2x HY2.-4P expansion interfaces"
+    ],
+    [
+     "Feature",
+     "1 x Hex Key L-Shape 2.5mm (For M3 Screw)"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/1_6de4eb63-078a-4ce7-86b0-e0ce2a64da29.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5_CoreS3_v1.0.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/490/Sch_M5_CoreS3_v1.0.pdf",
+     "host": true
+    },
+    {
+     "name": "SCH_DinBase_V1.1.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/559/SCH_DinBase_V1.1.pdf",
+     "host": true
+    },
+    {
+     "name": "Sch_Module-Gateway_H2_v0.4.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/464/Sch_Module-Gateway_H2_v0.4.pdf",
+     "host": true
+    }
+   ],
+   "links": [],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-core-metal",
+   "model": "Core Metal",
+   "title": "M5Stack Core Metal",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Core_Metal"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz",
+    "flash": "16MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V@500mA",
+    "speaker": "1W-0928",
+    "usb": "CH9102F",
+    "dimensions": "54.0 x 54.0 x 18.0mm",
+    "weight": "42.0g",
+    "size": "2.0\"",
+    "resolution": "320x240",
+    "display": "2.0\"@320 x 240 ILI9342C IPS Panel, Max Brightness 853nit",
+    "panel": "IPS",
+    "mcu_family": "ESP32",
+    "sku": "C001-CNC"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Power Input",
+     "5V@500mA"
+    ],
+    [
+     "Interface",
+     "USB Type-C x1, I2C x1"
+    ],
+    [
+     "Buttons",
+     "Physical Buttons x 3"
+    ],
+    [
+     "LCD Screen",
+     "2.0\"@320 x 240 ILI9342C IPS Panel, Max Brightness 853nit"
+    ],
+    [
+     "Speaker",
+     "1W-0928"
+    ],
+    [
+     "USB Chip",
+     "CH9102F"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D Antenna"
+    ],
+    [
+     "Shell Material",
+     "Aluminum Alloy"
+    ],
+    [
+     "Product Size",
+     "54.0 x 54.0 x 18.0mm"
+    ],
+    [
+     "Product Weight",
+     "42.0g"
+    ],
+    [
+     "Package Size",
+     "95.0 x 65.0 x 25.0mm"
+    ],
+    [
+     "Charging",
+     "Discharging"
+    ],
+    [
+     "ADC1",
+     "ADC2"
+    ],
+    [
+     "DAC1",
+     "DAC2"
+    ],
+    [
+     "LCD Pixels",
+     "320x240 TF Card supports up to 16GB"
+    ],
+    [
+     "Feature",
+     "Integrated full-color HD IPS display panel and various hardware peripherals"
+    ],
+    [
+     "Feature",
+     "Rich resource interfaces, compatible with M5Stack stacking module system and sensor system, extremely expandable."
+    ]
+   ],
+   "images": [
+    "https://static-cdn.m5stack.com/resource/docs/products/core/CORE%20Metal/img-9036d748-9312-413f-80e5-a37d76ffb216.webp"
+   ],
+   "files": [
+    {
+     "name": "M5-Core-Schematic_20171206.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/480/M5-Core-Schematic_20171206.pdf",
+     "host": true
+    }
+   ],
+   "links": [],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-dial-v1-1",
+   "model": "Dial v1.1",
+   "title": "M5Stack Dial v1.1",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Dial_v1.1",
+    "https://shop.m5stack.com/products/m5stack-dial-v1-1"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz",
+    "usb": "USB OTG, USB Serial/JTAG",
+    "flash": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "driver_ic": "GC9A01 1.28 Inch 240 x 240px",
+    "touch_ic": "FT3267",
+    "dimensions": "51.0 x 51.0 x 32.3mm",
+    "weight": "46.2g",
+    "size": "1.28\"",
+    "resolution": "240x240",
+    "display": "GC9A01 1.28 Inch 240 x 240px",
+    "mcu_family": "ESP32-S3",
+    "sku": "K130-V11"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "USB",
+     "USB OTG, USB Serial/JTAG"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Wide Voltage Input Range",
+     "DC 6 ~ 36V"
+    ],
+    [
+     "Screen Driver",
+     "GC9A01 1.28 Inch 240 x 240px"
+    ],
+    [
+     "Touch Driver",
+     "FT3267"
+    ],
+    [
+     "RFID",
+     "WS1850S @ Tag operating frequency: 13.56 MHz, ISO/IEC 14443 Type A/Type B protocol"
+    ],
+    [
+     "Encoder",
+     "Resolution: 16 positions, 64 pulses/rev"
+    ],
+    [
+     "Buzzer",
+     "80dB"
+    ],
+    [
+     "Battery Socket Specification",
+     "MX1.25-2P"
+    ],
+    [
+     "Sleep Current",
+     "USB supply: DC 5V@6.84mA (LDO idle power consumption) Battery only: DC 4V@6uA"
+    ],
+    [
+     "Operating Current",
+     "USB supply: DC 5V@88.19mA Battery only: DC 4V@100mA"
+    ],
+    [
+     "Power Interface Specification",
+     "Model KF2EDGV-2.54-2P, straight pin design, 2.54mm pitch (2Pin), green"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Product Size",
+     "51.0 x 51.0 x 32.3mm"
+    ],
+    [
+     "Product Weight",
+     "46.2g"
+    ],
+    [
+     "Package Size",
+     "71.9 x 71.9 x 57.4mm"
+    ],
+    [
+     "Interface expansion",
+     "Reserved PORT.A and PORT.B interfaces"
+    ],
+    [
+     "Power Off",
+     "When no external USB power is connected (battery power only), use either of the following methods: (1) Press the RST button; (2) Set HOLD (GPIO46) to 0 during program execution to cut off battery power."
+    ],
+    [
+     "Feature",
+     "Stamp-S3A as the main controller"
+    ],
+    [
+     "Feature",
+     "Interface expansion: Reserved PORT.A and PORT.B interfaces"
+    ],
+    [
+     "Feature",
+     "1 x L-shaped 1.5mm hex wrench (compatible with M2 screws)"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/1_d1a35754-1f43-4409-949a-c67605213231.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_M5Dial.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/499/Sch_M5Dial.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Dial",
+     "url": "https://github.com/m5stack/M5Dial",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Dial-UserDemo",
+     "url": "https://github.com/m5stack/M5Dial-UserDemo",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-dinmeter-v1-1",
+   "model": "DinMeter v1.1",
+   "title": "M5Stack DinMeter v1.1",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/DinMeter_v1.1",
+    "https://shop.m5stack.com/products/m5stack-din-meter-v1-1-with-m5stamps3a"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz",
+    "flash": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "usb": "USB OTG, USB Serial/JTAG",
+    "driver_ic": "ST7789P3",
+    "resolution": "135x240",
+    "power": "USB / DC Power / Battery",
+    "dimensions": "53.0 x 30.0 x 32.0mm",
+    "weight": "17.8g",
+    "display": "ST7789P3",
+    "mcu_family": "ESP32-S3",
+    "sku": "K134-V11"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "USB",
+     "USB OTG, USB Serial/JTAG"
+    ],
+    [
+     "Wide Voltage Input Range",
+     "6 ~ 36V"
+    ],
+    [
+     "Display Driver",
+     "ST7789P3"
+    ],
+    [
+     "Display Resolution",
+     "135 x 240"
+    ],
+    [
+     "Charging Current",
+     "100mA"
+    ],
+    [
+     "Grove Load Capability",
+     "PORT.A Load: DC 5V@220mA PORT.B Load: DC 5V@220mA"
+    ],
+    [
+     "Standby Current (Battery Power)",
+     "DC 4.2V@38.4uA"
+    ],
+    [
+     "Battery Socket Specification",
+     "MX1.25-2P"
+    ],
+    [
+     "Power Supply Methods",
+     "USB / DC Power / Battery"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 40°C"
+    ],
+    [
+     "Product Size",
+     "53.0 x 30.0 x 32.0mm"
+    ],
+    [
+     "Product Weight",
+     "17.8g"
+    ],
+    [
+     "Package Size",
+     "136.0 x 95.0 x 24.0mm"
+    ],
+    [
+     "Power Off",
+     "When there is no USB external power (battery power only), the device can be powered off using either of the following methods: (1) Press the RST button; (2) Set HOLD (GPIO46) to 0 during program execution to cut off battery power."
+    ],
+    [
+     "Three power supply methods are provided",
+     "USB / DC / BAT"
+    ],
+    [
+     "Feature",
+     "Stamp-S3A as the main controller"
+    ],
+    [
+     "Feature",
+     "Reserved PORT.A and PORT.B interfaces"
+    ],
+    [
+     "Feature",
+     "Lithium battery interface (rechargeable)"
+    ],
+    [
+     "Feature",
+     "1/32 DIN standard (45 x 22.5mm)"
+    ],
+    [
+     "Feature",
+     "1 x 250mAh Polymer Lithium Battery"
+    ],
+    [
+     "Feature",
+     "Smart home monitoring and control systems"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/1_3a27efc4-667e-411f-a608-dcf2d5d8f3f3.webp"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5DinMeter",
+     "url": "https://github.com/m5stack/M5DinMeter",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5DinMeter-UserDemo",
+     "url": "https://github.com/m5stack/M5DinMeter-UserDemo",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-m5stick",
+   "model": "M5Stick",
+   "title": "M5Stack M5Stick",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/M5Stick"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-WROOM32@Dual-core processor, 240MHz",
+    "flash": "4MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V@500mA",
+    "battery": "80mAh@3.7V, inside vb",
+    "dimensions": "48.2 x 25.5 x 13.7mm",
+    "weight": "14.0g",
+    "size": "1.3\"",
+    "resolution": "64x128",
+    "display": "1.3 inch, 64 x 128, SH1107",
+    "panel": "OLED",
+    "mcu_family": "ESP32",
+    "sku": "K016"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-WROOM32@Dual-core processor, 240MHz"
+    ],
+    [
+     "Flash",
+     "4MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Interface",
+     "USB Type-C x 1, GROVE (I2C+I/O+UART) x 1"
+    ],
+    [
+     "OLED Display",
+     "1.3 inch, 64 x 128, SH1107"
+    ],
+    [
+     "Buzzer",
+     "Active buzzer x 1"
+    ],
+    [
+     "Button",
+     "Custom button x 1"
+    ],
+    [
+     "LED",
+     "Blue LED x 1"
+    ],
+    [
+     "IR",
+     "Infrared transmission x 1"
+    ],
+    [
+     "MEMS",
+     "MPU9250 (Gray version)"
+    ],
+    [
+     "Battery",
+     "80mAh@3.7V, inside vb"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D antenna"
+    ],
+    [
+     "Operating Temp",
+     "0 ~ 60°C"
+    ],
+    [
+     "Case Material",
+     "Plastic ( PC )"
+    ],
+    [
+     "Product Size",
+     "48.2 x 25.5 x 13.7mm"
+    ],
+    [
+     "Product Weight",
+     "14.0g"
+    ],
+    [
+     "Package Size",
+     "85.0 x 55.0 x 31.0mm"
+    ],
+    [
+     "Charge",
+     "Discharge"
+    ],
+    [
+     "Power On",
+     "Press the reset button once"
+    ],
+    [
+     "Power Off",
+     "Double-click the reset button"
+    ],
+    [
+     "Feature",
+     "9‑axis IMU attitude sensor (gray version only)"
+    ],
+    [
+     "Feature",
+     "Integrated infrared transmitter"
+    ],
+    [
+     "Feature",
+     "Custom button, OLED (1.3 inch), power / reset button x1"
+    ],
+    [
+     "Feature",
+     "1 x USB Type-C Cable (20cm)"
+    ]
+   ],
+   "images": [],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: m5stack/StickWatch",
+     "url": "https://github.com/m5stack/StickWatch",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed.",
+    "No product photo could be verified on the page."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-papercolor",
+   "model": "PaperColor",
+   "title": "M5Stack PaperColor",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/PaperColor",
+    "https://shop.m5stack.com/products/m5paper-color-esp32s3-dev-kit"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-S3R8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz",
+    "flash": "16MB",
+    "psram": "8MB Octal",
+    "wifi": "2.4 GHz Wi-Fi",
+    "battery": "1250mAh",
+    "mic": "MEMS Microphone, ES7210 Audio ADC, Integrated AEC Circuit",
+    "speaker": "1W @ 8Ω 2520 Speaker, AW8737A Audio Amplifier",
+    "rtc": "RX8130CE",
+    "dimensions": "70.8 x 103.9 x 8.5mm",
+    "weight": "73.3g",
+    "size": "4\"",
+    "resolution": "400x600",
+    "display": "4\" E-Paper (E6 Full-Color) ED2208-DOA (EL040EF1), Resolution 400x600",
+    "panel": "E-Paper",
+    "mcu_family": "ESP32-S3",
+    "sku": "C151"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3R8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Octal"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Display",
+     "4\" E-Paper (E6 Full-Color) ED2208-DOA (EL040EF1), Resolution 400x600"
+    ],
+    [
+     "Input Power",
+     "USB Type-C DC 5V"
+    ],
+    [
+     "Battery Capacity",
+     "1250mAh"
+    ],
+    [
+     "Audio Codec",
+     "ES8311"
+    ],
+    [
+     "Microphone",
+     "MEMS Microphone, ES7210 Audio ADC, Integrated AEC Circuit"
+    ],
+    [
+     "Speaker",
+     "1W @ 8Ω 2520 Speaker, AW8737A Audio Amplifier"
+    ],
+    [
+     "Temp/Humidity",
+     "SHT40"
+    ],
+    [
+     "Expandable Storage",
+     "microSD"
+    ],
+    [
+     "RTC",
+     "RX8130CE"
+    ],
+    [
+     "User Buttons",
+     "3x User Buttons + 1x Power Button (ON/OFF/RESET/BOOT)"
+    ],
+    [
+     "Power Consumption",
+     "Standby: 92.53uA Full Load: 211.97mA"
+    ],
+    [
+     "Product Size",
+     "70.8 x 103.9 x 8.5mm"
+    ],
+    [
+     "Product Weight",
+     "73.3g"
+    ],
+    [
+     "Package Size",
+     "120.0 x 80.0 x 23.0mm"
+    ],
+    [
+     "Single click the power button",
+     "Power on / Reset"
+    ],
+    [
+     "Double-click the power button",
+     "Power off"
+    ],
+    [
+     "Feature",
+     "4-inch E Ink Spectra 6 Full-Color E-Paper Display"
+    ],
+    [
+     "Feature",
+     "1W Speaker + MEMS Microphone"
+    ],
+    [
+     "Feature",
+     "Human-Machine Interaction:"
+    ],
+    [
+     "Feature",
+     "3x User Buttons + 1x Power Button"
+    ],
+    [
+     "Feature",
+     "Onboard SHT40 Temperature & Humidity Sensor"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/M5Paper_Color_ESP32S3_Dev_Kit_600x400_SPECTRA_eInk_Display_4.webp"
+   ],
+   "files": [
+    {
+     "name": "C151-SCH_PaperColor_V0.5_SCH_PDF_20260424_EN_2026_04_24_11_01_17.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1239/C151-SCH_PaperColor_V0.5_SCH_PDF_20260424_EN_2026_04_24_11_01_17.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5PM1",
+     "url": "https://github.com/m5stack/M5PM1",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5PaperColor-UserDemo",
+     "url": "https://github.com/m5stack/M5PaperColor-UserDemo",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-papermono",
+   "model": "PaperMono",
+   "title": "M5Stack PaperMono",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/PaperMono",
+    "https://shop.m5stack.com/products/m5papermono-with-lora-nfc-800x480-3-97-eink-display"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-S3R8 @ Xtensa® 32-bit LX7 dual-core processor, 240MHz",
+    "flash": "16MB",
+    "psram": "8MB Octal",
+    "wifi": "2.4 GHz Wi-Fi",
+    "battery": "1150mAh",
+    "mic": "PDM microphone LMD4737T261-AC02",
+    "imu": "BMI270",
+    "rtc": "RX8130CE",
+    "dimensions": "62.0 x 101.0 x 8.0mm",
+    "weight": "74.7g",
+    "size": "3.97\"",
+    "resolution": "480x800",
+    "display": "3.97\" E-Paper (Mono) SSD1677 @ 480x800, Touch FT6336G",
+    "mcu_family": "ESP32-S3",
+    "sku": "C153"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3R8 @ Xtensa® 32-bit LX7 dual-core processor, 240MHz"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Octal"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Screen",
+     "3.97\" E-Paper (Mono) SSD1677 @ 480x800, Touch FT6336G"
+    ],
+    [
+     "Screen Grayscale",
+     "4-level grayscale display"
+    ],
+    [
+     "Frontlight",
+     "Integrated e-paper frontlight"
+    ],
+    [
+     "Input Power",
+     "USB Type-C DC 5V"
+    ],
+    [
+     "Battery Capacity",
+     "1150mAh"
+    ],
+    [
+     "Microphone",
+     "PDM microphone LMD4737T261-AC02"
+    ],
+    [
+     "Buzzer",
+     "Built-in buzzer"
+    ],
+    [
+     "IMU",
+     "BMI270"
+    ],
+    [
+     "Power Management",
+     "M5PM1"
+    ],
+    [
+     "Expansion Storage",
+     "microSD"
+    ],
+    [
+     "RTC",
+     "RX8130CE"
+    ],
+    [
+     "RGB LED",
+     "Built-in RGB LED"
+    ],
+    [
+     "NFC",
+     "ST25R3916 (ISO14443A/B, FeliCa™, ISO15693)"
+    ],
+    [
+     "LoRa",
+     "SX1262 (Stamp LoRa-1262), 868MHz ~ 923MHz, built-in FPC antenna"
+    ],
+    [
+     "User Buttons",
+     "2x user buttons + 1x power button (ON / OFF / RESET / BOOT)"
+    ],
+    [
+     "Product Size",
+     "62.0 x 101.0 x 8.0mm"
+    ],
+    [
+     "Product Weight",
+     "74.7g"
+    ],
+    [
+     "Package Size",
+     "113.2 x 69.6 x 21.0mm"
+    ],
+    [
+     "Single click the power button",
+     "Power on / Reset"
+    ],
+    [
+     "Double-click the power button",
+     "Power off"
+    ],
+    [
+     "Feature",
+     "ESP32-S3R8 Core Controller"
+    ],
+    [
+     "Feature",
+     "3.97-inch 4-level grayscale monochrome e-paper display with touch"
+    ],
+    [
+     "Feature",
+     "Integrated frontlight system"
+    ],
+    [
+     "Feature",
+     "PDM microphone (LMD4737T261-AC02)"
+    ],
+    [
+     "Feature",
+     "Supports ISO14443A / ISO14443B / FeliCa™ / ISO15693"
+    ],
+    [
+     "Feature",
+     "Identity Authentication Device"
+    ],
+    [
+     "Feature",
+     "Intelligent Transportation Terminal"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/C153_M5PaperMono_with_LoRa_NFC2.webp"
+   ],
+   "files": [
+    {
+     "name": "PaperMono_SCH_V0.6.2_20260522.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1267/PaperMono_SCH_V0.6.2_20260522.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5PM1",
+     "url": "https://github.com/m5stack/M5PM1",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5IOE1",
+     "url": "https://github.com/m5stack/M5IOE1",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5PaperMono-UserDemo",
+     "url": "https://github.com/m5stack/M5PaperMono-UserDemo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5PaperMono-OTP-Demo",
+     "url": "https://github.com/m5stack/M5PaperMono-OTP-Demo",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-papermono-lite",
+   "model": "PaperMono-Lite",
+   "title": "M5Stack PaperMono-Lite",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/PaperMono-Lite",
+    "https://shop.m5stack.com/products/papermono-lite-dev-kit-800x480-3-97-e-ink-display"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-S3R8 @ Xtensa® 32-bit LX7 dual-core processor, up to 240MHz",
+    "flash": "16MB",
+    "psram": "8MB Octal",
+    "wifi": "2.4 GHz Wi-Fi",
+    "battery": "1150mAh",
+    "mic": "PDM microphone LMD4737T261-AC02",
+    "imu": "BMI270",
+    "rtc": "RX8130CE",
+    "dimensions": "62.0 x 101.0 x 8.0mm",
+    "weight": "72.4g",
+    "size": "3.97\"",
+    "resolution": "480x800",
+    "display": "3.97\" E-Paper (Mono) SSD1677 @ 480x800, with FT6336G touch",
+    "panel": "E-Ink",
+    "mcu_family": "ESP32-S3",
+    "sku": "C153-Lite"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3R8 @ Xtensa® 32-bit LX7 dual-core processor, up to 240MHz"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB Octal"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Display",
+     "3.97\" E-Paper (Mono) SSD1677 @ 480x800, with FT6336G touch"
+    ],
+    [
+     "Display Grayscale",
+     "4-level grayscale display"
+    ],
+    [
+     "Front Light",
+     "Integrated E-Paper front-light"
+    ],
+    [
+     "Input Power",
+     "USB Type-C DC 5V"
+    ],
+    [
+     "Battery Capacity",
+     "1150mAh"
+    ],
+    [
+     "Microphone",
+     "PDM microphone LMD4737T261-AC02"
+    ],
+    [
+     "Buzzer",
+     "Built-in buzzer"
+    ],
+    [
+     "IMU",
+     "BMI270"
+    ],
+    [
+     "Power Management",
+     "M5PM1"
+    ],
+    [
+     "Expansion Storage",
+     "microSD"
+    ],
+    [
+     "RTC",
+     "RX8130CE"
+    ],
+    [
+     "RGB LED",
+     "Built-in RGB LED"
+    ],
+    [
+     "User Buttons",
+     "2x user buttons + 1x power button (ON / OFF / RESET / BOOT)"
+    ],
+    [
+     "Product Size",
+     "62.0 x 101.0 x 8.0mm"
+    ],
+    [
+     "Product Weight",
+     "72.4g"
+    ],
+    [
+     "Package Size",
+     "113.2 x 69.6 x 21.0mm"
+    ],
+    [
+     "Single click the power button",
+     "Power on / Reset"
+    ],
+    [
+     "Double-click the power button",
+     "Power off"
+    ],
+    [
+     "Feature",
+     "ESP32-S3R8 main controller"
+    ],
+    [
+     "Feature",
+     "3.97-inch 4-level grayscale black-and-white E-Ink display with touch support"
+    ],
+    [
+     "Feature",
+     "Integrated front-light system"
+    ],
+    [
+     "Feature",
+     "PDM microphone (LMD4737T261-AC02)"
+    ],
+    [
+     "Feature",
+     "M5PM1 multi-level power management"
+    ],
+    [
+     "Feature",
+     "Compared to PaperMono, does not include NFC and LoRa modules"
+    ],
+    [
+     "Feature",
+     "Information display terminal"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/C153-LITE_PaperMono_Lite_Dev_Kit2.webp"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5PM1",
+     "url": "https://github.com/m5stack/M5PM1",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5IOE1",
+     "url": "https://github.com/m5stack/M5IOE1",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5PaperMono-UserDemo",
+     "url": "https://github.com/m5stack/M5PaperMono-UserDemo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5PaperMono-OTP-Demo",
+     "url": "https://github.com/m5stack/M5PaperMono-OTP-Demo",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-paper-comm-edition",
+   "model": "Paper Comm Edition",
+   "title": "M5Stack Paper Comm Edition",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Paper_Comm_Edition",
+    "https://shop.m5stack.com/products/m5paper-esp32-development-kit-comm-edition"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V@500mA",
+    "rtc": "BM8563",
+    "touch": "Capacitive",
+    "battery": "1150mAh@3.7V",
+    "dimensions": "118.6 x 67.0 x 10.0mm",
+    "weight": "86.0g",
+    "resolution": "540x960",
+    "size": "4.7\"",
+    "display": "Model: EPD_ED047TC1 540 x 960@4.7\" Grayscale: 16 levels Display area: 58.32 x 103.68mm Display driver IC: IT8951E",
+    "panel": "E-Ink",
+    "mcu_family": "ESP32",
+    "sku": "K049-C"
+   },
+   "spec_rows": [
+    [
+     "Main Control Resources",
+     "Parameter"
+    ],
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Interfaces",
+     "USB Type-C x 1, HY2.0-4P x 3, TF-card (microSD) slot"
+    ],
+    [
+     "E-ink Screen",
+     "Model: EPD_ED047TC1 540 x 960@4.7\" Grayscale: 16 levels Display area: 58.32 x 103.68mm Display driver IC: IT8951E"
+    ],
+    [
+     "Physical Buttons",
+     "Rotary switch x 1, reset button x 1"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "Touch Panel",
+     "GT911 capacitive touch panel"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D antenna"
+    ],
+    [
+     "Battery",
+     "1150mAh@3.7V"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 60°C"
+    ],
+    [
+     "Product Size",
+     "118.6 x 67.0 x 10.0mm"
+    ],
+    [
+     "Product Weight",
+     "86.0g"
+    ],
+    [
+     "Package Size",
+     "147.3 x 73.7 x 13.2mm"
+    ],
+    [
+     "ADC1",
+     "ADC2"
+    ],
+    [
+     "DAC1",
+     "DAC2"
+    ],
+    [
+     "Power on",
+     "Press and hold the power button (rotary switch)."
+    ],
+    [
+     "Power off",
+     "Press the reset button on the back, or control it through the software API (the device cannot be powered off while USB-powered)."
+    ],
+    [
+     "Display resolution",
+     "540 x 960"
+    ],
+    [
+     "Feature",
+     "Embedded ESP32, supports WiFi"
+    ],
+    [
+     "Feature",
+     "E-Ink low-power display panel"
+    ],
+    [
+     "Feature",
+     "Nearly 180-degree viewing angle"
+    ],
+    [
+     "Feature",
+     "Built-in 1150mAh high-capacity lithium battery"
+    ],
+    [
+     "Feature",
+     "HY2.0-4P peripheral interface x 3"
+    ],
+    [
+     "Feature",
+     "Industrial instrument display panel"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/products/1_4eabb798-c51c-4d8f-9097-085c42c3efa2.jpg"
+   ],
+   "files": [
+    {
+     "name": "M5_PAPER_SCH.pdf",
+     "url": "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/m5paper/M5_PAPER_SCH.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Paper_FactoryTest",
+     "url": "https://github.com/m5stack/M5Paper_FactoryTest",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5EPD_Todo",
+     "url": "https://github.com/m5stack/M5EPD_Todo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5EPD_Calculator",
+     "url": "https://github.com/m5stack/M5EPD_Calculator",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5EPD_TTFExample",
+     "url": "https://github.com/m5stack/M5EPD_TTFExample",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5EPD",
+     "url": "https://github.com/m5stack/M5EPD",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-paper-v1-1",
+   "model": "Paper v1.1",
+   "title": "M5Stack Paper v1.1",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/Paper_v1.1",
+    "https://shop.m5stack.com/products/m5paper-esp32-development-kit-v1-1-960x540-4-7-eink-display-235-ppi"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz",
+    "flash": "16MB",
+    "psram": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V@500mA",
+    "rtc": "BM8563",
+    "battery": "1150mAh@3.7V",
+    "dimensions": "118.6 x 67.0 x 10.0mm",
+    "weight": "81.6g",
+    "resolution": "540x960",
+    "size": "4.7\"",
+    "display": "Model: ED047TC1 540 x 960@4.7\" Grayscale: 16 levels Display area: 58.32 x 103.68mm Display driver IC: IT8951E",
+    "panel": "E-Ink",
+    "mcu_family": "ESP32",
+    "sku": "K049-B"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-D0WDQ6-V3 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Flash",
+     "16MB"
+    ],
+    [
+     "PSRAM",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Interfaces",
+     "USB Type-C x 1, HY2.0-4P x 3, TF-card (microSD) slot"
+    ],
+    [
+     "Sleep Mode (Only RTC On) Power Consumption",
+     "3.7V@10uA"
+    ],
+    [
+     "E-ink Screen",
+     "Model: ED047TC1 540 x 960@4.7\" Grayscale: 16 levels Display area: 58.32 x 103.68mm Display driver IC: IT8951E"
+    ],
+    [
+     "Physical Buttons",
+     "Rotary switch x 1, reset button x 1"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D antenna"
+    ],
+    [
+     "Battery",
+     "1150mAh@3.7V"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 60°C"
+    ],
+    [
+     "Case Material",
+     "Plastic (PC)"
+    ],
+    [
+     "Product Size",
+     "118.6 x 67.0 x 10.0mm"
+    ],
+    [
+     "Product Weight",
+     "81.6g"
+    ],
+    [
+     "Package Size",
+     "120.0 x 70.0 x 14.0mm"
+    ],
+    [
+     "ADC1",
+     "ADC2"
+    ],
+    [
+     "DAC1",
+     "DAC2"
+    ],
+    [
+     "M5Paper",
+     "M5Paper v1.1"
+    ],
+    [
+     "Hard display panel",
+     "Flexible display panel"
+    ],
+    [
+     "Power on",
+     "Press and hold the power button (rotary switch)."
+    ],
+    [
+     "Power off",
+     "Press the reset button on the back, or control it through the software API (the device cannot be powered off while USB-powered)."
+    ],
+    [
+     "Screen Resolution",
+     "540 x 960"
+    ],
+    [
+     "Feature",
+     "Embedded ESP32, supports WiFi"
+    ],
+    [
+     "Feature",
+     "E-Ink low-power display panel"
+    ],
+    [
+     "Feature",
+     "Nearly 180-degree viewing angle"
+    ],
+    [
+     "Feature",
+     "Built-in 1150mAh large-capacity lithium battery"
+    ],
+    [
+     "Feature",
+     "HY2.0-4P peripheral interface*3"
+    ],
+    [
+     "Feature",
+     "Industrial instrument display panel"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/1_195526f7-a8e1-48c6-b2c5-62a569f8a840.webp"
+   ],
+   "files": [
+    {
+     "name": "M5_PAPER_SCH.pdf",
+     "url": "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/m5paper/M5_PAPER_SCH.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5EPD",
+     "url": "https://github.com/m5stack/M5EPD",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5Paper_FactoryTest",
+     "url": "https://github.com/m5stack/M5Paper_FactoryTest",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5EPD_Todo",
+     "url": "https://github.com/m5stack/M5EPD_Todo",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5EPD_Calculator",
+     "url": "https://github.com/m5stack/M5EPD_Calculator",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5EPD_TTFExample",
+     "url": "https://github.com/m5stack/M5EPD_TTFExample",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-stickc",
+   "model": "StickC",
+   "title": "M5Stack StickC",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/StickC",
+    "https://shop.m5stack.com/products/stick-c"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-PICO-D4 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency up to 240MHz",
+    "flash": "4MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V@500mA",
+    "mic": "SPM1423",
+    "rtc": "BM8563",
+    "battery": "95mAh@3.7V, inside vb",
+    "dimensions": "48.2 x 25.5 x 13.7mm",
+    "weight": "15.1g",
+    "driver_ic": "ST7735S Resolution: 80 x 160",
+    "size": "0.96\"",
+    "resolution": "80x160",
+    "display": "0.96 inch, 80 x 160 Colorful TFT LCD, ST7735SV",
+    "panel": "TFT",
+    "mcu_family": "ESP32",
+    "sku": "K016-C"
+   },
+   "spec_rows": [
+    [
+     "Main Controller Resources",
+     "Parameter"
+    ],
+    [
+     "SoC",
+     "ESP32-PICO-D4 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency up to 240MHz"
+    ],
+    [
+     "Flash",
+     "4MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Interface",
+     "USB Type-C x 1, GROVE (I2C+I/O+UART) x 1"
+    ],
+    [
+     "LCD Screen",
+     "0.96 inch, 80 x 160 Colorful TFT LCD, ST7735SV"
+    ],
+    [
+     "Microphone",
+     "SPM1423"
+    ],
+    [
+     "Button",
+     "Custom Button x 2"
+    ],
+    [
+     "LED",
+     "Red LED x 1"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "PMU",
+     "AXP192"
+    ],
+    [
+     "IR",
+     "Infrared Transmission"
+    ],
+    [
+     "MEMS",
+     "MPU6886"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D Antenna"
+    ],
+    [
+     "Battery",
+     "95mAh@3.7V, inside vb"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 60°C"
+    ],
+    [
+     "Shell Material",
+     "Plastic (PC)"
+    ],
+    [
+     "Product Size",
+     "48.2 x 25.5 x 13.7mm"
+    ],
+    [
+     "Product Weight",
+     "15.1g"
+    ],
+    [
+     "Package Size",
+     "55.0 x 55.0 x 20.0mm"
+    ],
+    [
+     "Release Date",
+     "Product Changes"
+    ],
+    [
+     "Single-click the power button",
+     "Power on."
+    ],
+    [
+     "Press and hold the power button",
+     "Power off."
+    ],
+    [
+     "Supported baud rates",
+     "1200 ~ 115200, 250 K, 500 K, 750 K, 1500 K"
+    ],
+    [
+     "Driver IC",
+     "ST7735S Resolution: 80 x 160"
+    ],
+    [
+     "Feature",
+     "Built-in 3-axis accelerometer & 3-axis gyroscope"
+    ],
+    [
+     "Feature",
+     "User buttons, LCD (0.96\"), Power / Reset button"
+    ],
+    [
+     "Feature",
+     "1 x USB Type-C Cable (20cm)"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/products/01.jpg"
+   ],
+   "files": [
+    {
+     "name": "20191118__StickC_A04_3110_Schematic_Rebuild_PinMap.pdf",
+     "url": "https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/Core/M5StickC/20191118__StickC_A04_3110_Schematic_Rebuild_PinMap.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5StickC",
+     "url": "https://github.com/m5stack/M5StickC",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-stickc-plus",
+   "model": "StickC-Plus",
+   "title": "M5Stack StickC-Plus",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/StickC-Plus",
+    "https://shop.m5stack.com/products/m5stickc-plus-esp32-pico-mini-iot-development-kit"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-PICO-D4 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency up to 240MHz",
+    "flash": "4MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V@500mA",
+    "mic": "SPM1423",
+    "rtc": "BM8563",
+    "battery": "120mAh@3.7V, inside vb",
+    "dimensions": "48.0 x 24.0 x 13.5mm",
+    "weight": "16.9g",
+    "driver_ic": "ST7789v2",
+    "resolution": "135x240",
+    "size": "1.14\"",
+    "display": "1.14 inch, 135 x 240 Colorful TFT LCD, ST7789v2",
+    "panel": "TFT",
+    "mcu_family": "ESP32",
+    "sku": "K016-P"
+   },
+   "spec_rows": [
+    [
+     "Specifications",
+     "Parameter"
+    ],
+    [
+     "SoC",
+     "ESP32-PICO-D4 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency up to 240MHz"
+    ],
+    [
+     "Flash",
+     "4MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Interface",
+     "USB Type-C x 1, GROVE (I2C+I/O+UART) x 1"
+    ],
+    [
+     "LCD Screen",
+     "1.14 inch, 135 x 240 Colorful TFT LCD, ST7789v2"
+    ],
+    [
+     "Microphone",
+     "SPM1423"
+    ],
+    [
+     "Button",
+     "Custom Button x 2"
+    ],
+    [
+     "LED",
+     "Red LED x 1"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "PMU",
+     "AXP192"
+    ],
+    [
+     "Buzzer",
+     "Onboard Buzzer"
+    ],
+    [
+     "IR",
+     "Infrared Transmission"
+    ],
+    [
+     "MEMS",
+     "MPU6886"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D Antenna"
+    ],
+    [
+     "External Pins",
+     "G0, G25/G26, G36, G32, G33"
+    ],
+    [
+     "Battery",
+     "120mAh@3.7V, inside vb"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 60°C"
+    ],
+    [
+     "Shell Material",
+     "Plastic (PC)"
+    ],
+    [
+     "Product Size",
+     "48.0 x 24.0 x 13.5mm"
+    ],
+    [
+     "Product Weight",
+     "16.9g"
+    ],
+    [
+     "Package Size",
+     "104.4 x 65.0 x 18.0mm"
+    ],
+    [
+     "Release Date",
+     "Product Changes"
+    ],
+    [
+     "/",
+     "First release"
+    ],
+    [
+     "Single click the power button",
+     "Power on / Reset"
+    ],
+    [
+     "Double-click the power button",
+     "Power off"
+    ],
+    [
+     "Driver Chip",
+     "ST7789v2"
+    ],
+    [
+     "Resolution",
+     "135 x 240"
+    ],
+    [
+     "StickC-Plus supported baud rates",
+     "1200 ~115200, 250K, 500K, 750K, 1500K"
+    ],
+    [
+     "Feature",
+     "Based on ESP32 development, supports Wi-Fi"
+    ],
+    [
+     "Feature",
+     "Built-in 3-axis accelerometer and 3-axis gyroscope"
+    ],
+    [
+     "Feature",
+     "Integrated infrared transmitter"
+    ],
+    [
+     "Feature",
+     "User button, LCD (1.14 inch), power/reset button"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/products/1.webp"
+   ],
+   "files": [
+    {
+     "name": "k016-p-StickC-Plus-sche.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/669/k016-p-StickC-Plus-sche.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5StickC-Plus",
+     "url": "https://github.com/m5stack/M5StickC-Plus",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-stickc-plus-se",
+   "model": "StickC-Plus SE",
+   "title": "M5Stack StickC-Plus SE",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/StickC-Plus_SE",
+    "https://shop.m5stack.com/products/m5stickc-plus-se-mini-iot-dev-kit-esp32-pico"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-PICO-D4 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz",
+    "flash": "4MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V@500mA",
+    "battery": "Built-in 3.7V 120mAh lithium battery",
+    "mic": "SPM1423",
+    "rtc": "BM8563",
+    "dimensions": "48.0 x 24.0 x 13.5mm",
+    "weight": "17.0g",
+    "size": "1.14\"",
+    "resolution": "135x240",
+    "display": "1.14-inch color TFT LCD, 135 x 240 resolution, ST7789v2 driver",
+    "panel": "TFT",
+    "mcu_family": "ESP32",
+    "sku": "K016-P-SE"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-PICO-D4 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Flash",
+     "4MB"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D Antenna"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Battery",
+     "Built-in 3.7V 120mAh lithium battery"
+    ],
+    [
+     "Power Management",
+     "AXP192"
+    ],
+    [
+     "Expansion Interface",
+     "HY2.0-4P x 1, Hat-Bus 2.54-8P interface"
+    ],
+    [
+     "LCD",
+     "1.14-inch color TFT LCD, 135 x 240 resolution, ST7789v2 driver"
+    ],
+    [
+     "Microphone",
+     "SPM1423"
+    ],
+    [
+     "RTC",
+     "BM8563"
+    ],
+    [
+     "IR",
+     "Infrared transmission"
+    ],
+    [
+     "Button",
+     "Customizable button x 2"
+    ],
+    [
+     "LED",
+     "Red LED x 1"
+    ],
+    [
+     "Buzzer",
+     "Onboard passive buzzer"
+    ],
+    [
+     "Operating Temperature",
+     "0 ~ 60°C"
+    ],
+    [
+     "Product Size",
+     "48.0 x 24.0 x 13.5mm"
+    ],
+    [
+     "Product Weight",
+     "17.0g"
+    ],
+    [
+     "Package Size",
+     "104.4 x 65.0 x 18.0mm"
+    ],
+    [
+     "Single click the power button",
+     "Power on / Reset"
+    ],
+    [
+     "Double-click the power button",
+     "Power off"
+    ],
+    [
+     "StickC-Plus SE supported baud rates",
+     "1200 ~115200, 250K, 500K, 750K, 1500K"
+    ],
+    [
+     "Feature",
+     "ESP32-PICO-D4 main controller"
+    ],
+    [
+     "Feature",
+     "Onboard red status indicator"
+    ],
+    [
+     "Feature",
+     "Integrated infrared transmitter"
+    ],
+    [
+     "Feature",
+     "Customizable buttons, LCD, power button, and reset button"
+    ],
+    [
+     "Feature",
+     "Built-in 120 mAh lithium battery"
+    ],
+    [
+     "Feature",
+     "Magnetic back; translucent orange enclosure"
+    ],
+    [
+     "Feature",
+     "Lightweight wearable devices"
+    ],
+    [
+     "Feature",
+     "Simple creative DIY projects"
+    ],
+    [
+     "Feature",
+     "Compact smart home control terminals"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/M5StickC_PLUS_SE_Mini_IoT_Dev_Kit_ESP32-PICO2.webp"
+   ],
+   "files": [
+    {
+     "name": "K016-P-SE-SCH_StickC-Plus-SE_SCH.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1234/K016-P-SE-SCH_StickC-Plus-SE_SCH.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5Unified",
+     "url": "https://github.com/m5stack/M5Unified",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5GFX",
+     "url": "https://github.com/m5stack/M5GFX",
+     "type": "official-github"
+    },
+    {
+     "title": "GitHub: m5stack/M5StickC-Plus-SE-Factory",
+     "url": "https://github.com/m5stack/M5StickC-Plus-SE-Factory",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-stickt2",
+   "model": "StickT2",
+   "title": "M5Stack StickT2",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/StickT2",
+    "https://shop.m5stack.com/products/m5stickt2-esp32-thermal-camera-development-kit-lepton-3-0"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-PICO-D4 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency up to 240MHz",
+    "flash": "4MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "power": "5V@500mA",
+    "mic": "SPM1423",
+    "battery": "300mAh",
+    "dimensions": "48.0 x 24.0 x 24.0mm",
+    "weight": "28.6g",
+    "driver_ic": "ST7789",
+    "resolution": "135x240",
+    "size": "1.14\"",
+    "display": "1.14 inch, 135x240 Colorful TFT LCD, ST7789",
+    "panel": "TFT",
+    "mcu_family": "ESP32",
+    "sku": "K016-T2"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-PICO-D4 @ Xtensa® 32-bit LX6 dual-core processor, clock frequency up to 240MHz"
+    ],
+    [
+     "Flash",
+     "4MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "SRAM",
+     "520KB"
+    ],
+    [
+     "Input Voltage",
+     "5V@500mA"
+    ],
+    [
+     "Host Interface",
+     "USB Type-C x 1, HY2.0-4P (I2C+I/O+UART) x 1"
+    ],
+    [
+     "IPS Screen",
+     "1.14 inch, 135x240 Colorful TFT LCD, ST7789"
+    ],
+    [
+     "Microphone",
+     "SPM1423"
+    ],
+    [
+     "Buttons",
+     "Custom Buttons x 2"
+    ],
+    [
+     "Power Management IC",
+     "AXP192"
+    ],
+    [
+     "Antenna",
+     "2.4G 3D Antenna"
+    ],
+    [
+     "MEMS",
+     "MPU6886"
+    ],
+    [
+     "Battery Capacity",
+     "300mAh"
+    ],
+    [
+     "Encoder",
+     "Rotary Encoder"
+    ],
+    [
+     "Thermal Imaging IC",
+     "Lepton 3.0"
+    ],
+    [
+     "Product Size",
+     "48.0 x 24.0 x 24.0mm"
+    ],
+    [
+     "Product Weight",
+     "28.6g"
+    ],
+    [
+     "Package Size",
+     "73.0 x 45.0 x 28.0mm"
+    ],
+    [
+     "Effective Pixels",
+     "160 x 120"
+    ],
+    [
+     "Field of View",
+     "56°"
+    ],
+    [
+     "Fast Imaging Time",
+     "500ms"
+    ],
+    [
+     "Effective Frame Rate",
+     "8.7Hz"
+    ],
+    [
+     "Input Clock",
+     "25MHz"
+    ],
+    [
+     "Pixel Size",
+     "12μm"
+    ],
+    [
+     "Power Consumption",
+     "150 mW (typical operation), 650 mW (shutter), 5 mW (standby)"
+    ],
+    [
+     "Dynamic Range",
+     "Low gain: -10 to 400°C; High gain: -10 to 140°C"
+    ],
+    [
+     "Wavelength Range",
+     "8 to 14µm"
+    ],
+    [
+     "Thermal Sensitivity",
+     "50 mK (0.050°C)"
+    ],
+    [
+     "Optimal Temperature Range",
+     "-10°C to +80°C"
+    ],
+    [
+     "ESP32-PICO-D4",
+     "PA2"
+    ],
+    [
+     "PA3",
+     "PA4"
+    ],
+    [
+     "Rotary Encoder",
+     "SW"
+    ],
+    [
+     "EN_B",
+     "EN_A"
+    ],
+    [
+     "Release Date",
+     "Product Changes"
+    ],
+    [
+     "Housing",
+     "3D-printed nylon material"
+    ],
+    [
+     "Single-click the power button",
+     "Power on."
+    ],
+    [
+     "Press and hold the power button",
+     "Power off."
+    ],
+    [
+     "Driver Chip",
+     "ST7789"
+    ],
+    [
+     "Resolution",
+     "135 x 240"
+    ],
+    [
+     "Feature",
+     "Based on ESP32 development"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/products/1_a98bbed0-f5ed-4c0c-9faa-d24343cce2e3.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: m5stack/M5-StickT",
+     "url": "https://github.com/m5stack/M5-StickT",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  },
+  {
+   "id": "m5stack-vameter",
+   "model": "VAMeter",
+   "title": "M5Stack VAMeter",
+   "series": "",
+   "sources": [
+    "https://docs.m5stack.com/en/core/VAMeter",
+    "https://shop.m5stack.com/products/m5stack-voltage-and-amperage-meter-with-m5stamps3"
+   ],
+   "description": "The reference docs for M5Stack products. Quick start, get the detailed information or instructions such as IDE,UIFLOW,Arduino. The tutorials for M5Burner, Firmware, Burning, programming. ESP32,M5StickC,StickV, StickT,M5ATOM.",
+   "params": {
+    "mcu": "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz",
+    "flash": "8MB",
+    "wifi": "2.4 GHz Wi-Fi",
+    "driver_ic": "ST7789",
+    "dimensions": "51.5 × 48.0 × 40.5 mm",
+    "weight": "43.4 g",
+    "size": "1.3\"",
+    "display": "1.3 inch @ 240 × 240 pixels",
+    "mcu_family": "ESP32-S3",
+    "sku": "K136"
+   },
+   "spec_rows": [
+    [
+     "SoC",
+     "ESP32-S3FN8 @ Xtensa® 32-bit LX7 dual-core processor, clock frequency 240MHz"
+    ],
+    [
+     "Power Detection Chip",
+     "INA226"
+    ],
+    [
+     "Flash",
+     "8MB"
+    ],
+    [
+     "Wi-Fi",
+     "2.4 GHz Wi-Fi"
+    ],
+    [
+     "INA226 Communication Address",
+     "Dual detection chips INA226: 0x40 / 0x41"
+    ],
+    [
+     "Display",
+     "1.3 inch @ 240 × 240 pixels"
+    ],
+    [
+     "Display Driver",
+     "ST7789"
+    ],
+    [
+     "PD Input Power",
+     "5-24 V @ 0-5 A"
+    ],
+    [
+     "Current Resolution",
+     "2.5 µA / 250 µA"
+    ],
+    [
+     "Current Sampling Err",
+     "Small current (1-100 mA): 1.01 % Large current (100 mA-5 A): 0.94 % µA-level current: 0.69 %"
+    ],
+    [
+     "Voltage Error",
+     "Measurement error: 0.11 %"
+    ],
+    [
+     "Power Consumption",
+     "Stamp-S3 USB powered: DC 5 V / 123.5 mA PD INPUT: DC 5 V / 118 mA DC 12 V / 66.8 mA DC 24 V / 26 mA"
+    ],
+    [
+     "PD OUTPUT Capability",
+     "DC 24 V @ 3 A 68 ℃ DC 24 V @ 5 A 92 ℃"
+    ],
+    [
+     "User Interface",
+     "Rotary encoder switch, Reset button, Boot button, onboard buzzer"
+    ],
+    [
+     "Relay",
+     "DC 5 - 24 V @ 5 A"
+    ],
+    [
+     "Operating Temp.",
+     "0 - 40 °C"
+    ],
+    [
+     "Product Size",
+     "51.5 × 48.0 × 40.5 mm"
+    ],
+    [
+     "Product Weight",
+     "43.4 g"
+    ],
+    [
+     "Package Size",
+     "160.9 × 93.0 × 31.6 mm"
+    ],
+    [
+     "Feature",
+     "High-precision current detection (2.5 µA / 250 µA resolution switching)"
+    ],
+    [
+     "Feature",
+     "Wide voltage input (5-24 V)"
+    ],
+    [
+     "Feature",
+     "Cloud data display via EZData"
+    ],
+    [
+     "Feature",
+     "PD input (no PD trigger built in)"
+    ],
+    [
+     "Feature",
+     "Multiple power-supply methods (PD INPUT / Stamp-S3 / external terminal block)"
+    ],
+    [
+     "Feature",
+     "Power and signal isolation"
+    ],
+    [
+     "Feature",
+     "Open-source hardware & software"
+    ],
+    [
+     "Feature",
+     "2 x 3.81-2P Terminal Block"
+    ],
+    [
+     "Feature",
+     "Remote monitoring & data acquisition"
+    ]
+   ],
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0056/7689/2250/files/1_5b8f1d7f-30f3-469c-b881-9e6436381080.webp"
+   ],
+   "files": [
+    {
+     "name": "Sch_VAMeter_V1.2.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/518/Sch_VAMeter_V1.2.pdf",
+     "host": true
+    },
+    {
+     "name": "Sch_VAMeter_base_V1.0.pdf",
+     "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/518/Sch_VAMeter_base_V1.0.pdf",
+     "host": true
+    }
+   ],
+   "links": [
+    {
+     "title": "GitHub: m5stack/VAMeter-Firmware",
+     "url": "https://github.com/m5stack/VAMeter-Firmware",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "m5stack"
+   }
+  }
+ ]
+}

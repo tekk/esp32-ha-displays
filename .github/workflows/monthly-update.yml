@@ -1,6 +1,9 @@
-# Monthly catalog update: checks guition.com, the Guition file server (pan.jczn1688.com), Waveshare and GitHub,
-# adds new boards / files, uploads large files to the `files-v1` release, rebuilds the site, commits + pushes,
-# then e-mails the summary with the log attached.
+# Monthly catalog update: checks guition.com, the Guition file server (pan.jczn1688.com), Waveshare, the other
+# vendors (M5Stack, LilyGO, Elecrow, Makerfabs, Seeed – new ESP32 display boards are AUTO-ADDED by build/autoadd.py
+# from their official product pages into data/auto/boards/) and GitHub; adds new boards / files, uploads large files
+# to the `files-v1` release, rebuilds the site incl. the SEO layer (board/vendor pages, JSON-LD, sitemap.xml,
+# robots.txt), validates it (tests/check_links.py + tests/check_seo.py), commits + pushes only if validation passes,
+# then e-mails the summary with the log attached. Manual runs default to --dry-run (reports what WOULD be added).
 #
 # Repository secrets used for the e-mail (the mail step is skipped when SMTP_SERVER or MAIL_TO is not set):
 #   SMTP_SERVER, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD, MAIL_TO, MAIL_FROM
@@ -15,7 +18,7 @@ on:
         type: boolean
         default: true
       skip:
-        description: 'Comma list of sources to skip (pan,guition,waveshare,github)'
+        description: 'Comma list of sources to skip (pan,guition,waveshare,vendors,github)'
         type: string
         default: ''
 permissions:

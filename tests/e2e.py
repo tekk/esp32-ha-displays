@@ -101,6 +101,30 @@ with sync_playwright() as p:
     if sec.count() and SHOTS:
         sec.screenshot(path=f'{SHOTS}/12-model-M5Stack-Tab5-ports-mobile.png')
     mp.close()
+    # static SEO pages: board + vendor page, link into the SPA, legacy #model= links, sitemap/robots
+    pg.goto(BASE + 'board/' + mid3 + '/'); pg.wait_for_timeout(800)
+    res['seo_board_h1'] = pg.locator('h1').inner_text()
+    res['seo_board_jsonld'] = pg.locator('script[type="application/ld+json"]').count()
+    res['seo_board_canonical'] = pg.locator('link[rel=canonical]').get_attribute('href')
+    res['seo_board_specs'] = pg.locator('table.sspec tbody tr').count()
+    shot(pg, '14-seo-board-page-Tab5.png', full_page=True)
+    pg.locator('a.btn.pri').first.click(); pg.wait_for_timeout(1500)
+    res['seo_to_spa'] = pg.locator('.dinfo h1').inner_text() if pg.locator('.dinfo h1').count() else None
+    pg.goto(BASE + 'vendor/m5stack/'); pg.wait_for_timeout(800)
+    res['seo_vendor_cards'] = pg.locator('.vcard').count()
+    shot(pg, '15-seo-vendor-page-M5Stack.png')
+    pg.goto(BASE + 'index.html#model=' + mid3); pg.wait_for_timeout(1500)
+    res['legacy_hash_redirect'] = 'model.html' in pg.url
+    res['sitemap_ok'] = pg.evaluate("fetch('sitemap.xml').then(r=>r.text()).then(t=>t.includes('<urlset') && t.includes('/board/'))")
+    res['robots_ok'] = pg.evaluate("fetch('robots.txt').then(r=>r.text()).then(t=>t.includes('Sitemap:'))")
+    pg.goto(BASE + 'index.html'); pg.wait_for_timeout(1200)
+    res['index_headers'] = pg.locator('body > header.topbar').count()
+    res['index_footer_dir_links'] = pg.locator('footer .dir a').count()
+    mp = ctx.new_page(); mp.set_viewport_size({'width': 390, 'height': 844})
+    mp.goto(BASE + 'board/' + mid3 + '/'); mp.wait_for_timeout(800)
+    res['seo_board_mobile_overflow'] = mp.evaluate("document.documentElement.scrollWidth > window.innerWidth + 1")
+    shot(mp, '16-seo-board-page-mobile.png')
+    mp.close()
     pg.goto(BASE + 'viewer.html?a=hmi-display-jc4880p443c-i-w'); pg.wait_for_timeout(3000)
     res['viewer_tree_nodes'] = pg.locator('#tree .n').count()
     shot(pg, '05-viewer-JC4880P443C_I_W.png')
@@ -125,5 +149,5 @@ print('console errors:', len(errors)); [print(' ', e) for e in errors[:20]]
 print('bad responses:', len(bad)); [print(' ', e) for e in bad[:20]]
 print('blocked external requests:', len(external)); [print(' ', e) for e in external[:20]]
 ok = (not errors and not bad and not external and res.get('hover_visible') and res.get('fonts_loaded') and (res.get('last_column') or '').lower() == 'features'
-      and res.get('feature_icons', 0) > 100 and res.get('tooltip') and res.get('model_feature_cells', 0) > 3 and res.get('value_badges', 0) > 50 and res.get('vendor_m5_rows', 0) >= 10 and res.get('tab5_has_thread') and not res.get('tab5_mobile_overflow') and not {'PSRAM', 'FILES'} & {h.upper() for h in res.get('header', [])})
+      and res.get('feature_icons', 0) > 100 and res.get('tooltip') and res.get('model_feature_cells', 0) > 3 and res.get('value_badges', 0) > 50 and res.get('vendor_m5_rows', 0) >= 10 and res.get('tab5_has_thread') and res.get('seo_board_jsonld', 0) >= 2 and res.get('seo_to_spa') and res.get('legacy_hash_redirect') and res.get('sitemap_ok') and res.get('robots_ok') and res.get('index_headers') == 1 and res.get('seo_vendor_cards', 0) >= 10 and not res.get('seo_board_mobile_overflow') and not res.get('tab5_mobile_overflow') and not {'PSRAM', 'FILES'} & {h.upper() for h in res.get('header', [])})
 sys.exit(0 if ok else 1)

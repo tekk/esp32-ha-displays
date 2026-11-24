@@ -1,0 +1,778 @@
+{
+ "vendor": "Makerfabs",
+ "slug": "makerfabs",
+ "category": "Makerfabs MaTouch",
+ "image_note": "official Makerfabs product photo",
+ "_note": "AUTO-DISCOVERED by build/autoadd.py from official product pages (verbatim values, empty = not stated). Move an entry to data/curated/boards/ after review; curated entries always win.",
+ "boards": [
+  {
+   "id": "makerfabs-matouch-esp32-s3-parallel-tft-with-touch-7",
+   "model": "MaTouch ESP32-S3 Parallel TFT with Touch 7“",
+   "title": "MaTouch ESP32-S3 Parallel TFT with Touch 7“",
+   "series": "",
+   "sources": [
+    "https://www.makerfabs.com/esp32-s3-parallel-tft-with-touch-7-inch.html"
+   ],
+   "description": "This ESP32 S3 7-inch IPS display could be an ideal displayer& controller for IOT applications. It has 2 versions: High resolution version 800*480, and Ultra High resolution version 1024*600;",
+   "params": {
+    "mcu": "ESP32-S3-WROOM-1, PCB Antenna, 16MB Flash, 8MB PSRAM, ESP32-S3-WROOM-1-N16R8",
+    "wifi": "Wifi& Bluetooth 5.0",
+    "resolution": "800x480",
+    "interface": "RGB 565",
+    "touch": "Capacitive",
+    "touch_ic": "GT911",
+    "usb": "Dual USB Type-C(one for USB-to-UART and one for native USB)",
+    "power": "USB Type-C 5.0V(4.0V~5.25V)",
+    "mic": "Yes",
+    "flash": "16MB",
+    "psram": "8MB",
+    "size": "7\"",
+    "display": "7 inch High Lightness IPS",
+    "bt": "Bluetooth 5.0",
+    "panel": "IPS",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "Controller",
+     "ESP32-S3-WROOM-1, PCB Antenna, 16MB Flash, 8MB PSRAM, ESP32-S3-WROOM-1-N16R8"
+    ],
+    [
+     "Wireless",
+     "Wifi& Bluetooth 5.0"
+    ],
+    [
+     "LCD",
+     "7 inch High Lightness IPS"
+    ],
+    [
+     "FPS",
+     ">30"
+    ],
+    [
+     "Resolution",
+     "800*480/1024*600"
+    ],
+    [
+     "LCD interface",
+     "RGB 565"
+    ],
+    [
+     "Touch Panel",
+     "5 Points Touch, Capacitive"
+    ],
+    [
+     "Touch Panel Driver",
+     "GT911"
+    ],
+    [
+     "USB",
+     "Dual USB Type-C(one for USB-to-UART and one for native USB)"
+    ],
+    [
+     "UART to UART Chip",
+     "CP2104"
+    ],
+    [
+     "Power Supply",
+     "USB Type-C 5.0V(4.0V~5.25V)"
+    ],
+    [
+     "Button",
+     "Flash button and reset button"
+    ],
+    [
+     "Mabee interface",
+     "1*I2C;1*GPIO"
+    ],
+    [
+     "MicroSD",
+     "Yes"
+    ],
+    [
+     "Arduino support",
+     "Yes"
+    ],
+    [
+     "Type-C Power Delivery",
+     "Not Supported"
+    ],
+    [
+     "Operation temperature",
+     "-40℃ to +85℃"
+    ]
+   ],
+   "images": [
+    "https://www.makerfabs.com/media/catalog/product/cache/6ab262b0af1e33517c917f0f4bd15d2d/m/a/matouch_esp32-s3_parallel_tft_with_touch_7_-1-1000x750.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Makerfabs/ESP32-S3-Parallel-TFT-with-Touch-7inch",
+     "url": "https://github.com/Makerfabs/ESP32-S3-Parallel-TFT-with-Touch-7inch",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "makerfabs"
+   }
+  },
+  {
+   "id": "makerfabs-matouch-ai-esp32s3-2-8-tft-st7789v",
+   "model": "MaTouch AI ESP32S3 2.8\" TFT ST7789V",
+   "title": "MaTouch AI ESP32S3 2.8\" TFT ST7789V",
+   "series": "",
+   "sources": [
+    "https://www.makerfabs.com/matouch-ai-esp32s3-2-8-tft-st7789v.html"
+   ],
+   "description": "The latest MaTouch AI board integrate I2S voice input/I2S speaker/ 3 million camera OV3660/ 320*240 resolution display, with ESP32S3 strong processor& Wifi ability, to make this board a good tool/platform for AI development with ESP32.",
+   "params": {
+    "mcu": "ESP32-S3, 16MB Flash, PSRAM 8MB",
+    "wifi": "WiFi& Bluetooth 5.0",
+    "driver_ic": "ST7789V",
+    "interface": "SPI",
+    "touch": "Capacitive",
+    "usb": "1 * USB to UART CH340K, 1 * USB_native",
+    "power": "USB Type-C 5.0V(4.0V~5.25V)",
+    "camera": "OV3660",
+    "mic": "32G",
+    "rtc": "PCF8563T",
+    "flash": "16MB",
+    "size": "2.8\"",
+    "resolution": "320x240",
+    "display": "2.8\", 320x240 resolution",
+    "bt": "Bluetooth 5.0",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "Controller",
+     "ESP32-S3, 16MB Flash, PSRAM 8MB"
+    ],
+    [
+     "Wireless",
+     "WiFi& Bluetooth 5.0"
+    ],
+    [
+     "LCD",
+     "2.8\", 320x240 resolution"
+    ],
+    [
+     "LCD Driver",
+     "ST7789V"
+    ],
+    [
+     "LCD interface",
+     "SPI"
+    ],
+    [
+     "Touch Panel",
+     "5 Points Touch, Capacitive, GT911"
+    ],
+    [
+     "USB",
+     "1 * USB to UART CH340K, 1 * USB_native"
+    ],
+    [
+     "Power Supply",
+     "USB Type-C 5.0V(4.0V~5.25V)"
+    ],
+    [
+     "Camera",
+     "OV3660"
+    ],
+    [
+     "MicroSD",
+     "32G"
+    ],
+    [
+     "RGB LED",
+     "1XWS2812"
+    ],
+    [
+     "RTC",
+     "PCF8563T"
+    ],
+    [
+     "Charger",
+     "TP4056"
+    ],
+    [
+     "Microphone input",
+     "2CH INMP441"
+    ],
+    [
+     "Audio output",
+     "MAX98357(3.2W@4Ω)"
+    ]
+   ],
+   "images": [
+    "https://www.makerfabs.com/media/catalog/product/cache/6ab262b0af1e33517c917f0f4bd15d2d/m/a/matouch_ai_esp32s3_2.8_tft_st7789v-1.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "makerfabs"
+   }
+  },
+  {
+   "id": "makerfabs-matouch-esp32-s3-2-13-quad-color-eink-epaper",
+   "model": "MaTouch ESP32-S3 2.13\" Quad-Color Eink ePaper",
+   "title": "MaTouch ESP32-S3 2.13\" Quad-Color Eink ePaper",
+   "series": "",
+   "sources": [
+    "https://www.makerfabs.com/matouch-esp32-s3-2-13-quad-color-eink-epaper.html"
+   ],
+   "description": "MaTouch ESP32-S3 2.13” Quad-Color E-Ink display is equipped with 122x250 resolution ePaper with Black, White, Red and Yellow color",
+   "params": {
+    "mcu": "ESP32-S3， 16M Flash, 8M PSRAM",
+    "wifi": "WiFi& Bluetooth 5.0",
+    "driver_ic": "JD79676",
+    "imu": "QMI8658A",
+    "usb": "1 * USB_native",
+    "power": "USB Type-C 5.0V(4.0V~5.25V); 3.7V Lipo battery",
+    "flash": "16MB",
+    "psram": "8MB",
+    "bt": "Bluetooth 5.0",
+    "mcu_family": "ESP32-S3",
+    "size": "2.13\""
+   },
+   "spec_rows": [
+    [
+     "Smart Home Dashboard",
+     "Display real-time information such as weather updates, calendar events, and notifications from various smart home devices."
+    ],
+    [
+     "Personal Info",
+     "Personal information display in Major Events such as receptions/Conferences"
+    ],
+    [
+     "Controller",
+     "ESP32-S3， 16M Flash, 8M PSRAM"
+    ],
+    [
+     "Wireless",
+     "WiFi& Bluetooth 5.0"
+    ],
+    [
+     "EINK",
+     "2.13\", 122x250 resolution"
+    ],
+    [
+     "Color",
+     "Black, White, Red and Yellow"
+    ],
+    [
+     "Driver",
+     "JD79676"
+    ],
+    [
+     "interface",
+     "SPI"
+    ],
+    [
+     "IMU",
+     "QMI8658A"
+    ],
+    [
+     "USB",
+     "1 * USB_native"
+    ],
+    [
+     "Power Supply",
+     "USB Type-C 5.0V(4.0V~5.25V); 3.7V Lipo battery"
+    ],
+    [
+     "Charger",
+     "Yes"
+    ],
+    [
+     "Feature",
+     "Controller: ESP32-S3， 16M Flash, 8M PSRAM"
+    ],
+    [
+     "Feature",
+     "Wireless: WiFi& Bluetooth 5.0"
+    ],
+    [
+     "Feature",
+     "EINK: 2.13\", 122x250 resolution"
+    ],
+    [
+     "Feature",
+     "Color: Black, White, Red and Yellow"
+    ],
+    [
+     "Feature",
+     "Power Supply: USB Type-C 5.0V(4.0V~5.25V); 3.7V Lipo battery"
+    ]
+   ],
+   "images": [
+    "https://www.makerfabs.com/media/catalog/product/cache/6ab262b0af1e33517c917f0f4bd15d2d/m/a/matouch-esp32-s3-2-13-quad-color-eink-epaper-7.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Makerfabs/ESP32S3_2.13_Quad-Color_Eink",
+     "url": "https://github.com/Makerfabs/ESP32S3_2.13_Quad-Color_Eink",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "makerfabs"
+   }
+  },
+  {
+   "id": "makerfabs-matouch-esp32-s3-amoled-ai-camera",
+   "model": "MaTouch ESP32-S3 AMOLED AI CAMERA",
+   "title": "MaTouch ESP32-S3 AMOLED AI CAMERA",
+   "series": "",
+   "sources": [
+    "https://www.makerfabs.com/matouch-esp32-s3-amoled-ai-camera.html"
+   ],
+   "description": "The MaTouch ESP32-S3 AMOLED with Touch 2.05” CO5300 driver AMOLED resolution 368x448 resolution, CST820 Touch. On board OV3660 3MP Camera",
+   "params": {
+    "mcu": "ESP32-S3， 16MB Flash，8MB PSRAM",
+    "wifi": "WiFi& Bluetooth 5.0",
+    "driver_ic": "CO5300，QSPI",
+    "touch_ic": "CST820",
+    "usb": "1 * USB_native",
+    "power": "USB Type-C 5.0V(4.0V~5.25V)",
+    "camera": "OV3660",
+    "flash": "16MB",
+    "psram": "8MB",
+    "size": "2.05\"",
+    "resolution": "368x448",
+    "display": "2.05\", 368x448 resolution",
+    "bt": "Bluetooth 5.0",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "Controller",
+     "ESP32-S3， 16MB Flash，8MB PSRAM"
+    ],
+    [
+     "Wireless",
+     "WiFi& Bluetooth 5.0"
+    ],
+    [
+     "LCD",
+     "2.05\", 368x448 resolution"
+    ],
+    [
+     "LCD Driver",
+     "CO5300，QSPI"
+    ],
+    [
+     "Contrast ratio",
+     "3000:1"
+    ],
+    [
+     "Touch Driver",
+     "CST820"
+    ],
+    [
+     "USB",
+     "1 * USB_native"
+    ],
+    [
+     "Power Supply",
+     "USB Type-C 5.0V(4.0V~5.25V)"
+    ],
+    [
+     "Button",
+     "Flash button and reset button"
+    ],
+    [
+     "Camera",
+     "OV3660"
+    ],
+    [
+     "Camera pixel",
+     "3MP"
+    ],
+    [
+     "Working temperature",
+     "-20~70 degree"
+    ],
+    [
+     "Feature",
+     "Controller: ESP32-S3， 16MB Flash，8MB PSRAM"
+    ],
+    [
+     "Feature",
+     "Wireless: WiFi& Bluetooth 5.0"
+    ],
+    [
+     "Feature",
+     "LCD: 2.05\", 368x448 resolution"
+    ],
+    [
+     "Feature",
+     "Power Supply: USB Type-C 5.0V(4.0V~5.25V)"
+    ],
+    [
+     "Feature",
+     "Button: Flash button and reset button"
+    ],
+    [
+     "Feature",
+     "Working temperature: -20~70 degree"
+    ]
+   ],
+   "images": [
+    "https://www.makerfabs.com/media/catalog/product/cache/6ab262b0af1e33517c917f0f4bd15d2d/m/a/matouch-esp32-s3-amoled-ai-camera-7_1.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Makerfabs/MaTouch_AMOLED_AI_CAMERA",
+     "url": "https://github.com/Makerfabs/MaTouch_AMOLED_AI_CAMERA",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "makerfabs"
+   }
+  },
+  {
+   "id": "makerfabs-matouch-esp32-s3-mauwb-spi-tft-touch-3-95-st7796",
+   "model": "MaTouch ESP32-S3 MaUWB SPI TFT Touch 3.95\" ST7796",
+   "title": "MaTouch ESP32-S3 MaUWB SPI TFT Touch 3.95\" ST7796",
+   "series": "",
+   "sources": [
+    "https://www.makerfabs.com/matouch-esp32-s3-mauwb-spi-tft-touch-3-95-st7796.html"
+   ],
+   "description": "ESP32 MaTouch display with UWB function, for easy UWB application development.",
+   "params": {
+    "mcu": "ESP32-S3 Chipset, 16MB Flash, 8MB PSRAM",
+    "driver_ic": "ST7796",
+    "interface": "SPI",
+    "touch": "Capacitive",
+    "touch_ic": "FT6336U",
+    "usb": "1 * USB_native, 1 *USB-to-UART",
+    "power": "USB Type-C 5.0V(4.0V~5.25V)/ Lipo battery",
+    "flash": "16MB",
+    "psram": "8MB",
+    "size": "3.95\"",
+    "display": "3.95\", 480X320 resolution",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "Controller",
+     "ESP32-S3 Chipset, 16MB Flash, 8MB PSRAM"
+    ],
+    [
+     "LCD",
+     "3.95\", 480X320 resolution"
+    ],
+    [
+     "LCD Driver",
+     "ST7796"
+    ],
+    [
+     "LCD interface",
+     "SPI"
+    ],
+    [
+     "Touch Panel",
+     "Capacitive"
+    ],
+    [
+     "Touch Driver",
+     "FT6336U"
+    ],
+    [
+     "UWB",
+     "MaUWB Chipset"
+    ],
+    [
+     "RF band",
+     "CH5 (6489.6MHZ)"
+    ],
+    [
+     "UWB rate",
+     "850K/6.8M"
+    ],
+    [
+     "Max support",
+     "8 Anchor 64 tags"
+    ],
+    [
+     "USB",
+     "1 * USB_native, 1 *USB-to-UART"
+    ],
+    [
+     "USB-UART Driver",
+     "CH340K"
+    ],
+    [
+     "Power Supply",
+     "USB Type-C 5.0V(4.0V~5.25V)/ Lipo battery"
+    ],
+    [
+     "Expansion interface",
+     "2*JST1.25mm-4P"
+    ],
+    [
+     "LCD Backlight control",
+     "Yes"
+    ]
+   ],
+   "images": [
+    "https://www.makerfabs.com/media/catalog/product/cache/6ab262b0af1e33517c917f0f4bd15d2d/m/a/matouch-esp32-s3-mauwb-spi-tft-touch-3-95-st7796.jpg"
+   ],
+   "files": [],
+   "links": [],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "makerfabs"
+   }
+  },
+  {
+   "id": "makerfabs-matouch-esp32-s3-parallel-tft-3-16-st7701s",
+   "model": "MaTouch ESP32-S3 Parallel TFT 3.16“ ST7701S",
+   "title": "MaTouch ESP32-S3 Parallel TFT 3.16“ ST7701S",
+   "series": "",
+   "sources": [
+    "https://www.makerfabs.com/matouch-esp32-s3-parallel-tft-3-16-st7701s.html"
+   ],
+   "description": "This compact 3.16\" ESP32-S3 IoT display with WiFi, Bluetooth 5.0, LVGL GUI, RTC, IMU, MIC, speaker & TF card is perfect for smart HMI and IoT projects.",
+   "params": {
+    "mcu": "ESP32-S3， 16MB Flash, PSRAM 8MB",
+    "wifi": "WiFi& Bluetooth 5.0",
+    "flash": "16MB",
+    "size": "3.16\"",
+    "resolution": "320x820",
+    "display": "3.16 inch LCD display, 320 × 820 resolution, 64K color, RGB565 interface，brightness 600 nits, contrast 1500:1",
+    "bt": "Bluetooth 5.0",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "Controller",
+     "ESP32-S3， 16MB Flash, PSRAM 8MB"
+    ],
+    [
+     "Wireless",
+     "WiFi& Bluetooth 5.0"
+    ],
+    [
+     "LCD",
+     "3.16 inch LCD display, 320 × 820 resolution, 64K color, RGB565 interface，brightness 600 nits, contrast 1500:1"
+    ]
+   ],
+   "images": [
+    "https://www.makerfabs.com/media/catalog/product/cache/6ab262b0af1e33517c917f0f4bd15d2d/m/a/matouch_esp32-s3_parallel_tft_3.16_st7701s-1.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Makerfabs/ESP32-S3_Parallel_TFT_3.16_ST7701S",
+     "url": "https://github.com/Makerfabs/ESP32-S3_Parallel_TFT_3.16_ST7701S",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "makerfabs"
+   }
+  },
+  {
+   "id": "makerfabs-matouch-lite-esp32-s3-spi-resistive-touch-2-4-st7789",
+   "model": "MaTouch Lite ESP32-S3 SPI Resistive Touch 2.4\" ST7789",
+   "title": "MaTouch Lite ESP32-S3 SPI Resistive Touch 2.4\" ST7789",
+   "series": "",
+   "sources": [
+    "https://www.makerfabs.com/matouch-lite-esp32-s3-spi-resistive-touch-2-4-st7789.html"
+   ],
+   "description": "ESP32S3 based 2.4“ display with resistive touch, suitable for ESP32 IOT applications",
+   "params": {
+    "mcu": "ESP32-S3 controller 16M flash, 8M PSRAM;",
+    "touch": "Resistive",
+    "usb": "1 * USB_native, 1 *USB-to-UART",
+    "power": "USB Type-C 5.0V(4.0V~5.25V); 3.7V Lipo battery",
+    "flash": "16MB",
+    "psram": "8MB",
+    "size": "2.4\"",
+    "resolution": "320x240",
+    "display": "2.4\", 320x240 resolution , driver ST7789V2, SPI interface",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "Controller",
+     "ESP32-S3 controller 16M flash, 8M PSRAM;"
+    ],
+    [
+     "Display",
+     "2.4\", 320x240 resolution , driver ST7789V2, SPI interface"
+    ],
+    [
+     "Touch Panel",
+     "Resistive, NS2009"
+    ],
+    [
+     "USB",
+     "1 * USB_native, 1 *USB-to-UART"
+    ],
+    [
+     "USB-UART Driver",
+     "CH340K"
+    ],
+    [
+     "Power Supply",
+     "USB Type-C 5.0V(4.0V~5.25V); 3.7V Lipo battery"
+    ],
+    [
+     "Expansion interface",
+     "2*JST1.25mm-4P GPIO, with cable included"
+    ],
+    [
+     "LCD Backlight control",
+     "Yes"
+    ],
+    [
+     "Arduino support",
+     "Yes"
+    ],
+    [
+     "LVGL support",
+     "Yes"
+    ],
+    [
+     "Operation temperature",
+     "-40℃ to +85℃"
+    ]
+   ],
+   "images": [
+    "https://www.makerfabs.com/media/catalog/product/cache/6ab262b0af1e33517c917f0f4bd15d2d/m/a/matouch-lite-esp32-s3-spi-resistive-touch-2-4-st7789.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Makerfabs/Matouch_Lite_ESP32-S3-SPI-IPS-with-Touch-2.4-ST7789",
+     "url": "https://github.com/Makerfabs/Matouch_Lite_ESP32-S3-SPI-IPS-with-Touch-2.4-ST7789",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "makerfabs"
+   }
+  },
+  {
+   "id": "makerfabs-matouch-lite-esp32-s3-spi-resistive-touch-3-95-st7796",
+   "model": "MaTouch Lite ESP32-S3 SPI Resistive Touch 3.95\" ST7796",
+   "title": "MaTouch Lite ESP32-S3 SPI Resistive Touch 3.95\" ST7796",
+   "series": "",
+   "sources": [
+    "https://www.makerfabs.com/matouch-lite-esp32-s3-spi-resistive-touch-3-95-st7796.html"
+   ],
+   "description": "ESP32S3 based 3.95“ display with resistive touch, suitable for ESP32 IOT applications",
+   "params": {
+    "mcu": "ESP32-S3 controller 16M flash, 8M PSRAM;",
+    "touch": "Resistive",
+    "usb": "1 * USB_native, 1 *USB-to-UART",
+    "power": "USB Type-C 5.0V(4.0V~5.25V); 3.7V Lipo battery",
+    "flash": "16MB",
+    "psram": "8MB",
+    "size": "3.95\"",
+    "resolution": "480x320",
+    "display": "3.95\", 480x320 resolution , driver ST7796, SPI interface",
+    "mcu_family": "ESP32-S3"
+   },
+   "spec_rows": [
+    [
+     "Controller",
+     "ESP32-S3 controller 16M flash, 8M PSRAM;"
+    ],
+    [
+     "Display",
+     "3.95\", 480x320 resolution , driver ST7796, SPI interface"
+    ],
+    [
+     "Touch Panel",
+     "Resistive, NS2009"
+    ],
+    [
+     "USB",
+     "1 * USB_native, 1 *USB-to-UART"
+    ],
+    [
+     "USB-UART Driver",
+     "CH340K"
+    ],
+    [
+     "Power Supply",
+     "USB Type-C 5.0V(4.0V~5.25V); 3.7V Lipo battery"
+    ],
+    [
+     "Expansion interface",
+     "2*JST1.25mm-4P GPIO, with cable included"
+    ],
+    [
+     "LCD Backlight control",
+     "Yes"
+    ],
+    [
+     "Arduino support",
+     "Yes"
+    ],
+    [
+     "LVGL support",
+     "Yes"
+    ],
+    [
+     "Operation temperature",
+     "-40℃ to +85℃"
+    ]
+   ],
+   "images": [
+    "https://www.makerfabs.com/media/catalog/product/cache/6ab262b0af1e33517c917f0f4bd15d2d/m/a/matouch-lite-esp32-s3-spi-resistive-touch-3-95-st7796.jpg"
+   ],
+   "files": [],
+   "links": [
+    {
+     "title": "GitHub: Makerfabs/MaTouch_Lite_ESP32-S3-SPI-with-Touch-3.95-ST7796",
+     "url": "https://github.com/Makerfabs/MaTouch_Lite_ESP32-S3-SPI-with-Touch-3.95-ST7796",
+     "type": "official-github"
+    }
+   ],
+   "notes": [
+    "Auto-added by the monthly scraper on 2026-11-24 from the official product page; values are copied verbatim from that page, fields it does not state are empty. Not yet hand-reviewed."
+   ],
+   "auto": {
+    "added": "2026-11-24",
+    "vendor_key": "makerfabs"
+   }
+  }
+ ]
+}

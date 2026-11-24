@@ -1,7 +1,7 @@
 {
- "models": 185,
- "with_photo": 177,
- "hd_ge_1000": 54,
+ "models": 280,
+ "with_photo": 267,
+ "hd_ge_1000": 125,
  "missing": [
   "ESP32-2432S022 (diagram only)",
   "4.3inch_8080_Module_SSD1963",
@@ -10,7 +10,12 @@
   "JC1216A018N",
   "JC2424W513",
   "JC2432A024N",
-  "JC2432A028N"
+  "JC2432A028N",
+  "ESP32-S3-DualEye-Touch-LCD-1.28",
+  "M5Stick",
+  "ESP32-S3-Touch-LCD-1.46B",
+  "CoreP4X",
+  "ESP32-S3-LCD-7B"
  ],
- "images": 792
+ "images": 882
 }

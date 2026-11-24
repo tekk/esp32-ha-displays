@@ -168,7 +168,7 @@
   const cell = (m, k, q) => {
     const p = m.params;
     switch (k) {
-      case 'thumb': { const im = m.images[0]; return `<td>${im ? `<a href="${modelURL(m.id)}" data-pv="${esc(m.id)}" tabindex="-1"><img class="th" loading="lazy" src="${esc(im.thumb || im.src)}" alt="${esc(m.model)}"></a>` : ''}</td>`; }
+      case 'thumb': { const im = m.images[0]; return `<td>${im ? `<a href="${modelURL(m.id)}" data-pv="${esc(m.id)}" tabindex="-1"><img class="th" loading="lazy" decoding="async" width="52" height="38" src="${esc(im.thumb || im.src)}" alt="${esc(m.model)}"></a>` : ''}</td>`; }
       case 'model': return `<td class="m"><a href="${modelURL(m.id)}" data-pv="${esc(m.id)}">${highlight(m.model, q)}</a>${m.notes.some((n) => n.level === 'warning') ? ' <span class="badge warn" title="variant warning">!</span>' : ''}${m.downloads_only ? ' <span class="badge info" title="only on the file server">fs</span>' : ''}</td>`;
       case 'features': return `<td class="feats">${ficons(m, 18, { click: true }) || '<span class="na">—</span>'}</td>`;
       case 'tags': return `<td>${m.tags.slice(0, 6).map((t) => `<span class="tag" data-tag="${esc(t)}">${esc(t)}</span>`).join(' ')}</td>`;
@@ -281,7 +281,7 @@
     const rows = POP_KEYS.filter(([k]) => p[k]).map(([k, l]) => `<dt>${l}</dt><dd title="${esc(p[k])}">${esc(String(p[k]).length > 60 ? String(p[k]).slice(0, 58) + '…' : p[k])}</dd>`).join('');
     const feats = m.features || [];
     const warn = m.notes.find((n) => n.level === 'warning');
-    return `<div class="ph ${im ? '' : 'none'}">${im ? `<img src="${esc(im.thumb || im.src)}" data-hd="${esc(im.src)}" alt="${esc(m.model)}">${im.kind !== 'photo' ? `<div class="src">${esc(im.kind)} · ${esc(im.note || '')}</div>` : ''}` : 'no photo available'}</div>
+    return `<div class="ph ${im ? '' : 'none'}">${im ? `<img src="${esc(im.thumb || im.src)}" data-hd="${esc(im.src)}" width="${im.w || 800}" height="${im.h || 600}" decoding="async" alt="${esc(m.model + ' – ' + m.vendor + ' ESP32 display board')}">${im.kind !== 'photo' ? `<div class="src">${esc(im.kind)} · ${esc(im.note || '')}</div>` : ''}` : 'no photo available'}</div>
       <div class="inf"><h3>${esc(m.model)}</h3><div class="sub">${esc([m.vendor, p.category].filter(Boolean).join(' · '))}</div>
       <dl>${rows}</dl>
       ${feats.length ? `<h4>Ports, connectors &amp; interfaces</h4><ul class="pfeat">${feats.map((f) => `<li class="fc-${esc(f.category)}"><svg width="16" height="16" aria-hidden="true"><use href="${FEAT_SPRITE}#f-${esc(f.icon)}"/></svg><span>${esc(f.label)}</span></li>`).join('')}</ul>` : ''}
@@ -322,6 +322,7 @@
     window.addEventListener('resize', () => { if (popFor) hidePop(); });
   }
 
+  if (/^#model=/.test(location.hash)) { location.replace(modelURL(decodeURIComponent(location.hash.slice(7)))); return; }   // legacy #model=<id> links
   header('models');
   bindTips();
   readHash();

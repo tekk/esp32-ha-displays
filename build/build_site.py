@@ -456,15 +456,22 @@ def main():
         e['categories'].add('waveshare-esp32-p4')
 
     # 5) other manufacturers – hand-curated, sourced board files (data/curated/boards/<vendor>.json)
-    bdir = os.path.join(ROOT, 'data/curated/boards')
-    for fn in sorted(os.listdir(bdir)) if os.path.isdir(bdir) else []:
-        if not fn.endswith('.json'):
-            continue
-        vf = json.load(open(os.path.join(bdir, fn)))
+    #    + auto-discovered boards (data/auto/boards/<vendor>.json, written by build/autoadd.py); curated always wins
+    vfiles = []
+    for sub, auto in (('data/curated/boards', False), ('data/auto/boards', True)):
+        bdir = os.path.join(ROOT, sub)
+        vfiles += [(os.path.join(bdir, fn), auto) for fn in sorted(os.listdir(bdir)) if fn.endswith('.json')] if os.path.isdir(bdir) else []
+    ids_seen = {e.get('id') for e in models.values()}
+    for path, auto in vfiles:
+        vf = json.load(open(path))
         vslug = vf['slug']
         for b in vf['boards']:
             mid = b['model']
+            if auto and (mid in models or b['id'] in ids_seen):
+                print('  auto board skipped (already in catalog):', mid)
+                continue
             assert mid not in models, 'duplicate model ' + mid
+            ids_seen.add(b['id'])
             e = get(mid)
             e['vendor'] = vf['vendor']
             e['id'] = b['id']
@@ -496,6 +503,8 @@ def main():
             for n in b.get('notes', []):
                 e['notes'].append({'level': 'info', 'text': n, 'source': src0})
             e['categories'].add(vslug)
+            if auto:
+                e['auto_added'] = b.get('auto', {}).get('added') or True
 
     # ---------------------------------------------------------- normalize
     out = []
@@ -659,6 +668,9 @@ def main():
         }
         if e.get('curated_params') is not None:
             rec['curated_vendor'] = True
+        if e.get('auto_added'):
+            rec['auto_added'] = e['auto_added']
+            rec['tags'] = sorted(set(rec['tags']) | {'auto-added'})
         out.append(rec)
     # siblings (same base key)
     bykey = collections.defaultdict(list)

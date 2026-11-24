@@ -3,16 +3,18 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Static searchable catalog of Guition (and Waveshare ESP32-P4) display boards",
+  "description": "Static searchable catalog of ESP32 display boards (Guition, Waveshare, M5Stack, LilyGO, Elecrow, Seeed, Makerfabs, DFRobot)",
   "scripts": {
     "vendor": "node build/vendor.mjs",
     "index": "node build/build_index.mjs",
-    "build": "python3 build/build_site.py && python3 build/features.py && python3 build/offline.py && python3 build/photos.py && python3 build/icons.py && node build/build_index.mjs && python3 build/gen_sw.py",
+    "build": "python3 build/build_site.py && python3 build/features.py && python3 build/offline.py && python3 build/photos.py && python3 build/icons.py && python3 build/seo.py && node build/build_index.mjs && python3 build/gen_sw.py",
     "serve": "python3 -m http.server -d site 8080",
     "release": "bash build/upload_release.sh",
     "update": "bash build/update.sh",
-    "test": "python3 tests/check_links.py && python3 tests/e2e.py",
-    "icons": "python3 build/icons.py --sheet"
+    "test": "python3 tests/check_links.py && python3 tests/check_seo.py && python3 tests/e2e.py",
+    "icons": "python3 build/icons.py --sheet",
+    "seo": "python3 build/seo.py && python3 tests/check_seo.py",
+    "autoadd": "python3 build/autoadd.py --dry-run"
   },
   "devDependencies": {
     "@fontsource/jetbrains-mono": "^5.3.0",
