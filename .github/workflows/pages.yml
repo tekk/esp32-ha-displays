@@ -1,5 +1,8 @@
 # Deploys the prebuilt static site in ./site to GitHub Pages.
 # Settings → Pages → Source: "GitHub Actions".
+# Upload and deploy run in SEPARATE jobs: in one job deploy-pages can race the artifact finalisation
+# ("No artifacts named github-pages were found", actions/deploy-pages#451). Re-run the whole workflow, not
+# only the failed job (a partial re-run uploads a second artifact).
 name: Deploy to GitHub Pages
 on:
   push:
@@ -13,16 +16,20 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v4
