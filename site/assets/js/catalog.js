@@ -1,4 +1,4 @@
-/* catalog page: faceted search, sorting, table/cards, URL state */
+/* catalog page: faceted search, sorting, table/cards/list, URL state */
 (function () {
   'use strict';
   const FACETS = [
@@ -22,6 +22,14 @@
   let MODELS = [], BYID = {}, INDEX = null, META = null;
   const FEATBYNAME = {};
   const st = { q: '', f: {}, sort: 'size', dir: 'asc', view: 'table', cols: null, closed: new Set(), open: new Set() };
+  let viewPicked = false, shown = 0, lastListKey = '', lastCompute = null, drawerOpen = false;
+
+  const isPhone = () => window.matchMedia('(max-width: 767px)').matches;
+  const isNarrow = () => window.matchMedia('(max-width: 899px)').matches;
+  const finePointer = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const defaultView = () => (isPhone() ? 'list' : 'table');
+  const pageSize = () => (isPhone() ? 40 : 150);
+  const filterCount = () => Object.values(st.f).reduce((n, s) => n + s.size, 0);
 
   const val = (m, k) => {
     if (k === 'tags') return m.tags;
@@ -55,7 +63,9 @@
     for (const [k, v] of h) if (k.startsWith('f.')) st.f[k.slice(2)] = new Set(v.split('|').filter(Boolean));
     st.sort = h.get('sort') || (st.q ? 'relevance' : 'size');
     st.dir = h.get('dir') || 'asc';
-    st.view = h.get('view') || (localStorage.getItem('gc.view') || 'table');
+    const stored = localStorage.getItem('gc.view');
+    viewPicked = !!(h.get('view') || stored);
+    st.view = h.get('view') || stored || defaultView();
     const c = h.get('cols') || localStorage.getItem('gc.cols');
     st.cols = c ? new Set(c.split(',')) : new Set(COLS.filter((x) => x[2]).map((x) => x[0]));
   }
@@ -65,11 +75,17 @@
     for (const [k, s] of Object.entries(st.f)) if (s.size) h.set('f.' + k, [...s].join('|'));
     if (st.sort !== (st.q ? 'relevance' : 'size')) h.set('sort', st.sort);
     if (st.dir !== 'asc') h.set('dir', st.dir);
-    if (st.view !== 'table') h.set('view', st.view);
+    if (viewPicked && st.view !== defaultView()) h.set('view', st.view);
     const s = h.toString();
     history.replaceState(null, '', s ? '#' + s : location.pathname + location.search);
-    localStorage.setItem('gc.view', st.view);
+    if (viewPicked) localStorage.setItem('gc.view', st.view);
     localStorage.setItem('gc.cols', [...st.cols].join(','));
+  }
+  function setView(v) {
+    st.view = v;
+    viewPicked = true;
+    localStorage.setItem('gc.view', v);
+    render();
   }
 
   // ---------- query parsing: free text + key:value filters
@@ -145,7 +161,32 @@
   }
 
   // ---------- rendering
+  function chipHTML(emptyMsg) {
+    const chips = [];
+    for (const [k, s] of Object.entries(st.f)) s.forEach((v) => chips.push(`<span class="chip x" data-k="${k}" data-v="${esc(v)}"><b>${esc(k)}</b>=${esc(v)}</span>`));
+    return chips.join('') || (emptyMsg || '');
+  }
+  function renderChips() {
+    const el = $('#chips');
+    if (el) el.innerHTML = chipHTML('<span class="na">None — pick values below or type key:value</span>');
+    const ac = $('#achips');
+    if (ac) ac.innerHTML = chipHTML();
+  }
+  function updateFilterChrome(listLen) {
+    const n = filterCount();
+    const b = $('#fbadge');
+    if (b) { b.hidden = !n; b.textContent = n; }
+    const apply = $('#fapply');
+    if (apply) apply.textContent = 'Show ' + listLen + ' board' + (listLen === 1 ? '' : 's');
+    const btn = $('#fbtn');
+    if (btn) btn.setAttribute('aria-expanded', drawerOpen ? 'true' : 'false');
+  }
   function renderFacets(counts) {
+    renderChips();
+    const host = $('#facets');
+    if (!host) return;
+    // On narrow screens, only build the (large) facet DOM once the drawer is open
+    if (isNarrow() && !drawerOpen) { host.innerHTML = ''; return; }
     const html = FACETS.map(([k, label]) => {
       const c = counts[k];
       let entries = Object.entries(c);
@@ -160,10 +201,7 @@
         <div class="fv">${entries.map(([v, n]) => `<label class="${n ? '' : 'zero'}" data-v="${esc(v.toLowerCase())}"><input type="checkbox" value="${esc(v)}" ${sel.has(v) ? 'checked' : ''}>
           <span>${k === 'feat' && FEATBYNAME[v] ? `<svg class="fac-ic fc-${esc(FEATBYNAME[v].category)}" width="14" height="14" aria-hidden="true"><use href="${FEAT_SPRITE}#f-${esc(FEATBYNAME[v].icon)}"/></svg>` : ''}${v === '∅' ? '<span class="na">(unknown)</span>' : esc(v)}</span><span class="n">${n}</span></label><div class="bar" style="width:${Math.round((n / max) * 100)}%"></div>`).join('')}</div></div>`;
     }).join('');
-    $('#facets').innerHTML = html;
-    const chips = [];
-    for (const [k, s] of Object.entries(st.f)) s.forEach((v) => chips.push(`<span class="chip x" data-k="${k}" data-v="${esc(v)}"><b>${esc(k)}</b>=${esc(v)}</span>`));
-    $('#chips').innerHTML = chips.join('') || '<span class="na">None — pick values below or type key:value</span>';
+    host.innerHTML = html;
   }
   const cell = (m, k, q) => {
     const p = m.params;
@@ -193,15 +231,45 @@
         <div class="tags">${m.tags.filter((t) => !t.startsWith('vendor:')).slice(0, 8).map((t) => `<span class="tag" data-tag="${esc(t)}">${esc(t)}</span>`).join('')}</div></div></div>`;
     }).join('')}</div>`;
   }
+  function renderList(list) {
+    const q = parseQuery(st.q).free;
+    return `<div class="mlist">${list.map((m) => {
+      const p = m.params, im = m.images[0], feats = m.features || [];
+      const shownF = feats.slice(0, 11), more = feats.length - shownF.length;
+      const sub = [m.vendor, p.size, p.resolution, p.mcu_family || p.mcu].filter(Boolean).join(' · ');
+      return `<a class="mrow" href="${modelURL(m.id)}">${im
+        ? `<img class="th" loading="lazy" decoding="async" width="56" height="42" src="${esc(im.thumb || im.src)}" alt="">`
+        : `<span class="th empty" aria-hidden="true"></span>`}
+        <div class="mmeta"><div class="md">${highlight(m.model, q)}</div><div class="msub">${esc(sub)}</div>
+        ${feats.length ? `<div class="feats">${shownF.map((f) => ficon(f, 18, { passive: true })).join('')}${more > 0 ? `<span class="fmore">+${more}</span>` : ''}</div>` : ''}</div></a>`;
+    }).join('')}</div>`;
+  }
+  function moreBar(shownN, total) {
+    if (total <= shownN && total <= pageSize()) return '';
+    if (total <= shownN) return `<div class="morebar"><span class="count">Showing all <b>${total}</b></span></div>`;
+    return `<div class="morebar"><span class="count">Showing <b>${shownN}</b> of <b>${total}</b></span>
+      <button type="button" id="showmore">Show more</button>
+      <button type="button" id="showall">Show all</button></div>`;
+  }
   function render() {
     const { list, counts, fallback } = compute();
+    lastCompute = { list, counts, fallback };
+    const key = JSON.stringify({ q: st.q, f: Object.fromEntries(Object.entries(st.f).map(([k, s]) => [k, [...s].sort()])), sort: st.sort, dir: st.dir });
+    if (key !== lastListKey) { shown = pageSize(); lastListKey = key; }
+    if (!shown) shown = pageSize();
     renderFacets(counts);
+    updateFilterChrome(list.length);
     $('#count').innerHTML = `<b>${list.length}</b> / ${MODELS.length} boards${fallback ? ' <span class="na">(no exact match – showing any-term results)</span>' : ''}`;
     hidePop();
-    $('#results').innerHTML = list.length ? (st.view === 'cards' ? renderCards(list) : renderTable(list))
+    const page = list.slice(0, shown);
+    const body = list.length
+      ? (st.view === 'cards' ? renderCards(page) : st.view === 'list' ? renderList(page) : renderTable(page))
       : `<div class="empty">No boards match. Try fewer terms or <a href="#" id="clearall">reset filters</a>.</div>`;
-    $('#vtable').classList.toggle('on', st.view === 'table');
-    $('#vcards').classList.toggle('on', st.view === 'cards');
+    $('#results').innerHTML = body + (list.length ? moreBar(page.length, list.length) : '');
+    const vl = $('#vlist'), vt = $('#vtable'), vc = $('#vcards');
+    if (vl) vl.classList.toggle('on', st.view === 'list');
+    if (vt) vt.classList.toggle('on', st.view === 'table');
+    if (vc) vc.classList.toggle('on', st.view === 'cards');
     $('#colsmenu').style.display = st.view === 'table' ? '' : 'none';
     $('#sort').value = st.sort;
     $('#dir').textContent = st.dir === 'asc' ? '↑ Asc' : '↓ Desc';
@@ -225,13 +293,34 @@
     a.click();
   }
 
+  function openDrawer() {
+    drawerOpen = true;
+    const sb = $('#filters'); if (sb) sb.classList.add('open');
+    const scrim = $('#fscrim'); if (scrim) scrim.classList.add('on');
+    document.body.classList.add('fd-open');
+    if (lastCompute) renderFacets(lastCompute.counts);
+    updateFilterChrome(lastCompute ? lastCompute.list.length : 0);
+    const close = $('#fclose'); if (close) close.focus();
+  }
+  function closeDrawer() {
+    drawerOpen = false;
+    const sb = $('#filters'); if (sb) sb.classList.remove('open');
+    const scrim = $('#fscrim'); if (scrim) scrim.classList.remove('on');
+    document.body.classList.remove('fd-open');
+    const btn = $('#fbtn'); if (btn) { btn.setAttribute('aria-expanded', 'false'); btn.focus(); }
+  }
+
   // ---------- events
   function bind() {
     const qi = $('#q');
     qi.value = st.q;
     let t;
     qi.addEventListener('input', () => { clearTimeout(t); t = setTimeout(() => { const had = !!st.q; st.q = qi.value.trim(); if (!had && st.q && st.sort === 'size') st.sort = 'relevance'; if (!st.q && st.sort === 'relevance') st.sort = 'size'; render(); }, 120); });
-    document.addEventListener('keydown', (e) => { if (e.key === '/' && document.activeElement !== qi && !/input|select|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); qi.focus(); qi.select(); } if (e.key === 'Escape' && document.activeElement === qi) { qi.value = ''; st.q = ''; render(); } });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== qi && !/input|select|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); qi.focus(); qi.select(); }
+      if (e.key === 'Escape' && document.activeElement === qi) { qi.value = ''; st.q = ''; render(); }
+      if (e.key === 'Escape' && drawerOpen) { e.preventDefault(); closeDrawer(); }
+    });
     $('#facets').addEventListener('change', (e) => { if (e.target.type === 'checkbox') toggle(e.target.closest('.facet').dataset.k, e.target.value); });
     $('#facets').addEventListener('click', (e) => {
       const h = e.target.closest('h4');
@@ -242,8 +331,12 @@
       const v = e.target.value.toLowerCase();
       $$('label', e.target.parentElement).forEach((l) => { const show = l.dataset.v.includes(v); l.style.display = show ? '' : 'none'; l.nextElementSibling.style.display = show ? '' : 'none'; });
     });
-    $('#chips').addEventListener('click', (e) => { const c = e.target.closest('.chip'); if (c) toggle(c.dataset.k, c.dataset.v); });
+    const chipClick = (e) => { const c = e.target.closest('.chip'); if (c) toggle(c.dataset.k, c.dataset.v); };
+    $('#chips').addEventListener('click', chipClick);
+    const ac = $('#achips'); if (ac) ac.addEventListener('click', chipClick);
     $('#results').addEventListener('click', (e) => {
+      if (e.target.id === 'showmore') { shown += pageSize(); render(); return; }
+      if (e.target.id === 'showall') { shown = (window.__lastList || []).length; render(); return; }
       const th = e.target.closest('th[data-sort]');
       if (th && th.dataset.sort) { const k = th.dataset.sort; if (st.sort === k) st.dir = st.dir === 'asc' ? 'desc' : 'asc'; else { st.sort = k; st.dir = ['files', 'features', 'flash', 'psram', 'sram', 'frequency'].includes(k) ? 'desc' : 'asc'; } render(); return; }
       const fi = e.target.closest('.fi.fclick');
@@ -255,8 +348,9 @@
     $('#sort').innerHTML = SORTS.map(([k, l]) => `<option value="${k}">${l}</option>`).join('');
     $('#sort').addEventListener('change', (e) => { st.sort = e.target.value; render(); });
     $('#dir').addEventListener('click', () => { st.dir = st.dir === 'asc' ? 'desc' : 'asc'; render(); });
-    $('#vtable').addEventListener('click', () => { st.view = 'table'; render(); });
-    $('#vcards').addEventListener('click', () => { st.view = 'cards'; render(); });
+    const vl = $('#vlist'); if (vl) vl.addEventListener('click', () => setView('list'));
+    $('#vtable').addEventListener('click', () => setView('table'));
+    $('#vcards').addEventListener('click', () => setView('cards'));
     $('#csv').addEventListener('click', exportCSV);
     $('#reset').addEventListener('click', reset);
     $('#colsbtn').addEventListener('click', (e) => { e.stopPropagation(); $('#colsmenu').classList.toggle('open'); });
@@ -265,11 +359,19 @@
     $('#colslist').innerHTML = COLS.filter((c) => c[0] !== 'model' && c[0] !== 'features').map(([k, l]) => `<label><input type="checkbox" value="${k}" ${st.cols.has(k) ? 'checked' : ''}> ${esc(l || 'image')}</label>`).join('');
     $('#colslist').addEventListener('change', (e) => { e.target.checked ? st.cols.add(e.target.value) : st.cols.delete(e.target.value); render(); });
     window.addEventListener('hashchange', () => { readHash(); qi.value = st.q; render(); });
+    const fbtn = $('#fbtn'); if (fbtn) fbtn.addEventListener('click', () => { drawerOpen ? closeDrawer() : openDrawer(); });
+    const fscrim = $('#fscrim'); if (fscrim) fscrim.addEventListener('click', closeDrawer);
+    const fclose = $('#fclose'); if (fclose) fclose.addEventListener('click', closeDrawer);
+    const fclear = $('#fclear'); if (fclear) fclear.addEventListener('click', () => { reset(); });
+    const fapply = $('#fapply'); if (fapply) fapply.addEventListener('click', closeDrawer);
+    window.addEventListener('resize', () => {
+      if (!isNarrow() && drawerOpen) closeDrawer();
+      if (!isNarrow() && lastCompute && !$('#facets').children.length) renderFacets(lastCompute.counts);
+    });
   }
   function reset() { st.q = ''; st.f = {}; st.sort = 'size'; st.dir = 'asc'; $('#q').value = ''; render(); }
 
-  // ---------- hover preview (mouse hover + keyboard focus; no-op on touch – tap opens the detail page)
-  // flash / PSRAM / touch / display interface / wireless / audio … are listed as pictograms below the table
+  // ---------- hover preview (mouse + fine pointer only; tap opens the detail page)
   const POP_KEYS = [['size', 'Size'], ['resolution', 'Resolution'], ['panel', 'Panel'], ['driver_ic', 'Display driver'], ['touch_ic', 'Touch IC'],
     ['mcu', 'MCU'], ['coprocessor', 'Co-processor'], ['frequency', 'CPU'], ['sram', 'SRAM'], ['dimensions', 'Dimensions'], ['voltage', 'Supply'], ['power', 'Power']];
   const pop = document.createElement('div');
@@ -313,11 +415,19 @@
   function hidePop() { clearTimeout(popTimer); if (popFor) popFor.removeAttribute('aria-describedby'); popFor = null; pop.classList.remove('on'); }
   function bindPop() {
     const res = $('#results');
-    res.addEventListener('pointerover', (e) => { lastPointer = e.pointerType || 'mouse'; const a = e.target.closest('[data-pv]'); if (!a || lastPointer !== 'mouse') return; if (a === popFor) return; clearTimeout(popTimer); popTimer = setTimeout(() => showPop(a), 280); });
+    res.addEventListener('pointerover', (e) => {
+      lastPointer = e.pointerType || 'mouse';
+      const a = e.target.closest('[data-pv]');
+      if (!a || lastPointer !== 'mouse' || !finePointer()) return;
+      if (a === popFor) return;
+      clearTimeout(popTimer);
+      popTimer = setTimeout(() => showPop(a), 280);
+    });
     res.addEventListener('pointerout', (e) => { const a = e.target.closest('[data-pv]'); if (!a || (e.relatedTarget && a.contains(e.relatedTarget))) return; hidePop(); });
-    res.addEventListener('focusin', (e) => { const a = e.target.closest('[data-pv]'); if (a && lastPointer !== 'touch') { clearTimeout(popTimer); popTimer = setTimeout(() => showPop(a), 150); } });
+    res.addEventListener('focusin', (e) => { const a = e.target.closest('[data-pv]'); if (a && lastPointer !== 'touch' && finePointer()) { clearTimeout(popTimer); popTimer = setTimeout(() => showPop(a), 150); } });
     res.addEventListener('focusout', hidePop);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hidePop(); });
+    document.addEventListener('pointerdown', () => { if (popFor) hidePop(); }, { capture: true });
     window.addEventListener('scroll', () => { if (popFor) hidePop(); }, { passive: true, capture: true });
     window.addEventListener('resize', () => { if (popFor) hidePop(); });
   }
@@ -330,8 +440,11 @@
     MODELS = models; META = meta; INDEX = idx;
     models.forEach((m) => { BYID[m.id] = m; (m.features || []).forEach((f) => { FEATBYNAME[f.name] = f; }); });
     const c = meta.counts;
-    $('#stats').innerHTML = `<span><b>${models.length}</b> boards</span>` + Object.entries(c).map(([v, n]) => `<span>${esc(v)}: <b>${n}</b></span>`).join('')
-      + `<span><b>${meta.archives}</b> archives (${fmtBytes(meta.archive_bytes)})</span><span><b>${meta.hosted_blobs}</b> docs hosted</span><span>updated <b>${esc(meta.generated.slice(0, 10))}</b></span>`;
+    const nVendors = Object.keys(c).length;
+    const updated = esc(meta.generated.slice(0, 10));
+    $('#stats').innerHTML = `<span class="hero-compact"><b>${models.length}</b> boards · ${nVendors} manufacturers · updated ${updated}</span>`
+      + `<span class="hero-full"><span><b>${models.length}</b> boards</span>` + Object.entries(c).map(([v, n]) => `<span>${esc(v)}: <b>${n}</b></span>`).join('')
+      + `<span><b>${meta.archives}</b> archives (${fmtBytes(meta.archive_bytes)})</span><span><b>${meta.hosted_blobs}</b> docs hosted</span><span>updated <b>${updated}</b></span></span>`;
     bind();
     bindPop();
     render();

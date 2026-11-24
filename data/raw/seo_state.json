@@ -1,6 +1,6 @@
 {
 "": [
-"3870a9713ceef47a",
+"649a6d6a3b8c7de9",
 "2026-11-24"
 ],
 "about.html": [
@@ -16,1123 +16,1123 @@
 "2026-11-24"
 ],
 "board/esp32-2424s012c-i/": [
-"b0132a76c3726c71",
+"f5ebe17afb7fbedd",
 "2026-11-24"
 ],
 "board/esp32-2424s012c-i-y-b/": [
-"31e1b1a5394a4bb0",
+"d4bfce0792b924d8",
 "2026-11-24"
 ],
 "board/esp32-2424s012c-i-y-w/": [
-"4b2e3893e59051a8",
+"c49aaad578a0708d",
 "2026-11-24"
 ],
 "board/esp32-2424s012n-i/": [
-"18b2708fe5c80e3b",
+"eaa2533a4694c6a0",
 "2026-11-24"
 ],
 "board/jc2424s012n-i/": [
-"514a74b41a78d1e2",
+"9913d58b25337fdd",
 "2026-11-24"
 ],
 "board/jc1216s018n/": [
-"71b334a54103409d",
+"677d9b13a56f3507",
 "2026-11-24"
 ],
 "board/jc3636f118c-i-yr/": [
-"851d182581514b21",
+"2a71b7628166354e",
 "2026-11-24"
 ],
 "board/jc3636f118c-i-yr1/": [
-"d255df426cec8073",
+"f4dad5b5349762b8",
 "2026-11-24"
 ],
 "board/jc3636f318c-i-y1-bu/": [
-"c992fc4d49098601",
+"39f4a2613012f580",
 "2026-11-24"
 ],
 "board/jc3636f318c-i-y1-gy/": [
-"6e0977b3fddb04a7",
+"39dc079baaae5a33",
 "2026-11-24"
 ],
 "board/jc3636f318c-i-y1-rd/": [
-"b848bc424bf3abe7",
+"950e6765fc8d36e3",
 "2026-11-24"
 ],
 "board/jc3636k518c-i-yr1/": [
-"670fdd64871ff991",
+"b8b8709317176536",
 "2026-11-24"
 ],
 "board/jc3636w518c-i-y/": [
-"b1e0ca15372acdb7",
+"608c97a19876fa61",
 "2026-11-24"
 ],
 "board/jc3636k518c-i-yr/": [
-"f2ee9703d63d73c1",
+"bbd568d3589e6f4d",
 "2026-11-24"
 ],
 "board/jc3636k718c-i-bu/": [
-"b139682961b01784",
+"bc3f868caed61ca3",
 "2026-11-24"
 ],
 "board/jc3636k718c-i-gy/": [
-"63c3542e678d91b7",
+"0536ade1fe3b1e5c",
 "2026-11-24"
 ],
 "board/jc3636k718c-i-rd/": [
-"98baaed209485c48",
+"b60642ca667fc8b2",
 "2026-11-24"
 ],
 "board/jc3636k718c-i-y1-bu/": [
-"c670b9d44951b34c",
+"f9246e688392495d",
 "2026-11-24"
 ],
 "board/jc3636k718c-i-y1-gy/": [
-"1c254c1e70b4a3f2",
+"283dbc6b983cd89c",
 "2026-11-24"
 ],
 "board/jc3636k718c-i-y1-rd/": [
-"04571a4259a0c140",
+"a7865238660a7266",
 "2026-11-24"
 ],
 "board/esp32-1732s019n-i/": [
-"e6ce9dffcb8afdd4",
+"409a494267d46c34",
 "2026-11-24"
 ],
 "board/esp32-2432s022/": [
-"b2f20fabb9c1399a",
+"eeca149423bc8640",
 "2026-11-24"
 ],
 "board/esp32-2432s024c/": [
-"af8fbe988d0e07b2",
+"6d54a78e6b91c3de",
 "2026-11-24"
 ],
 "board/esp32-2432s024n/": [
-"be855e17ebdaaafd",
+"5d7c7a78b39dcd22",
 "2026-11-24"
 ],
 "board/esp32-2432s024r/": [
-"605c621ebd47ce32",
+"e8cfca2d2b88dbdf",
 "2026-11-24"
 ],
 "board/jc2432s024n/": [
-"edf512e8df543a1e",
+"e04591ea76ff8039",
 "2026-11-24"
 ],
 "board/jc2432s024r/": [
-"bc37757939d9fc40",
+"6609eb78076f54a6",
 "2026-11-24"
 ],
 "board/esp32-2432s028r/": [
-"35423953f19b948a",
+"0e10e0317e8a682c",
 "2026-11-24"
 ],
 "board/jc2432s028n/": [
-"0a396aef5c3a9c77",
+"fb1cc416143acd9d",
 "2026-11-24"
 ],
 "board/jc2432s028r/": [
-"b26e9751027583a5",
+"c1a88ea9d573e5fb",
 "2026-11-24"
 ],
 "board/jc2432w328c/": [
-"b6363046f9dcfcff",
+"3ecc03aa0171ac10",
 "2026-11-24"
 ],
 "board/jc2432w328n/": [
-"b003e207b9599c01",
+"0d983c5a02a5dec1",
 "2026-11-24"
 ],
 "board/esp32-2432s032c-i/": [
-"dd0ffc31d2936122",
+"688de2b235a8f53d",
 "2026-11-24"
 ],
 "board/esp32-2432s032n-i/": [
-"cd46ad117728e48a",
+"d052364319cca443",
 "2026-11-24"
 ],
 "board/esp32-2432s032r-i/": [
-"f4df2840e14a40d4",
+"7d0c0ee6b487a555",
 "2026-11-24"
 ],
 "board/esp32-3248s035c/": [
-"9ca3901e58968af5",
+"c0a9a1de799c1848",
 "2026-11-24"
 ],
 "board/esp32-3248s035r/": [
-"4b248e6c2188c243",
+"a73e940e478404e6",
 "2026-11-24"
 ],
 "board/jc3248a035c/": [
-"718efce85bce2feb",
+"1c5d9cec3c167433",
 "2026-11-24"
 ],
 "board/jc3248s035c/": [
-"ff2358292495b75e",
+"2573a93164c1a3ec",
 "2026-11-24"
 ],
 "board/jc3248s035n/": [
-"cd6170e45751ffa1",
+"f30a72b7700dd940",
 "2026-11-24"
 ],
 "board/jc3248s035r/": [
-"d23254f2bf51859f",
+"169919dc7e2111f9",
 "2026-11-24"
 ],
 "board/jc3248w535c-i-y/": [
-"645180e7f17ea73e",
+"93b3e7214e1dec05",
 "2026-11-24"
 ],
 "board/esp32-4848s040c-i/": [
-"2a9ba5edfb8961be",
+"b95d30bef5855d55",
 "2026-11-24"
 ],
 "board/esp32-4848s040c-i-y-1/": [
-"39bb623650c99c94",
+"04bdda8ed420237a",
 "2026-11-24"
 ],
 "board/esp32-4848s040c-i-y-3/": [
-"1df589ebbe216690",
+"7436f467d42d6db3",
 "2026-11-24"
 ],
 "board/jc4848b040c-i/": [
-"680d0d4150138177",
+"5796a2812392e7c1",
 "2026-11-24"
 ],
 "board/4-3inch-8080-module-ssd1963/": [
-"eb3630f643ad34fb",
+"77cfa3d2546b5ffd",
 "2026-11-24"
 ],
 "board/esp32-4827s043c/": [
-"38e6b0291d40f27d",
+"7eaf4e6c6e7f977e",
 "2026-11-24"
 ],
 "board/esp32-4827s043n/": [
-"b76b90819686fbc2",
+"b62fde777c25e3b2",
 "2026-11-24"
 ],
 "board/esp32-4827s043r/": [
-"818894602518999f",
+"851ad03de33986c3",
 "2026-11-24"
 ],
 "board/esp32-8048s043c-i/": [
-"bfb04dd75531b7c0",
+"0bdd944e3662c9db",
 "2026-11-24"
 ],
 "board/jc4827b043c/": [
-"d5f298f7bdab2dd1",
+"71e214f2ed2e055f",
 "2026-11-24"
 ],
 "board/jc4827b043n/": [
-"ccb6f5ce8d39f11a",
+"3fa0e917ef4ea779",
 "2026-11-24"
 ],
 "board/jc4827b043r/": [
-"8863a7079c308434",
+"3aa13557fa2369c3",
 "2026-11-24"
 ],
 "board/jc4827q043n-i/": [
-"0f2246264c28ef11",
+"cfb2e2839a637b23",
 "2026-11-24"
 ],
 "board/jc4827q343c-i/": [
-"46cf40744bbc63fb",
+"20165ab2610179be",
 "2026-11-24"
 ],
 "board/jc4827q343n-i/": [
-"b31b83ad7890ab35",
+"506407da3aa98c8f",
 "2026-11-24"
 ],
 "board/jc4827w543c-i/": [
-"98879fe076ad7003",
+"78e74f0ae1651810",
 "2026-11-24"
 ],
 "board/jc4827w543n-i/": [
-"285796fb12e5ff7f",
+"70491155bb501d64",
 "2026-11-24"
 ],
 "board/jc4827w543r-i/": [
-"7db44d33dcc0ecce",
+"8db06663e4e989c8",
 "2026-11-24"
 ],
 "board/jc4880p443c-i-w/": [
-"e9d4ad348ded6a6d",
+"a3884fa6eee35f03",
 "2026-11-24"
 ],
 "board/jc4880p443c-i-w-y/": [
-"4f69531f76a74313",
+"f5271af364fe45f8",
 "2026-11-24"
 ],
 "board/jc8048b043c-i/": [
-"b7a73ab9f0bffeeb",
+"828c0513ec6da66f",
 "2026-11-24"
 ],
 "board/jc8048b043n/": [
-"8e854aea320dc3d7",
+"62004b3227dc2959",
 "2026-11-24"
 ],
 "board/5-0inch-8080-module-ssd1963/": [
-"7c8ed39b7c4bb953",
+"611f756e5b73acb2",
 "2026-11-24"
 ],
 "board/esp32-8048s050c-i/": [
-"edc44b51541932c3",
+"c196ba4b9730d14b",
 "2026-11-24"
 ],
 "board/esp32-8048s050n-i/": [
-"772df729cc301a97",
+"b3ff0c91dd10b542",
 "2026-11-24"
 ],
 "board/jc8048b050c-i/": [
-"e54bc89ebd3da810",
+"17c7eee7555e2100",
 "2026-11-24"
 ],
 "board/jc8048b050n-i/": [
-"8cbfc6133a96de8c",
+"7e8019b227806b44",
 "2026-11-24"
 ],
 "board/jc8048f550c-i-w-y/": [
-"a3455cce459200b8",
+"ba01b0a9b8018db9",
 "2026-11-24"
 ],
 "board/jc8048q350c-i/": [
-"61b16bb82355621a",
+"2c5b6f6c480f93d4",
 "2026-11-24"
 ],
 "board/jc8048q350c-i-w/": [
-"7f74cf9634a9b62b",
+"9f026ee215622bcf",
 "2026-11-24"
 ],
 "board/jc8048q350n-i/": [
-"7b521bac9e6a7241",
+"3a46d2a254a28028",
 "2026-11-24"
 ],
 "board/jc8048q350n-i-w/": [
-"f8a65d05da3a39b2",
+"a38e8f2c4006f997",
 "2026-11-24"
 ],
 "board/jc8048w550c-i/": [
-"00c413501e262e9c",
+"a4e3a3a991de86cf",
 "2026-11-24"
 ],
 "board/jc8048w550n-i/": [
-"f8a9fde1fa2e0b2b",
+"48360ac1a306b99e",
 "2026-11-24"
 ],
 "board/7-0inch-8080-module-ssd1963/": [
-"181a1b1be5350ba2",
+"fab70b34e30a351c",
 "2026-11-24"
 ],
 "board/esp32-8048s070c/": [
-"312fc056f080e293",
+"ba0513c8bc3ef401",
 "2026-11-24"
 ],
 "board/esp32-8048s070n/": [
-"69207f123e0bec28",
+"5fa95db95940c1a4",
 "2026-11-24"
 ],
 "board/jc1060f570c-i-w/": [
-"c4e6a5326aeee0cc",
+"c5cf61f57f8db4bf",
 "2026-11-24"
 ],
 "board/jc1060f570c-i-w-y/": [
-"ea8f3a0597e2b3ea",
+"60a031792df7a69f",
 "2026-11-24"
 ],
 "board/jc1060m070c-i/": [
-"10740845b33c1392",
+"ad7d620f31f85e73",
 "2026-11-24"
 ],
 "board/jc1060m070n-i/": [
-"912ce9a3ee22ad4e",
+"212591c8552bfe27",
 "2026-11-24"
 ],
 "board/jc1060p470c-i-w/": [
-"8e159f8a82bc6a23",
+"95a725f5a9f4b27d",
 "2026-11-24"
 ],
 "board/jc1060p470c-i-w-y/": [
-"4f497bd2f0367235",
+"4a45b43931ba96fa",
 "2026-11-24"
 ],
 "board/jc1060q370c-i/": [
-"7ca5e71461a625e6",
+"7b38604c3bf09be2",
 "2026-11-24"
 ],
 "board/jc1060q370n-i/": [
-"0441506971e3d821",
+"0b2a31cdceb3d502",
 "2026-11-24"
 ],
 "board/jc8048b070c/": [
-"073ef53cce075c54",
+"b39a2739868addc6",
 "2026-11-24"
 ],
 "board/jc8048b070n/": [
-"81e55288aecef91f",
+"6dc3194cf5f4ffd0",
 "2026-11-24"
 ],
 "board/jc8012p4a1c-i-w-y/": [
-"3fea32d5a469b60c",
+"b574db51bfeabada",
 "2026-11-24"
 ],
 "board/jc8012p4a1c-i-w-y1/": [
-"0833861e50052c4c",
+"b0d87e43c34e6158",
 "2026-11-24"
 ],
 "board/jc-esp32p4-m3-c6/": [
-"a5bf6140def7e72e",
+"2175c28e454843b3",
 "2026-11-24"
 ],
 "board/jc-esp32p4-m3-dev/": [
-"a5d9a0d807e053ee",
+"b70fda399d4bb3a7",
 "2026-11-24"
 ],
 "board/jc1216a018n/": [
-"0de76775638660e5",
+"1799f23a2d9048ac",
 "2026-11-24"
 ],
 "board/jc2424w513/": [
-"93b7b7664a125e41",
+"d3d2c0589c12e0e6",
 "2026-11-24"
 ],
 "board/jc2432a024n/": [
-"ac5e7c83cc7e7e13",
+"c9463efdaa3ccc3f",
 "2026-11-24"
 ],
 "board/jc2432a028n/": [
-"b5580088b4724c98",
+"6de10992669d1d0a",
 "2026-11-24"
 ],
 "board/lilygo-t-circle-s3/": [
-"75d580f97e8e34f2",
+"394ae3d166c94813",
 "2026-11-24"
 ],
 "board/m5stack-atoms3/": [
-"4d732e8b6aa7fdff",
+"5a7a4c6b14cbbd65",
 "2026-11-24"
 ],
 "board/m5stack-atoms3r/": [
-"cd44bd79686cd49d",
+"3484ec8a85370096",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-lcd-0-85/": [
-"302335a5363e869f",
+"77c50e0793e6e456",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-0-85/": [
-"8f0567ccd760fa33",
+"ad481d2c405f26d9",
 "2026-11-24"
 ],
 "board/lilygo-t-qt-pro/": [
-"43cffcef1f0b041e",
+"9d5d2b9bfd67ddb1",
 "2026-11-24"
 ],
 "board/m5stack-stickc/": [
-"3221ae59a3880cd9",
+"6650bc8e7d59cce0",
 "2026-11-24"
 ],
 "board/lilygo-t-dongle-s3/": [
-"5271e4213bf15abf",
+"a52708184138f46e",
 "2026-11-24"
 ],
 "board/lilygo-t-dongle-s3-plus/": [
-"b4629c78d764d464",
+"e34c154303a11c00",
 "2026-11-24"
 ],
 "board/m5stack-cardputer/": [
-"ed0dc6bd2164a3d1",
+"78d685dc4e531280",
 "2026-11-24"
 ],
 "board/m5stack-cardputer-v1-1/": [
-"a394dbc114b15180",
+"0e5123d0d3e89a0a",
 "2026-11-24"
 ],
 "board/m5stack-cardputer-adv/": [
-"7fe5938dbd2605bd",
+"ec6a8889ec84c536",
 "2026-11-24"
 ],
 "board/m5stack-dinmeter/": [
-"a2a16110eb2d8e96",
+"7d713298a0b0e2d5",
 "2026-11-24"
 ],
 "board/m5stack-stickc-plus2/": [
-"7570afe6c6233677",
+"37434d0203b7df74",
 "2026-11-24"
 ],
 "board/m5stack-stickc-plus/": [
-"e31e2f642a02c2eb",
+"98c070b6e91d6381",
 "2026-11-24"
 ],
 "board/m5stack-stickc-plus-se/": [
-"0bc09ef2c47aca58",
+"5099cbbd45258e99",
 "2026-11-24"
 ],
 "board/m5stack-sticks3/": [
-"5a83a72f43329675",
+"681c678c79d8ab21",
 "2026-11-24"
 ],
 "board/m5stack-stickt2/": [
-"02de856c0e8473f1",
+"f77cd74869fbb319",
 "2026-11-24"
 ],
 "board/lilygo-t-display/": [
-"1eb8b2909dccdb27",
+"b739696b4b47fef5",
 "2026-11-24"
 ],
 "board/lilygo-t-encoder-pro/": [
-"a2bd27834fc65b23",
+"351eade6c7bc8eb2",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-rotary-1-28/": [
-"4c3d4be9c0b762a2",
+"2c87562e5b6ff511",
 "2026-11-24"
 ],
 "board/m5stack-dial/": [
-"a88babfe052906f6",
+"f3e75e01e845b6b9",
 "2026-11-24"
 ],
 "board/m5stack-dial-v1-1/": [
-"be9c445ed0e522c7",
+"e474fd2d79831116",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-lcd-1-28/": [
-"51330c04027a62bb",
+"b1dd7f77a5048416",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-touch-lcd-1-28/": [
-"8e44810fec3c86e7",
+"bb613dfc45c36eb7",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-dualeye-touch-lcd-1-28/": [
-"4d389dbb0fb0e283",
+"a5a8ecf104ec0b23",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-1-28/": [
-"9140c8aaedcd341a",
+"b5baf88f83f36338",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-1-28-b/": [
-"7644b95a491e6719",
+"9790defb870720a4",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-1-28/": [
-"4f0e262a9528669b",
+"fc4957336fd992ce",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-1-28-b/": [
-"e0a789bdf16760ed",
+"447425fed984f136",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-lcd-1-3/": [
-"a5afe6306cdb1990",
+"a3b729ab393319de",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-1-3/": [
-"471f1a1f8ba5780f",
+"29373430c9cb0793",
 "2026-11-24"
 ],
 "board/m5stack-m5stick/": [
-"5cd2ec93ef05ad43",
+"e6f9be255dd55b72",
 "2026-11-24"
 ],
 "board/m5stack-vameter/": [
-"b1cbf2080512ef28",
+"1d5bcf0bea40f76a",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-amoled-1-32/": [
-"c1e0b79699508a0e",
+"4f1abe657c286628",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-amoled-1-43/": [
-"49381806b1304ade",
+"b17cfe399968b96a",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-amoled-1-43c/": [
-"6b4cba390ba42d7b",
+"9c9f11bee1120b41",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-1-46b/": [
-"9e831fc9373b55f8",
+"19b3f035bf5c0422",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-lcd-1-47/": [
-"014b84edf5b093d3",
+"6f79afa677ab36d2",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-touch-lcd-1-47/": [
-"b15f4b1594427635",
+"7ae6f8493c45c469",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-1-47/": [
-"76738edb951bfef4",
+"b569c433cfdb7e71",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-1-47b/": [
-"29bfd4f25284e821",
+"c77f202935c894a1",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-1-47/": [
-"c2ca5c7c83691c16",
+"11345cefab4e4c26",
 "2026-11-24"
 ],
 "board/m5stack-coreink/": [
-"f7177f82f7d53322",
+"58c1b2e6133ad21b",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-lcd-1-54/": [
-"22a4ff38539663ec",
+"602770ceac0117fc",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-1-54/": [
-"6b6a79b5cbc371e2",
+"780d64fd34198b05",
 "2026-11-24"
 ],
 "board/lilygo-t-wrist-e-paper-1-54-inch-display/": [
-"7f287a49b8c7937b",
+"5124a0acbbf91b65",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-amoled-1-64/": [
-"d04a1cb1d0a44ec8",
+"e2b2f8cc98d0b8bc",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-lcd-1-69/": [
-"80c123e79a4c8d26",
+"c90b8b77b190b135",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-touch-lcd-1-69/": [
-"d1d911b5545fef0f",
+"8bfe3b95146750fb",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-1-69/": [
-"65454cf416e7abf2",
+"c25060576edb94b1",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-1-69/": [
-"96cff299942b5a9b",
+"3eb64db293f17c75",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-knob-touch-amoled-1-75/": [
-"a94cc32329f13cb1",
+"2565df594c6b3be5",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-amoled-1-75/": [
-"625dfbb0e1c52327",
+"c5ea7111c3ae6726",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-amoled-1-75c/": [
-"e2688dd3f8a54f35",
+"b72c7fcbf75519c1",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-knob-touch-lcd-1-8/": [
-"b0cd3f8c91b0f982",
+"a12e6fa26fe4a16e",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-amoled-1-8/": [
-"c4327fd8374cd07b",
+"1a861db699816e48",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-touch-lcd-1-83/": [
-"670c5a928920c2d7",
+"6b2594c7a5f79ea5",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-1-83/": [
-"eb09f9622ad7c047",
+"c51beb1f41f8ecab",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-1-85/": [
-"25622e13bc3d0d8e",
+"2f77036dd8fa09ee",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-1-85b/": [
-"895deb0c00096e64",
+"4b84a98d69d27df0",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-1-85c/": [
-"8a8afb6be47990ba",
+"ddaa12ccc3b6f24e",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-lcd-1-9/": [
-"f7d8709ed71b45e1",
+"67db5975f6567196",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-1-9/": [
-"4def90394a907d1f",
+"d670acf9fde01a46",
 "2026-11-24"
 ],
 "board/lilygo-t-display-c5/": [
-"cc0fba36a3979512",
+"8aeab095efdba64f",
 "2026-11-24"
 ],
 "board/lilygo-t-display-s3/": [
-"28be43bc022d4512",
+"21b204de1ad7335f",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-amoled-1-91/": [
-"a52e29fafe175335",
+"34ee1fc64b987af5",
 "2026-11-24"
 ],
 "board/lilygo-t-display-s3-amoled/": [
-"78c93a13a888ecce",
+"871f49dc0aed9a11",
 "2026-11-24"
 ],
 "board/m5stack-basic-v2-7/": [
-"71134d81e7c60362",
+"9f519c46ebd95a39",
 "2026-11-24"
 ],
 "board/m5stack-core-metal/": [
-"dede255753d4c15c",
+"c439214aad300ec2",
 "2026-11-24"
 ],
 "board/m5stack-core2/": [
-"a292d4d1c4cfcb66",
+"16abcc1663f526d4",
 "2026-11-24"
 ],
 "board/m5stack-core2-for-aws/": [
-"ce514d8302576edf",
+"1e33e056654b1c77",
 "2026-11-24"
 ],
 "board/m5stack-core2-for-aws-v1-3/": [
-"6e0984887978c722",
+"0f04ec85cbeb068d",
 "2026-11-24"
 ],
 "board/m5stack-core2-v1-1/": [
-"4d39f8e2e847c7f8",
+"5dd983efbcc9795e",
 "2026-11-24"
 ],
 "board/m5stack-core2-v1-3/": [
-"4ad8f7958cb64a15",
+"f5aadb7fc4ca1156",
 "2026-11-24"
 ],
 "board/m5stack-cores3/": [
-"80f60fa67e3f2a9b",
+"63f31538d9b4b0f8",
 "2026-11-24"
 ],
 "board/m5stack-cores3-se/": [
-"d6026ae7e2d13618",
+"5f3eb29b0bded8ee",
 "2026-11-24"
 ],
 "board/m5stack-cores3-thread-br/": [
-"012df90f88f1a846",
+"a007663ebac28047",
 "2026-11-24"
 ],
 "board/m5stack-cores3-lite/": [
-"1ed5aa95f49ce218",
+"7529133482d10f3c",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-2/": [
-"edc153f24aeb3831",
+"a6a53a54378a70b9",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-2/": [
-"2139cf570aeaa623",
+"7d2daa4b3ce6f32b",
 "2026-11-24"
 ],
 "board/m5stack-tough/": [
-"4b12b50e2eb20e7c",
+"1d1d1e3fabf7a2e8",
 "2026-11-24"
 ],
 "board/makerfabs-matouch-esp32-s3-amoled-ai-camera/": [
-"b3d094ace49b26a1",
+"9cbc0e7651abad0d",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-amoled-2-06/": [
-"149c841a4660022f",
+"0adb7889f77f66c0",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-rotary-2-1/": [
-"f018a9f88a488d8a",
+"8e0bf73bed7ef546",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-2-1/": [
-"29a4f4eedd9e3e71",
+"383a9a27df386ee4",
 "2026-11-24"
 ],
 "board/makerfabs-matouch-esp32-s3-rotary-2-1/": [
-"0fc1f89a5415ac9f",
+"27cbb546e31502f7",
 "2026-11-24"
 ],
 "board/lilygo-t-rgb/": [
-"d4314a5b52a2c755",
+"f3a471a025a56780",
 "2026-11-24"
 ],
 "board/makerfabs-matouch-esp32-s3-2-13-quad-color-eink-epaper/": [
-"edfee458ae113b15",
+"e1ced44d1ec9aab3",
 "2026-11-24"
 ],
 "board/lilygo-t5-v2-4/": [
-"fdf8fe2ae6df9483",
+"5fc3b1ff735bc293",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-amoled-2-16/": [
-"4f95ed4111bc81ac",
+"64bc5d8b13f8839a",
 "2026-11-24"
 ],
 "board/lilygo-t-display-s3-pro/": [
-"f91c72f5617350fd",
+"eb5b19dbcd125d05",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-2-4-basic/": [
-"b55df3c5e14ca157",
+"792d46ecd5f13b13",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-advance-2-4/": [
-"1976f478d8785570",
+"ef186857bb8a3963",
 "2026-11-24"
 ],
 "board/makerfabs-matouch-lite-esp32-s3-spi-resistive-touch-2-4-st7789/": [
-"4e79f360a8cef9f1",
+"9abb7cf8520844fa",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-amoled-2-41/": [
-"9f7ef942aa1078ed",
+"0b2d8de601838827",
 "2026-11-24"
 ],
 "board/lilygo-t4-s3/": [
-"0a657ee8a90e71b3",
+"5f43ef3b666f6418",
 "2026-11-24"
 ],
 "board/m5stack-corep4x/": [
-"4c8444fef55d6215",
+"1cf5661ea4ec1470",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-lcd-2-73/": [
-"05f35329800e7391",
+"bf3f09090a22bc33",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-2-8-basic/": [
-"80be3949fc90c317",
+"10ebcf5bca5501d8",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-advance-2-8/": [
-"0c3aa86f11af44a2",
+"f1dcd1b5641aa754",
 "2026-11-24"
 ],
 "board/waveshare-esp32-c6-touch-lcd-2-8/": [
-"1ba3e5f95d4b71e5",
+"0e0603c2ec054407",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-2-8/": [
-"8b025eb3b0e402bf",
+"04e56e6dca742b3c",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-2-8b/": [
-"1d9b226b8f6cc2dc",
+"76ff3141595e5df0",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-2-8c/": [
-"cc88290a37c1f7be",
+"04fdc46c7eaf7d4d",
 "2026-11-24"
 ],
 "board/makerfabs-matouch-ai-esp32s3-2-8-tft-st7789v/": [
-"d2365d2a5843ba71",
+"40d0d52a0ca588fb",
 "2026-11-24"
 ],
 "board/lilygo-t-deck/": [
-"b61a30b89c97109c",
+"c8090512324ae625",
 "2026-11-24"
 ],
 "board/lilygo-t-deck-plus/": [
-"3c8456e2892894b0",
+"986975b1a077f83f",
 "2026-11-24"
 ],
 "board/dfrobot-unihiker-k10/": [
-"b94f7ed0bd909c63",
+"bcd87507b7e3e7d7",
 "2026-11-24"
 ],
 "board/lilygo-t-deck-max/": [
-"9ab2f5fcf6f0bc47",
+"4189f0196c4cb000",
 "2026-11-24"
 ],
 "board/lilygo-t-deck-pro/": [
-"4c1231104a924c26",
+"a3668d92aa0a18c2",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-3-16/": [
-"571a4494ea6ccaf3",
+"1e1b033664b8b348",
 "2026-11-24"
 ],
 "board/makerfabs-matouch-esp32-s3-parallel-tft-3-16-st7701s/": [
-"a729fa7e7c0f2db0",
+"894472dfd75cd0aa",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-wifi6-touch-lcd-3-4c/": [
-"7368032ddfe59da2",
+"16a665fb8654d85b",
 "2026-11-24"
 ],
 "board/lilygo-t-display-s3-long/": [
-"c01bfb88f29fed92",
+"56e8a00e0fe2d9d1",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-3-49/": [
-"9039731d039ab941",
+"4125f06f1d4e11f0",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-3-5-basic/": [
-"852440ca8b1ff62b",
+"2fa5a63d5770a5ae",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-advance-3-5/": [
-"34ed8dc93a3de21f",
+"d2c20015f259f8d1",
 "2026-11-24"
 ],
 "board/elecrow-esp-terminal-3-5/": [
-"ec96c2edc71c6c7f",
+"1da675b21b78b82d",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-wifi6-touch-lcd-3-5/": [
-"d4270fc330cd1b7a",
+"9ab1d3f7167fb81d",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-3-5/": [
-"7f7580de364821b1",
+"32d727aa306ff28d",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-3-5b/": [
-"f0a11004e2af4cd9",
+"26c4d918a6a25fce",
 "2026-11-24"
 ],
 "board/makerfabs-matouch-esp32-s3-parallel-3-5/": [
-"5eb1339c172e5c76",
+"3874cef09c63ab36",
 "2026-11-24"
 ],
 "board/makerfabs-matouch-esp32-s3-mauwb-spi-tft-touch-3-95-st7796/": [
-"334226e89760016b",
+"82d96297e0de3ef4",
 "2026-11-24"
 ],
 "board/makerfabs-matouch-lite-esp32-s3-spi-resistive-touch-3-95-st7796/": [
-"385fe7beb673ce8b",
+"ca7398f82b99fedc",
 "2026-11-24"
 ],
 "board/seeed-sensecap-indicator-d1/": [
-"19aacc716b6b5372",
+"70652e0907cf4622",
 "2026-11-24"
 ],
 "board/seeed-sensecap-indicator-d1l/": [
-"d244321ea6b716e3",
+"e1f5b4260f7e5f1b",
 "2026-11-24"
 ],
 "board/seeed-sensecap-indicator-d1pro/": [
-"eaa0d9a3ac989dcf",
+"910fda8cad5a2a68",
 "2026-11-24"
 ],
 "board/seeed-sensecap-indicator-d1s/": [
-"3d225ef2a7edd76f",
+"5a2ff1a3cb916d35",
 "2026-11-24"
 ],
 "board/m5stack-papermono/": [
-"3eb85fb633722467",
+"031b166c3b2ecda1",
 "2026-11-24"
 ],
 "board/m5stack-papermono-lite/": [
-"2f6186e907ef0821",
+"ef8e9a8ad7ccb6bd",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-wifi6-touch-lcd-4b/": [
-"d161997aa81ad9bb",
+"0a7a338c2aff6e1e",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-wifi6-touch-lcd-4c/": [
-"916127b670f93cfe",
+"58d5a34290c0afe9",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-4/": [
-"60af5488076a23d6",
+"1adfa323bbd2a789",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-4b/": [
-"c56f55db09506df1",
+"9cfcee398113f4a8",
 "2026-11-24"
 ],
 "board/m5stack-papercolor/": [
-"3a196279f0cbbac4",
+"bbcff7f2b2be6b15",
 "2026-11-24"
 ],
 "board/lilygo-t-panel-s3/": [
-"402c76e03b2f86da",
+"8e4e447cf96a0b66",
 "2026-11-24"
 ],
 "board/lilygo-t-display-p4/": [
-"de1ab13a2916bd5f",
+"295991c8141dfcf6",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-rlcd-4-2/": [
-"c471bf135f5a2e0d",
+"e67866387a58894f",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-4-3-basic/": [
-"45ecff10374cc977",
+"4e2b6bf1cebc96e5",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-advance-4-3/": [
-"494e8f2349825d16",
+"aa01c74c76e8776f",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-wifi6-touch-lcd-4-3/": [
-"4b6de54cb642c59d",
+"73e1152a480f8717",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-4-3/": [
-"0476971472580c33",
+"538c761ddf91d956",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-4-3b/": [
-"424ba599bcfd4006",
+"64ac27ff18f86eb9",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-4-3c/": [
-"5e1f9d4ce32ca709",
+"5226444618632dfc",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s31-touch-lcd-4-3c/": [
-"285711edcb993e03",
+"6327abeb6ed8e682",
 "2026-11-24"
 ],
 "board/m5stack-paper/": [
-"4d114d7a3abedd0d",
+"66358ac97457512e",
 "2026-11-24"
 ],
 "board/m5stack-paper-comm-edition/": [
-"9d53a5afaf5e5071",
+"04aa5e3be821aa1c",
 "2026-11-24"
 ],
 "board/m5stack-paper-v1-1/": [
-"ff1e4d8ab9a35316",
+"52fdeb1e1f214772",
 "2026-11-24"
 ],
 "board/m5stack-papers3/": [
-"1279c410a378e064",
+"20a107541e9c6c9f",
 "2026-11-24"
 ],
 "board/lilygo-t5-e-paper-s3-pro/": [
-"f6efba81d32d082b",
+"33d2979dd3911ae7",
 "2026-11-24"
 ],
 "board/lilygo-t5-e-paper-s3-pro-lite/": [
-"70b4106b88f84f77",
+"1f3230046de462aa",
 "2026-11-24"
 ],
 "board/lilygo-t5-e-paper/": [
-"0d4d8d94272045d0",
+"e8cd91286e60feda",
 "2026-11-24"
 ],
 "board/lilygo-t5-e-paper-basic/": [
-"2a81d331014dbdcf",
+"c1a2c19d56bf7164",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-5-0-basic/": [
-"37b0c4b632aebaf1",
+"1d725f96c3576c92",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-advance-5-0/": [
-"c5934c7e56422236",
+"c0e37e41d0fb0001",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-p4-5-0/": [
-"4267eb123861a64f",
+"72212af5ce881207",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-wifi6-touch-lcd-5/": [
-"dc9465222f03c337",
+"8df7d6ebb4e3ee51",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-5/": [
-"27f5a149671a4fb0",
+"e6d339760abba776",
 "2026-11-24"
 ],
 "board/m5stack-tab5/": [
-"7f0c03089541e035",
+"d650a4487af346b9",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-7-0-basic/": [
-"8aa90828072b3099",
+"e814b9da3c7dd920",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-advance-7-0/": [
-"d568fe29c26c6fb1",
+"48e2f7994f502f05",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-p4-7-0/": [
-"0887146309445ea8",
+"3ba92c9f6c1a7f7a",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-module-dev-kit-b/": [
-"da7ac7695b98d8e7",
+"cfe993bba5e9448d",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-wifi6-touch-lcd-7/": [
-"54d21ba891dc8eca",
+"187c0da218326d15",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-wifi6-touch-lcd-7b/": [
-"a60c38288706d8e0",
+"2d8213589d2f821f",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-lcd-7b/": [
-"7379e13c665b8f7b",
+"df21e640993fd1bc",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-7/": [
-"c34451de423f967f",
+"075727de4d13ee6d",
 "2026-11-24"
 ],
 "board/waveshare-esp32-s3-touch-lcd-7c-box/": [
-"89ceeb6d023f2044",
+"6cef319aa2e0b57d",
 "2026-11-24"
 ],
 "board/makerfabs-matouch-esp32-s3-parallel-tft-with-touch-7/": [
-"b456cbb73aa9a9e1",
+"0551bf712bd07d9b",
 "2026-11-24"
 ],
 "board/seeed-reterminal-e1002/": [
-"d0d342d7c261c13f",
+"2834d30dfcf2cac9",
 "2026-11-24"
 ],
 "board/seeed-reterminal-e1001/": [
-"deb8cf5b54a2d38d",
+"2e7056ff11af1e2a",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-wifi6-touch-lcd-8/": [
-"c845973bd739190b",
+"2224663354cebc62",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-p4-9-0/": [
-"2c3c4ceba5561cb4",
+"994104d70cf7f0a5",
 "2026-11-24"
 ],
 "board/elecrow-crowpanel-p4-10-1/": [
-"46b6d110cdf5e59a",
+"13a48bf7f0389585",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-module-dev-kit-c/": [
-"83cd0a4e4e9e598c",
+"2992ae687c66596c",
 "2026-11-24"
 ],
 "board/waveshare-esp32-p4-wifi6-touch-lcd-10-1/": [
-"c9069b902e052f82",
+"3a7baeff211d4790",
 "2026-11-24"
 ],
 "board/seeed-reterminal-e1003/": [
-"e9f9972895346e0a",
+"31187c7fb0ceee57",
 "2026-11-24"
 ],
 "board/seeed-reterminal-e1004/": [
-"073626ba6cf21148",
+"4ba40c610df37c7c",
 "2026-11-24"
 ],
 "board/m5stack-dinmeter-v1-1/": [
-"0b817832e2d44805",
+"cc3ecad2a500dffd",
 "2026-11-24"
 ],
 "board/lilygo-t-display-s3-amoled-ds/": [
-"645c304508e273ad",
+"95a9794408478559",
 "2026-11-24"
 ],
 "board/lilygo-t3-s3-e-paper/": [
-"0153d8f1fc252b51",
+"bc42ae1203e83638",
 "2026-11-24"
 ],
 "board/lilygo-t4/": [
-"73b609ea7c624384",
+"11531fcb4d56cadf",
 "2026-11-24"
 ],
 "vendor/guition/": [

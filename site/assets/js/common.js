@@ -36,7 +36,11 @@
   G.ficon = (f, size, opts) => {
     opts = opts || {};
     const tip = f.label + (f.connector && !f.label.includes(f.connector) ? ' – ' + f.connector : '');
-    return `<span class="fi fc-${G.esc(f.category)}${f.value ? ' fhasv' : ''}${opts.click ? ' fclick' : ''}" style="--s:${size}px" tabindex="0" role="img" aria-label="${G.esc(tip)}" data-tip="${G.esc(tip)}" data-fname="${G.esc(f.name)}">`
+    const cls = `fi fc-${G.esc(f.category)}${f.value ? ' fhasv' : ''}${(!opts.passive && opts.click) ? ' fclick' : ''}`;
+    const attrs = opts.passive
+      ? `class="${cls}" style="--s:${size}px" aria-hidden="true"`
+      : `class="${cls}" style="--s:${size}px" tabindex="0" role="img" aria-label="${G.esc(tip)}" data-tip="${G.esc(tip)}" data-fname="${G.esc(f.name)}"`;
+    return `<span ${attrs}>`
       + `<svg width="${size}" height="${size}" aria-hidden="true" focusable="false"><use href="${G.FEAT_SPRITE}#f-${G.esc(f.icon)}"/></svg>`
       + (f.value ? `<b class="fv" aria-hidden="true">${G.esc(f.value)}</b>` : '') + '</span>';
   };
@@ -51,6 +55,7 @@
     let cur = null, t = null;
     const show = (el) => {
       cur = el; tip.textContent = el.dataset.tip; tip.classList.add('on');
+      tip.style.maxWidth = Math.max(80, window.innerWidth - 12) + 'px';
       const r = el.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
       let x = r.left + r.width / 2 - w / 2, y = r.top - h - 8;
       if (y < 6) y = r.bottom + 8;
@@ -59,9 +64,11 @@
       el.setAttribute('aria-describedby', 'ftip');
     };
     const hide = () => { clearTimeout(t); if (cur) cur.removeAttribute('aria-describedby'); cur = null; tip.classList.remove('on'); };
-    document.addEventListener('pointerover', (e) => { const el = e.target.closest('[data-tip]'); if (el === cur) return; hide(); if (el && e.pointerType === 'mouse') t = setTimeout(() => show(el), 120); });
-    document.addEventListener('focusin', (e) => { const el = e.target.closest('[data-tip]'); hide(); if (el) show(el); });
+    const fine = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    document.addEventListener('pointerover', (e) => { const el = e.target.closest('[data-tip]'); if (el === cur) return; hide(); if (el && e.pointerType === 'mouse' && fine()) t = setTimeout(() => show(el), 120); });
+    document.addEventListener('focusin', (e) => { if (!fine()) return; const el = e.target.closest('[data-tip]'); hide(); if (el) show(el); });
     document.addEventListener('focusout', hide);
+    document.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'mouse') hide(); }, { capture: true });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hide(); });
     window.addEventListener('scroll', () => { if (cur) hide(); }, { passive: true, capture: true });
   };

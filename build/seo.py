@@ -178,7 +178,7 @@ def board_page(m, vname, vslug, depth=2):
 <h1>{e(m['model'])}</h1>
 <p class="sub">{e(vname)}{(' · ' + e(m['title'])) if m.get('title') and m['title'] != m['model'] else ''}</p>
 <p>{e(m['model'])} is {('an' if (disp or 'x')[0] in '18' else 'a')} {e(disp + ' ' if disp else '')}ESP32 display board by {e(vname)}{(' based on the ' + e(chip)) if chip else ''}{(' with ' + e(mem)) if mem else ''}.</p>
-<p><a class="btn pri" href="{interactive}">Open the interactive page (gallery, files, archives) →</a></p>
+<p class="cta"><a class="btn pri" href="{interactive}">Open the interactive page (gallery, files, archives) →</a></p>
 </div>
 </div>
 {f'<section class="sec"><h2>Features, ports &amp; interfaces</h2><ul class="sfeat">{fl}</ul></section>' if fl else ''}
@@ -271,7 +271,7 @@ def top_pages(models, vendors, meta):
         if fn == 'index.html':
             groups = ''.join(f'<details><summary>{e(vn)} ({cnt})</summary><ul>' + ''.join(
                 f'<li><a href="board/{e(m["id"])}/">{e(m["model"])}</a></li>' for m in models if m['vendor'] == vn) + '</ul></details>' for _, vn, cnt in vendors)
-            foot = foot.replace('<footer class="footer">', f'<footer class="footer"><section class="dir" aria-label="All boards"><h2>All {n} boards</h2>{groups}</section>', 1)
+            foot = foot.replace('<footer class="footer">', f'<footer class="footer"><section class="dir" aria-label="All boards"><details><summary>All {n} boards</summary>{groups}</details></section>', 1)
         act = {'index.html': 'models', 'docs.html': 'docs', 'files.html': 'files', 'about.html': 'about'}[fn]
         t2 = replace_block(t, 'TOP', topbar(0, act))
         t = t2 if t2 is not None else re.sub(r'<body([^>]*)>', lambda mm: f'<body{mm.group(1)}>\n<!--SEO:TOP-->{topbar(0, act)}<!--/SEO:TOP-->', t, count=1)
